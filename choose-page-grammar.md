@@ -53,7 +53,8 @@ Same format and authority rules as `atlas-page-grammar.md` and `class-page-gramm
 |---|---|---|
 | Register | **P1 slim quick-look**: one screen — identity, archetype tag, demand pips, ✓/✕, defining talents. The mini-class-page modal retires; the nine folds live on the class page only. User 2026-08-07: "p1" | RULED (2026-08-07 round 2) |
 | Class-page emphasis | The modal must sell the full class page, not just link it. User (2026-08-07, near-verbatim): "make sure we emphasize the full class page, cause that's where the magic is at." The small footer link is replaced by an emphasized exit | RULED (2026-08-07, user's words) |
-| Exit treatment | Which emphasis form: **X1 crest door** (bottom, class-colored portal bar with crest + tagline) · **X2 top strip** (emphasis before the scroll) · **X3 video portal** (bottom bar with the class-video thumb). Rendered side by side in `profile-study.html`; the live demo uses the exit stone | OPEN (round 2b ask) |
+| Exit placement | **Up top, beside the spec name, words slimmed down.** User 2026-08-07: "none, I want it up top, maybe next to the spec, but slim down the words." X1–X3 (bottom/top bar treatments) set aside; the modal's class name leaves the meta line — the exit carries it | RULED (2026-08-07 round 2b) |
+| Exit form | Which slim header exit: **X4 class chip** (crest + "Cultist ⇢" in a glowing chip, tooltip carries the sentence) · **X5 crest only** (crest button, tiny label — the phone icon-nav pattern) · **X6 bare word** ("Cultist ⇢" glowing, no chrome). Side by side in `profile-study.html`; the demo's exit stone drives the live modal | OPEN (round 2c ask) |
 | Exit destination | Pilot classes demo the ruled study (`rhythm-class.html?c=<class>`); the rest link to today's `class.html` until the site slice + ×21 authoring land | note |
 
 ## 5 · Session log
@@ -83,3 +84,8 @@ Same format and authority rules as `atlas-page-grammar.md` and `class-page-gramm
   portal) side by side on Godblade; the door demo's exit stone drives the live modal. Pilot
   classes exit to the ruled study; the rest to today's page. Smoke test: 70 specs × 3 exits.
   Awaiting the round-2b pick.
+- **2026-08-07 (round 2b verdict → round 2c):** user: "none, I want it up top, maybe next to the
+  spec, but slim down the words" — placement RULED, X1–X3 set aside (§4). Round 2c built and
+  deployed: three header exits beside the spec name (X4 chip / X5 crest / X6 word), Godblade
+  side by side, live in the door demo. Smoke test re-run: 70 specs × 3 exits.
+  Awaiting the round-2c pick.
