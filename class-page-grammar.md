@@ -36,6 +36,7 @@ This is the checklist for repeating the design 21 times without drift.
 | Interaction | Node click selects the spec card; selected node glows; selected card glows in the SAME tone | RULED |
 | Glow tone | The active stroke is the LIGHTENED class color (seal uses #d3a3ef for Cultist). Card formula: `color-mix(class-color 58%, white 42%)` border + soft halo. Raw class color is wrong | RULED (2026-08-07 correction) |
 | Verbs | One word per spec, its relation to the engine. Must not need the seal to parse: every verb ships with a plain gloss (tooltip) | RULED |
+| Phone treatment | Full seal below the masthead text at full width, vertically tightened ~15% (420×224 arrangement: orbits 60/77, eye .66, node rows raised; nothing removed). The seal is the phone spec switcher — tap a node to select. NEVER fused with the spec card; band/rail/collapsed compactions considered and set aside (session-2 artifact). Fallback if still too tall in real use: a remembered collapsed row | RULED (2026-08-07 session 2) |
 
 Current verb + gloss set (Cultist/Tinker):
 - Spread — keep damage-over-time on every target; the engine is coverage.
@@ -61,6 +62,7 @@ Current verb + gloss set (Cultist/Tinker):
 | Topology glyph | Tiny spike/wave/stack silhouette derived from the spec's authored strip. Only exists where a strip exists — no invented shapes | PROPOSED |
 | Family tooltip | Family names are jargon; attach the family's authored tagline as tooltip (same treatment as verbs) | PROPOSED (flag raised) |
 | Spec fantasy one-liner | If `style` wins, each spec needs an authored one-line fantasy (current quotes clamp mid-phrase) | PROPOSED (flag raised) |
+| Phone treatment | The selected spec's airfam card renders standalone below the seal (quick-look register kept, own plate). The other specs live behind an "All 4 specializations" bottom sheet carrying the full cards; no swipe rail | RULED (2026-08-07 session 2) |
 
 ## 4 · Rhythm block (per spec, in codex)
 
@@ -75,7 +77,7 @@ Current verb + gloss set (Cultist/Tinker):
 | Evidence labels | "names: Data · shape: Inference" on every strip | RULED |
 | Gap state | Unauthored spec ⇒ dashed block: "Not drawn yet for this spec … we don't invent them" | RULED |
 | Seal-strip continuity | Strip reuses the seal's tension vocabulary where true (hold/cross lines drawn in the Godblade strip) | RULED (pattern) |
-| Phone treatment | Strips unreadable at 400px; needs a stacked/taller mobile variant | OPEN |
+| Phone treatment | S2: each strip gets an authored-to-fit phone redraw — same topology, fewer labels, full width, no scroll (Godblade pattern in the session-2 artifact). Vertical rotation tested and set aside: the level axis turns sideways, wave/stack topologies break, and it costs more height than S2 | RULED (2026-08-07 session 2) |
 
 Authored strips so far: Godblade (spike), Corruption (wave), Demolition (stack).
 Screen cards so far: same three, plus Invention config in the form study.
@@ -102,6 +104,15 @@ Screen cards so far: same three, plus Invention config in the form study.
 | Card ↔ codex blurb overlap | Card blurb is the teaser register; codex quote is the full statement. Keep both; make the registers diverge in the authoring pass so the echo softens | PROPOSED (advisor answer to user's redundancy question) |
 | ✓/✕ verdicts | Unchanged; card ✓/✕ lines echo the same content | RULED (keep) |
 | Folds | Nine-fold structure unchanged. No ruling sought yet | OPEN |
+
+## 6b · Phone chrome (page-wide, below 560px)
+
+| Piece | Decision | Status |
+|---|---|---|
+| Top row | Sigil + search only, one sticky 50px row. The tab row is removed entirely on phone | RULED (2026-08-07 session 2) |
+| Nav | Slim (~50px) bottom deck: Atlas · Choose · Guided · Loot, glyph + label, auto-hides on downward scroll and returns on upward scroll | RULED (2026-08-07 session 2) |
+| Why | One nav home in thumb reach; reading costs zero chrome; retires the shipped ~390px `nav.a-tabs` overflow recorded at the Anatomy visual gate | — |
+| Scope note | The deck touches all five page shells including `loot.html`'s separate chrome; auto-hide needs real iOS momentum-scroll testing | flag |
 
 ## 7 · Evidence & honesty (page-wide)
 
@@ -151,7 +162,15 @@ placement `feel`, video `mini`, engine `col`, verbs `chip`, cards `airfam`.
 
 - **2026-08-06/07 (desktop):** everything above through the codex-top close. Rhythm = first fold
   (final). Study defaults mirror all rulings: bare `rhythm-class.html?c=<class>` is the ruled page.
-- **Next (phone):** same cadence — mock, pick, record. Start with queue item 1.
+- **2026-08-07 (phone, session 2, closed):** mockups in the session-2 artifact
+  (https://claude.ai/code/artifact/ca1349bc-2fcb-43d5-8834-994aa3b5e05e). Four rulings:
+  (1) strips = S2 authored-to-fit phone redraws, vertical rotation evidenced and set aside;
+  (2) seal = full drawing tightened ~15% (420×224), standalone, the phone spec switcher —
+  fusion with the card explicitly rejected, band/rail/collapsed compactions set aside;
+  (3) card = standalone quick-look kept, "All 4" sheet for the rest;
+  (4) chrome = sigil-only top row + slim auto-hiding bottom deck (§6b).
+- **Next:** implement the ruled phone layout in the study, verify on a real phone, then plan the
+  shipped-site slice. The 7 advisor card blurbs (§3 flag) still need their approval pass.
 - **Deployed:** https://blakedonn.github.io/coa-class-mockups/ (GitHub Pages, repo
   `BlakeDonn/coa-class-mockups`, public). Main study:
   https://blakedonn.github.io/coa-class-mockups/rhythm-class.html?c=cultist
