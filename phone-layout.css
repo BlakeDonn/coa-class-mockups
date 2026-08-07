@@ -30,7 +30,6 @@
   .ph-icons .tl { font-size: 7.5px; font-weight: 800; letter-spacing: .05em; text-transform: uppercase;
     color: #83888f; line-height: 1; }
   .ph-icons a.active .tl { color: #c9aa71; }
-  body.ph-scrolled .ph-icons .tl { display: none; }
 }
 
 /* ---------- masthead: video thumb top-right + plain-text role line (grammar 1, 5) ---------- */
@@ -56,14 +55,18 @@
   .cp-roles span + span::before { content: " · "; color: #565b62; }
 }
 
-/* ---------- seal: static, full width, below the masthead text (grammar 2) ---------- */
+/* ---------- seal: its own detached plate below the masthead (grammar 2, post-verify) ---------- */
+.ph-seal-plate { display: none; }
+
 @media (max-width: 560px) {
   .cp-mast.cd-with-seal { padding-right: 24px; padding-bottom: 18px; min-height: 0; }
-  .cd-seal { position: static; width: 100%; height: auto; margin-top: 12px;
-    border-left: 0; border-top: 1px solid #49355380; padding-top: 8px; }
+  .ph-seal-plate { display: block; margin: 12px 0 14px; padding: 10px 8px 6px; }
+  .ph-seal-plate[hidden] { display: none; }
+  .ph-seal-plate .cd-seal { position: static; width: 100%; height: auto; margin: 0;
+    border-left: 0; padding: 0; }
   /* the tightened drawing is 420x224; the tinker schematic keeps its native 420x205 */
-  .cd-seal svg { height: auto; aspect-ratio: 420 / 224; }
-  .cd-seal.cd-tinker-seal svg { aspect-ratio: 420 / 205; }
+  .ph-seal-plate .cd-seal svg { height: auto; aspect-ratio: 420 / 224; }
+  .ph-seal-plate .cd-seal.cd-tinker-seal svg { aspect-ratio: 420 / 205; }
 }
 
 /* ---------- spec cards: selected card only + All-4 sheet (grammar 3) ---------- */

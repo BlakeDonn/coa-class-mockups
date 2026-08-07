@@ -27,15 +27,6 @@
       <a href="guided.html" aria-label="Guided">✦<span class="tl">Guided</span></a>
       <a href="loot.html" aria-label="Loot 45+">⚔<span class="tl">Loot</span></a>
     </nav>`);
-  let wasScrolled = false;
-  addEventListener("scroll", () => {
-    const scrolled = scrollY > 56;
-    if (scrolled !== wasScrolled) {
-      wasScrolled = scrolled;
-      document.body.classList.toggle("ph-scrolled", scrolled);
-    }
-  }, { passive: true });
-
   // On phone the sigil is its glyph alone; the wordmark returns above 560px.
   const sigil = document.querySelector(".a-sigil");
   const sigilFull = sigil ? sigil.textContent : "";
@@ -81,6 +72,27 @@
     <text class="cd-threshold" x="210" y="32" text-anchor="middle">60 · HOLD</text>
     <text class="cd-threshold" x="210" y="192" text-anchor="middle">100 · CROSS</text>
     ${NODES.map(nodeSvg).join("")}`;
+
+  // Post-verify amendment: on phone the seal detaches into its own plate below the masthead.
+  const sealStage = document.querySelector("#mast .cd-stage.cd-seal");
+  const sealHome = sealStage ? sealStage.parentElement : null;
+  let sealPlate = null;
+  function applySealPlacement() {
+    if (!sealStage || !sealHome) return;
+    if (mq.matches) {
+      if (!sealPlate) {
+        sealPlate = document.createElement("section");
+        sealPlate.className = "plate ph-seal-plate";
+        sealPlate.setAttribute("aria-label", "Class engine diagram");
+        sealHome.insertAdjacentElement("afterend", sealPlate);
+      }
+      sealPlate.appendChild(sealStage);
+      sealPlate.hidden = false;
+    } else if (sealPlate) {
+      sealHome.appendChild(sealStage);
+      sealPlate.hidden = true;
+    }
+  }
 
   const sealSvg = document.querySelector("#mast .cd-seal svg");
   let desktopSeal = null;
@@ -229,8 +241,9 @@
     requestAnimationFrame(() => { strippling = false; applyStrips(); syncActive(); });
   }).observe(codex, { childList: true, subtree: true });
 
-  mq.addEventListener("change", () => { applySigil(); applySeal(); applyStrips(); });
+  mq.addEventListener("change", () => { applySigil(); applySealPlacement(); applySeal(); applyStrips(); });
   applySigil();
+  applySealPlacement();
   applySeal();
   applyStrips();
 })();
