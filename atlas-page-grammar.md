@@ -81,16 +81,16 @@ Same format and authority rules as `class-page-grammar.md`.
   "relative among researched CoA specs". RULED (keep).
 - Comparative or rare claims trace to computable facts (rare-part precedent). RULED (pattern).
 
-## 7 · Open decisions queue
+## 7 · Open decisions queue (post-session-4 state)
 
-1. **Map round 2 picks:** the unit (pip ladder / shape / fused) and the wall
-   (pip matrix / shape wall / pip-card wall) — `map-study.html`.
-2. Toggle default altitude (classes vs specs first).
-3. Identity-card pieces, granularly (round 3): role line, family row, spec doors, ordering.
-4. Workbench button on phone (drop vs keep).
-5. Card clamp: record divergence vs restructure now.
-6. Pips tooltips on Atlas cards (extend the ruled `tips` treatment — already demoed on
-   the map study's pip rows).
+1. **Star-map placement** — the masthead ghost button in `atlas-v2.html` is a live proposal.
+2. **Starmap phone redraw** — interim is a horizontal pan; an authored S2-style redraw is open.
+3. **True-support propagation** — the class page's ruled role line and the four-jobs ✦ facts
+   still use the old counting (§4 ripples row).
+4. **Crest rights confirmation** — before the site slice only.
+5. **Spec-profile modal** — slim vs port-class-page vs remove; session 5's job
+   (`choose-profile-design-handoff.md`).
+6. Class-card ordering: alphabetical stands as PROPOSED; confirm when convenient.
 
 ## 8 · Session log
 

@@ -11,13 +11,16 @@ Authority note: entries here are plans, not rulings. Rulings live in the grammar
 
 | Item | Where | State |
 |---|---|---|
-| Atlas design session (session 4, 2026-08-07) | This repo | **Substantially complete.** Rulings in `atlas-page-grammar.md`; reference assembly `atlas-v2.html`; interim map `starmap.html`. Open: star-map placement, starmap phone redraw, ×21 authoring (blocked on pilot), game-axes map (deferred, research ask below) |
+| Atlas design session (session 4, 2026-08-07) | This repo | **CLOSED, all landed.** Eight rounds; the class card finished ("they look fantastic"). Rulings in `atlas-page-grammar.md`; assembly `atlas-v2.html`; interim map `starmap.html`. The bit-by-bit round cadence is now the standing process (contract in the session-5 handoff) |
+| Design session 5: Choose page + spec-profile modal | This repo, briefed in `choose-profile-design-handoff.md` | Handoff ready. Kickoff line at its bottom. Less pointed by design; jobs: "find my class" visual pass, and the profile modal (slim it vs port the class page into it vs remove) |
 | Five-class research pilot (cultist, tinker, witch-hunter, guardian, knight-of-xoroth) | Main repo, worktree `coa-picker-pilot`, branch `work/2026-08-07-coa-picker-pilot` | In flight, separate session. Its outputs unblock half this file |
 
 ## NEXT (design track, in order)
 
-1. **Choose page pass.** Bring Choose under the design philosophy. Not blocked by anything —
-   its scoring rules are user-ruled and Sol-approved; this is visual language, not logic.
+1. **Session 5 (handoff ready): Choose page pass + the spec-profile modal question.** Choose is
+   unblocked — scoring is ruled and Sol-approved; this is visual language. The modal question:
+   today's spec profile duplicates the future class page; slim it, port the class page into it,
+   or drop it.
 2. **Desktop echo pass.** Carry the session-3 rulings to desktop: plain-text role line, corner
    video thumb (at the text column's right edge — the seal owns the far right), engine styling.
    Plus the shipped-Atlas tagline swap (the old premise line still shows there; recorded divergence).
