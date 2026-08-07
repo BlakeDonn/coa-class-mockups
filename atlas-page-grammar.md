@@ -51,6 +51,8 @@ Same format and authority rules as `class-page-grammar.md`.
 | Top-right corner | **V1 class-video thumb**: real thumbnail, play ring, "Class highlight" caption, opens the video. The ruled phone-masthead treatment, scaled to the card. All 21 classes have a video in the data | RULED (2026-08-07 round 6, "video thumb is dope") |
 | Rare ✦ lines | The class-page rare-part pattern comes to the card: 1–2 terse ✦ fragments, every one tracing to a computable roster fact. No fact, no bullet | RULED pattern (2026-08-07, user ask) |
 | Ordering | Alphabetical; no ordering that could read as rank | PROPOSED |
+| Crest icon | Round 7: the Sol hunt found the build hub's official 21-frame class-crest sprite (`class-icons.v1.webp` + named CSS manifest; findings in `sol-class-icon-findings.md`). The picker defaults every class to its official crest; ability icons are the fallback candidates. PROVENANCE FLAG: the hub is fan-made, no license published — shipping the crests needs rights confirmation | OPEN (awaiting picks + rights) |
+| Crest sub line | Round 7 variants: S1 jobs & range (advisor rec) · S2 spec count & range · S0 none (current ruled state) | OPEN (awaiting pick) |
 
 ## 5 · The identity map
 
