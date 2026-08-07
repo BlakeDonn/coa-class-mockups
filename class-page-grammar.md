@@ -21,7 +21,9 @@ This is the checklist for repeating the design 21 times without drift.
 | Tagline | Must fit ONE line at desktop width. Author or trim to fit | RULED (2026-08-07) |
 | Engine paragraph | 2–4 plain sentences in the masthead column (`e=col`), class-colored left border, label "THE ENGINE — <resource/idea>" | RULED |
 | Engine content | Names the resource, the loop, and the class tension. Generalizations across specs need research backing (flag: Heretic's Insanity relation unconfirmed) | RULED shape / OPEN copy per class |
-| Role chips | Unchanged from shipped page | RULED (keep) |
+| Engine copy shape (amended) | Condensed: a serif-italic lede ("Every Cultist runs on Insanity, and it climbs as you act."), a 60-band feel line ("Near 60 it is steady power: strong enough to fuel your kit, controlled enough to stay safe."), then the 100 line. The four-specs sentence is dropped — the seal below shows it. FLAG: "strong enough to fuel your kit" is a cross-spec generalization needing research confirm; fallback is "steady power you ride, not spend" | RULED (2026-08-07 session 3) / flag on the 60-band claim |
+| Rare-part list | The engine block ends with 1–3 terse ✦ fragments naming what is strange about the class. Cultist: "Melee healer option" · "Four specs, four different playstyles". Every fragment must trace to a computable roster fact (melee healers = 2 of 70 specs; verified in snapshot). No fact, no bullet — never invented | RULED (2026-08-07 session 3) |
+| Role chips | One plain-text line, sentence case, no boxes, separators only ("Damage ×2 · Healer · Support · Tank · Melee · Ranged"). Authored to fit ONE line at 390px. Desktop follows the same treatment in its own pass | RULED (2026-08-07 session 3, supersedes "keep") |
 
 ## 2 · Seal (class diagram)
 
@@ -87,6 +89,7 @@ Screen cards so far: same three, plus Invention config in the form study.
 | Piece | Decision | Status |
 |---|---|---|
 | Class video | Masthead chip: "▶ Class highlight" link beside the role chips, caveat as hover title. Nothing about it renders in the codex | RULED (2026-08-07, supersedes the mini row) |
+| Class video (phone) | Real thumbnail again: 96×54 in the masthead's top-right corner, provenance micro-caption on the image, links to the video. Replaces the chip below 560px. Desktop echo ruled in principle (thumb at the text column's right edge — the seal owns the far right); chip stays on desktop until that pass | RULED (2026-08-07 session 3) |
 | Rationale | Class-level content belongs at class level; it was repeated per spec and labeled weak by the page itself | — |
 | Spec guide rows | Unchanged (verified guides with thumbnails) | RULED (keep) |
 | No-spec-video row | Hidden; the search record lives in Evidence & gaps | RULED |
@@ -109,10 +112,12 @@ Screen cards so far: same three, plus Invention config in the form study.
 
 | Piece | Decision | Status |
 |---|---|---|
-| Top row | Sigil + search only, one sticky 50px row. The tab row is removed entirely on phone | RULED (2026-08-07 session 2) |
-| Nav | Slim (~50px) bottom deck: Atlas · Choose · Guided · Loot, glyph + label, auto-hides on downward scroll and returns on upward scroll | RULED (2026-08-07 session 2) |
-| Why | One nav home in thumb reach; reading costs zero chrome; retires the shipped ~390px `nav.a-tabs` overflow recorded at the Anatomy visual gate | — |
-| Scope note | The deck touches all five page shells including `loot.html`'s separate chrome; auto-hide needs real iOS momentum-scroll testing | flag |
+| Top row | ONE sticky 48px row holds everything: ⚜ sigil (glyph only on phone), search, and four icon nav buttons (⚜ Atlas · ◈ Choose · ✦ Guided · ⚔ Loot). No tab row on phone, ever | RULED (2026-08-07 session 3) |
+| Icon labels | Tiny labels under the icons at the top of the page. Once scrolled they fade and the icons stand alone; only the small labels return at the top, never full buttons | RULED (2026-08-07 session 3) |
+| Bottom deck | Session 2's auto-hiding bottom deck was implemented, then superseded the same day by the single-row icon chrome. Removed | superseded |
+| Why | One row of standing chrome, labels re-teach the glyphs on every return to the top, and the shipped ~390px `nav.a-tabs` overflow stays retired | — |
+| Desktop | Keeps the labeled tab row; icon mode is phone-only | RULED (2026-08-07 session 3) |
+| Scope notes | The class page has no search backend — its search box links to the Atlas search until one exists. Chrome still touches all five shells including `loot.html`. Icon labels (~8px) and the fade hand-off need a real-device check | flag |
 
 ## 7 · Evidence & honesty (page-wide)
 
@@ -169,8 +174,16 @@ placement `feel`, video `mini`, engine `col`, verbs `chip`, cards `airfam`.
   fusion with the card explicitly rejected, band/rail/collapsed compactions set aside;
   (3) card = standalone quick-look kept, "All 4" sheet for the rest;
   (4) chrome = sigil-only top row + slim auto-hiding bottom deck (§6b).
-- **Next:** implement the ruled phone layout in the study, verify on a real phone, then plan the
-  shipped-site slice. The 7 advisor card blurbs (§3 flag) still need their approval pass.
+- **2026-08-07 (masthead + chrome, session 3, closed):** same artifact, Frame 2. Five rulings, all
+  LOCKED by the user ("this is fantastic — lock it in"): (1) chrome = single sticky row with icon
+  nav + fading labels, deck removed (§6b rewritten); (2) role chips = one plain-text line (§1);
+  (3) class video = corner thumbnail on phone (§5); (4) engine copy = condensed lede + 60-band feel
+  line, four-specs sentence dropped, "fuel your kit" flagged for research confirm (§1); (5) rare-part
+  ✦ list with the computable-fact rule (§1). Roster facts verified this session: melee healers =
+  2 of 70 (Heretic, Life); four-role classes = 4 of 21.
+- **Next:** user phone-verifies the deployed study; research-confirm the two engine flags ("fuel your
+  kit", Heretic's Insanity relation); approve the 7 advisor card blurbs (§3 flag); author tinker's
+  rare-part bullets from computable facts; then plan the shipped-site slice (after the Anatomy merge).
 - **Deployed:** https://blakedonn.github.io/coa-class-mockups/ (GitHub Pages, repo
   `BlakeDonn/coa-class-mockups`, public). Main study:
   https://blakedonn.github.io/coa-class-mockups/rhythm-class.html?c=cultist
