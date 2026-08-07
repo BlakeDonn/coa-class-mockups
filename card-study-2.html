@@ -26,12 +26,12 @@
 
   <section class="st-sec">
     <header class="st-head">
-      <h2>Round 5 — your round-4 rulings, applied</h2>
-      <p>Locked in: no kick line, authored tagline with the keyword glow, family row gone,
-        ✦ fact lines in. Two pieces remain open below. Taglines and engine blurbs exist for the
-        <b>five pilot classes</b> — Cultist authored, four advisor drafts grounded in researched
-        text. Every ✦ line is computed from the roster; its tooltip shows the fact. Nothing is
-        invented for the other sixteen — they show the honest gap.</p>
+      <h2>Rounds 5–6 — the card, closing in</h2>
+      <p>Ruled so far: no kick line, tagline with the keyword glow, no family row, ✦ fact lines,
+        <b>E1 engine blurb</b>, and <b>R1 role icons</b>. The E and R stones below stay for
+        reference. One piece is open: <b>the top-right corner</b> (round 6, at the bottom).
+        Taglines and engine blurbs exist for the five pilot classes — Cultist authored, four
+        advisor drafts grounded in researched text. Every ✦ line is computed from the roster.</p>
     </header>
   </section>
 
@@ -104,6 +104,40 @@
     </div>
   </section>
 
+  <!-- V · THE TOP-RIGHT CORNER (round 6) -->
+  <section class="st-sec" id="pV">
+    <header class="st-head"><h2>V · The top-right corner</h2>
+      <p>What lives beside the class name. All 21 classes have a real highlight video in the data,
+        so the thumbnails below are live.</p></header>
+
+    <div class="st-sub"><h3>V1 · The class video thumb</h3>
+      <div class="st-note">The ruled phone-masthead treatment from the class page, scaled to the
+        card: real thumbnail, play ring, provenance caption; opens the video.
+        <span class="gain">Gains:</span> motion and proof — the class shows itself before a single
+        click. <span class="cost">Costs:</span> 21 thumbnails compete with 21 class colors; the
+        corner gets busy on smaller cards.</div>
+      <div class="pair" data-piece="corner" data-variant="video"></div>
+    </div>
+    <div class="st-sub"><h3>V2 · The glyph watermark</h3>
+      <div class="st-note">The spec cards' translucent class-glyph mark, echoed here.
+        <span class="gain">Gains:</span> quiet identity; matches the 70-spec cards' language.
+        <span class="cost">Costs:</span> decoration only — the corner does no new work.</div>
+      <div class="pair" data-piece="corner" data-variant="glyph"></div>
+    </div>
+    <div class="st-sub"><h3>V0 · Clean corner</h3>
+      <div class="st-note"><span class="gain">Gains:</span> calmest card; the name owns the top.
+        <span class="cost">Costs:</span> the video stays a profile-only discovery.</div>
+      <div class="pair" data-piece="corner" data-variant="none"></div>
+    </div>
+    <div class="st-pick" data-pick="corner">
+      <span class="stone">
+        <button data-v="video" class="active">V1 video</button>
+        <button data-v="glyph">V2 glyph</button>
+        <button data-v="none">V0 clean</button>
+      </span>
+    </div>
+  </section>
+
   <!-- DRAFT COPY FOR APPROVAL -->
   <section class="st-sec" id="drafts">
     <details class="rules">
@@ -125,8 +159,8 @@
   </section>
 
   <footer class="st-foot">
-    Round 5 asks two picks: <b>engine</b> (E1 / E2 / E0) and <b>role coupling</b> (R1 / R2 / R3) —
-    plus a yes/no on the four drafted taglines. Rulings land in <code>atlas-page-grammar.md</code> §4.
+    Open asks: <b>the corner</b> (V1 / V2 / V0) and a yes/no on the four drafted taglines.
+    E1 + R1 are ruled. Rulings land in <code>atlas-page-grammar.md</code> §4.
   </footer>
 
   <dialog id="profileDialog" class="a-dialog">

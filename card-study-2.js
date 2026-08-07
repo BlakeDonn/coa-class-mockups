@@ -94,15 +94,34 @@
     }).join("")}</div>`;
   }
 
-  // ---------- the card, composed under the round-4 rulings ----------
+  // ---------- the card, composed under the rulings ----------
+  const videoId = c => {
+    const s = c.specs.find(s => (s.media || {}).classVideo);
+    return s ? s.media.classVideo : null;
+  };
+  function cornerHTML(c, mode) {
+    if (mode === "video") {
+      const id = videoId(c);
+      if (!id) return "";
+      return `<a class="cl-thumb" href="https://www.youtube.com/watch?v=${esc(id)}" target="_blank"
+        rel="noreferrer" aria-label="${esc(c.name)} class highlight video">
+        <img src="https://i.ytimg.com/vi/${esc(id)}/mqdefault.jpg" alt="" loading="lazy">
+        <span class="play">▶</span><span class="cap">Class highlight</span></a>`;
+    }
+    if (mode === "glyph") return `<span class="cl-glyphmark" aria-hidden="true">${c.glyph}</span>`;
+    return "";
+  }
   function composeCard(c, o) {
     const tag = TAGLINES[c.name];
     const eng = o.engine === "blurb" ? ENGINES[c.name]
       : o.engine === "chip" ? (cleanResource(c) ? { lab: "The engine — " + cleanResource(c), p: null } : null)
       : null;
     const facts = factsFor(c);
-    return `<article class="plate cl-card" style="--class-color:${c.color}">
-      <div class="cl-top"><span class="cl-medal">${c.glyph}</span><div><h3>${esc(c.name)}</h3></div></div>
+    const corner = o.corner || "none";
+    return `<article class="plate cl-card${corner === "video" && videoId(c) ? " has-thumb" : ""}"
+        style="--class-color:${c.color}">
+      <div class="cl-top"><span class="cl-medal">${c.glyph}</span><div><h3>${esc(c.name)}</h3></div>
+        ${cornerHTML(c, corner)}</div>
       ${tag ? `<div class="cl-tagline">${esc(tag.t).replace(esc(tag.kw), `<span class="kw">${esc(tag.kw)}</span>`)}</div>` : ""}
       ${eng ? `<div class="cl-engine${eng.p ? "" : " chip"}"><span class="lab">${esc(eng.lab)}</span>${eng.p ? `<p>${esc(eng.p)}</p>` : ""}</div>` : ""}
       ${facts.length ? `<ul class="cl-rare">${facts.map(f =>
@@ -114,7 +133,7 @@
 
   // ---------- paint ----------
   const el = id => document.getElementById(id);
-  const state = { engine: "blurb", doors: "icons" };
+  const state = { engine: "blurb", doors: "icons", corner: "video" };
   const DEMO = ["Cultist", "Witch Hunter"];
 
   function renderPairs() {

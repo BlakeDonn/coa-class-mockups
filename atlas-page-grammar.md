@@ -44,7 +44,11 @@ Same format and authority rules as `class-page-grammar.md`.
 | Tagline slot | Authored-only tagline on the card, ruled styled-keyword glow; unauthored classes omit the line — absent, never invented | RULED (2026-08-07 round 4) |
 | Family row | DROPPED from the card ("no jargon thing"). Families still live in profiles and the starmap | RULED (2026-08-07 round 4) |
 | Role line | The standalone counts line is REPLACED: role info couples onto the spec doors (icon or color-coded). Treatment variant is round 5's pick | RULED direction (2026-08-07) / variant OPEN |
-| Engine blurb | "Maybe" — mocked in round 5 (authored/drafted blurb vs computed resource chip vs none) | OPEN (round 5) |
+| Engine blurb | **E1**: one authored sentence with the class-colored engine label. Pilot five have copy (Cultist authored, four advisor drafts); the rest omit until the ×21 authoring | RULED (2026-08-07 round 5) |
+| Role coupling | **R1 role icons**: ⚔ Damage · 🛡 Tank · ✚ Healer · ⚑ Support lead each spec door, tooltip names the role, range word at right | RULED (2026-08-07 round 5) |
+| Composed card | Crest (name only) → tagline → engine blurb → ✦ facts → doors with role icons. User: "the first one is perfect… just great" | RULED (2026-08-07 round 5) |
+| Draft taglines/engines | The four pilot drafts still need an explicit copy approval before the site slice (class-page precedent: advisor drafts never ship unapproved) | flag |
+| Top-right corner | Round 6 mocked: **V1** live class-video thumb (ruled phone-masthead treatment, scaled) · **V2** glyph watermark · **V0** clean. All 21 classes have a real video in the data | OPEN (awaiting pick) |
 | Rare ✦ lines | The class-page rare-part pattern comes to the card: 1–2 terse ✦ fragments, every one tracing to a computable roster fact. No fact, no bullet | RULED pattern (2026-08-07, user ask) |
 | Ordering | Alphabetical; no ordering that could read as rank | PROPOSED |
 
