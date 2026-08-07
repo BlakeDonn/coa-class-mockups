@@ -46,6 +46,13 @@ Authority note: entries here are plans, not rulings. Rulings live in the grammar
     strips, tagline) from this study into production — otherwise the CSS forks;
   - the Guided pass implementation.
 
+## DATA VERIFICATION QUEUE (for the research track)
+
+- **Chronomancer/Time's `Hybrid` range tag** (surfaced 2026-08-07 in the Atlas session): the kit
+  text shows a wand/temporal healer with no visible melee element. Verify against research-v2
+  sources; if wrong, the fix belongs upstream — the explorer pipeline passes `range` through
+  verbatim (`build_explorer_data.py:347`).
+
 ## COPY & APPROVAL QUEUE (small, user-facing)
 
 - Research-confirm two engine flags: "strong enough to fuel your kit" (fallback recorded:
