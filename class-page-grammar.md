@@ -38,7 +38,7 @@ This is the checklist for repeating the design 21 times without drift.
 | Interaction | Node click selects the spec card; selected node glows; selected card glows in the SAME tone | RULED |
 | Glow tone | The active stroke is the LIGHTENED class color (seal uses #d3a3ef for Cultist). Card formula: `color-mix(class-color 58%, white 42%)` border + soft halo. Raw class color is wrong | RULED (2026-08-07 correction) |
 | Verbs | One word per spec, its relation to the engine. Must not need the seal to parse: every verb ships with a plain gloss (tooltip) | RULED |
-| Phone treatment | Full seal below the masthead text at full width, vertically tightened ~15% (420×224 arrangement: orbits 60/77, eye .66, node rows raised; nothing removed). The seal is the phone spec switcher — tap a node to select. NEVER fused with the spec card; band/rail/collapsed compactions considered and set aside (session-2 artifact). Fallback if still too tall in real use: a remembered collapsed row | RULED (2026-08-07 session 2) |
+| Phone treatment | Full seal at full width, vertically tightened ~15% (420×224 arrangement: orbits 60/77, eye .66, node rows raised; nothing removed). Post-verify amendment: the seal sits DETACHED in its own plate directly below the masthead, not inside it. The seal is the phone spec switcher — tap a node to select. NEVER fused with the spec card; band/rail/collapsed compactions considered and set aside (session-2 artifact). Fallback if still too tall in real use: a remembered collapsed row | RULED (2026-08-07 sessions 2–3) |
 
 Current verb + gloss set (Cultist/Tinker):
 - Spread — keep damage-over-time on every target; the engine is coverage.
@@ -113,7 +113,7 @@ Screen cards so far: same three, plus Invention config in the form study.
 | Piece | Decision | Status |
 |---|---|---|
 | Top row | ONE sticky 48px row holds everything: ⚜ sigil (glyph only on phone), search, and four icon nav buttons (⚜ Atlas · ◈ Choose · ✦ Guided · ⚔ Loot). No tab row on phone, ever | RULED (2026-08-07 session 3) |
-| Icon labels | Tiny labels under the icons at the top of the page. Once scrolled they fade and the icons stand alone; only the small labels return at the top, never full buttons | RULED (2026-08-07 session 3) |
+| Icon labels | Tiny labels under the icons, ALWAYS visible at every scroll position. The scroll-fade version shipped first and was removed after the user's phone verify — words stay; full buttons never return | RULED (2026-08-07 session 3, amended post-verify) |
 | Bottom deck | Session 2's auto-hiding bottom deck was implemented, then superseded the same day by the single-row icon chrome. Removed | superseded |
 | Why | One row of standing chrome, labels re-teach the glyphs on every return to the top, and the shipped ~390px `nav.a-tabs` overflow stays retired | — |
 | Desktop | Keeps the labeled tab row; icon mode is phone-only | RULED (2026-08-07 session 3) |
@@ -181,9 +181,12 @@ placement `feel`, video `mini`, engine `col`, verbs `chip`, cards `airfam`.
   line, four-specs sentence dropped, "fuel your kit" flagged for research confirm (§1); (5) rare-part
   ✦ list with the computable-fact rule (§1). Roster facts verified this session: melee healers =
   2 of 70 (Heretic, Life); four-role classes = 4 of 21.
-- **Next:** user phone-verifies the deployed study; research-confirm the two engine flags ("fuel your
-  kit", Heretic's Insanity relation); approve the 7 advisor card blurbs (§3 flag); author tinker's
-  rare-part bullets from computable facts; then plan the shipped-site slice (after the Anatomy merge).
+- **2026-08-07 (post-verify tweaks):** user phone-verified the deploy ("looks super good"; masthead
+  reads in one glance up to the seal). Two amendments from that read: icon labels always visible
+  (scroll fade removed), and the seal detached into its own plate below the masthead.
+- **Next:** research-confirm the two engine flags ("fuel your kit", Heretic's Insanity relation);
+  approve the 7 advisor card blurbs (§3 flag); author tinker's rare-part bullets from computable
+  facts; then plan the shipped-site slice (after the Anatomy merge).
 - **Deployed:** https://blakedonn.github.io/coa-class-mockups/ (GitHub Pages, repo
   `BlakeDonn/coa-class-mockups`, public). Main study:
   https://blakedonn.github.io/coa-class-mockups/rhythm-class.html?c=cultist
