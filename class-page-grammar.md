@@ -19,9 +19,11 @@ This is the checklist for repeating the design 21 times without drift.
 |---|---|---|
 | Order | Name → tagline → engine paragraph → role chips; seal on the right | RULED |
 | Tagline | Must fit ONE line at desktop width. Author or trim to fit | RULED (2026-08-07) |
+| Tagline copy (cultist) | "The whispers offer power. Will you listen?" — replaces "Whispers from below, answered…". The shipped Atlas keeps the old premise line until the site slice lands (recorded divergence) | RULED (2026-08-07 session 3) |
+| Styled keyword | One tagline word may carry the class color with a soft glow (cultist: "whispers"). Decoration only — never an information channel, text stays readable | RULED (2026-08-07 session 3) |
 | Engine paragraph | 2–4 plain sentences in the masthead column (`e=col`), class-colored left border, label "THE ENGINE — <resource/idea>" | RULED |
 | Engine content | Names the resource, the loop, and the class tension. Generalizations across specs need research backing (flag: Heretic's Insanity relation unconfirmed) | RULED shape / OPEN copy per class |
-| Engine copy shape (amended) | Condensed: a serif-italic lede ("Every Cultist runs on Insanity, and it climbs as you act."), a 60-band feel line ("Near 60 it is steady power: strong enough to fuel your kit, controlled enough to stay safe."), then the 100 line. The four-specs sentence is dropped — the seal below shows it. FLAG: "strong enough to fuel your kit" is a cross-spec generalization needing research confirm; fallback is "steady power you ride, not spend" | RULED (2026-08-07 session 3) / flag on the 60-band claim |
+| Engine copy shape (amended) | Condensed: a serif-italic lede ("Every Cultist runs on Insanity, and it climbs as you act."), then "Near 60 it is steady power: strong enough to fuel your kit, safe enough to hold. Cross 100 and it pays out more, punishing you while it lasts." The paragraph deliberately teaches the seal's HOLD/CROSS words right above the seal. The four-specs sentence is dropped — the seal shows it. FLAG: "strong enough to fuel your kit" is a cross-spec generalization needing research confirm; fallback is "steady power you ride, not spend" | RULED (2026-08-07 session 3, copy tightened same day) / flag on the 60-band claim |
 | Rare-part list | The engine block ends with 1–3 terse ✦ fragments naming what is strange about the class. Cultist: "Melee healer option" · "Four specs, four different playstyles". Every fragment must trace to a computable roster fact (melee healers = 2 of 70 specs; verified in snapshot). No fact, no bullet — never invented | RULED (2026-08-07 session 3) |
 | Role chips | One plain-text line, sentence case, no boxes, separators only ("Damage ×2 · Healer · Support · Tank · Melee · Ranged"). Authored to fit ONE line at 390px. Desktop follows the same treatment in its own pass | RULED (2026-08-07 session 3, supersedes "keep") |
 
@@ -184,6 +186,9 @@ placement `feel`, video `mini`, engine `col`, verbs `chip`, cards `airfam`.
 - **2026-08-07 (post-verify tweaks):** user phone-verified the deploy ("looks super good"; masthead
   reads in one glance up to the seal). Two amendments from that read: icon labels always visible
   (scroll fade removed), and the seal detached into its own plate below the masthead.
+- **2026-08-07 (copy pass):** engine 60/100 lines tightened to echo the seal's HOLD/CROSS vocabulary.
+  Cultist tagline replaced with "The whispers offer power. Will you listen?" plus the styled-keyword
+  rule ("whispers" in class-color glow). Shipped Atlas keeps the old premise until the site slice.
 - **Next:** research-confirm the two engine flags ("fuel your kit", Heretic's Insanity relation);
   approve the 7 advisor card blurbs (§3 flag); author tinker's rare-part bullets from computable
   facts; then plan the shipped-site slice (after the Anatomy merge).
