@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="robots" content="noindex">
+  <title>CoA Atlas — design study (session 4)</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="explorer.css">
+  <link rel="stylesheet" href="atlas-study.css">
+</head>
+<body class="atlas atlas-study">
+
+  <div class="st-banner">
+    <span class="st-tag">Atlas design study · session 4 · proposals, not rulings</span>
+    <nav>
+      <a href="#s1">1 · Chrome &amp; fork</a>
+      <a href="#s2">2 · Class Atlas</a>
+      <a href="#s3">3 · The map</a>
+    </nav>
+  </div>
+
+  <!-- ============ 1 · CHROME + THE ALTITUDE FORK ============ -->
+  <section class="st-sec" id="s1">
+    <header class="st-head">
+      <h2>1 · Chrome &amp; the altitude fork</h2>
+      <p>The ruled phone chrome (grammar §6b) applied to the Atlas shell, plus three ways to offer the
+        landing altitudes: <b>Guide</b> · <b>the 21 classes</b> · <b>all 70 specs</b>.
+        At phone width the demo's top row becomes the ruled icon chrome; on desktop the labeled tabs stay.
+        The phone topbar drops the ⚖ Workbench button — the bottom tray already appears the moment a
+        spec is benched (proposal).</p>
+    </header>
+    <div class="st-pick" data-pick="fork">
+      <span class="stone">
+        <button data-v="mast" class="active">A · Masthead doors</button>
+        <button data-v="gate">B · First-visit gate</button>
+        <button data-v="lens">C · Bar-row lens</button>
+      </span>
+    </div>
+    <div class="st-note" id="forkNote"></div>
+    <div class="demo-shell" id="forkDemo"></div>
+  </section>
+
+  <!-- ============ 2 · THE CLASS ATLAS ============ -->
+  <section class="st-sec" id="s2">
+    <header class="st-head">
+      <h2>2 · The Class Atlas — 21 cards</h2>
+      <p>The class as the browsing unit. All 21, real roster data, alphabetical.
+        Tap a spec anywhere to open its full profile.</p>
+    </header>
+    <div class="st-pick" data-pick="cards">
+      <span class="stone">
+        <button data-v="crest">A · Crest roll</button>
+        <button data-v="rich">B · Identity card</button>
+        <button data-v="constel" class="active">C · Constellation card</button>
+      </span>
+    </div>
+    <div class="st-note" id="cardsNote"></div>
+    <div id="classGrid"></div>
+  </section>
+
+  <!-- ============ 3 · THE IDENTITY MAP ============ -->
+  <section class="st-sec" id="s3">
+    <header class="st-head">
+      <h2>3 · The identity map</h2>
+      <p>Reading the whole roster at once. The axes are <b>demand</b> from the research — never quality;
+        nothing here ranks. Values carry Data · Players · Inference tiers and are relative among
+        researched CoA specs.</p>
+    </header>
+
+    <div class="st-pick st-filters">
+      <span class="stone" data-pick="ctx">
+        <button data-v="boss" class="active">Boss</button>
+        <button data-v="dungeon_aoe">Dungeon AoE</button>
+        <button data-v="pvp">PvP</button>
+      </span>
+      <label class="st-lenslab">Family lens
+        <select id="famLens"><option value="All">All families</option></select>
+      </label>
+    </div>
+
+    <div class="st-sub" id="mapAsec">
+      <h3>A · The constellation wall</h3>
+      <p class="st-read"><b>How to read it:</b> every spec is one shape on the same six spokes — the farther
+        a shape reaches toward a spoke, the more of that demand the spec asks of you. Similar shapes play
+        alike. Tap any shape for the full profile.</p>
+      <div class="st-legend" id="mapLegend"></div>
+      <div id="mapA"></div>
+      <p class="st-fine">Six axes from research v2. Sequencing joins as a seventh spoke with research v3 —
+        an unresearched value renders as a hollow spoke, never as zero.</p>
+    </div>
+
+    <div class="st-sub" id="mapBsec">
+      <h3>B · The field</h3>
+      <p class="st-read" id="fieldRead"></p>
+      <div class="st-fieldbar">
+        <label>Across <select id="axisX"></select></label>
+        <label>Up <select id="axisY"></select></label>
+      </div>
+      <div class="st-classstrip" id="classStrip"></div>
+      <div class="st-fieldwrap"><svg id="mapB" viewBox="0 0 560 508" role="img"
+        aria-label="All 70 specializations placed on two chosen demand axes"></svg></div>
+      <p class="st-fine">Dot color follows the class, but 21 class colors cannot be told apart reliably
+        (Ranger and Witch Hunter green differ by ΔE 0.3 — measured, not eyeballed). Color never carries
+        identity alone here: tap a class crest above to light its specs and name them, tap a dot for its
+        profile.</p>
+    </div>
+
+    <div class="st-sub" id="mapCsec">
+      <h3>C · The muster board</h3>
+      <p class="st-read"><b>How to read it:</b> columns are jobs, rows are where you stand. A spec appears
+        at every post it can hold. Purely structural — roster facts only, no demand values, so the family
+        lens is the only filter that applies.</p>
+      <div class="st-scroll"><div id="mapC"></div></div>
+    </div>
+  </section>
+
+  <footer class="st-foot">
+    Everything on this page is <b>PROPOSED</b>. Rulings land in <code>atlas-page-grammar.md</code>,
+    same format as the class-page contract. The shipped Atlas (<a href="index.html">index.html</a>)
+    is untouched by this study.
+  </footer>
+
+  <dialog id="profileDialog" class="a-dialog">
+    <button class="d-close" id="profileClose" aria-label="Close specialization profile">×</button>
+    <div id="profileContent"></div>
+  </dialog>
+
+  <script src="explorer-data.js"></script>
+  <script src="profile-render.js"></script>
+  <script src="atlas-study.js"></script>
+</body>
+</html>
