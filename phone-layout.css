@@ -1,28 +1,60 @@
-/* Ruled phone layout for the rhythm study (grammar contract, session 2).
-   Scope: rhythm-class.html only. Everything here activates at 560px and below;
-   the desktop and tablet rulings are untouched above that. */
+/* Ruled phone layout for the rhythm study (grammar contract, sessions 2-3).
+   Scope: rhythm-class.html only. Everything gated to 560px activates there;
+   desktop and tablet rulings are untouched above it. */
 
-/* ---------- chrome: sigil-only top row + bottom deck (grammar 6b) ---------- */
-.ph-deck { display: none; }
+/* ---------- engine block, all widths (session-3 shape: lede + body + rare list) ---------- */
+.ry-engine .lab { display: flex; align-items: center; gap: 8px; }
+.ry-engine .lab::after { content: ""; flex: 1; height: 1px;
+  background: linear-gradient(90deg, color-mix(in srgb, var(--class-color, #c9aa71) 30%, transparent), transparent); }
+.ry-engine .ry-lede { margin: 0 0 3px; font: italic 13.5px Georgia, "Palatino Linotype", serif; color: #d8c99b; }
+.ry-rare { margin: 8px 0 0; padding: 7px 0 0; list-style: none; display: grid; gap: 3px;
+  border-top: 1px solid color-mix(in srgb, var(--class-color, #c9aa71) 18%, transparent); }
+.ry-rare li { color: #e8c88a; font-size: 12.5px; }
+.ry-rare .mark { color: #c9aa71; margin-right: 6px; }
+
+/* ---------- chrome: one sticky row, icon nav with fading labels (grammar 6b) ---------- */
+.ph-search, .ph-icons { display: none; }
 
 @media (max-width: 560px) {
   .a-tabs { display: none; }
-  .a-topbar { justify-content: flex-start; }
+  .a-topbar { gap: 8px; }
 
-  .ph-deck { position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; display: flex;
-    border-top: 1px solid #6b5a35; background: linear-gradient(#141312, #0b0a09);
-    padding-bottom: max(4px, env(safe-area-inset-bottom));
-    box-shadow: 0 -6px 20px #0009; transition: transform .22s; }
-  .ph-deck.hide { transform: translateY(108%); }
-  .ph-deck a { flex: 1; display: grid; place-items: center; gap: 1px; padding: 6px 0 3px;
-    color: #9a9483; font-size: 10px; font-weight: 800; letter-spacing: .09em;
-    text-transform: uppercase; text-decoration: none; }
-  .ph-deck a .g { font-size: 15px; line-height: 1; }
-  .ph-deck a.active { color: #ecd7a8; }
-  .ph-deck a.active .g { text-shadow: 0 0 12px #c9aa7180; }
-  body.class-page { padding-bottom: 64px; }
+  .ph-search { flex: 1; min-width: 0; display: flex; align-items: center; border: 1px solid #3a3325;
+    border-radius: 3px; background: #0c0d0f; padding: 8px 10px; color: #565b62; font-size: 13px;
+    text-decoration: none; white-space: nowrap; overflow: hidden; box-shadow: inset 0 2px 6px #000a; }
+  .ph-icons { display: flex; gap: 4px; }
+  .ph-icons a { width: 40px; height: 38px; display: grid; place-items: center; border: 1px solid #3a3325;
+    border-radius: 4px; background: linear-gradient(#1c1a15, #131210); color: #9a9483; font-size: 14px;
+    line-height: 1; text-decoration: none; }
+  .ph-icons a.active { color: #ecd7a8; border-color: #6b5a35; }
+  .ph-icons .tl { font-size: 7.5px; font-weight: 800; letter-spacing: .05em; text-transform: uppercase;
+    color: #83888f; line-height: 1; }
+  .ph-icons a.active .tl { color: #c9aa71; }
+  body.ph-scrolled .ph-icons .tl { display: none; }
 }
-@media (prefers-reduced-motion: reduce) { .ph-deck { transition: none; } }
+
+/* ---------- masthead: video thumb top-right + plain-text role line (grammar 1, 5) ---------- */
+.ph-thumb { display: none; }
+
+@media (max-width: 560px) {
+  .cp-mast .crumb, .cp-mast .kick, .cp-mast h1 { padding-right: 104px; }
+  .ph-thumb { position: absolute; top: 14px; right: 14px; z-index: 2; display: block;
+    width: 96px; height: 54px; border: 1px solid #6b5a35; border-radius: 3px; overflow: hidden; }
+  .ph-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .ph-thumb .play { position: absolute; inset: 0; display: grid; place-items: center;
+    color: #ecd7a8; font-size: 13px; text-shadow: 0 0 8px #000; }
+  .ph-thumb .cap { position: absolute; left: 0; right: 0; bottom: 0; padding: 2px 4px 3px;
+    background: linear-gradient(transparent, #000d); color: #c9aa71; font-size: 7.5px;
+    letter-spacing: .12em; text-transform: uppercase; text-align: center; }
+  /* the chip form of the class highlight is replaced by the thumb on phone */
+  .ry-mast-video { display: none; }
+
+  /* role chips become one plain-text line, authored to fit */
+  .cp-roles { display: block; margin-top: 9px; white-space: nowrap; overflow: hidden; }
+  .cp-roles span { display: inline; border: 0; background: none; padding: 0; color: #9a9483;
+    font-size: 12px; letter-spacing: 0; text-transform: none; }
+  .cp-roles span + span::before { content: " · "; color: #565b62; }
+}
 
 /* ---------- seal: static, full width, below the masthead text (grammar 2) ---------- */
 @media (max-width: 560px) {

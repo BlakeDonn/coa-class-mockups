@@ -101,16 +101,26 @@
       ${no ? `<p class="rc-no">✕ ${R.esc(no)}</p>` : ""}`;
   }
 
-  // Class-level engine text. Drafted from researched mechanics; the phrasing is the study's proposal.
+  // Class-level engine text. Session-3 shape: serif lede + body; the four-specs sentence is
+  // dropped because the seal below shows it. "Fuel your kit" carries a research-confirm flag
+  // (grammar contract 1); fallback if it fails: "steady power you ride, not spend".
   const ENGINE = {
     cultist: {
       label: "The engine — Insanity",
-      text: "Every Cultist runs on Insanity, and it climbs as you act. Held near 60 it is steady power. At 100 it pays out more and punishes you while it lasts. The four specs differ in how close to that edge they live.",
+      lede: "Every Cultist runs on Insanity, and it climbs as you act.",
+      text: "Near 60 it is steady power: strong enough to fuel your kit, controlled enough to stay safe. At 100 it pays out more, and punishes you while it lasts.",
     },
     tinker: {
       label: "The engine — temporary machines",
-      text: "A Tinker's power stands on the field, not on the action bar. You build machines — bombs, turrets, beacons, a mech — deploy them where the fight will be, and keep them overlapping. The three specs point the same workshop at destruction, repair, or the pilot's seat.",
+      lede: "A Tinker's power stands on the field, not on the action bar.",
+      text: "You build machines — bombs, turrets, beacons, a mech — deploy them where the fight will be, and keep them overlapping. The three specs point the same workshop at destruction, repair, or the pilot's seat.",
     },
+  };
+  // Rare-part fragments: each must trace to a computable roster fact (grammar contract 1).
+  // Cultist verified 2026-08-07: melee healers = 2 of 70 specs; 4 specs span 4 role-range combos.
+  // Tinker has no authored fragments yet — no fact, no bullet.
+  const RARE = {
+    cultist: ["Melee healer option", "Four specs, four different playstyles"],
   };
   const codex = document.getElementById("codex");
   if (!codex) return;
@@ -494,16 +504,18 @@
     const mast = document.getElementById("mast");
     if (!eg || !mast || engine === "off") return;
     document.body.classList.add(`ry-e-${engine}`);
+    const rare = RARE[classSlug]
+      ? `<ul class="ry-rare">${RARE[classSlug].map(t => `<li><span class="mark">✦</span>${t}</li>`).join("")}</ul>` : "";
     if (engine === "col") {
       mast.querySelector(":scope > p")?.insertAdjacentHTML("afterend",
-        `<div class="ry-engine"><span class="lab">${eg.label}</span><p>${eg.text}</p></div>`);
+        `<div class="ry-engine"><span class="lab">${eg.label}</span><p class="ry-lede">${eg.lede}</p><p>${eg.text}</p>${rare}</div>`);
     } else if (engine === "seal") {
       mast.querySelector(".cd-stage.cd-seal")?.insertAdjacentHTML("beforeend",
-        `<div class="ry-engine-cap"><span class="lab">${eg.label}</span>${eg.text}</div>`);
+        `<div class="ry-engine-cap"><span class="lab">${eg.label}</span>${eg.lede} ${eg.text}</div>`);
     } else {
       const strip = document.createElement("section");
       strip.className = "plate ry-engine-strip";
-      strip.innerHTML = `<span class="lab">${eg.label}</span><p>${eg.text}</p>`;
+      strip.innerHTML = `<span class="lab">${eg.label}</span><p>${eg.lede} ${eg.text}</p>`;
       mast.insertAdjacentElement("afterend", strip);
     }
   })();

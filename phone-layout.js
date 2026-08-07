@@ -1,9 +1,11 @@
-/* Ruled phone layout for the rhythm study (grammar contract, session 2).
-   Loads last on rhythm-class.html. Four jobs, all at 560px and below:
-   1. Chrome 6b: bottom deck (auto-hiding) replaces the tab row.
-   2. Seal 2: swap the cultist drawing to the tightened 420x224 arrangement.
-   3. Cards 3: All-4 bottom sheet behind the standalone selected card.
-   4. Strips 4: swap in the authored-to-fit S2 phone redraws. */
+/* Ruled phone layout for the rhythm study (grammar contract, sessions 2-3).
+   Loads last on rhythm-class.html. Five jobs, all at 560px and below:
+   1. Chrome 6b (session 3): one sticky row — glyph sigil, search, icon nav with
+      labels that fade on scroll. The session-2 bottom deck is superseded.
+   2. Video: the class-highlight thumbnail returns, masthead top-right.
+   3. Seal 2: swap the cultist drawing to the tightened 420x224 arrangement.
+   4. Cards 3: All-4 bottom sheet behind the standalone selected card.
+   5. Strips 4: swap in the authored-to-fit S2 phone redraws. */
 (() => {
   "use strict";
   const params = new URLSearchParams(location.search);
@@ -13,20 +15,41 @@
   if (!rail || !codex) return;
   const mq = matchMedia("(max-width: 560px)");
 
-  // ---------- 1 · bottom deck ----------
-  document.body.insertAdjacentHTML("beforeend", `<nav class="ph-deck" aria-label="Site pages">
-    <a class="active" href="index.html"><span class="g">⚜</span>Atlas</a>
-    <a href="choose.html"><span class="g">◈</span>Choose</a>
-    <a href="guided.html"><span class="g">✦</span>Guided</a>
-    <a href="loot.html"><span class="g">⚔</span>Loot</a>
-  </nav>`);
-  const deck = document.querySelector(".ph-deck");
-  let lastY = 0;
+  // ---------- 1 · single-row icon chrome (session 3) ----------
+  // The class page has no search backend; the box links to the Atlas search for now
+  // (grammar 6b scope note). Labels fade once scrolled; icons stand alone.
+  const topbar = document.querySelector(".a-topbar");
+  if (topbar) topbar.insertAdjacentHTML("beforeend", `
+    <a class="ph-search" href="index.html" aria-label="Search the Atlas">⌕&nbsp;&nbsp;Search specs, abilities…</a>
+    <nav class="ph-icons" aria-label="Site pages">
+      <a class="active" href="index.html" aria-label="Atlas">⚜<span class="tl">Atlas</span></a>
+      <a href="choose.html" aria-label="Choose">◈<span class="tl">Choose</span></a>
+      <a href="guided.html" aria-label="Guided">✦<span class="tl">Guided</span></a>
+      <a href="loot.html" aria-label="Loot 45+">⚔<span class="tl">Loot</span></a>
+    </nav>`);
+  let wasScrolled = false;
   addEventListener("scroll", () => {
-    const y = scrollY;
-    deck.classList.toggle("hide", y > lastY && y > 70);
-    lastY = y;
+    const scrolled = scrollY > 56;
+    if (scrolled !== wasScrolled) {
+      wasScrolled = scrolled;
+      document.body.classList.toggle("ph-scrolled", scrolled);
+    }
   }, { passive: true });
+
+  // On phone the sigil is its glyph alone; the wordmark returns above 560px.
+  const sigil = document.querySelector(".a-sigil");
+  const sigilFull = sigil ? sigil.textContent : "";
+  function applySigil() { if (sigil) sigil.textContent = mq.matches ? "⚜" : sigilFull; }
+
+  // ---------- 2 · class-highlight thumbnail, masthead top-right ----------
+  const R = window.COA_RENDER;
+  const vid = R?.data.specs.find(s => s.id.split("/")[0] === classSlug && s.media.classVideo)?.media.classVideo;
+  const mast = document.getElementById("mast");
+  if (vid && mast) mast.insertAdjacentHTML("beforeend", `
+    <a class="ph-thumb" href="https://www.youtube.com/watch?v=${vid}" target="_blank" rel="noreferrer"
+       title="Official Ascension class video — an older fantasy reference, not evidence">
+      <img src="https://i.ytimg.com/vi/${vid}/mqdefault.jpg" alt="" loading="lazy">
+      <span class="play">▶</span><span class="cap">Class highlight</span></a>`);
 
   // ---------- 2 · tightened cultist seal ----------
   // The ruled 420x224 arrangement: orbits 60/77, eye at .66, node rows raised,
@@ -206,7 +229,8 @@
     requestAnimationFrame(() => { strippling = false; applyStrips(); syncActive(); });
   }).observe(codex, { childList: true, subtree: true });
 
-  mq.addEventListener("change", () => { applySeal(); applyStrips(); });
+  mq.addEventListener("change", () => { applySigil(); applySeal(); applyStrips(); });
+  applySigil();
   applySeal();
   applyStrips();
 })();
