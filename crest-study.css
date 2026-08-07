@@ -1,0 +1,20 @@
+/* Class crest study, round 7: identity-icon picker + sub line. */
+
+#crests { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
+
+.cr-block { padding: 0 0 12px; }
+.cr-block .cl-top { padding-right: 100px; }
+.cl-medal img { width: 100%; height: 100%; object-fit: cover; border-radius: 2px; display: block; }
+.cl-sub { color: #83888f; font-size: 9.5px; text-transform: uppercase; letter-spacing: .08em; margin-top: 2px; }
+
+.cr-pickname { margin: 8px 14px 0; color: #9a9483; font-size: 10.5px; }
+.cr-pickname b { color: #c9c3b2; font-weight: 600; }
+
+.cr-strip { display: flex; flex-wrap: wrap; gap: 5px; margin: 7px 14px 0; }
+.cr-strip button { width: 34px; height: 34px; padding: 0; border: 1px solid #3a3325; border-radius: 3px;
+  overflow: hidden; cursor: pointer; background: #0a0a0a; }
+.cr-strip img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.cr-strip button:hover { border-color: #c9aa71; }
+.cr-strip button.sel { border-color: color-mix(in srgb, var(--class-color) 58%, white 42%);
+  box-shadow: 0 0 10px color-mix(in srgb, var(--class-color) 35%, transparent); }
+.cr-strip button.unv { opacity: .35; }

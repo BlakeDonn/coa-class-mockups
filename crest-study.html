@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="robots" content="noindex">
+  <title>CoA class crest — round 7 (identity icons &amp; the sub line)</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="explorer.css">
+  <link rel="stylesheet" href="atlas-study.css">
+  <link rel="stylesheet" href="card-study.css?v=6">
+  <link rel="stylesheet" href="card-study-2.css?v=6">
+  <link rel="stylesheet" href="crest-study.css">
+</head>
+<body class="atlas atlas-study">
+
+  <div class="st-banner">
+    <span class="st-tag">Class crest · round 7 · identity icons &amp; the sub line</span>
+    <nav><a href="#subline">Sub line</a><a href="#picker">Icon picker</a></nav>
+  </div>
+
+  <section class="st-sec" id="subline">
+    <header class="st-head">
+      <h2>Round 7 — the crest, upgraded</h2>
+      <p>Two things at once. The glyph medal becomes a <b>real ability icon</b> — tap any candidate
+        in a class's strip to try it as the crest. And the name gains a <b>sub line</b>, like the
+        spec cards' "Cultist · Damage · Melee". Each crest renders as the ruled card top, video
+        corner included, so you judge it in its real home.</p>
+      <p class="st-fine">Web check, 2026-08-07: official class icons exist in the game's assets, but
+        no public labeled set surfaced (the site hides them behind hashed URLs; the build hub blocks
+        fetchers). A deeper Sol web session can hunt the official art if you want it. Candidates
+        below are the classes' own researched ability icons. A dimmed candidate means its icon art
+        is unverified in <code>icon-verification.json</code>.</p>
+    </header>
+    <div class="st-pick" data-pick="sub">
+      <span class="stone">
+        <button data-v="roles" class="active">S1 · Jobs &amp; range</button>
+        <button data-v="count">S2 · Spec count &amp; range</button>
+        <button data-v="none">S0 · No sub line</button>
+      </span>
+    </div>
+    <div class="st-note" id="subNote"></div>
+  </section>
+
+  <section class="st-sec" id="picker">
+    <div id="crests"></div>
+    <p class="st-fine">Tap a candidate to set it as the crest. When you're happy, read me your picks
+      by ability name — "Cultist: Call the Void" is enough. Nothing ships until each pick is ruled.</p>
+  </section>
+
+  <footer class="st-foot">
+    Round 7 asks: the sub-line variant, an icon pick per class (or "defaults are fine"), and whether
+    to commission the Sol web session for the official class art. Rulings land in
+    <code>atlas-page-grammar.md</code> §4.
+  </footer>
+
+  <script src="explorer-data.js"></script>
+  <script src="profile-render.js"></script>
+  <script src="atlas-study.js"></script>
+  <script src="crest-study.js"></script>
+</body>
+</html>
