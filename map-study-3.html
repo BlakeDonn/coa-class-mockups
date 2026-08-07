@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="robots" content="noindex">
+  <title>CoA identity map — round 3 (game axes &amp; the single map)</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="explorer.css">
+  <link rel="stylesheet" href="atlas-study.css">
+  <link rel="stylesheet" href="map-study.css">
+  <link rel="stylesheet" href="map-study-3.css">
+</head>
+<body class="atlas atlas-study">
+
+  <div class="st-banner">
+    <span class="st-tag">Identity map · round 3 · the shape's language &amp; the single map</span>
+    <nav>
+      <a href="#s1">1 · Shape axes</a>
+      <a href="#s2">2 · The map</a>
+    </nav>
+  </div>
+
+  <section class="st-sec" id="s0">
+    <header class="st-head">
+      <h2>Round 3 — your reframe, honestly costed</h2>
+      <p>Two pieces this round. The shape keeps its form but tries <b>game language</b> — Damage,
+        Burst, Sustain, Control, Mobility, Utility. The wall is gone; in its place, <b>one canvas
+        where every spec has a position</b>.</p>
+      <p class="st-warn">The research has no damage/sustain/control numbers. Every game-style value
+        below is an <b>advisor draft</b>, derived live by the printed rules from what the research
+        does say — roles are Data, family and player-text drafts are Inference, and where no evidence
+        exists the spoke renders hollow. Tap any value row to see the actual researched sentence
+        behind it. Adopting this direction commissions a research pass to fill it properly.</p>
+    </header>
+  </section>
+
+  <!-- ============ 1 · THE SHAPE'S LANGUAGE ============ -->
+  <section class="st-sec" id="s1">
+    <header class="st-head">
+      <h2>1 · The shape's language</h2>
+      <p>Same class, three vocabularies, side by side. Each unit is shape + rows; the rows carry
+        the evidence tooltips. Tap a unit for the full profile.</p>
+    </header>
+    <div class="st-pick">
+      <label class="st-lenslab">Class <select id="unitClass"></select></label>
+    </div>
+
+    <div class="st-sub">
+      <h3>G1 · The game hexagon <span class="draft-chip">drafted values</span></h3>
+      <div class="st-note">Damage · Burst · Sustain · Control · Mobility · Utility — the vocabulary
+        players already speak. <span class="gain">Gains:</span> instantly meaningful; shapes differ in
+        ways players care about. <span class="cost">Costs:</span> only partly evidenced today — hollow
+        spokes mark where research is missing; shipping this means commissioning that research.</div>
+      <div class="unit-row unit-row-wide" id="rowG1"></div>
+    </div>
+
+    <div class="st-sub">
+      <h3>G2 · The output diamond <span class="data-chip">roles only — Data tier</span></h3>
+      <div class="st-note">Four axes straight from structural roles: Damage · Toughness · Healing ·
+        Group. <span class="gain">Gains:</span> zero invention, shippable today.
+        <span class="cost">Costs:</span> every pure damage spec draws the same diamond — it cannot
+        tell Corruption from Godblade. Shown so the cost of "structural only" is visible.</div>
+      <div class="unit-row unit-row-wide" id="rowG2"></div>
+    </div>
+
+    <div class="st-sub">
+      <h3>G3 · The demand hexagon <span class="data-chip">fully researched</span></h3>
+      <div class="st-note">Round 2's axes — what the spec asks of you. <span class="gain">Gains:</span>
+        complete, tiered evidence for all 70 today. <span class="cost">Costs:</span> not the language
+        you asked for; describes the player's hands, not the character's powers.</div>
+      <div class="unit-row unit-row-wide" id="rowG3"></div>
+    </div>
+
+    <details class="rules">
+      <summary>The draft rules, in full (G1)</summary>
+      <div id="rulesBody"></div>
+    </details>
+  </section>
+
+  <!-- ============ 2 · THE SINGLE MAP ============ -->
+  <section class="st-sec" id="s2">
+    <header class="st-head">
+      <h2>2 · The map — every spec, one canvas</h2>
+      <p>Three ways to give all 70 a position. Every dot is a spec: class color, class glyph,
+        hover for the name, tap for the profile. No axis orders by quality — positions are identity,
+        never rank.</p>
+    </header>
+
+    <div class="st-sub">
+      <h3>M1 · The role compass <span class="data-chip">structural — Data tier</span></h3>
+      <p class="st-read"><b>How to read it:</b> four poles — Damage, Tank, Healer, Support. A spec
+        sits at its job; a spec with two jobs sits between them. The crowd at the Damage pole is the
+        honest truth of the roster.</p>
+      <div class="st-fieldwrap"><svg id="mapM1" viewBox="0 0 640 560"></svg></div>
+    </div>
+
+    <div class="st-sub">
+      <h3>M2 · The style field <span class="draft-chip">drafted axes</span></h3>
+      <p class="st-read"><b>How to read it:</b> rightward = damage arrives in bursts and windows;
+        leftward = it flows steadily. Upward = your value lands on the group; downward = on your own
+        target. Drafted from families, roles, and player text — same disclosure as G1.</p>
+      <div class="st-fieldwrap"><svg id="mapM2" viewBox="0 0 640 560"></svg></div>
+    </div>
+
+    <div class="st-sub">
+      <h3>M3 · The family starmap <span class="data-chip">site taxonomy</span></h3>
+      <p class="st-read"><b>How to read it:</b> eight constellations, one per playstyle family —
+        the site's own taxonomy. Specs cluster with their kin; neighbors play alike. Family grouping
+        is editorial, as the Atlas already says.</p>
+      <div class="st-fieldwrap"><svg id="mapM3" viewBox="0 0 640 560"></svg></div>
+    </div>
+
+    <p class="st-fine">Dot color follows the class but is not separable at 21 hues (measured, round 1);
+      the glyph inside each dot and the hover name carry identity. Class emphasis interaction lands
+      once a direction wins.</p>
+  </section>
+
+  <footer class="st-foot">
+    Round 3 asks two picks: <b>the shape's language</b> (G1 / G2 / G3, or a blend) and
+    <b>the map</b> (M1 / M2 / M3). If G1 or M2 wins, the axis research becomes a real task for the
+    pilot pipeline. Rulings land in <code>atlas-page-grammar.md</code> §5.
+    Earlier rounds: <a href="atlas-study.html">round 1</a> · <a href="map-study.html">round 2</a>.
+  </footer>
+
+  <dialog id="profileDialog" class="a-dialog">
+    <button class="d-close" id="profileClose" aria-label="Close specialization profile">×</button>
+    <div id="profileContent"></div>
+  </dialog>
+
+  <script src="explorer-data.js"></script>
+  <script src="profile-render.js"></script>
+  <script src="atlas-study.js"></script>
+  <script src="map-study.js"></script>
+  <script src="map-study-3.js"></script>
+</body>
+</html>

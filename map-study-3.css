@@ -1,0 +1,37 @@
+/* Identity map round 3: game-language shapes + single-canvas maps.
+   Builds on atlas-study.css and map-study.css; new file, shipped Atlas untouched. */
+
+.st-warn { margin: 8px 0 0; padding: 9px 13px; border: 1px solid #c8912e3d; border-radius: 3px;
+  background: #c8912e0d; color: #cdb68a; font-size: 12px; max-width: 82ch; }
+.st-warn b { color: #e8c88a; }
+
+.draft-chip, .data-chip { font: 800 8.5px var(--sans); letter-spacing: .1em; text-transform: uppercase;
+  border: 1px solid; border-radius: 999px; padding: 2px 8px; vertical-align: 2px; margin-left: 6px; }
+.draft-chip { color: #c8912e; border-color: #c8912e55; }
+.data-chip { color: #62d69a; border-color: #62d69a44; }
+
+.rules { margin-top: 14px; border: 1px solid #26282d; border-radius: 3px; background: #101113; }
+.rules summary { cursor: pointer; padding: 10px 14px; color: #c9aa71; font: 700 12px var(--serif); }
+.rules[open] summary { border-bottom: 1px solid #1e2025; }
+.rules .inner { padding: 8px 16px 14px; }
+.rules table { border-collapse: collapse; width: 100%; font-size: 11.5px; }
+.rules th, .rules td { text-align: left; padding: 6px 10px 6px 0; border-bottom: 1px solid #1e2025;
+  color: #a9ada7; vertical-align: top; }
+.rules th { color: #8d8678; font: 800 9px var(--sans); letter-spacing: .1em; text-transform: uppercase; }
+.rules td:first-child { color: #c9c3b2; font-weight: 600; white-space: nowrap; }
+
+/* evidence tier tag inside unit rows */
+.pl-row .tt { margin-left: 6px; font-size: 7.5px; font-weight: 800; letter-spacing: .05em;
+  border-radius: 3px; padding: 1px 4px; }
+.pl-row .tt.data { color: #62d69a; background: #62d69a12; }
+.pl-row .tt.inf { color: #c8912e; background: #c8912e16; }
+.pl-row .tt.gap { color: #565b62; background: #565b6212; }
+
+/* map svg text */
+.pole-lab { font: 800 11px var(--sans); letter-spacing: .14em; fill: #8d8678; text-transform: uppercase; }
+.region-lab { font: 700 12px var(--serif); letter-spacing: .05em; fill: #c9aa71; }
+.region-sub { font: 400 8.5px var(--sans); fill: #565b62; }
+.map-dot { cursor: pointer; }
+.map-dot text { font: 700 8px var(--sans); fill: #0b0a09; pointer-events: none; }
+.axis-lab { font: 800 10.5px var(--sans); letter-spacing: .1em; fill: #8d8678; }
+.axis-end { font: 400 8.5px var(--sans); fill: #565b62; }

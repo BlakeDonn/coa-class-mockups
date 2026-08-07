@@ -48,7 +48,8 @@ Same format and authority rules as `class-page-grammar.md`.
 
 | Piece | Decision | Status |
 |---|---|---|
-| Form | REOPENED after round 1. User reframe: the existing 1–5 pip system "was good"; the constellation shape "may be just as good — I'd have to see side by side". Round 2 (`map-study.html`) mocks the two pieces granularly: the **unit** (pip ladder vs shape vs fused) and the **wall** (pip matrix vs shape wall vs pip-card wall), same real specs in every direction. Round-1 field and muster directions set aside unless revived | OPEN (round 2 in flight) |
+| Form | Round-2 verdict (2026-08-07): the shape holds as the unit **in principle**, but its axes reopen — user wants game language ("damage, sustain, control, like other games"), not the demand axes. ALL wall directions rejected; the requirement is **one cohesive canvas where every spec has a position**. Round 3 (`map-study-3.html`) mocks: the shape's language (**G1** game hexagon, drafted · **G2** output diamond, roles-only · **G3** demand hexagon) and the single map (**M1** role compass · **M2** style field · **M3** family starmap) | OPEN (round 3 awaiting picks) |
+| Game-axis evidence | The research holds no damage/sustain/control values. Round-3 drafts derive live by printed rules (roles = Data; family/player-text = Inference; no evidence = hollow). Measured coverage: Control 10/70, Mobility 31/70, Sustain 38/70. Adopting game axes commissions a per-spec research pass (pilot pipeline scope) | OPEN (flag, load-bearing) |
 | Axes | The six researched demand axes, fixed spoke order everywhere (core actions top; clockwise: execution, tracking, reactive, failure cost, setup). Sequencing joins as a seventh spoke with research v3 | PROPOSED |
 | Gaps | An unresearched value renders as a hollow marker on a dashed spoke — never as zero. "Unknown is not zero" (user ruling 2026-08-07) | PROPOSED (law-derived) |
 | Color | Measured, not eyeballed: the 21 class colors are not mutually separable (Ranger ↔ Witch Hunter ΔE 0.3; 4 of 21 read gray-adjacent on the dark surface). Color follows the class but never carries identity alone — glyphs, name labels, and emphasis interaction do the separating | PROPOSED (evidence-backed) |
@@ -85,3 +86,9 @@ Same format and authority rules as `class-page-grammar.md`.
   per round, 2–3 directions each, pick, record. Two rulings landed (standing Classes↔Specs toggle;
   identity card as the class-card base). The map REOPENED with the pip-system reframe; round 2 is
   `map-study.html` (unit + wall, side by side, same real specs).
+- **2026-08-07 (round 2 verdict → round 3):** user: shape yes, but in game language (damage /
+  sustain / control); wall no — wants one plotted map of all 70. Round 3 built (`map-study-3.html`):
+  three shape vocabularies (game hexagon with live-derived draft values quoting their researched
+  evidence sentence; roles-only diamond; demand control) and three single-canvas maps (role compass,
+  style field, family starmap). Evidence coverage measured and disclosed on the page; hollow = no
+  evidence, never zero. Awaiting picks: G1/G2/G3 and M1/M2/M3.
