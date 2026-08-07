@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="robots" content="noindex">
+  <title>CoA identity card — round 4 (piece by piece)</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="explorer.css">
+  <link rel="stylesheet" href="atlas-study.css">
+  <link rel="stylesheet" href="card-study.css">
+</head>
+<body class="atlas atlas-study">
+
+  <div class="st-banner">
+    <span class="st-tag">Identity card · round 4 · piece by piece — proposals, not rulings</span>
+    <nav>
+      <a href="#pA">A · Spec doors</a>
+      <a href="#pB">B · Family row</a>
+      <a href="#pC">C · Tagline</a>
+      <a href="#pD">D · Kick</a>
+      <a href="#live">Composed</a>
+    </nav>
+  </div>
+
+  <section class="st-sec">
+    <header class="st-head">
+      <h2>Round 4 — the identity card, piece by piece</h2>
+      <p>Your ruled base from round 1: crest, roles, families, spec doors. Each piece below shows
+        its 2–3 directions on the same two cards. <b>Cultist</b> is the authored best case
+        (tagline, verbs). <b>Witch Hunter</b> is the honest gap case — nothing authored yet, and
+        nothing invented for it. The stones under each piece feed the composed grid at the bottom.</p>
+    </header>
+  </section>
+
+  <!-- A · SPEC DOORS -->
+  <section class="st-sec" id="pA">
+    <header class="st-head"><h2>A · The spec doors</h2>
+      <p>How the class's specs appear on the card. Every door opens the spec profile.</p></header>
+
+    <div class="st-sub"><h3>D1 · Name chips</h3>
+      <div class="st-note"><span class="gain">Gains:</span> shortest card; scans as a set.
+        <span class="cost">Costs:</span> names alone — a new player learns nothing at the door.</div>
+      <div class="pair" data-piece="doors" data-variant="chips"></div>
+    </div>
+    <div class="st-sub"><h3>D2 · Spec rows</h3>
+      <div class="st-note"><span class="gain">Gains:</span> each door teaches job and reach before
+        the click. <span class="cost">Costs:</span> a taller card; 21 of them lengthen the page.</div>
+      <div class="pair" data-piece="doors" data-variant="rows"></div>
+    </div>
+    <div class="st-sub"><h3>D3 · Spec rows + verb</h3>
+      <div class="st-note">Rows plus the authored one-word verb, gloss on tap — the class page's ruled
+        teaching pattern. <span class="gain">Gains:</span> the richest door; verbs carry identity.
+        <span class="cost">Costs:</span> verbs exist only for Cultist and Tinker today — every other
+        class shows rows without chips until the ×21 authoring pass. Honest, but uneven for a while.
+        Heretic's Convert gloss still carries its research flag.</div>
+      <div class="pair" data-piece="doors" data-variant="rows-verb"></div>
+    </div>
+    <div class="st-pick" data-pick="doors">
+      <span class="stone">
+        <button data-v="chips">D1 chips</button>
+        <button data-v="rows">D2 rows</button>
+        <button data-v="rows-verb" class="active">D3 rows + verb</button>
+      </span>
+    </div>
+  </section>
+
+  <!-- B · FAMILY ROW -->
+  <section class="st-sec" id="pB">
+    <header class="st-head"><h2>B · The family row</h2>
+      <p>"Runs in:" with the class's playstyle families, tagline tooltips teaching the jargon.</p></header>
+    <div class="st-sub"><h3>F1 · Keep the row</h3>
+      <div class="st-note"><span class="gain">Gains:</span> the only place the card says how the class
+        plays, not just what it does; tooltips teach the taxonomy. <span class="cost">Costs:</span>
+        family names are jargon on first read.</div>
+      <div class="pair" data-piece="fams" data-variant="keep"></div>
+    </div>
+    <div class="st-sub"><h3>F2 · Drop it</h3>
+      <div class="st-note"><span class="gain">Gains:</span> a leaner card; families still live in
+        profiles and the starmap. <span class="cost">Costs:</span> the card loses its only playstyle
+        signal — roles alone say job, not feel.</div>
+      <div class="pair" data-piece="fams" data-variant="drop"></div>
+    </div>
+    <div class="st-pick" data-pick="fams">
+      <span class="stone">
+        <button data-v="keep" class="active">F1 keep</button>
+        <button data-v="drop">F2 drop</button>
+      </span>
+    </div>
+  </section>
+
+  <!-- C · TAGLINE -->
+  <section class="st-sec" id="pC">
+    <header class="st-head"><h2>C · The tagline slot</h2>
+      <p>The class page's authored tagline, echoed on the card — with the ruled styled-keyword glow.</p></header>
+    <div class="st-sub"><h3>T1 · No tagline</h3>
+      <div class="st-note"><span class="gain">Gains:</span> uniform cards today.
+        <span class="cost">Costs:</span> the card never speaks in the class's voice.</div>
+      <div class="pair" data-piece="tag" data-variant="none"></div>
+    </div>
+    <div class="st-sub"><h3>T2 · Authored-only slot</h3>
+      <div class="st-note">The slot renders only where a tagline is authored; unauthored classes
+        simply omit it — absent, never invented. <span class="gain">Gains:</span> the best cards get
+        their voice now; the slot fills as the ×21 authoring lands. <span class="cost">Costs:</span>
+        uneven cards until then (one line of height difference).</div>
+      <div class="pair" data-piece="tag" data-variant="authored"></div>
+    </div>
+    <div class="st-pick" data-pick="tag">
+      <span class="stone">
+        <button data-v="none">T1 none</button>
+        <button data-v="authored" class="active">T2 authored-only</button>
+      </span>
+    </div>
+  </section>
+
+  <!-- D · KICK LINE -->
+  <section class="st-sec" id="pD">
+    <header class="st-head"><h2>D · The kick line</h2>
+      <p>The small uppercase line under the class name.</p></header>
+    <div class="pair-duo">
+      <div><h3 class="duo-h">K1 · "Class · 4 specializations"</h3>
+        <div class="pair" data-piece="kick" data-variant="count"></div></div>
+      <div><h3 class="duo-h">K2 · Drop it</h3>
+        <div class="pair" data-piece="kick" data-variant="none"></div></div>
+    </div>
+    <div class="st-note">K1 restates what the doors already show; K2 relies on the doors to carry
+      the count. Small call either way.</div>
+    <div class="st-pick" data-pick="kick">
+      <span class="stone">
+        <button data-v="count" class="active">K1 keep</button>
+        <button data-v="none">K2 drop</button>
+      </span>
+    </div>
+  </section>
+
+  <!-- LIVE COMPOSED GRID -->
+  <section class="st-sec" id="live">
+    <header class="st-head"><h2>The composed result</h2>
+      <p>The ruled Classes altitude as it would ship: the standing toggle, then all 21 cards
+        composed from your current stone picks above. Flip a stone, watch the grid.</p></header>
+    <div class="bar-row" style="padding-left:0;padding-right:0">
+      <span class="st-lens"><button class="active">21 Classes</button><button>70 Specs</button></span>
+      <span class="counter"><b>70</b> specs · <b>21</b> classes · <b>70</b> curated</span>
+    </div>
+    <div class="st-classgrid g-rich" id="liveGrid"></div>
+    <p class="st-fine">Ordering is alphabetical — no order that could read as rank. The "70 Specs"
+      side of the toggle is the shipped family view, unchanged.</p>
+  </section>
+
+  <footer class="st-foot">
+    Round 4 asks four picks: <b>doors</b> (D1/D2/D3) · <b>family row</b> (F1/F2) ·
+    <b>tagline</b> (T1/T2) · <b>kick</b> (K1/K2). Rulings land in
+    <code>atlas-page-grammar.md</code> §4. Earlier rounds:
+    <a href="atlas-study.html">1</a> · <a href="map-study.html">2</a> ·
+    <a href="map-study-3.html">3</a> · <a href="starmap.html">starmap</a>.
+  </footer>
+
+  <dialog id="profileDialog" class="a-dialog">
+    <button class="d-close" id="profileClose" aria-label="Close specialization profile">×</button>
+    <div id="profileContent"></div>
+  </dialog>
+
+  <script src="explorer-data.js"></script>
+  <script src="profile-render.js"></script>
+  <script src="atlas-study.js"></script>
+  <script src="card-study.js"></script>
+</body>
+</html>

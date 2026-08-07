@@ -1,0 +1,26 @@
+/* Identity card study, round 4. Builds on atlas-study.css; shipped Atlas untouched. */
+
+.pair { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 10px; max-width: 700px; }
+.pair-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: 1000px; }
+@media (max-width: 760px) { .pair-duo { grid-template-columns: 1fr; } }
+.duo-h { margin: 0 0 6px; font: 700 14px var(--serif); color: #c9aa71; letter-spacing: .05em; }
+
+/* tagline slot (ruled styled-keyword treatment from the class page) */
+.cl-tagline { margin: 7px 14px 0; font: italic 12.5px Georgia, "Palatino Linotype", serif; color: #b4b8b1; }
+.cl-tagline .kw { font-style: normal; font-weight: 600;
+  color: color-mix(in srgb, var(--class-color) 58%, white 42%);
+  text-shadow: 0 0 14px color-mix(in srgb, var(--class-color) 70%, transparent),
+    0 0 4px color-mix(in srgb, var(--class-color) 45%, transparent); }
+
+/* spec rows (D2/D3) */
+.cl-specrows { display: grid; gap: 5px; padding: 9px 14px 13px; }
+.cl-specrows button { display: flex; align-items: center; gap: 8px; width: 100%; text-align: left;
+  border: 1px solid #2c2a22; border-radius: 3px; padding: 6px 10px; cursor: pointer;
+  background: linear-gradient(#191815, #121110); color: inherit; font: inherit; }
+.cl-specrows button:hover { border-color: color-mix(in srgb, var(--class-color) 58%, white 42%); }
+.cl-specrows .nm { font: 600 12px var(--sans); color: color-mix(in srgb, var(--class-color) 72%, #fff); }
+.cl-specrows .rs { margin-left: auto; color: #83888f; font-size: 9px; text-transform: uppercase;
+  letter-spacing: .07em; white-space: nowrap; }
+.cl-specrows .vb { border: 1px solid color-mix(in srgb, var(--class-color) 45%, transparent);
+  border-radius: 3px; padding: 1px 6px; font: 800 8px var(--sans); letter-spacing: .12em;
+  text-transform: uppercase; color: color-mix(in srgb, var(--class-color) 60%, #fff); cursor: help; }
