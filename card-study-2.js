@@ -111,6 +111,19 @@
     if (mode === "glyph") return `<span class="cl-glyphmark" aria-hidden="true">${c.glyph}</span>`;
     return "";
   }
+  // Ruled sub lines (round 7): jobs under the name via the true-support rule
+  // ("Support" only when a spec supports without healing), range always on its own line.
+  const RANGES = ["Melee", "Hybrid", "Ranged"];
+  const JOBS = ["Damage", "Tank", "Healer", "Support"];
+  function subLines(c) {
+    const jobs = JOBS.filter(r => c.specs.some(s => r === "Support"
+      ? s.roles.includes("Support") && !s.roles.includes("Healer")
+      : s.roles.includes(r)));
+    const ranges = RANGES.filter(r => c.specs.some(s => s.range.includes(r)));
+    return `<div class="cl-sub">${jobs.map(esc).join(" · ")}</div>
+      <div class="cl-sub cl-sub-range">${ranges.join(ranges.length > 2 ? " · " : " &amp; ")}</div>`;
+  }
+
   function composeCard(c, o) {
     const tag = TAGLINES[c.name];
     const eng = o.engine === "blurb" ? ENGINES[c.name]
@@ -118,9 +131,10 @@
       : null;
     const facts = factsFor(c);
     const corner = o.corner || "none";
+    const medal = (S.crestFrame && S.crestFrame(c)) || c.glyph;
     return `<article class="plate cl-card${corner === "video" && videoId(c) ? " has-thumb" : ""}"
         style="--class-color:${c.color}">
-      <div class="cl-top"><span class="cl-medal">${c.glyph}</span><div><h3>${esc(c.name)}</h3></div>
+      <div class="cl-top"><span class="cl-medal">${medal}</span><div><h3>${esc(c.name)}</h3>${subLines(c)}</div>
         ${cornerHTML(c, corner)}</div>
       ${tag ? `<div class="cl-tagline">${esc(tag.t).replace(esc(tag.kw), `<span class="kw">${esc(tag.kw)}</span>`)}</div>` : ""}
       ${eng ? `<div class="cl-engine${eng.p ? "" : " chip"}"><span class="lab">${esc(eng.lab)}</span>${eng.p ? `<p>${esc(eng.p)}</p>` : ""}</div>` : ""}

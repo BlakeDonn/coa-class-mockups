@@ -15,6 +15,11 @@
 .cl-rare li { color: #e8c88a; font-size: 11.5px; cursor: help; }
 .cl-rare .mark { color: #c9aa71; margin-right: 5px; }
 
+/* ruled sub lines (round 7): jobs, then range on its own fainter line */
+.cl-sub { color: #83888f; font-size: 9.5px; text-transform: uppercase; letter-spacing: .08em; margin-top: 2px; }
+.cl-sub-range { color: #565b62; margin-top: 1px; }
+.cl-medal .crest-frame { display: block; width: 100%; height: 100%; }
+
 /* top-right corner (round 6) */
 .cl-top { position: relative; }
 .cl-card.has-thumb .cl-top { padding-right: 100px; }

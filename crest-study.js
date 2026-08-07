@@ -14,15 +14,9 @@
   let verified = {};
   const picks = {}; // class name -> icon entry | { official: true }
 
-  // Official class-crest sprite found by the Sol hunt (sol-class-icon-findings.md):
-  // 21 frames, 5% steps, roster order. Fan-hub asset — rights unconfirmed for shipping.
-  const SPRITE = "https://coabuildhub.com/icons/class-icons.v1.webp";
-  const CREST_POS = { "Barbarian": 0, "Witch Doctor": 5, "Felsworn": 10, "Witch Hunter": 15,
-    "Stormbringer": 20, "Knight of Xoroth": 25, "Guardian": 30, "Templar": 35, "Bloodmage": 40,
-    "Ranger": 45, "Chronomancer": 50, "Necromancer": 55, "Pyromancer": 60, "Cultist": 65,
-    "Starcaller": 70, "Sun Cleric": 75, "Tinker": 80, "Venomancer": 85, "Reaper": 90,
-    "Primalist": 95, "Runemaster": 100 };
-  const crestFrame = c => `<span class="crest-frame" style="background:url('${SPRITE}') ${CREST_POS[c.name]}% 0 / 2100% 100% no-repeat"></span>`;
+  // Official class-crest sprite: shared map in atlas-study.js (Sol hunt findings).
+  const CREST_POS = S.CREST_POS;
+  const crestFrame = c => S.crestFrame(c);
 
   function candidates(c) {
     const seen = new Map();
@@ -49,8 +43,9 @@
     const ranges = RANGES.filter(r => c.specs.some(s => s.range.includes(r)));
     const rangeTxt = ranges.join(ranges.length > 2 ? " · " : " & ");
     if (state.sub === "count")
-      return `<div class="cl-sub">${c.specs.length} specs — ${esc(rangeTxt)}</div>`;
-    return `<div class="cl-sub">${classRoles(c).map(esc).join(" · ")} — ${esc(rangeTxt)}</div>`;
+      return `<div class="cl-sub">${c.specs.length} specs</div><div class="cl-sub cl-sub-range">${esc(rangeTxt)}</div>`;
+    return `<div class="cl-sub">${classRoles(c).map(esc).join(" · ")}</div>
+      <div class="cl-sub cl-sub-range">${esc(rangeTxt)}</div>`;
   }
 
   const SUB_NOTES = {
