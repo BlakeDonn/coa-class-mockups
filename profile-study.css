@@ -14,5 +14,27 @@
 .slim-tag { display: inline-block; margin-top: 5px; color: #8d8678; font-size: 10.5px;
   border: 1px dotted #4a463c; border-radius: 3px; padding: 2px 7px; }
 .slim-foot { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap;
-  margin-top: 12px; padding-top: 9px; border-top: 1px solid #26282d; }
+  margin-top: 10px; padding-top: 8px; border-top: 1px solid #26282d; }
 .slim-foot span { color: var(--faint); font-size: 10px; }
+
+/* The emphasized class-page exits (round 2b) */
+.slim-crest { display: grid; place-items: center; flex: 0 0 auto; overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--class-color) 40%, #3a3427); border-radius: 3px;
+  background: #0d0c0a; }
+.slim-crest .crest-frame { display: block; width: 100%; height: 100%; }
+.slim-exit-top { display: flex; align-items: center; gap: 9px; margin: 0 0 10px; padding: 7px 10px;
+  border: 1px solid color-mix(in srgb, var(--class-color) 40%, #2b2d31); border-radius: 3px;
+  background: #0f1013; text-decoration: none; }
+.slim-exit-top b { font: 600 12px var(--sans); color: color-mix(in srgb, var(--class-color) 72%, #fff); }
+.slim-exit-top .arr { margin-left: auto; color: var(--gold); }
+.slim-exit-door { display: flex; align-items: center; gap: 11px; margin-top: 12px; padding: 10px 12px;
+  border: 1px solid color-mix(in srgb, var(--class-color) 58%, white 42%); border-radius: 3px;
+  background: linear-gradient(#15131a, #0f0d13); text-decoration: none;
+  box-shadow: 0 0 12px color-mix(in srgb, var(--class-color) 22%, transparent); }
+.slim-exit-door b { display: block; font: 700 13px var(--serif);
+  color: color-mix(in srgb, var(--class-color) 72%, #fff); }
+.slim-exit-door .sub { color: #9a978c; font-size: 10.5px; font-style: italic; }
+.slim-exit-door .arr { margin-left: auto; color: var(--gold); font-size: 16px; }
+.slim-exit-door:hover { filter: brightness(1.12); }
+.slim-exit-vid .thumb { width: 74px; height: 42px; object-fit: cover; border-radius: 2px;
+  flex: 0 0 auto; border: 1px solid #3a3427; }

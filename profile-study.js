@@ -10,14 +10,45 @@
     throw new Error("explorer-data, profile-render, atlas-study and card-study-2 must load first");
   const { specById, famById, esc, classSlug } = R;
 
-  const state = { reg: "today" };
+  // Register RULED 2026-08-07: P1, with the full class page emphasized ("that's where
+  // the magic is at"). The exit stone picks the emphasis treatment (round 2b).
+  const state = { reg: "P1", exit: "x1" };
   const el = id => document.getElementById(id);
   const classHref = s => `class.html?c=${classSlug(s)}&from=study#${s.id.split("/")[1]}`;
 
-  // ---------- P1 · the slim quick-look ----------
+  // Exit destination: pilot classes demo the ruled class-page study; the rest go to
+  // today's class page until the site slice + ×21 authoring land.
+  const PILOT_PAGES = { cultist: 1, tinker: 1 };
+  const classPageHref = s => PILOT_PAGES[classSlug(s)]
+    ? `rhythm-class.html?c=${classSlug(s)}` : classHref(s);
+  const classVideo = s => {
+    const c = S.classes.find(x => x.name === s.klass);
+    const v = c && c.specs.find(x => x.media.classVideo);
+    return v ? v.media.classVideo : null;
+  };
+  const crestBox = (s, size) => `<span class="slim-crest" style="width:${size}px;height:${size}px">
+    ${S.crestFrame({ name: s.klass }) || ""}</span>`;
+
+  // The emphasized class-page exits (round 2b variants).
+  function exitHTML(s, exit, where) {
+    const href = classPageHref(s);
+    const tag = C2.TAGLINES[s.klass];
+    const sub = tag ? tag.t : "Engine, specializations, and evidence in one place.";
+    if (where === "top")
+      return exit === "x2" ? `<a class="slim-exit-top" href="${href}">${crestBox(s, 24)}
+        <b>${esc(s.klass)} — open the full class page</b><span class="arr">⇢</span></a>` : "";
+    if (exit === "x2") return "";
+    const vid = exit === "x3" && classVideo(s);
+    return `<a class="slim-exit-door${vid ? " slim-exit-vid" : ""}" href="${href}">
+      ${vid ? `<img class="thumb" src="https://i.ytimg.com/vi/${esc(vid)}/mqdefault.jpg" alt="" loading="lazy">` : crestBox(s, 34)}
+      <div><b>See the full ${esc(s.klass)} page</b><span class="sub">${esc(sub)}</span></div>
+      <span class="arr">⇢</span></a>`;
+  }
+
+  // ---------- P1 · the slim quick-look (RULED register) ----------
   // One phone screen: who this spec is and whether the door is worth opening. Everything
   // deeper lives on the class page. Built only from researched fields; gaps stay absent.
-  function slimHTML(s) {
+  function slimHTML(s, exit = state.exit) {
     const bc = R.bestCtx(s) || "boss";
     const feel = s.contexts[bc]?.feel || "";
     const micro = C2.MICRO[s.id];
@@ -32,6 +63,7 @@
          data-tipname="${esc(i.name)}" data-tip="${esc(i.tip)}">`).join("")}
       <span class="cap">Defining talents — hover or tap to read</span></div>` : "";
     return `<div class="slim" style="--class-color:${s.color}">
+      ${exitHTML(s, exit, "top")}
       <header class="d-head ${s.enriched ? "q-c" : "q-w"}">
         <h2>${esc(s.name)}</h2>
         <div class="d-meta"><span>${esc(s.klass)}</span><span>${[...s.roles, ...s.range].map(esc).join(" · ")}</span>
@@ -47,8 +79,8 @@
         <div>${no.map(t => `<p class="v-no">✕ ${esc(t)}</p>`).join("")}</div>
       </div>` : ""}
       ${icons}
-      <div class="slim-foot"><a class="gold-link" href="${classHref(s)}">View full class ⇢</a>
-        <span>${R.CTX_LABELS[bc]} context · qualitative labels, relative among researched CoA specs</span></div>
+      ${exitHTML(s, exit, "bottom")}
+      <div class="slim-foot"><span>${R.CTX_LABELS[bc]} context · qualitative labels, relative among researched CoA specs</span></div>
     </div>`;
   }
 
@@ -79,6 +111,9 @@
     const s = specById["cultist/godblade"];
     el("regToday").innerHTML = R.profileHTML(s);
     el("regSlim").innerHTML = slimHTML(s);
+    el("exitX1").innerHTML = slimHTML(s, "x1");
+    el("exitX2").innerHTML = slimHTML(s, "x2");
+    el("exitX3").innerHTML = slimHTML(s, "x3");
   }
 
   function init() {
@@ -88,6 +123,15 @@
       if (!b) return;
       state.reg = b.dataset.v;
       group.querySelectorAll("button[data-v]").forEach(x => x.classList.toggle("active", x === b));
+    });
+
+    const exitGroup = document.querySelector("[data-pick='exit']");
+    exitGroup.addEventListener("click", e => {
+      const b = e.target.closest("button[data-v]");
+      if (!b) return;
+      state.exit = b.dataset.v;
+      exitGroup.querySelectorAll("button[data-v]").forEach(x => x.classList.toggle("active", x === b));
+      el("regSlim").innerHTML = slimHTML(specById["cultist/godblade"]);
     });
 
     document.addEventListener("click", e => {

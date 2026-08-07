@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="atlas-study.css">
   <link rel="stylesheet" href="card-study.css?v=6">
   <link rel="stylesheet" href="card-study-2.css?v=11">
-  <link rel="stylesheet" href="profile-study.css">
+  <link rel="stylesheet" href="profile-study.css?v=2">
 </head>
 <body class="atlas atlas-study">
 
@@ -19,30 +19,35 @@
     <span class="st-tag">Choose page · session 5 · round 2 · the spec-profile modal</span>
     <nav>
       <a href="#try">Try it</a>
-      <a href="#side">Side by side</a>
+      <a href="#exit">The exit</a>
+      <a href="#side">Registers</a>
       <a href="choose-study-2.html">round 1b ↩</a>
     </nav>
   </div>
 
   <section class="st-sec">
     <header class="st-head">
-      <h2>Round 2 — what a door opens</h2>
-      <p>Job 2 from the handoff. Today every spec door — Atlas cards, star map, and now your ruled
-        M2 result cards — opens a modal that is a mini class page: nine folds, media, leveling,
-        sentiment. Your framing: it "may need some work or we get rid of it." Four registers below,
-        all real. <b>P1 slim</b> is the only new build; <b>P2</b> loads the ruled class-page study
-        inside the dialog (pilot classes only until the ×21 authoring); <b>P0</b> removes the modal
-        and navigates straight to the spec's page.</p>
+      <h2>Round 2 — RULED: P1, with the class page emphasized</h2>
+      <p>Your call: the slim quick-look wins, and it must sell the full class page — "that's where
+        the magic is at." The small footer link is gone. Round 2b below: <b>three exit
+        treatments</b>, side by side on Godblade, all live in the door demo. Pilot classes open
+        the ruled class-page study; the rest open today's page until the ×21 authoring.</p>
     </header>
   </section>
 
   <section class="st-sec" id="try">
-    <header class="st-head"><h2>Try it — pick a register, then tap any door</h2>
-      <p>Two ruled Atlas cards below. The stone decides what their doors open.</p></header>
+    <header class="st-head"><h2>Try it — tap any door</h2>
+      <p>Two ruled Atlas cards. The exit stone changes the ruled P1 modal; the register stone
+        keeps the other registers around for reference.</p></header>
     <div class="st-pick">
+      <span class="stone" data-pick="exit">
+        <button data-v="x1" class="active">X1 · crest door</button>
+        <button data-v="x2">X2 · top strip</button>
+        <button data-v="x3">X3 · video portal</button>
+      </span>
       <span class="stone" data-pick="reg">
-        <button data-v="today" class="active">Today · mini class page</button>
-        <button data-v="P1">P1 · slim quick-look</button>
+        <button data-v="today">Today · mini class page</button>
+        <button data-v="P1" class="active">P1 · slim (ruled)</button>
         <button data-v="P2">P2 · class page in the modal</button>
         <button data-v="P0">P0 · no modal, navigate</button>
       </span>
@@ -50,9 +55,30 @@
     <div class="pair-duo" id="demoCards"></div>
   </section>
 
+  <section class="st-sec" id="exit">
+    <header class="st-head"><h2>Round 2b — the emphasized exit, three ways</h2>
+      <p>Same slim modal, same spec. Only the class-page exit varies.</p></header>
+    <div class="reg-cols">
+      <div class="reg-col"><h3>X1 · The crest door (bottom)</h3>
+        <div class="reg-plate" id="exitX1"></div>
+        <p class="reg-cap">A class-colored portal bar closes the modal: crest, "See the full
+          Cultist page," the authored tagline where one exists. The modal's final beat is the
+          invitation.</p></div>
+      <div class="reg-col"><h3>X2 · The top strip</h3>
+        <div class="reg-plate" id="exitX2"></div>
+        <p class="reg-cap">The emphasis comes first: you know where the depth lives before you
+          scroll. Quieter; the bottom carries only the context line.</p></div>
+      <div class="reg-col"><h3>X3 · The video portal (bottom)</h3>
+        <div class="reg-plate" id="exitX3"></div>
+        <p class="reg-cap">The crest door with the class-video thumbnail as its art. Biggest pull;
+          risk: the thumb can read as "watch a video," not "enter the page."</p></div>
+    </div>
+  </section>
+
   <section class="st-sec" id="side">
-    <header class="st-head"><h2>Side by side — the same spec, Godblade, in each register</h2>
-      <p>Same subject, only the register varying. Heights are honest: the capped plates scroll.</p></header>
+    <header class="st-head"><h2>The registers, kept for reference — P1 is ruled</h2>
+      <p>Same subject, only the register varying. Heights are honest: the capped plates scroll.
+        The P1 plate follows the exit stone above.</p></header>
     <div class="reg-cols">
       <div class="reg-col"><h3>Today · the mini class page</h3>
         <div class="reg-plate capped" id="regToday"></div>
@@ -76,8 +102,8 @@
   </section>
 
   <footer class="st-foot">
-    Open ask: <b>Today / P0 / P1 / P2</b> — or "P1 but…". Rulings land in
-    <code>choose-page-grammar.md</code> §4.
+    <b>RULED 2026-08-07: P1</b>, class page emphasized ("that's where the magic is at").
+    Open ask: <b>X1 / X2 / X3</b> for the exit. Rulings land in <code>choose-page-grammar.md</code> §4.
   </footer>
 
   <dialog id="profileDialog" class="a-dialog">
@@ -89,6 +115,6 @@
   <script src="profile-render.js"></script>
   <script src="atlas-study.js?v=2"></script>
   <script src="card-study-2.js?v=12"></script>
-  <script src="profile-study.js"></script>
+  <script src="profile-study.js?v=2"></script>
 </body>
 </html>

@@ -51,7 +51,10 @@ Same format and authority rules as `atlas-page-grammar.md` and `class-page-gramm
 
 | Piece | Decision | Status |
 |---|---|---|
-| Register | Round 2 study built (`profile-study.html`): Today's mini class page · **P1 slim quick-look** (one screen: identity, archetype tag, pips, ✓/✕, defining talents, one link out) · **P2 class page in the modal** (ruled study in the dialog, pilot demo) · **P0 remove** (doors navigate). Live demo: two ruled Atlas cards, the stone decides what doors open; Godblade side by side in every register | OPEN (round 2 ask) |
+| Register | **P1 slim quick-look**: one screen — identity, archetype tag, demand pips, ✓/✕, defining talents. The mini-class-page modal retires; the nine folds live on the class page only. User 2026-08-07: "p1" | RULED (2026-08-07 round 2) |
+| Class-page emphasis | The modal must sell the full class page, not just link it. User (2026-08-07, near-verbatim): "make sure we emphasize the full class page, cause that's where the magic is at." The small footer link is replaced by an emphasized exit | RULED (2026-08-07, user's words) |
+| Exit treatment | Which emphasis form: **X1 crest door** (bottom, class-colored portal bar with crest + tagline) · **X2 top strip** (emphasis before the scroll) · **X3 video portal** (bottom bar with the class-video thumb). Rendered side by side in `profile-study.html`; the live demo uses the exit stone | OPEN (round 2b ask) |
+| Exit destination | Pilot classes demo the ruled study (`rhythm-class.html?c=<class>`); the rest link to today's `class.html` until the site slice + ×21 authoring land | note |
 
 ## 5 · Session log
 
@@ -74,3 +77,9 @@ Same format and authority rules as `atlas-page-grammar.md` and `class-page-gramm
   (`profile-study.html`) — Today / P1 slim / P2 class-page-in-modal / P0 remove, with a live
   door demo on two ruled cards and Godblade side by side in every register. Slim renderer
   smoke-tested across all 70 specs. Awaiting the round-2 pick.
+- **2026-08-07 (round 2 verdict → round 2b):** user: "p1 but make sure we emphasize the full
+  class page, cause that's where the magic is at" — register RULED P1, emphasis RULED (§4).
+  Round 2b built and deployed: three exit treatments (X1 crest door, X2 top strip, X3 video
+  portal) side by side on Godblade; the door demo's exit stone drives the live modal. Pilot
+  classes exit to the ruled study; the rest to today's page. Smoke test: 70 specs × 3 exits.
+  Awaiting the round-2b pick.
