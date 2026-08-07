@@ -11,7 +11,7 @@ Authority note: entries here are plans, not rulings. Rulings live in the grammar
 
 | Item | Where | State |
 |---|---|---|
-| Atlas design session: philosophy pass + granularity fork (Guide / Spec Atlas / Class Atlas) + identity map | This repo, briefed in `atlas-map-design-handoff.md` | Handoff ready. Kickoff line at the bottom of the handoff |
+| Atlas design session (session 4, 2026-08-07) | This repo | **Substantially complete.** Rulings in `atlas-page-grammar.md`; reference assembly `atlas-v2.html`; interim map `starmap.html`. Open: star-map placement, starmap phone redraw, ×21 authoring (blocked on pilot), game-axes map (deferred, research ask below) |
 | Five-class research pilot (cultist, tinker, witch-hunter, guardian, knight-of-xoroth) | Main repo, worktree `coa-picker-pilot`, branch `work/2026-08-07-coa-picker-pilot` | In flight, separate session. Its outputs unblock half this file |
 
 ## NEXT (design track, in order)

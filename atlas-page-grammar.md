@@ -15,7 +15,7 @@ Same format and authority rules as `class-page-grammar.md`.
 | Piece | Decision | Status |
 |---|---|---|
 | Phone top row | The ruled single-row icon chrome (class-page grammar §6b) extends to the Atlas shell: ⚜ glyph sigil, search, four icon buttons with always-visible tiny labels. Already ruled page-wide there; applied to the Atlas in the study demo | RULED (§6b) / not yet applied to `index.html` |
-| Workbench button (phone) | The topbar ⚖ button drops below 560px — the bottom tray already appears the moment a spec is benched, so the button is redundant standing chrome. Desktop keeps it | PROPOSED |
+| Workbench button (phone) | The topbar ⚖ button drops below 560px — the bottom tray already appears the moment a spec is benched. Desktop keeps it | RULED (2026-08-07) |
 | Desktop chrome | Labeled tab row unchanged | RULED (keep) |
 
 ## 2 · Masthead & the altitude fork
@@ -23,7 +23,7 @@ Same format and authority rules as `class-page-grammar.md`.
 | Piece | Decision | Status |
 |---|---|---|
 | Fork presentation | A standing Classes ↔ Specs toggle, always visible in the list bar. No doors, no gate. User's words: "always show the toggle between class and specs in the list" (the direction the study labeled C; recorded by description — the user's letter said "b") | RULED (2026-08-07 round 1) |
-| Default altitude | Which side the toggle starts on (classes vs specs). Not yet discussed | OPEN |
+| Default altitude | The toggle starts on **Classes** — 21 cards greet the visitor; specs are one tap away | RULED (2026-08-07) |
 | Guide door | Points at Guided (pilot) — not live on the shipped site. The door ships only when Guided does, or lands in a disabled "soon" state | OPEN (flag) |
 | Masthead copy | "The Atlas of Seventy Paths" + "An identity guide, not a tier list" kept — it already meets the tone bar (§8: stylized phrase introduces, plain language explains) | PROPOSED (keep) |
 
@@ -31,8 +31,8 @@ Same format and authority rules as `class-page-grammar.md`.
 
 | Piece | Decision | Status |
 |---|---|---|
-| Clamp divergence | Cards clamp generated text (`clamp2` on the one-liner, 2-line clamp on the fantasy quote) — a defect under the authored-to-fit law (§8). Card-copy authoring at scale is FROZEN until the five-class pilot lands, so the advisor recommends recording this as a divergence now and clearing it in the pilot's authoring pass | PROPOSED |
-| Pips tooltips | The class page's ruled `tips` treatment (tooltip: "<axis> — <value>" + the why) extends to Atlas card pips | OPEN (not mocked; cheap to add) |
+| Clamp divergence | RECORDED DIVERGENCE: cards clamp generated text until the pilot's authoring pass replaces it with authored-to-fit copy. Known defect under §8, accepted temporarily | RULED (2026-08-07) |
+| Pips tooltips | The class page's ruled `tips` treatment (tooltip: "<axis> — <value>" + the researched why) extends to Atlas card pips NOW — demoed in `atlas-v2.html` | RULED (2026-08-07) |
 | Everything else | Family sections, filters, workbench, evidence tags unchanged — "what we have is solid" | RULED (keep, user framing) |
 
 ## 4 · The Class Atlas (the 21) — new surface
@@ -109,3 +109,10 @@ Same format and authority rules as `class-page-grammar.md`.
   axes can be filled; SHIP the family starmap as the interim. `starmap.html` built and deployed
   (emphasis strip, profiles, structural data only). Research ask recorded on the roadmap. Next
   piece: the identity-card granular round.
+- **2026-08-07 (rounds 4–6, the card, closed):** piece-by-piece rounds ruled the full card: no kick,
+  authored tagline (keyword glow), no family row, E1 engine blurb, ✦ computed facts, R1 icon doors,
+  V1 video corner. Pilot-five taglines/engines approved as TEMPORARY copy (revisit after research).
+  Four standing calls closed: classes-first toggle, no phone ⚖, clamp recorded as divergence, pip
+  tooltips extended to spec cards. **Reference assembly built: `atlas-v2.html`** — the Atlas as
+  ruled, both altitudes, live data. Remaining OPEN: star-map placement (masthead ghost shown as a
+  proposal), starmap phone redraw, the ×21 authoring (blocked on pilot).

@@ -1,0 +1,27 @@
+/* The Atlas as ruled — reference assembly. Chrome and view styles only; the ruled
+   card comes from card-study css, the world from explorer.css. */
+
+/* ruled phone chrome (§6b): one row, glyph sigil, icon nav with standing labels, no ⚖ */
+.ph-icons { display: none; }
+@media (max-width: 560px) {
+  .a-tabs, .wb-button, .sg-word, .a-search kbd { display: none; }
+  .a-topbar { gap: 8px; height: 50px; padding: 0 10px; }
+  .ph-icons { display: flex; gap: 4px; }
+  .ph-icons a { width: 40px; height: 38px; display: grid; place-items: center; border: 1px solid #3a3325;
+    border-radius: 4px; background: linear-gradient(#1c1a15, #131210); color: #9a9483; font-size: 14px;
+    line-height: 1; text-decoration: none; }
+  .ph-icons a.active { color: #ecd7a8; border-color: #6b5a35; }
+  .ph-icons .tl { font-size: 7.5px; font-weight: 800; letter-spacing: .05em; text-transform: uppercase;
+    color: #83888f; line-height: 1; }
+  .ph-icons a.active .tl { color: #c9aa71; }
+}
+
+/* classes view */
+.v2-classes { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
+
+/* spec-card pip rows carry the ruled tooltip affordance */
+.pip-row.tipped { border-bottom: 1px dotted #3a3d42; cursor: help; }
+
+.v2-foot { max-width: 1400px; margin: 10px auto 0; padding: 16px clamp(12px,3vw,40px) 70px;
+  border-top: 1px solid #26282d; color: #83888f; font-size: 11.5px; }
+.v2-foot code { font-family: ui-monospace, Consolas, monospace; color: #c9aa71; font-size: .95em; }
