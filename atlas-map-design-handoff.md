@@ -8,14 +8,19 @@
 
 ## GOAL & SCOPE
 
-Two jobs, in order:
+Three jobs, in order:
 
 1. **Bring the Atlas page (`index.html`) under the class-page design philosophy** ruled in
    `class-page-grammar.md`. The user's framing, verbatim in spirit: "it's really good already,
    I don't want to go too crazy — what we have is solid." This is an additive pass, not a rebuild.
-2. **Explore the spec map.** The user's sketch: a "map" so users can view all specs at once —
+2. **The granularity fork (user direction, 2026-08-07).** On landing, the user picks their altitude:
+   **Guide** (the guided path), **Spec Atlas** (all 70 specs), or **Class Atlas** (the 21 classes as
+   the browsing unit). A class-level atlas is a new surface — mock both the fork presentation and
+   what a class-card grid looks like. Note: Guided is not live on the shipped site; this repo's
+   `guided.html` copy exists for linking in mockups.
+3. **Explore the spec map.** The user's sketch: a "map" so users can view all specs at once —
    "like one of the web charts that has different axes (damage, control, sustain, etc.)".
-   This is a direction to explore and mock, not a ruled feature.
+   A direction to explore and mock, not a ruled feature.
 
 **OUT of scope:** the Choose page and the Guided surfaces (later sessions — see sequencing note);
 granular class-page detail work (endgame folds etc.) is FROZEN until the five-class research pilot
@@ -61,19 +66,21 @@ lands (user ruling 2026-08-07); the main repo; the shipped site; any candidate/s
 - **Mobile-first, desktop echoes the same cadence.**
 - **Diagrams show; sentences tell.** Every visual ships with its one-line reading.
 
-## THE MAP — CONSTRAINTS THAT ARE NOT NEGOTIABLE
+## THE MAP — AN IDENTITY MAP (user framing, ruled 2026-08-07)
 
-- **The Atlas is an identity guide, not a tier list.** A radar/web chart slides toward power ranking
-  fast. Axes must be IDENTITY or DEMAND axes, never performance. The researched complexity axes
-  (core actions, state tracking, setup burden, sequencing, reactive decisions, execution, failure cost)
-  exist per-context with tiers. Roles, range, and family are structural Data. "Damage / control /
-  sustain" as the user sketched them need translating into that evidence-backed space — propose the
-  translation, show the options, get the ruling.
-- **Unknown is not zero.** A radar spoke at zero reads as "bad", not "unresearched". Whatever form
-  wins must render gaps honestly or exclude honestly, stated on the surface.
-- **70 specs on one chart is noise.** Consider class rollups, small multiples, family lenses,
-  filter-driven overlays. Scale is a design question the mockups must answer, not hand-wave.
-- Evidence never changes ordering; nothing sorts by fit or strength.
+The user's ruling on intent: this is an **identity map**, not tier-list territory. Take that framing
+at face value — the map's job is "what is this spec LIKE", answered visually, all at once.
+Design notes that still shape the work:
+
+- **Axes come from the identity/demand space** the research actually covers: the complexity axes
+  (core actions, state tracking, setup burden, sequencing, reactive decisions, execution, failure
+  cost, per-context with tiers), plus structural roles, range, and family. Translate the user's
+  "damage / control / sustain" sketch into that space and show the options.
+- **Unknown is not zero.** A spoke at zero reads as "bad", not "unresearched". Render gaps honestly.
+- **70 specs on one chart is noise.** Class rollups, small multiples, family lenses, or the
+  granularity fork (job 2) may be the answer — the Class Atlas altitude and the map may be the
+  same surface. Mockups decide.
+- The standing law stays as background: no rankings or popularity visuals, evidence never orders.
 
 ## STATE (2026-08-07)
 
