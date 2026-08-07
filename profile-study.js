@@ -11,9 +11,9 @@
   const { specById, famById, esc, classSlug } = R;
 
   // Register RULED 2026-08-07: P1, with the full class page emphasized ("that's where
-  // the magic is at"). Round 2b verdict: bottom/top bars rejected — "up top, next to the
-  // spec, slim down the words". The exit lives in the header row (round 2c variants).
-  const state = { reg: "P1", exit: "x4" };
+  // the magic is at"). Exit RULED through rounds 2b/2c: header row beside the spec name,
+  // crest + "View class page" in text, clear of the dialog's × close.
+  const state = { reg: "P1" };
   const el = id => document.getElementById(id);
   const classHref = s => `class.html?c=${classSlug(s)}&from=study#${s.id.split("/")[1]}`;
 
@@ -30,23 +30,18 @@
   const crestBox = (s, size) => `<span class="slim-crest" style="width:${size}px;height:${size}px">
     ${S.crestFrame({ name: s.klass }) || ""}</span>`;
 
-  // The emphasized class-page exit, header placement (round 2c variants).
-  // Word budget is minimal on purpose; longer words live in the tooltip.
-  function exitHTML(s, exit) {
-    const href = classPageHref(s);
-    if (exit === "x4") return `<a class="slim-exit-chip" href="${href}"
-      data-tipname="${esc(s.klass)}" data-tip="Open the full class page.">
-      ${crestBox(s, 20)}${esc(s.klass)}<span class="arr">⇢</span></a>`;
-    if (exit === "x5") return `<a class="slim-exit-icon" href="${href}"
-      data-tipname="Open the full ${esc(s.klass)} page" data-tip="Engine, specializations, and evidence in one place.">
-      ${crestBox(s, 30)}<span class="tl">${esc(s.klass)} ⇢</span></a>`;
-    return `<a class="slim-exit-word" href="${href}">${esc(s.klass)} ⇢</a>`;
+  // The emphasized class-page exit — RULED form: crest + "View class page" in text,
+  // header row beside the spec name. In the dialog it clears the × close via CSS margin.
+  function exitHTML(s) {
+    return `<a class="slim-exit-chip" href="${classPageHref(s)}"
+      data-tipname="${esc(s.klass)}" data-tip="The full class page — engine, specializations, evidence.">
+      ${crestBox(s, 20)}View class page<span class="arr">⇢</span></a>`;
   }
 
   // ---------- P1 · the slim quick-look (RULED register) ----------
   // One phone screen: who this spec is and whether the door is worth opening. Everything
   // deeper lives on the class page. Built only from researched fields; gaps stay absent.
-  function slimHTML(s, exit = state.exit) {
+  function slimHTML(s) {
     const bc = R.bestCtx(s) || "boss";
     const feel = s.contexts[bc]?.feel || "";
     const micro = C2.MICRO[s.id];
@@ -62,8 +57,8 @@
       <span class="cap">Defining talents — hover or tap to read</span></div>` : "";
     return `<div class="slim" style="--class-color:${s.color}">
       <header class="d-head ${s.enriched ? "q-c" : "q-w"}">
-        <div class="slim-h2row"><h2>${esc(s.name)}</h2>${exitHTML(s, exit)}</div>
-        <div class="d-meta"><span>${[...s.roles, ...s.range].map(esc).join(" · ")}</span>
+        <div class="slim-h2row"><h2>${esc(s.name)}</h2>${exitHTML(s)}</div>
+        <div class="d-meta"><span>${esc(s.klass)}</span><span>${[...s.roles, ...s.range].map(esc).join(" · ")}</span>
           <span>${esc(famById[s.atlas].name)}</span>
           <span class="wb-q ${s.enriched ? "c" : "w"}">${s.enriched ? "Curated · " + esc(s.confidence) : "Research in progress"}</span></div>
         ${micro ? `<span class="slim-tag">${esc(micro)}</span>` : ""}
@@ -107,9 +102,7 @@
     const s = specById["cultist/godblade"];
     el("regToday").innerHTML = R.profileHTML(s);
     el("regSlim").innerHTML = slimHTML(s);
-    el("exitX4").innerHTML = slimHTML(s, "x4");
-    el("exitX5").innerHTML = slimHTML(s, "x5");
-    el("exitX6").innerHTML = slimHTML(s, "x6");
+    el("exitRuled").innerHTML = slimHTML(s);
   }
 
   function init() {
@@ -121,14 +114,6 @@
       group.querySelectorAll("button[data-v]").forEach(x => x.classList.toggle("active", x === b));
     });
 
-    const exitGroup = document.querySelector("[data-pick='exit']");
-    exitGroup.addEventListener("click", e => {
-      const b = e.target.closest("button[data-v]");
-      if (!b) return;
-      state.exit = b.dataset.v;
-      exitGroup.querySelectorAll("button[data-v]").forEach(x => x.classList.toggle("active", x === b));
-      el("regSlim").innerHTML = slimHTML(specById["cultist/godblade"]);
-    });
 
     document.addEventListener("click", e => {
       if (e.target.closest(".rimg") || e.target.closest(".cl-rare li") || e.target.closest(".famname")
