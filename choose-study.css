@@ -1,0 +1,57 @@
+/* Choose study, session 5 round 1 — the result card. New file. */
+
+.cs-pair { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 10px; max-width: 1100px; }
+
+/* Strong-match glow — the ruled lightened-class-color formula, shared by all directions. */
+.rcard.cs-lead, .cs-lead .cl-card { border-color: color-mix(in srgb, var(--class-color) 58%, white 42%);
+  box-shadow: 0 0 12px color-mix(in srgb, var(--class-color) 26%, transparent); }
+
+/* Today's card, kept as the dimmed reference. */
+.cs-ship .cs-pair > * { opacity: .78; }
+
+/* A · identity result */
+.cs-top { display: flex; align-items: center; gap: 10px; }
+.cs-medal { width: 34px; height: 34px; flex: 0 0 34px; display: grid; place-items: center;
+  border: 1px solid color-mix(in srgb, var(--class-color) 40%, #3a3427); border-radius: 3px;
+  background: #0d0c0a; overflow: hidden; }
+.cs-medal .crest-frame { display: block; width: 100%; height: 100%; }
+.cs-glyph { font-size: 17px; color: color-mix(in srgb, var(--class-color) 72%, #fff); }
+.cs-name { font: 700 16px var(--serif); letter-spacing: .02em; text-decoration: none;
+  color: color-mix(in srgb, var(--class-color) 72%, #fff); }
+.cs-name:hover { text-decoration: underline; text-underline-offset: 3px; }
+.cs-a .cl-tagline { margin: 7px 0 0; }
+.cs-door { display: flex; align-items: center; gap: 8px; margin: 8px 0 9px; padding: 7px 10px;
+  border: 1px solid color-mix(in srgb, var(--class-color) 34%, #2b2d31); border-radius: 3px;
+  background: #0f1013; text-decoration: none;
+  box-shadow: 0 0 9px color-mix(in srgb, var(--class-color) 18%, transparent); }
+.cs-door .rimg { display: inline-flex; gap: 3px; flex: 0 0 auto; cursor: help; }
+.cs-door .rimg img { width: 16px; height: 16px; display: block; }
+.cs-door .nm { font: 600 12px var(--sans); color: color-mix(in srgb, var(--class-color) 72%, #fff); }
+.cs-door .mid { color: #8d8678; font-size: 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cs-door .rs { margin-left: auto; color: #83888f; font-size: 9px; text-transform: uppercase;
+  letter-spacing: .07em; flex: 0 0 auto; }
+
+/* B · spec door card */
+.cs-b-top { display: flex; align-items: center; gap: 8px; }
+.cs-b-top .rimg { display: inline-flex; gap: 3px; cursor: help; }
+.cs-b-top .rimg img { width: 18px; height: 18px; display: block; }
+.cs-b-top .mid { color: #8d8678; font-size: 10.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cs-b .m-sub { margin-top: 3px; }
+
+/* C · the full Atlas card with a match band */
+.cs-c { max-width: 460px; width: 100%; }
+.cs-band { border: 1px solid var(--edge-out); border-bottom: 0; border-radius: 3px 3px 0 0;
+  background: #131418; padding: 9px 12px 7px; }
+.cs-band .rtier { float: right; margin-left: 8px; }
+.cs-band .why, .cs-band .trade { margin: 0 0 4px; font-size: 12px; color: #b9bdb4; }
+.cs-band .why em { color: #8fd6a0; font-style: normal; }
+.cs-band .trade em { color: var(--red-soft); font-style: normal; }
+.cs-band .conf { margin: 0 0 3px; color: var(--faint); font-size: 10.5px; }
+.cs-c .cl-card { border-radius: 0 0 3px 3px; }
+.cs-c .cl-specrows button.cs-matched { border-color: color-mix(in srgb, var(--class-color) 58%, white 42%);
+  box-shadow: 0 0 9px color-mix(in srgb, var(--class-color) 30%, transparent); }
+
+/* Composed view */
+.cs-composed { max-width: 760px; margin: 0 auto; }
+.cs-list-C { justify-items: center; }
+.cs-personas { margin: 0 0 12px; }

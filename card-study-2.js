@@ -250,6 +250,6 @@
     renderPairs(); renderLive(); renderDrafts();
   }
 
-  window.COA_CARD2 = { composeCard, factsFor, cleanResource, TAGLINES, ENGINES };
+  window.COA_CARD2 = { composeCard, factsFor, cleanResource, TAGLINES, ENGINES, MICRO, roleImgs };
   if (typeof document !== "undefined" && document.getElementById && document.getElementById("liveGrid")) init();
 })();

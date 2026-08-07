@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="robots" content="noindex">
+  <title>CoA Choose — round 1 (the result card)</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="explorer.css">
+  <link rel="stylesheet" href="atlas-study.css">
+  <link rel="stylesheet" href="card-study.css?v=6">
+  <link rel="stylesheet" href="card-study-2.css?v=11">
+  <link rel="stylesheet" href="choose-study.css">
+</head>
+<body class="atlas atlas-study">
+
+  <div class="st-banner">
+    <span class="st-tag">Choose page · session 5 · round 1 · the result card</span>
+    <nav>
+      <a href="#ship">Today</a>
+      <a href="#pA">A · Identity</a>
+      <a href="#pB">B · Door</a>
+      <a href="#pC">C · Full card</a>
+      <a href="#live">Composed</a>
+    </nav>
+  </div>
+
+  <section class="st-sec">
+    <header class="st-head">
+      <h2>Round 1 — the result card</h2>
+      <p>The first piece of the Choose pass. The questions, scoring, and copy voice are untouched —
+        this round is only about <b>what a result looks like when the Atlas answers you</b>.
+        Everything below is scored live by the shipped engine; swap the persona or adjust any chip
+        and all three directions re-render with real picks. All three share two proposals: the ruled
+        tier badges stay, and the Strong match wears the ruled lightened-class-color glow. Where a
+        tagline or archetype tag is not authored yet it is simply absent, never invented — the
+        default persona surfaces Pyromancer on purpose to show that honest gap.</p>
+    </header>
+    <div class="st-pick"><span class="stone" id="personaRow">
+      <button data-persona="planner" class="active">Overloaded planner</button>
+      <button data-persona="striker">Windowed striker</button>
+      <button data-persona="lifeline">Melee lifeline</button>
+      <button data-persona="commander">Calm commander</button>
+      <button data-persona="wall">Wall with a plan</button>
+    </span></div>
+  </section>
+
+  <section class="st-sec cs-ship" id="ship">
+    <header class="st-head"><h2>As it ships today</h2>
+      <p>Glyph + "class, led by spec" link, roles line, matched / trade-off / confidence. Honest,
+        but it speaks none of the Atlas card language that closed yesterday — no crest, no queue
+        icons, no archetype tag, and the class color barely shows.</p></header>
+    <div class="cs-pair" data-card="ship"></div>
+  </section>
+
+  <section class="st-sec" id="pA">
+    <header class="st-head"><h2>A · The identity result — class first</h2>
+      <p>The Atlas card's top row answers: official crest, class-colored name, the authored tagline
+        where one exists, and the matched spec as a ruled glowing door — queue icons, name,
+        archetype tag, range.</p></header>
+    <div class="st-note"><span class="gain">Gains:</span> the result looks like the Atlas the visitor
+      just left; the crest does the recognition work; the door teaches the spec's job in the ruled
+      language. <span class="cost">Costs:</span> taller than today's card; taglines exist for the
+      pilot five only, so most classes open with crest + door alone until the ×21 authoring.</div>
+    <div class="cs-pair" data-card="A"></div>
+  </section>
+
+  <section class="st-sec" id="pB">
+    <header class="st-head"><h2>B · The spec door card — spec first</h2>
+      <p>The door row grown into a slim card: queue icons + spec name + archetype tag up top, the
+        class named in the sub line. Closest to today's card in weight.</p></header>
+    <div class="st-note"><span class="gain">Gains:</span> slimmest; answers "what will I actually
+      queue as" first; nothing new to author. <span class="cost">Costs:</span> class identity —
+      crest, tagline, color presence — stays a click away; the weakest visual tie to the Atlas.</div>
+    <div class="cs-pair" data-card="B"></div>
+  </section>
+
+  <section class="st-sec" id="pC">
+    <header class="st-head"><h2>C · The full Atlas card, match-banded</h2>
+      <p>The ruled 21-card verbatim — crest, tagline, engine, ✦ facts, doors, video corner — with a
+        band on top carrying tier, matched reasons, trade-off, and confidence. The matched door
+        glows; every door still opens its spec profile.</p></header>
+    <div class="st-note"><span class="gain">Gains:</span> one card language everywhere; the payoff
+      moment feels like a reveal; engine blurb and ✦ facts arrive free. <span class="cost">Costs:</span>
+      by far the tallest results screen — three full cards to scroll; two voices share one surface
+      (the band scores, the card sells); pilot-five copy only.</div>
+    <div class="cs-pair" data-card="C"></div>
+  </section>
+
+  <section class="st-sec" id="live">
+    <header class="st-head"><h2>The composed results screen</h2>
+      <p>The full "The Atlas has read you" screen under your current stone. The adjust chips are the
+        shipped ones and re-score everything live.</p></header>
+    <div class="st-pick" data-pick="card">
+      <span class="stone">
+        <button data-v="A" class="active">A identity</button>
+        <button data-v="B">B door</button>
+        <button data-v="C">C full card</button>
+      </span>
+    </div>
+    <div class="plate oracle cs-composed" id="composed"></div>
+  </section>
+
+  <footer class="st-foot">
+    Open ask: <b>A / B / C</b> for the result card. The question surface, adjust chips, entry copy,
+    and the spec-profile modal are their own rounds. Rulings land in <code>choose-page-grammar.md</code>.
+  </footer>
+
+  <dialog id="profileDialog" class="a-dialog">
+    <button class="d-close" id="profileClose" aria-label="Close specialization profile">×</button>
+    <div id="profileContent"></div>
+  </dialog>
+
+  <script src="explorer-data.js"></script>
+  <script src="profile-render.js"></script>
+  <script src="guided-data.js"></script>
+  <script src="atlas-study.js?v=2"></script>
+  <script src="card-study-2.js?v=12"></script>
+  <script src="choose.js"></script>
+  <script src="choose-study.js"></script>
+</body>
+</html>
