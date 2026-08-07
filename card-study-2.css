@@ -38,8 +38,8 @@
 /* round 8: WoW role art + middle element on doors */
 .key-ico { width: 15px; height: 15px; border-radius: 3px; border: 1px solid #000; vertical-align: -3px; }
 .cl-specrows .rimg { display: inline-flex; gap: 3px; flex: 0 0 auto; cursor: help; }
-/* flat queue glyphs on transparency — no tile chrome */
-.cl-specrows .rimg img { width: 16px; height: 16px; display: block; image-rendering: pixelated; }
+/* HD queue icons (64px source at 16px display) */
+.cl-specrows .rimg img { width: 16px; height: 16px; display: block; }
 .cl-specrows .mid { color: #6e695c; font-size: 10px; white-space: nowrap; overflow: hidden;
   text-overflow: ellipsis; min-width: 0; }
 .cl-specrows .mid.famname { color: #8d8678; border-bottom: 1px dotted #6b5a35; cursor: help; }

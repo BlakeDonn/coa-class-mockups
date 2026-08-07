@@ -77,12 +77,12 @@
   // ---------- role coupling ----------
   const ICONS = { Damage: "⚔", Tank: "🛡", Healer: "✚", Support: "⚑" };
   const COLORS = { Damage: "#cf8484", Tank: "#7fb2ff", Healer: "#8fd6a0", Support: "#d9c27e" };
-  // The real queue icons (round 8 correction): extracted from the Ascension client's own
-  // role texture (patch-A.MPQ, Interface\lfgframe\lfgrole.blp), 4x nearest from native 16px.
-  // Support has no queue icon; the leader crown from the same texture is the default,
-  // the WoW banner tile (zamimg inv_banner_02) is the recorded alternative.
+  // The real queue icons, HD (round 8, quality fix): 64px frames from WoW's
+  // UI-LFG-ICON-ROLES texture (Gethe/wow-ui-textures mirror of the game's interface art).
+  // Support = the texture's green flag (matching gold-rim style — the user's original ask);
+  // the client's 16px leader crown remains the recorded alternative (lfg-leader.png).
   const ROLE_ICON = { Damage: "generated-assets/lfg-damage.png", Tank: "generated-assets/lfg-tank.png",
-    Healer: "generated-assets/lfg-healer.png", Support: "generated-assets/lfg-leader.png" };
+    Healer: "generated-assets/lfg-healer.png", Support: "generated-assets/lfg-flag.png" };
   const roleImgs = roles => `<span class="rimg" data-tipname="${esc(roles.join(" + "))}"
     data-tip="${esc("Role" + (roles.length > 1 ? "s" : "") + ": " + roles.join(", "))}">${roles.map(r =>
     `<img src="${ROLE_ICON[r]}" alt="${esc(r)}">`).join("")}</span>`;
@@ -102,17 +102,17 @@
   // spec's researched fantasy sentence, compressed — not invented. The ×70 pass is a
   // compression pass over text that already exists.
   const MICRO = {
-    "cultist/corruption": "affliction caster",
-    "cultist/dreadnought": "shield tank",
-    "cultist/heretic": "battle healer",
-    "cultist/godblade": "2H Void bruiser",
-    "tinker/demolition": "battlefield bomber",
-    "tinker/invention": "gadget medic",
-    "tinker/mechanics": "scrap engineer",
-    "witch-hunter/boltslinger": "crossbow gunner",
-    "witch-hunter/houndmaster": "pack marksman",
-    "witch-hunter/black-knight": "parry tank",
-    "witch-hunter/inquisition": "four-school inquisitor",
+    "cultist/corruption": "mobile C'Thun affliction caster",
+    "cultist/dreadnought": "eldritch shield tank",
+    "cultist/heretic": "melee battle healer",
+    "cultist/godblade": "2H Void burst bruiser",
+    "tinker/demolition": "explosive battlefield engineer",
+    "tinker/invention": "gadget field medic",
+    "tinker/mechanics": "scrap-fueled combat engineer",
+    "witch-hunter/boltslinger": "run-and-gun crossbow gunner",
+    "witch-hunter/houndmaster": "shadow marksman with hounds",
+    "witch-hunter/black-knight": "dark parry tank",
+    "witch-hunter/inquisition": "four-school burst inquisitor",
   };
 
   function doorsHTML(c, mode) {
