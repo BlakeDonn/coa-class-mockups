@@ -38,20 +38,26 @@
     return s ? s.media.classVideo : null;
   };
 
+  // True-support rule (user, 2026-08-07): "Support" appears only when a spec supports
+  // WITHOUT healing — otherwise every healer class would wear the word.
+  const classRoles = c => ROLES.filter(r => c.specs.some(s => r === "Support"
+    ? s.roles.includes("Support") && !s.roles.includes("Healer")
+    : s.roles.includes(r)));
+
   function subLine(c) {
     if (state.sub === "none") return "";
     const ranges = RANGES.filter(r => c.specs.some(s => s.range.includes(r)));
     const rangeTxt = ranges.join(ranges.length > 2 ? " · " : " & ");
     if (state.sub === "count")
       return `<div class="cl-sub">${c.specs.length} specs — ${esc(rangeTxt)}</div>`;
-    const roles = ROLES.filter(r => c.specs.some(s => s.roles.includes(r)));
-    return `<div class="cl-sub">${roles.map(esc).join(" · ")} — ${esc(rangeTxt)}</div>`;
+    return `<div class="cl-sub">${classRoles(c).map(esc).join(" · ")} — ${esc(rangeTxt)}</div>`;
   }
 
   const SUB_NOTES = {
-    roles: `<b>S1 · Jobs & range.</b> The union of what the class can do — "Damage · Tank · Healer ·
-      Support — Melee & Ranged". The spec-card grammar, one level up. My recommendation: the doors
-      show each spec's own job; this line answers "what can this class be" before any reading.`,
+    roles: `<b>S1 · Jobs & range.</b> What the class can be, under the true-support rule: "Support"
+      appears only when a spec supports without healing. Five classes carry it — Barbarian,
+      Stormbringer, Guardian, Ranger, Sun Cleric. Healers no longer wear the word for free.
+      Cultist now reads "Damage · Tank · Healer — Melee & Ranged".`,
     count: `<b>S2 · Spec count & range.</b> "4 specs — Melee & Ranged". Leaner, but it half-revives
       the dropped kick line and the doors already show the count.`,
     none: `<b>S0 · No sub line.</b> The ruled status quo — the name stands alone and the doors carry

@@ -52,7 +52,9 @@ Same format and authority rules as `class-page-grammar.md`.
 | Rare ✦ lines | The class-page rare-part pattern comes to the card: 1–2 terse ✦ fragments, every one tracing to a computable roster fact. No fact, no bullet | RULED pattern (2026-08-07, user ask) |
 | Ordering | Alphabetical; no ordering that could read as rank | PROPOSED |
 | Crest icon | **The official class crest, all 21 classes** (build-hub sprite `class-icons.v1.webp`; findings in `sol-class-icon-findings.md`). Ability icons stay as the recorded fallback. STANDING FLAG: the hub is fan-made, no license published — shipping the crests needs rights confirmation before the site slice | RULED (2026-08-07 round 7) / rights flag OPEN |
-| Crest sub line | Round 7 variants: S1 jobs & range (advisor rec) · S2 spec count & range · S0 none (current ruled state) | OPEN (awaiting pick) |
+| Crest sub line | Round 7 variants: S1 jobs & range (advisor rec, amended by the true-support rule) · S2 spec count & range · S0 none | OPEN (awaiting final pick) |
+| True-support rule | Class-level "Support" appears only when a spec supports WITHOUT healing (user 2026-08-07: "wouldn't every healer be quantified as support?"). Five classes qualify: Barbarian, Stormbringer, Guardian, Ranger, Sun Cleric. Spec-level role data is untouched — doors still show a Healer+Support spec's ⚑, and the taxonomy stays research-derived | RULED (principle) |
+| True-support ripples | Two surfaces disagree with the new rule and need explicit dispositions: (1) the class page's RULED masthead role line ("Damage ×2 · Healer · Support · Tank" for Cultist) counts Heretic as Support; (2) the "four specs, four different jobs" ✦ facts and the session-3 verified roster fact "four-role classes = 4 of 21" both use the inflated counting | OPEN (flag) |
 
 ## 5 · The identity map
 
