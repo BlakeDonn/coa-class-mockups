@@ -77,13 +77,15 @@
   // ---------- role coupling ----------
   const ICONS = { Damage: "⚔", Tank: "🛡", Healer: "✚", Support: "⚑" };
   const COLORS = { Damage: "#cf8484", Tank: "#7fb2ff", Healer: "#8fd6a0", Support: "#d9c27e" };
-  // WoW icon art (round 8): verified live in the zamimg icon namespace. The literal LFG
-  // atlas trio is not publicly hosted; these carry the same visual language.
-  const ROLE_ICON = { Damage: "ability_dualwield", Tank: "ability_defend",
-    Healer: "spell_chargepositive", Support: "inv_banner_02" };
+  // The real queue icons (round 8 correction): extracted from the Ascension client's own
+  // role texture (patch-A.MPQ, Interface\lfgframe\lfgrole.blp), 4x nearest from native 16px.
+  // Support has no queue icon; the leader crown from the same texture is the default,
+  // the WoW banner tile (zamimg inv_banner_02) is the recorded alternative.
+  const ROLE_ICON = { Damage: "generated-assets/lfg-damage.png", Tank: "generated-assets/lfg-tank.png",
+    Healer: "generated-assets/lfg-healer.png", Support: "generated-assets/lfg-leader.png" };
   const roleImgs = roles => `<span class="rimg" data-tipname="${esc(roles.join(" + "))}"
     data-tip="${esc("Role" + (roles.length > 1 ? "s" : "") + ": " + roles.join(", "))}">${roles.map(r =>
-    `<img src="https://wow.zamimg.com/images/wow/icons/medium/${ROLE_ICON[r]}.jpg" alt="${esc(r)}">`).join("")}</span>`;
+    `<img src="${ROLE_ICON[r]}" alt="${esc(r)}">`).join("")}</span>`;
 
   // Round-8 middle elements. Verbs/glosses: the authored set (class-page grammar §2).
   // Micro-words: ADVISOR DRAFTS for Cultist/Tinker only, grounded in researched text.
@@ -96,14 +98,21 @@
     "tinker/invention": ["Restore", "Deploy healing machines where the group will need them."],
     "tinker/mechanics": ["Overclock", "Push your machines and combat suit past their limits."],
   };
+  // Archetype tags (round 8 correction: "2H bruiser" style). Each is EXTRACTED from the
+  // spec's researched fantasy sentence, compressed — not invented. The ×70 pass is a
+  // compression pass over text that already exists.
   const MICRO = {
-    "cultist/corruption": "rot on every target",
-    "cultist/dreadnought": "madness held steady",
-    "cultist/heretic": "violence becomes healing",
-    "cultist/godblade": "courts madness for burst",
-    "tinker/demolition": "everything explodes at once",
-    "tinker/invention": "gadgets keep allies standing",
-    "tinker/mechanics": "gunfire feeds the machines",
+    "cultist/corruption": "affliction caster",
+    "cultist/dreadnought": "shield tank",
+    "cultist/heretic": "battle healer",
+    "cultist/godblade": "2H Void bruiser",
+    "tinker/demolition": "battlefield bomber",
+    "tinker/invention": "gadget medic",
+    "tinker/mechanics": "scrap engineer",
+    "witch-hunter/boltslinger": "crossbow gunner",
+    "witch-hunter/houndmaster": "pack marksman",
+    "witch-hunter/black-knight": "parry tank",
+    "witch-hunter/inquisition": "four-school inquisitor",
   };
 
   function doorsHTML(c, mode) {
