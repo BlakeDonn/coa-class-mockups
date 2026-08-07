@@ -12,7 +12,17 @@
   const RANGES = ["Melee", "Hybrid", "Ranged"];
   const state = { sub: "roles" };
   let verified = {};
-  const picks = {}; // class name -> icon entry
+  const picks = {}; // class name -> icon entry | { official: true }
+
+  // Official class-crest sprite found by the Sol hunt (sol-class-icon-findings.md):
+  // 21 frames, 5% steps, roster order. Fan-hub asset — rights unconfirmed for shipping.
+  const SPRITE = "https://coabuildhub.com/icons/class-icons.v1.webp";
+  const CREST_POS = { "Barbarian": 0, "Witch Doctor": 5, "Felsworn": 10, "Witch Hunter": 15,
+    "Stormbringer": 20, "Knight of Xoroth": 25, "Guardian": 30, "Templar": 35, "Bloodmage": 40,
+    "Ranger": 45, "Chronomancer": 50, "Necromancer": 55, "Pyromancer": 60, "Cultist": 65,
+    "Starcaller": 70, "Sun Cleric": 75, "Tinker": 80, "Venomancer": 85, "Reaper": 90,
+    "Primalist": 95, "Runemaster": 100 };
+  const crestFrame = c => `<span class="crest-frame" style="background:url('${SPRITE}') ${CREST_POS[c.name]}% 0 / 2100% 100% no-repeat"></span>`;
 
   function candidates(c) {
     const seen = new Map();
@@ -21,10 +31,8 @@
         if (e.icon && !seen.has(e.icon)) seen.set(e.icon, { ...e, spec: s.name });
     return [...seen.values()];
   }
-  const defaultPick = c => {
-    const cand = candidates(c);
-    return cand.find(e => verified[e.icon]) || cand[0] || null;
-  };
+  const defaultPick = c => c.name in CREST_POS ? { official: true }
+    : (candidates(c).find(e => verified[e.icon]) || candidates(c)[0] || null);
   const videoId = c => {
     const s = c.specs.find(s => (s.media || {}).classVideo);
     return s ? s.media.classVideo : null;
@@ -55,17 +63,23 @@
   function crestBlock(c) {
     const p = picks[c.name];
     const vid = videoId(c);
+    const medal = !p ? c.glyph : p.official ? crestFrame(c)
+      : `<img src="https://coabuildhub.com/skill-icons/${esc(p.icon)}.jpg" alt="">`;
+    const pickName = !p ? "—" : p.official ? "Official class crest (build hub)" : esc(p.name);
     return `<article class="plate cl-card cr-block" style="--class-color:${c.color}" data-cr="${esc(c.name)}">
       <div class="cl-top">
-        <span class="cl-medal">${p ? `<img src="https://coabuildhub.com/skill-icons/${esc(p.icon)}.jpg" alt="">` : c.glyph}</span>
+        <span class="cl-medal">${medal}</span>
         <div><h3>${esc(c.name)}</h3>${subLine(c)}</div>
         ${vid ? `<a class="cl-thumb" href="https://www.youtube.com/watch?v=${esc(vid)}" target="_blank" rel="noreferrer">
           <img src="https://i.ytimg.com/vi/${esc(vid)}/mqdefault.jpg" alt="" loading="lazy">
           <span class="play">▶</span><span class="cap">Class highlight</span></a>` : ""}
       </div>
-      <div class="cr-pickname">Crest: <b>${p ? esc(p.name) : "—"}</b>${p ? ` — from ${esc(p.spec)}` : ""}</div>
-      <div class="cr-strip">${candidates(c).map(e =>
-        `<button class="${p && e.icon === p.icon ? "sel" : ""}${verified[e.icon] ? "" : " unv"}"
+      <div class="cr-pickname">Crest: <b>${pickName}</b>${p && !p.official ? ` — from ${esc(p.spec)}` : ""}</div>
+      <div class="cr-strip">
+        ${c.name in CREST_POS ? `<button class="${p && p.official ? "sel" : ""}" data-icon="__official__"
+          title="Official class crest — build hub sprite (rights unconfirmed)">${crestFrame(c)}</button>` : ""}
+        ${candidates(c).map(e =>
+        `<button class="${p && !p.official && e.icon === p.icon ? "sel" : ""}${verified[e.icon] ? "" : " unv"}"
           data-icon="${esc(e.icon)}" title="${esc(e.name)} — ${esc(e.spec)}${verified[e.icon] ? "" : " (icon art unverified)"}">
           <img src="https://coabuildhub.com/skill-icons/${esc(e.icon)}.jpg" alt="${esc(e.name)}" loading="lazy"></button>`).join("")}</div>
     </article>`;
@@ -92,7 +106,8 @@
       if (!b) return;
       const block = e.target.closest("[data-cr]");
       const c = classes.find(x => x.name === block.dataset.cr);
-      picks[c.name] = candidates(c).find(x => x.icon === b.dataset.icon);
+      picks[c.name] = b.dataset.icon === "__official__" ? { official: true }
+        : candidates(c).find(x => x.icon === b.dataset.icon);
       render();
     });
   }

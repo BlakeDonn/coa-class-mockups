@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="atlas-study.css">
   <link rel="stylesheet" href="card-study.css?v=6">
   <link rel="stylesheet" href="card-study-2.css?v=6">
-  <link rel="stylesheet" href="crest-study.css">
+  <link rel="stylesheet" href="crest-study.css?v=2">
 </head>
 <body class="atlas atlas-study">
 
@@ -27,11 +27,12 @@
         in a class's strip to try it as the crest. And the name gains a <b>sub line</b>, like the
         spec cards' "Cultist · Damage · Melee". Each crest renders as the ruled card top, video
         corner included, so you judge it in its real home.</p>
-      <p class="st-fine">Web check, 2026-08-07: official class icons exist in the game's assets, but
-        no public labeled set surfaced (the site hides them behind hashed URLs; the build hub blocks
-        fetchers). A deeper Sol web session can hunt the official art if you want it. Candidates
-        below are the classes' own researched ability icons. A dimmed candidate means its icon art
-        is unverified in <code>icon-verification.json</code>.</p>
+      <p class="st-fine">Sol hunt, 2026-08-07 (<code>sol-class-icon-findings.md</code>): the build
+        hub ships a 21-frame class-crest sprite with a named manifest — every class strip now leads
+        with its <b>official crest</b>, set as the default. Provenance flag: the hub is fan-made and
+        publishes no license, so shipping the crests needs rights confirmation. Ability-icon
+        candidates follow as the fallback; dimmed means art unverified in
+        <code>icon-verification.json</code>.</p>
     </header>
     <div class="st-pick" data-pick="sub">
       <span class="stone">
@@ -50,14 +51,14 @@
   </section>
 
   <footer class="st-foot">
-    Round 7 asks: the sub-line variant, an icon pick per class (or "defaults are fine"), and whether
-    to commission the Sol web session for the official class art. Rulings land in
+    Round 7 asks: the sub-line variant, and a crest pick per class — official crest is the default;
+    tap an ability icon to override. "Officials everywhere" is a fine answer. Rulings land in
     <code>atlas-page-grammar.md</code> §4.
   </footer>
 
   <script src="explorer-data.js"></script>
   <script src="profile-render.js"></script>
   <script src="atlas-study.js"></script>
-  <script src="crest-study.js"></script>
+  <script src="crest-study.js?v=2"></script>
 </body>
 </html>
