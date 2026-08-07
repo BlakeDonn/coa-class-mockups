@@ -77,10 +77,49 @@
   // ---------- role coupling ----------
   const ICONS = { Damage: "⚔", Tank: "🛡", Healer: "✚", Support: "⚑" };
   const COLORS = { Damage: "#cf8484", Tank: "#7fb2ff", Healer: "#8fd6a0", Support: "#d9c27e" };
+  // WoW icon art (round 8): verified live in the zamimg icon namespace. The literal LFG
+  // atlas trio is not publicly hosted; these carry the same visual language.
+  const ROLE_ICON = { Damage: "ability_dualwield", Tank: "ability_defend",
+    Healer: "spell_chargepositive", Support: "inv_banner_02" };
+  const roleImgs = roles => `<span class="rimg" data-tipname="${esc(roles.join(" + "))}"
+    data-tip="${esc("Role" + (roles.length > 1 ? "s" : "") + ": " + roles.join(", "))}">${roles.map(r =>
+    `<img src="https://wow.zamimg.com/images/wow/icons/medium/${ROLE_ICON[r]}.jpg" alt="${esc(r)}">`).join("")}</span>`;
+
+  // Round-8 middle elements. Verbs/glosses: the authored set (class-page grammar §2).
+  // Micro-words: ADVISOR DRAFTS for Cultist/Tinker only, grounded in researched text.
+  const VERBS = {
+    "cultist/corruption": ["Spread", "Keep damage-over-time on every target; the engine is coverage."],
+    "cultist/dreadnought": ["Endure", "Hold Insanity in a managed band and turn it into survival."],
+    "cultist/heretic": ["Convert", "Turn melee aggression into healing for the group."],
+    "cultist/godblade": ["Cross", "Push Insanity to 100 on purpose and fight inside the dangerous payoff state."],
+    "tinker/demolition": ["Detonate", "Stack explosives and machines, then fire them in one overlapping window."],
+    "tinker/invention": ["Restore", "Deploy healing machines where the group will need them."],
+    "tinker/mechanics": ["Overclock", "Push your machines and combat suit past their limits."],
+  };
+  const MICRO = {
+    "cultist/corruption": "rot on every target",
+    "cultist/dreadnought": "madness held steady",
+    "cultist/heretic": "violence becomes healing",
+    "cultist/godblade": "courts madness for burst",
+    "tinker/demolition": "everything explodes at once",
+    "tinker/invention": "gadgets keep allies standing",
+    "tinker/mechanics": "gunfire feeds the machines",
+  };
 
   function doorsHTML(c, mode) {
     return `<div class="cl-specrows">${c.specs.map(s => {
       const roles = s.roles, range = s.range.join(" · ");
+      if (mode.startsWith("wow-")) {
+        const fam = data.families.find(f => f.id === s.atlas);
+        const mid = mode === "wow-family"
+          ? `<span class="mid famname" data-tipname="${esc(fam.name)}" data-tip="${esc(fam.tagline)}">${esc(fam.name)}</span>`
+          : mode === "wow-words" && MICRO[s.id] ? `<span class="mid">${esc(MICRO[s.id])}</span>`
+          : mode === "wow-verb" && VERBS[s.id]
+            ? `<span class="vb" data-tipname="${esc(VERBS[s.id][0])}" data-tip="${esc(VERBS[s.id][1])}">${esc(VERBS[s.id][0])}</span>`
+          : "";
+        return `<button data-open="${s.id}">${roleImgs(roles)}<span class="nm">${esc(s.name)}</span>
+          ${mid}<span class="rs">${esc(range)}</span></button>`;
+      }
       if (mode === "icons")
         return `<button data-open="${s.id}"><span class="ri" data-tipname="${esc(roles.join(" + "))}"
             data-tip="${esc("Role" + (roles.length > 1 ? "s" : "") + ": " + roles.join(", "))}">${roles.map(r => ICONS[r]).join("")}</span>
@@ -192,7 +231,8 @@
       });
     });
     document.addEventListener("click", e => {
-      if (e.target.closest(".ri") || e.target.closest(".cl-rare li")) return; // tooltips, not doors
+      if (e.target.closest(".ri") || e.target.closest(".cl-rare li") || e.target.closest(".rimg")
+        || e.target.closest(".vb") || e.target.closest(".famname")) return; // tooltips, not doors
       const t = e.target.closest("[data-open]");
       if (t) openProfile(t.dataset.open);
     });

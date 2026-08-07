@@ -35,6 +35,18 @@
   pointer-events: none; color: color-mix(in srgb, var(--class-color) 28%, transparent);
   text-shadow: 0 0 18px color-mix(in srgb, var(--class-color) 35%, transparent); }
 
+/* round 8: WoW role art + middle element on doors */
+.key-ico { width: 15px; height: 15px; border-radius: 3px; border: 1px solid #000; vertical-align: -3px; }
+.cl-specrows .rimg { display: inline-flex; gap: 3px; flex: 0 0 auto; cursor: help; }
+.cl-specrows .rimg img { width: 16px; height: 16px; border-radius: 3px; border: 1px solid #000;
+  box-shadow: 0 0 0 1px #3a3325; display: block; }
+.cl-specrows .mid { color: #6e695c; font-size: 10px; white-space: nowrap; overflow: hidden;
+  text-overflow: ellipsis; min-width: 0; }
+.cl-specrows .mid.famname { color: #8d8678; border-bottom: 1px dotted #6b5a35; cursor: help; }
+.cl-specrows .vb { border: 1px solid color-mix(in srgb, var(--class-color) 45%, transparent);
+  border-radius: 3px; padding: 1px 6px; font: 800 8px var(--sans); letter-spacing: .12em;
+  text-transform: uppercase; color: color-mix(in srgb, var(--class-color) 60%, #fff); cursor: help; }
+
 /* role coupling on doors */
 .cl-specrows .ri { display: inline-flex; gap: 2px; font-size: 11px; line-height: 1; cursor: help;
   color: #c9c3b2; flex: 0 0 auto; }

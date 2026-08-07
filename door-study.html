@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="robots" content="noindex">
+  <title>CoA spec doors — round 8 (WoW role art &amp; the middle element)</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="explorer.css">
+  <link rel="stylesheet" href="atlas-study.css">
+  <link rel="stylesheet" href="card-study.css?v=6">
+  <link rel="stylesheet" href="card-study-2.css?v=8">
+</head>
+<body class="atlas atlas-study">
+
+  <div class="st-banner">
+    <span class="st-tag">Spec doors · round 8 · WoW role art &amp; the middle element</span>
+    <nav><a href="#pM">Middle element</a><a href="#live">Composed</a></nav>
+  </div>
+
+  <section class="st-sec">
+    <header class="st-head">
+      <h2>Round 8 — the doors, finished</h2>
+      <p>Two changes at once. The role glyphs become <b>real WoW icon art</b>:
+        <img class="key-ico" src="https://wow.zamimg.com/images/wow/icons/medium/ability_dualwield.jpg" alt=""> Damage ·
+        <img class="key-ico" src="https://wow.zamimg.com/images/wow/icons/medium/ability_defend.jpg" alt=""> Tank ·
+        <img class="key-ico" src="https://wow.zamimg.com/images/wow/icons/medium/spell_chargepositive.jpg" alt=""> Healer ·
+        <img class="key-ico" src="https://wow.zamimg.com/images/wow/icons/medium/inv_banner_02.jpg" alt=""> Support —
+        the war banner is your flag. And each door gains <b>one more thing</b> between the name and
+        the range, three ways below.</p>
+      <p class="st-fine">Icon provenance: the literal group-finder atlas is not publicly hosted;
+        these are real WoW icons carrying the same visual language, served from the same host as the
+        site's skill icons. Extracting the exact LFG art from the client is a recorded follow-up if
+        wanted.</p>
+    </header>
+  </section>
+
+  <section class="st-sec" id="pM">
+    <div class="st-sub"><h3>M1 · The family</h3>
+      <div class="st-note">"The family stuff we did before", per spec: each door names its playstyle
+        family, tagline on tap. <span class="gain">Gains:</span> zero authoring, covers all 70,
+        teaches the taxonomy exactly where it applies. <span class="cost">Costs:</span> family names
+        are long — rows tighten on phone; jargon returns to the card, one level lower.</div>
+      <div class="pair" data-variant="wow-family"></div>
+    </div>
+    <div class="st-sub"><h3>M2 · Three-to-four words</h3>
+      <div class="st-note">An authored micro-line: "courts madness for burst". <span class="gain">Gains:</span>
+        the most character per pixel; reads like a whisper of the spec fantasy.
+        <span class="cost">Costs:</span> authoring ×70 — drafted for Cultist and Tinker only
+        (advisor drafts); every other class shows plain rows until the big pass.</div>
+      <div class="pair" data-variant="wow-words"></div>
+    </div>
+    <div class="st-sub"><h3>M3 · The verb</h3>
+      <div class="st-note">The class page's ruled one-word verb as a chip, gloss on tap.
+        <span class="gain">Gains:</span> reuses ruled, teachable vocabulary; the seal and the card
+        speak the same words. <span class="cost">Costs:</span> same coverage gap — Cultist and
+        Tinker only until the ×21 authoring; Convert's gloss still carries its research flag.</div>
+      <div class="pair" data-variant="wow-verb"></div>
+    </div>
+    <div class="st-pick" data-pick="doors">
+      <span class="stone">
+        <button data-v="wow-family" class="active">M1 family</button>
+        <button data-v="wow-words">M2 words</button>
+        <button data-v="wow-verb">M3 verb</button>
+      </span>
+    </div>
+  </section>
+
+  <section class="st-sec" id="live">
+    <header class="st-head"><h2>The composed result</h2>
+      <p>All 21 ruled cards with WoW role art and your current middle-element pick.</p></header>
+    <div class="st-classgrid g-rich" id="doorGrid"></div>
+  </section>
+
+  <footer class="st-foot">
+    Round 8 asks two picks: the WoW role art (yes/no — it renders everywhere on this page) and the
+    middle element (M1 / M2 / M3, or none). Rulings land in <code>atlas-page-grammar.md</code> §4.
+  </footer>
+
+  <dialog id="profileDialog" class="a-dialog">
+    <button class="d-close" id="profileClose" aria-label="Close specialization profile">×</button>
+    <div id="profileContent"></div>
+  </dialog>
+
+  <script src="explorer-data.js"></script>
+  <script src="profile-render.js"></script>
+  <script src="atlas-study.js?v=2"></script>
+  <script src="card-study-2.js?v=8"></script>
+  <script src="door-study.js"></script>
+</body>
+</html>
