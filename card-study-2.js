@@ -98,21 +98,21 @@
     "tinker/invention": ["Restore", "Deploy healing machines where the group will need them."],
     "tinker/mechanics": ["Overclock", "Push your machines and combat suit past their limits."],
   };
-  // Archetype tags (round 8 correction: "2H bruiser" style). Each is EXTRACTED from the
-  // spec's researched fantasy sentence, compressed — not invented. The ×70 pass is a
-  // compression pass over text that already exists.
+  // Archetype tags, RULED round 8. Authoring rule (user 2026-08-07): describe PLAYSTYLE,
+  // not fantasy — lore nouns and flavor adjectives out, mechanics words in. Each tag still
+  // traces to the spec's researched fantasy sentence. Temporary copy; the big pass revisits.
   const MICRO = {
-    "cultist/corruption": "mobile C'Thun affliction caster",
-    "cultist/dreadnought": "eldritch shield tank",
+    "cultist/corruption": "mobile DoT caster",
+    "cultist/dreadnought": "retaliation shield tank",
     "cultist/heretic": "melee battle healer",
-    "cultist/godblade": "2H Void burst bruiser",
-    "tinker/demolition": "explosive battlefield engineer",
+    "cultist/godblade": "2H burst bruiser",
+    "tinker/demolition": "explosive burst engineer",
     "tinker/invention": "gadget field medic",
     "tinker/mechanics": "scrap-fueled combat engineer",
     "witch-hunter/boltslinger": "run-and-gun crossbow gunner",
-    "witch-hunter/houndmaster": "shadow marksman with hounds",
-    "witch-hunter/black-knight": "dark parry tank",
-    "witch-hunter/inquisition": "four-school burst inquisitor",
+    "witch-hunter/houndmaster": "pet pack marksman",
+    "witch-hunter/black-knight": "tonic-switching parry tank",
+    "witch-hunter/inquisition": "four-school burst caster",
   };
 
   function doorsHTML(c, mode) {
@@ -195,7 +195,7 @@
 
   // ---------- paint ----------
   const el = id => document.getElementById(id);
-  const state = { engine: "blurb", doors: "icons", corner: "video" };
+  const state = { engine: "blurb", doors: "wow-words", corner: "video" };
   const DEMO = ["Cultist", "Witch Hunter"];
 
   function renderPairs() {

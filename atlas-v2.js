@@ -8,7 +8,7 @@
   if (!R || !S || !C2) throw new Error("study scripts must load first");
   const { data, specById, famById, AXIS_LABELS, CX_ORDINAL, esc, pips, glyph, qcls, cxCell, bestCtx } = R;
 
-  const RULED = { engine: "blurb", doors: "icons", corner: "video" };
+  const RULED = { engine: "blurb", doors: "wow-words", corner: "video" };
   const state = { view: "classes", role: "All", range: "All", q: "" };
   const el = id => document.getElementById(id);
 

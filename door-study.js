@@ -8,7 +8,7 @@
   const classes = S.classes;
 
   const RULED = { engine: "blurb", corner: "video" };
-  const state = { doors: "wow-family" };
+  const state = { doors: "wow-words" };
   const el = id => document.getElementById(id);
   const DEMO = ["Cultist", "Witch Hunter"];
 
