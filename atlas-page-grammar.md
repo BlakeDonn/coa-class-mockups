@@ -47,7 +47,7 @@ Same format and authority rules as `class-page-grammar.md`.
 | Engine blurb | **E1**: one authored sentence with the class-colored engine label. Pilot five have copy (Cultist authored, four advisor drafts); the rest omit until the ×21 authoring | RULED (2026-08-07 round 5) |
 | Role coupling | **R1 role icons**: ⚔ Damage · 🛡 Tank · ✚ Healer · ⚑ Support lead each spec door, tooltip names the role, range word at right | RULED (2026-08-07 round 5) |
 | Composed card | Crest (name only) → tagline → engine blurb → ✦ facts → doors with role icons. User: "the first one is perfect… just great" | RULED (2026-08-07 round 5) |
-| Draft taglines/engines | The four pilot drafts still need an explicit copy approval before the site slice (class-page precedent: advisor drafts never ship unapproved) | flag |
+| Draft taglines/engines | The four pilot drafts (Tinker, Witch Hunter, Guardian, Knight of Xoroth) are **approved as temporary copy** — user 2026-08-07: "good for now but just temporary; once we have full research we will revisit the actual verbiage." Revisit trigger: the research lands and the ×21 authoring pass runs | RULED (provisional) |
 | Top-right corner | **V1 class-video thumb**: real thumbnail, play ring, "Class highlight" caption, opens the video. The ruled phone-masthead treatment, scaled to the card. All 21 classes have a video in the data | RULED (2026-08-07 round 6, "video thumb is dope") |
 | Rare ✦ lines | The class-page rare-part pattern comes to the card: 1–2 terse ✦ fragments, every one tracing to a computable roster fact. No fact, no bullet | RULED pattern (2026-08-07, user ask) |
 | Ordering | Alphabetical; no ordering that could read as rank | PROPOSED |
