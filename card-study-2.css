@@ -1,0 +1,22 @@
+/* Identity card study, round 5. Builds on card-study.css; shipped Atlas untouched. */
+
+/* engine blurb / chip */
+.cl-engine { margin: 8px 14px 0; padding: 6px 10px; border-left: 3px solid var(--class-color);
+  background: #131118; border-radius: 0 3px 3px 0; }
+.cl-engine .lab { display: block; font-size: 8px; font-weight: 800; letter-spacing: .16em;
+  text-transform: uppercase; color: color-mix(in srgb, var(--class-color) 58%, white 42%); margin-bottom: 2px; }
+.cl-engine p { margin: 0; color: #a9ada7; font-size: 11.5px; }
+.cl-engine.chip { padding: 5px 10px; }
+.cl-engine.chip .lab { margin-bottom: 0; }
+
+/* rare ✦ facts */
+.cl-rare { margin: 8px 14px 0; padding: 6px 0 0; list-style: none; display: grid; gap: 2px;
+  border-top: 1px solid color-mix(in srgb, var(--class-color) 18%, transparent); }
+.cl-rare li { color: #e8c88a; font-size: 11.5px; cursor: help; }
+.cl-rare .mark { color: #c9aa71; margin-right: 5px; }
+
+/* role coupling on doors */
+.cl-specrows .ri { display: inline-flex; gap: 2px; font-size: 11px; line-height: 1; cursor: help;
+  color: #c9c3b2; flex: 0 0 auto; }
+.cl-specrows button.role-edge { border-left-width: 3px; }
+.cl-specrows .rw { font-size: 9px; text-transform: uppercase; letter-spacing: .07em; font-weight: 800; }

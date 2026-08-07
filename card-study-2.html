@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="robots" content="noindex">
+  <title>CoA identity card — round 5 (engine, facts, coupled roles)</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="explorer.css">
+  <link rel="stylesheet" href="atlas-study.css">
+  <link rel="stylesheet" href="card-study.css">
+  <link rel="stylesheet" href="card-study-2.css">
+</head>
+<body class="atlas atlas-study">
+
+  <div class="st-banner">
+    <span class="st-tag">Identity card · round 5 · engine, ✦ facts, coupled roles</span>
+    <nav>
+      <a href="#pE">E · Engine</a>
+      <a href="#pR">R · Role coupling</a>
+      <a href="#drafts">Draft copy</a>
+      <a href="#live">Composed</a>
+    </nav>
+  </div>
+
+  <section class="st-sec">
+    <header class="st-head">
+      <h2>Round 5 — your round-4 rulings, applied</h2>
+      <p>Locked in: no kick line, authored tagline with the keyword glow, family row gone,
+        ✦ fact lines in. Two pieces remain open below. Taglines and engine blurbs exist for the
+        <b>five pilot classes</b> — Cultist authored, four advisor drafts grounded in researched
+        text. Every ✦ line is computed from the roster; its tooltip shows the fact. Nothing is
+        invented for the other sixteen — they show the honest gap.</p>
+    </header>
+  </section>
+
+  <!-- E · ENGINE -->
+  <section class="st-sec" id="pE">
+    <header class="st-head"><h2>E · The engine blurb</h2>
+      <p>Whether the card names the class's engine, and how loudly.</p></header>
+
+    <div class="st-sub"><h3>E1 · The blurb</h3>
+      <div class="st-note">One authored sentence with the engine label. <span class="gain">Gains:</span>
+        the class-page's best teaching, condensed; the card explains the class in its own voice.
+        <span class="cost">Costs:</span> needs authoring ×21 — only the pilot five have it; the rest
+        omit until then.</div>
+      <div class="pair" data-piece="engine" data-variant="blurb"></div>
+    </div>
+    <div class="st-sub"><h3>E2 · The resource chip</h3>
+      <div class="st-note">A computed one-liner — "THE ENGINE — Insanity" — generated wherever the
+        roster shows one clean shared resource (9 of 21 classes today). <span class="gain">Gains:</span>
+        zero authoring, honest everywhere. <span class="cost">Costs:</span> names the fuel without the
+        loop; twelve classes show nothing.</div>
+      <div class="pair" data-piece="engine" data-variant="chip"></div>
+    </div>
+    <div class="st-sub"><h3>E0 · No engine</h3>
+      <div class="st-note">The tagline and ✦ facts carry the identity alone.
+        <span class="gain">Gains:</span> shortest card. <span class="cost">Costs:</span> the card
+        never says how the class actually runs.</div>
+      <div class="pair" data-piece="engine" data-variant="none"></div>
+    </div>
+    <div class="st-pick" data-pick="engine">
+      <span class="stone">
+        <button data-v="blurb" class="active">E1 blurb</button>
+        <button data-v="chip">E2 chip</button>
+        <button data-v="none">E0 none</button>
+      </span>
+    </div>
+  </section>
+
+  <!-- R · ROLE COUPLING -->
+  <section class="st-sec" id="pR">
+    <header class="st-head"><h2>R · Roles, coupled to the spec doors</h2>
+      <p>Your call from round 4: the standalone "Damage ×2 · Support" line is gone; each spec door
+        carries its own job instead.</p></header>
+
+    <div class="st-sub"><h3>R1 · Role icons</h3>
+      <div class="st-note">⚔ Damage · 🛡 Tank · ✚ Healer · ⚑ Support, leading each door; tap an icon
+        for its name. Range word sits at the right. <span class="gain">Gains:</span> compact, scans
+        as a party frame. <span class="cost">Costs:</span> four glyphs to learn; two-role specs wear
+        two icons.</div>
+      <div class="pair" data-piece="doors" data-variant="icons"></div>
+    </div>
+    <div class="st-sub"><h3>R2 · Role color edge</h3>
+      <div class="st-note">Each door wears its role's color on the left edge, with the role word
+        beside the name — color never alone. <span class="gain">Gains:</span> jobs pop at a glance
+        down a column of doors. <span class="cost">Costs:</span> a second color language inside a
+        class-colored card; it can fight the class hue.</div>
+      <div class="pair" data-piece="doors" data-variant="edge"></div>
+    </div>
+    <div class="st-sub"><h3>R3 · Role words only</h3>
+      <div class="st-note">Plain "Damage · Melee" text on each door — round 4's D2, kept as the
+        control. <span class="gain">Gains:</span> nothing to learn. <span class="cost">Costs:</span>
+        no glanceability; jobs blur down the column.</div>
+      <div class="pair" data-piece="doors" data-variant="words"></div>
+    </div>
+    <div class="st-pick" data-pick="doors">
+      <span class="stone">
+        <button data-v="icons" class="active">R1 icons</button>
+        <button data-v="edge">R2 color edge</button>
+        <button data-v="words">R3 words</button>
+      </span>
+    </div>
+  </section>
+
+  <!-- DRAFT COPY FOR APPROVAL -->
+  <section class="st-sec" id="drafts">
+    <details class="rules">
+      <summary>The draft copy, in full — needs your approval before anything ships</summary>
+      <div id="draftsBody"></div>
+    </details>
+  </section>
+
+  <!-- LIVE COMPOSED GRID -->
+  <section class="st-sec" id="live">
+    <header class="st-head"><h2>The composed result</h2>
+      <p>All 21 cards under your current stones. The pilot five carry taglines and engine blurbs;
+        the other sixteen show the honest gap until the ×21 authoring pass.</p></header>
+    <div class="bar-row" style="padding-left:0;padding-right:0">
+      <span class="st-lens"><button class="active">21 Classes</button><button>70 Specs</button></span>
+      <span class="counter"><b>70</b> specs · <b>21</b> classes · <b>70</b> curated</span>
+    </div>
+    <div class="st-classgrid g-rich" id="liveGrid"></div>
+  </section>
+
+  <footer class="st-foot">
+    Round 5 asks two picks: <b>engine</b> (E1 / E2 / E0) and <b>role coupling</b> (R1 / R2 / R3) —
+    plus a yes/no on the four drafted taglines. Rulings land in <code>atlas-page-grammar.md</code> §4.
+  </footer>
+
+  <dialog id="profileDialog" class="a-dialog">
+    <button class="d-close" id="profileClose" aria-label="Close specialization profile">×</button>
+    <div id="profileContent"></div>
+  </dialog>
+
+  <script src="explorer-data.js"></script>
+  <script src="profile-render.js"></script>
+  <script src="atlas-study.js"></script>
+  <script src="card-study-2.js"></script>
+</body>
+</html>

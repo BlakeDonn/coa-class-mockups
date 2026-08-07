@@ -39,9 +39,13 @@ Same format and authority rules as `class-page-grammar.md`.
 
 | Piece | Decision | Status |
 |---|---|---|
-| Card form | **B identity card** (roles, families, spec doors). Constellation shapes on cards set aside unless the map round revives them. Piece-level detail (role line, family row, spec doors) gets its own granular round | RULED (2026-08-07 round 1) / pieces OPEN |
-| Role line | Class rollup uses the ruled plain-text role-line treatment: "Damage ×2 · Tank · Healer · Support — Melee & Ranged", computed from roster facts | PROPOSED |
-| Family names | Jargon carries its authored family tagline as a tooltip — same teaching pattern as the ruled verb glosses | PROPOSED (pattern reuse) |
+| Card form | **B identity card** as the base. Constellation shapes on cards set aside unless the map question revives them | RULED (2026-08-07 round 1) |
+| Kick line | "Class · N specializations" DROPPED — the doors carry the count | RULED (2026-08-07 round 4) |
+| Tagline slot | Authored-only tagline on the card, ruled styled-keyword glow; unauthored classes omit the line — absent, never invented | RULED (2026-08-07 round 4) |
+| Family row | DROPPED from the card ("no jargon thing"). Families still live in profiles and the starmap | RULED (2026-08-07 round 4) |
+| Role line | The standalone counts line is REPLACED: role info couples onto the spec doors (icon or color-coded). Treatment variant is round 5's pick | RULED direction (2026-08-07) / variant OPEN |
+| Engine blurb | "Maybe" — mocked in round 5 (authored/drafted blurb vs computed resource chip vs none) | OPEN (round 5) |
+| Rare ✦ lines | The class-page rare-part pattern comes to the card: 1–2 terse ✦ fragments, every one tracing to a computable roster fact. No fact, no bullet | RULED pattern (2026-08-07, user ask) |
 | Ordering | Alphabetical; no ordering that could read as rank | PROPOSED |
 
 ## 5 · The identity map
