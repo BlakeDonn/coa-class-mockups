@@ -95,3 +95,12 @@ Same format and authority rules as `atlas-page-grammar.md` and `class-page-gramm
   the × overlap fixed with a reserved corner in the dialog header row (standing rule, §4). The
   modal is fully ruled: P1 slim · header chip exit · class name in meta. Study page now shows
   the ruled modal only; X1–X6 variants set aside. Next piece: the question surface (round 3).
+- **2026-08-07 (phone-quality fix, user-caught):** the deployed study pages overflowed at phone
+  width ("this looks really bad… overlapping"). Root causes, found on real rendered pixels via a
+  headless-Chrome 390px-iframe harness: (1) `.stone` button rows never wrap — shrink alone never
+  engages their wrap; fixed with a ≤700px `flex: 1 1 100%` basis in both study css files;
+  (2) the modal's chip row could collide with content — chip row now wraps; (3) the old
+  register's media strip bled outside reference plates — plates clip x-overflow. STANDING
+  PRACTICE: before any deploy, screenshot the changed page in the 390px harness (desktop
+  headless lays out at ~500px minimum, so bare `--window-size=390` lies; WSL sees `/mnt/c`
+  writes late — wait, don't rerun).

@@ -1,5 +1,14 @@
 /* Choose study, session 5 round 1 — the result card. New file. */
 
+/* Phone safety: long stone rows (personas, mappings) wrap instead of widening the page.
+   The stone needs an explicit full-line basis — shrink alone never engages its wrap. */
+.st-pick .stone { flex-wrap: wrap; }
+.st-pick .stone button { flex: 1 1 auto; }
+.st-banner nav { flex-wrap: wrap; }
+@media (max-width: 700px) {
+  .st-pick .stone { flex: 1 1 100%; max-width: 100%; }
+}
+
 .cs-pair { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 10px; max-width: 1100px; }
 
 /* Strong-match glow — the ruled lightened-class-color formula, shared by all directions. */

@@ -1,10 +1,21 @@
 /* Session 5 round 2 — the spec-profile modal registers. New file. */
 
+/* Phone safety: nothing may widen the page. Long stone rows wrap; plates clip
+   the old register's edge-bleed media; the header chip drops a line when tight.
+   The stone needs an explicit full-line basis — shrink alone never engages its wrap. */
+.st-pick .stone { flex-wrap: wrap; }
+.st-pick .stone button { flex: 1 1 auto; }
+.st-banner nav { flex-wrap: wrap; }
+.reg-plate .class-link { white-space: nowrap; }
+@media (max-width: 700px) {
+  .st-pick .stone { flex: 1 1 100%; max-width: 100%; }
+}
+
 .reg-cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 12px; max-width: 1240px; }
 .reg-col h3 { margin: 0 0 6px; font: 700 13px var(--serif); color: var(--gold); letter-spacing: .04em; }
 .reg-plate { border: 1px solid var(--edge-out); border-radius: 3px; background: #131418;
-  padding: 14px; overflow: auto; }
+  padding: 14px; overflow-x: hidden; overflow-y: auto; }
 .reg-plate.capped { max-height: 500px; }
 .reg-cap { color: var(--faint); font-size: 10.5px; margin: 6px 0 0; }
 .reg-frame { display: block; width: 100%; height: 76vh; border: 0; background: #0b0a09; }
@@ -22,7 +33,7 @@
   border: 1px solid color-mix(in srgb, var(--class-color) 40%, #3a3427); border-radius: 3px;
   background: #0d0c0a; }
 .slim-crest .crest-frame { display: block; width: 100%; height: 100%; }
-.slim-h2row { display: flex; align-items: center; gap: 10px; }
+.slim-h2row { display: flex; align-items: center; gap: 8px 10px; flex-wrap: wrap; }
 .slim-h2row h2 { margin: 0; flex: 1 1 auto; min-width: 0; }
 .slim-exit-chip { display: inline-flex; align-items: center; gap: 7px; flex: 0 0 auto;
   padding: 4px 9px; border: 1px solid color-mix(in srgb, var(--class-color) 58%, white 42%);
