@@ -152,3 +152,6 @@ placement `feel`, video `mini`, engine `col`, verbs `chip`, cards `airfam`.
 - **2026-08-06/07 (desktop):** everything above through the codex-top close. Rhythm = first fold
   (final). Study defaults mirror all rulings: bare `rhythm-class.html?c=<class>` is the ruled page.
 - **Next (phone):** same cadence — mock, pick, record. Start with queue item 1.
+- **Deployed:** https://blakedonn.github.io/coa-class-mockups/ (GitHub Pages, repo
+  `BlakeDonn/coa-class-mockups`, public). Main study:
+  https://blakedonn.github.io/coa-class-mockups/rhythm-class.html?c=cultist
