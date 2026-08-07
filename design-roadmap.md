@@ -32,6 +32,11 @@ Authority note: entries here are plans, not rulings. Rulings live in the grammar
   seals, verbs + glosses, cadence strips (desktop + S2 phone variants), rare-part bullets.
 - **Anatomy extension past the three Guided pilot classes** (main repo) — grammar is ready,
   data is the constraint.
+- **Six style axes per spec** (Damage · Burst · Sustain · Control · Mobility · Utility) — research
+  ask from the Atlas map deferral, ruled 2026-08-07. Today's evidence coverage: Control 10/70,
+  Mobility 31/70, Sustain 38/70. The draft rules and evidence bar live in `map-study-3.html` and
+  `atlas-page-grammar.md` §5. Unblocks the game-language identity map (deferred, not dead); the
+  family starmap (`starmap.html`) holds the interim.
 
 ## BLOCKED — waiting on a main-repo merge
 

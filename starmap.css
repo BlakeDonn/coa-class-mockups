@@ -1,0 +1,15 @@
+/* The Star Map — interim identity map (ruled 2026-08-07). Builds on atlas-study.css. */
+
+.sky-mast h2 { font-size: 26px; letter-spacing: .06em; }
+.sky-strip { margin-bottom: 12px; }
+
+.sky-scroll { overflow-x: auto; border: 1px solid #26282d; border-radius: 4px;
+  background: radial-gradient(700px 420px at 50% 42%, #16171d, #0d0e11 80%); }
+.sky-scroll svg { display: block; min-width: 760px; width: 100%; height: auto; }
+
+.sky-region-lab { font: 700 15px var(--serif); letter-spacing: .05em; fill: #c9aa71; cursor: help; }
+.sky-region-sub { font: 400 9.5px var(--sans); letter-spacing: .08em; fill: #565b62; }
+.sky-dot { cursor: pointer; }
+.sky-dot text.g { font: 700 9px var(--sans); fill: #0b0a09; pointer-events: none; }
+.sky-dot.dim { opacity: .26; }
+.sky-dot text.nm { font: 700 10.5px var(--sans); paint-order: stroke; stroke: #0d0e11; stroke-width: 3.5px; }

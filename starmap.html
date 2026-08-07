@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="robots" content="noindex">
+  <title>CoA Atlas — the star map (interim)</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="explorer.css">
+  <link rel="stylesheet" href="atlas-study.css">
+  <link rel="stylesheet" href="starmap.css">
+</head>
+<body class="atlas atlas-study">
+
+  <header class="a-topbar" style="position:static">
+    <a class="a-sigil" href="index.html">⚜ COA ATLAS</a>
+    <nav class="a-tabs" aria-label="Site pages">
+      <a href="index.html">Atlas</a>
+      <a href="choose.html">Choose</a>
+      <a href="guided.html">Guided · pilot</a>
+      <a href="loot.html">Loot 45+</a>
+    </nav>
+    <span style="flex:1"></span>
+  </header>
+
+  <section class="st-sec">
+    <header class="st-head sky-mast">
+      <div class="kick">Conquest of Azeroth · every specialization, one sky</div>
+      <h2>The Star Map</h2>
+      <p><b>How to read it:</b> eight constellations, one per playstyle family. Specs cluster with
+        their kin; neighbors play alike. Tap a class crest to light its stars; tap any star for the
+        full profile. Positions are identity, never rank.</p>
+    </header>
+
+    <div class="st-classstrip sky-strip" id="classStrip"></div>
+
+    <div class="sky-scroll"><svg id="sky" viewBox="0 0 960 640" role="img"
+      aria-label="All 70 specializations grouped into eight playstyle constellations"></svg></div>
+
+    <p class="st-fine">Family grouping is editorial, as the Atlas says. Interim surface, ruled
+      2026-08-07: the game-language map (damage · sustain · control axes) is deferred until the
+      research pilot shows those axes can be filled per spec. Its spec lives in
+      <a href="map-study-3.html">round 3</a>. Phone gets a pan for now; an authored phone redraw is
+      an open piece.</p>
+  </section>
+
+  <dialog id="profileDialog" class="a-dialog">
+    <button class="d-close" id="profileClose" aria-label="Close specialization profile">×</button>
+    <div id="profileContent"></div>
+  </dialog>
+
+  <script src="explorer-data.js"></script>
+  <script src="profile-render.js"></script>
+  <script src="atlas-study.js"></script>
+  <script src="starmap.js"></script>
+</body>
+</html>

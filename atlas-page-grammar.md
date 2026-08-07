@@ -48,8 +48,12 @@ Same format and authority rules as `class-page-grammar.md`.
 
 | Piece | Decision | Status |
 |---|---|---|
-| Form | Round-2 verdict (2026-08-07): the shape holds as the unit **in principle**, but its axes reopen — user wants game language ("damage, sustain, control, like other games"), not the demand axes. ALL wall directions rejected; the requirement is **one cohesive canvas where every spec has a position**. Round 3 (`map-study-3.html`) mocks: the shape's language (**G1** game hexagon, drafted · **G2** output diamond, roles-only · **G3** demand hexagon) and the single map (**M1** role compass · **M2** style field · **M3** family starmap) | OPEN (round 3 awaiting picks) |
-| Game-axis evidence | The research holds no damage/sustain/control values. Round-3 drafts derive live by printed rules (roles = Data; family/player-text = Inference; no evidence = hollow). Measured coverage: Control 10/70, Mobility 31/70, Sustain 38/70. Adopting game axes commissions a per-spec research pass (pilot pipeline scope) | OPEN (flag, load-bearing) |
+| Form (interim) | **The family starmap is the interim identity map** (`starmap.html`): eight constellations from the site's own taxonomy, class-emphasis crest strip, tap-through to profiles. Structural and editorial data only — nothing drafted | RULED (2026-08-07 round 3) |
+| Form (target) | The game-language map (G1 hexagon + M2 style field, damage/sustain/control axes) is **DEFERRED, not dead**. User: "probably a data limitation — some DPS have more sustain than others and we can't plot that yet." Trigger to revisit: the five-class pilot lands and shows per-spec style evidence meets the bar. `map-study-3.html` and its printed draft rules stay as the spec for what that research must fill | RULED (deferred, 2026-08-07) |
+| Game-axis evidence | Measured coverage today: Control 10/70, Mobility 31/70, Sustain 38/70 with evidence; the rest hollow. Six style axes (Damage · Burst · Sustain · Control · Mobility · Utility) are now a research ask on the pilot track (recorded in `design-roadmap.md`) | RULED (flag, load-bearing) |
+| Shape language (units) | Deferred with the axes. The demand hexagon stays available in profiles as shipped; no shape ships on cards or map until the axis question resolves | RULED (deferred) |
+| Starmap placement | Where the starmap lives in Atlas nav (toggle third state, masthead link, or section) | OPEN |
+| Starmap phone | Interim = horizontal pan. An authored phone redraw (S2 pattern) is its own piece | OPEN |
 | Axes | The six researched demand axes, fixed spoke order everywhere (core actions top; clockwise: execution, tracking, reactive, failure cost, setup). Sequencing joins as a seventh spoke with research v3 | PROPOSED |
 | Gaps | An unresearched value renders as a hollow marker on a dashed spoke — never as zero. "Unknown is not zero" (user ruling 2026-08-07) | PROPOSED (law-derived) |
 | Color | Measured, not eyeballed: the 21 class colors are not mutually separable (Ranger ↔ Witch Hunter ΔE 0.3; 4 of 21 read gray-adjacent on the dark surface). Color follows the class but never carries identity alone — glyphs, name labels, and emphasis interaction do the separating | PROPOSED (evidence-backed) |
@@ -92,3 +96,8 @@ Same format and authority rules as `class-page-grammar.md`.
   evidence sentence; roles-only diamond; demand control) and three single-canvas maps (role compass,
   style field, family starmap). Evidence coverage measured and disclosed on the page; hollow = no
   evidence, never zero. Awaiting picks: G1/G2/G3 and M1/M2/M3.
+- **2026-08-07 (round 3 verdict, map closed for now):** user read the coverage numbers as the data
+  limitation they are and ruled: DEFER the game-language map until the pilot's research shows the
+  axes can be filled; SHIP the family starmap as the interim. `starmap.html` built and deployed
+  (emphasis strip, profiles, structural data only). Research ask recorded on the roadmap. Next
+  piece: the identity-card granular round.
