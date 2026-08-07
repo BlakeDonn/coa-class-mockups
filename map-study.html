@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="robots" content="noindex">
+  <title>CoA identity map — round 2 (unit &amp; wall)</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="explorer.css">
+  <link rel="stylesheet" href="atlas-study.css">
+  <link rel="stylesheet" href="map-study.css">
+</head>
+<body class="atlas atlas-study">
+
+  <div class="st-banner">
+    <span class="st-tag">Identity map · round 2 · the unit &amp; the wall — proposals, not rulings</span>
+    <nav>
+      <a href="#s0">Both systems</a>
+      <a href="#s1">1 · The unit</a>
+      <a href="#s2">2 · The wall</a>
+    </nav>
+  </div>
+
+  <!-- ============ 0 · THE SAME SPEC, BOTH SYSTEMS ============ -->
+  <section class="st-sec" id="s0">
+    <header class="st-head">
+      <h2>The same spec, both systems</h2>
+      <p>Godblade, Boss context, real values. Left is the 1–5 pip system the site already speaks.
+        Right is the constellation shape built from the identical six numbers.
+        Every pip row carries its tooltip: the axis, the value, and the researched why.</p>
+    </header>
+    <div class="hero-pair" id="heroPair"></div>
+    <div class="st-note"><b>What each claims.</b> Pips are <span class="gain">numbers you can read</span> —
+      exact, familiar, tooltipped. The shape is <span class="gain">a silhouette you can recognize</span> —
+      same-shaped specs play alike, before any reading. The question of this round: which does the
+      map's job, or do they need each other?</div>
+  </section>
+
+  <!-- ============ 1 · THE UNIT ============ -->
+  <section class="st-sec" id="s1">
+    <header class="st-head">
+      <h2>1 · The unit — how one spec renders</h2>
+      <p>One class's specs, shown in all three directions at once so the comparison is direct.
+        Change the class and context; every direction re-renders from the same values.
+        Tap any unit for the full profile.</p>
+    </header>
+    <div class="st-pick">
+      <label class="st-lenslab">Class <select id="unitClass"></select></label>
+      <span class="stone" data-pick="ctx">
+        <button data-v="boss" class="active">Boss</button>
+        <button data-v="dungeon_aoe">Dungeon AoE</button>
+        <button data-v="pvp">PvP</button>
+      </span>
+    </div>
+
+    <div class="st-sub">
+      <h3>U1 · The pip ladder</h3>
+      <div class="st-note">The system you know, compacted: six axes, five diamonds each, tooltips with
+        the researched why. <span class="gain">Gains:</span> exact and instantly familiar; the ruled
+        class-page tooltip treatment carries over whole. <span class="cost">Costs:</span> six rows must
+        be read one by one — nothing about the spec arrives at a glance.</div>
+      <div class="unit-row" id="rowU1"></div>
+    </div>
+
+    <div class="st-sub">
+      <h3>U2 · The shape</h3>
+      <div class="st-note">The same six values as one silhouette. <span class="gain">Gains:</span> the
+        spec's character arrives before any reading; similar shapes play alike across the whole page.
+        <span class="cost">Costs:</span> values are approximate until tapped; the spoke order must be
+        learned once.</div>
+      <div class="unit-row" id="rowU2"></div>
+    </div>
+
+    <div class="st-sub">
+      <h3>U3 · Shape + ladder, fused</h3>
+      <div class="st-note">The shape gives the gestalt, the pips give the numbers, one unit.
+        <span class="gain">Gains:</span> nothing is lost — recognize first, read second.
+        <span class="cost">Costs:</span> the widest unit; at 70 specs the wall gets heavy.</div>
+      <div class="unit-row unit-row-wide" id="rowU3"></div>
+    </div>
+  </section>
+
+  <!-- ============ 2 · THE WALL ============ -->
+  <section class="st-sec" id="s2">
+    <header class="st-head">
+      <h2>2 · The wall — all 70 at once</h2>
+      <p>The map's actual job: every spec on one surface. Flip between the three treatments;
+        each renders the full roster in the context picked above, grouped by class, roster order.
+        No sort controls anywhere — ordering by an axis would read as ranking.</p>
+    </header>
+    <div class="st-pick" data-pick="wall">
+      <span class="stone">
+        <button data-v="matrix" class="active">W1 · Pip matrix</button>
+        <button data-v="shapes">W2 · Shape wall</button>
+        <button data-v="cards">W3 · Pip cards</button>
+      </span>
+    </div>
+    <div class="st-note" id="wallNote"></div>
+    <div id="wallHost"></div>
+    <p class="st-fine">Values carry Data · Players · Inference tiers and are relative among researched
+      CoA specs. Axes are demand, never quality. An unresearched value renders hollow, never zero.</p>
+  </section>
+
+  <footer class="st-foot">
+    Round 2 asks two picks: <b>the unit</b> (U1 / U2 / U3) and <b>the wall</b> (W1 / W2 / W3).
+    Rulings land in <code>atlas-page-grammar.md</code> §5. Round 1 study:
+    <a href="atlas-study.html">atlas-study.html</a>.
+  </footer>
+
+  <dialog id="profileDialog" class="a-dialog">
+    <button class="d-close" id="profileClose" aria-label="Close specialization profile">×</button>
+    <div id="profileContent"></div>
+  </dialog>
+
+  <script src="explorer-data.js"></script>
+  <script src="profile-render.js"></script>
+  <script src="atlas-study.js"></script>
+  <script src="map-study.js"></script>
+</body>
+</html>

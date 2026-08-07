@@ -22,8 +22,8 @@ Same format and authority rules as `class-page-grammar.md`.
 
 | Piece | Decision | Status |
 |---|---|---|
-| Fork presentation | Three directions mocked in the study: **A masthead doors** (three door-cards in the masthead, content below follows the pick) · **B first-visit gate** (full-screen choice, remembered) · **C bar-row lens** (Classes/Specs segmented control; Guide stays nav-only). Advisor recommends **A** | PROPOSED (awaiting pick) |
-| Default altitude | If doors win: what renders before any pick? The study demos the 21 classes; today's landing is the 70-spec family view. A product call | OPEN |
+| Fork presentation | A standing Classes ↔ Specs toggle, always visible in the list bar. No doors, no gate. User's words: "always show the toggle between class and specs in the list" (the direction the study labeled C; recorded by description — the user's letter said "b") | RULED (2026-08-07 round 1) |
+| Default altitude | Which side the toggle starts on (classes vs specs). Not yet discussed | OPEN |
 | Guide door | Points at Guided (pilot) — not live on the shipped site. The door ships only when Guided does, or lands in a disabled "soon" state | OPEN (flag) |
 | Masthead copy | "The Atlas of Seventy Paths" + "An identity guide, not a tier list" kept — it already meets the tone bar (§8: stylized phrase introduces, plain language explains) | PROPOSED (keep) |
 
@@ -39,7 +39,7 @@ Same format and authority rules as `class-page-grammar.md`.
 
 | Piece | Decision | Status |
 |---|---|---|
-| Card form | Three directions mocked: **A crest roll** (compact muster) · **B identity card** (roles, families, spec doors) · **C constellation card** (B + one demand shape per spec). Advisor recommends **C** if map direction A wins, else **B** | PROPOSED (awaiting pick) |
+| Card form | **B identity card** (roles, families, spec doors). Constellation shapes on cards set aside unless the map round revives them. Piece-level detail (role line, family row, spec doors) gets its own granular round | RULED (2026-08-07 round 1) / pieces OPEN |
 | Role line | Class rollup uses the ruled plain-text role-line treatment: "Damage ×2 · Tank · Healer · Support — Melee & Ranged", computed from roster facts | PROPOSED |
 | Family names | Jargon carries its authored family tagline as a tooltip — same teaching pattern as the ruled verb glosses | PROPOSED (pattern reuse) |
 | Ordering | Alphabetical; no ordering that could read as rank | PROPOSED |
@@ -48,7 +48,7 @@ Same format and authority rules as `class-page-grammar.md`.
 
 | Piece | Decision | Status |
 |---|---|---|
-| Form | Three directions mocked: **A constellation wall** (one small-multiple demand shape per spec, grouped by class) · **B the field** (all 70 on two picked axes, class-emphasis interaction) · **C muster board** (role × range, purely structural). Advisor recommends **A** as the primary surface (it fuses with the Class Atlas), **C** as a cheap structural companion; **B** is the power tool — ship only if browsing wants it | PROPOSED (awaiting pick) |
+| Form | REOPENED after round 1. User reframe: the existing 1–5 pip system "was good"; the constellation shape "may be just as good — I'd have to see side by side". Round 2 (`map-study.html`) mocks the two pieces granularly: the **unit** (pip ladder vs shape vs fused) and the **wall** (pip matrix vs shape wall vs pip-card wall), same real specs in every direction. Round-1 field and muster directions set aside unless revived | OPEN (round 2 in flight) |
 | Axes | The six researched demand axes, fixed spoke order everywhere (core actions top; clockwise: execution, tracking, reactive, failure cost, setup). Sequencing joins as a seventh spoke with research v3 | PROPOSED |
 | Gaps | An unresearched value renders as a hollow marker on a dashed spoke — never as zero. "Unknown is not zero" (user ruling 2026-08-07) | PROPOSED (law-derived) |
 | Color | Measured, not eyeballed: the 21 class colors are not mutually separable (Ranger ↔ Witch Hunter ΔE 0.3; 4 of 21 read gray-adjacent on the dark surface). Color follows the class but never carries identity alone — glyphs, name labels, and emphasis interaction do the separating | PROPOSED (evidence-backed) |
@@ -63,12 +63,14 @@ Same format and authority rules as `class-page-grammar.md`.
 
 ## 7 · Open decisions queue
 
-1. Fork direction (A / B / C) — and if A: the default altitude question.
-2. Class-card form (A / B / C).
-3. Map direction(s) to carry forward — A / B / C are combinable.
+1. **Map round 2 picks:** the unit (pip ladder / shape / fused) and the wall
+   (pip matrix / shape wall / pip-card wall) — `map-study.html`.
+2. Toggle default altitude (classes vs specs first).
+3. Identity-card pieces, granularly (round 3): role line, family row, spec doors, ordering.
 4. Workbench button on phone (drop vs keep).
 5. Card clamp: record divergence vs restructure now.
-6. Pips tooltips on Atlas cards (extend the ruled `tips` treatment).
+6. Pips tooltips on Atlas cards (extend the ruled `tips` treatment — already demoed on
+   the map study's pip rows).
 
 ## 8 · Session log
 
@@ -78,3 +80,8 @@ Same format and authority rules as `class-page-grammar.md`.
   `atlas-study.html` — chrome port, three fork directions, three class-card directions, three map
   directions; node smoke test covers every data path (70/70 specs place in all three contexts;
   worst field cell 42 specs packs inside its cell). All entries PROPOSED; awaiting user picks.
+- **2026-08-07 (round 1 verdict + process correction):** user: "not loving this approach — not as
+  granular as what worked on the class page." Process restored to the class-page cadence: one piece
+  per round, 2–3 directions each, pick, record. Two rulings landed (standing Classes↔Specs toggle;
+  identity card as the class-card base). The map REOPENED with the pip-system reframe; round 2 is
+  `map-study.html` (unit + wall, side by side, same real specs).

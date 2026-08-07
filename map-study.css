@@ -1,0 +1,61 @@
+/* Identity map study, round 2 (unit + wall). Builds on atlas-study.css; new file,
+   shipped Atlas untouched. */
+
+/* ---------- hero: same spec, both systems ---------- */
+.hero-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; max-width: 640px; margin: 0 0 12px; }
+@media (max-width: 420px) { .hero-pair { gap: 8px; } }
+
+/* ---------- shared unit chrome ---------- */
+.unit-row { display: grid; grid-template-columns: repeat(auto-fill, minmax(168px, 1fr)); gap: 10px; }
+.unit-row-wide { grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); }
+
+.mu { padding: 0; cursor: pointer; text-align: left; color: inherit; font: inherit; }
+.mu:focus-visible { outline: 1px solid #c9aa71; }
+.mu .mu-head { display: flex; flex-direction: column; gap: 1px; padding: 10px 12px 7px;
+  background: radial-gradient(220px 70px at 14% 0%, color-mix(in srgb, var(--class-color) 24%, transparent), transparent 75%); }
+.mu .mu-head b { font: 700 14.5px var(--serif); letter-spacing: .02em;
+  color: color-mix(in srgb, var(--class-color) 75%, #fff); }
+.mu .mu-head .sub { color: #83888f; font-size: 9px; text-transform: uppercase; letter-spacing: .08em; }
+
+.mu .pl-rows { display: grid; gap: 3px; padding: 4px 12px 11px; }
+.pl-row { display: flex; align-items: center; gap: 8px; font-size: 9px; letter-spacing: .06em;
+  text-transform: uppercase; color: #7c8087; border-bottom: 1px dotted #26282d; padding-bottom: 3px; }
+.pl-row:last-child { border-bottom: 0; padding-bottom: 0; }
+.pl-row .pips { margin-left: auto; }
+.pl-row .na { margin-left: auto; color: #565b62; font-size: 9px; letter-spacing: 0; text-transform: none; }
+
+.mu .mu-shape { padding: 4px 14px 8px; }
+.mu .mu-shape svg { width: 100%; max-width: 150px; height: auto; display: block; margin: 0 auto; }
+
+.mu-fused { display: grid; grid-template-columns: 96px 1fr; gap: 2px; align-items: center; padding: 2px 10px 9px 8px; }
+.mu-fused svg { width: 96px; height: auto; }
+.mu-fused .pl-rows { padding: 0 0 0 4px; }
+
+/* ---------- W1: the pip matrix ---------- */
+.mx { border: 1px solid #26282d; border-radius: 3px; background: #101113; overflow: hidden; }
+.mx-headrow { display: grid; grid-template-columns: minmax(96px, 1.3fr) repeat(6, minmax(38px, 1fr));
+  position: sticky; top: 0; z-index: 3; background: #131418; border-bottom: 1px solid #26282d; }
+.mx-headrow .h { padding: 8px 4px; font: 800 8px var(--sans); letter-spacing: .07em; text-transform: uppercase;
+  color: #8d8678; text-align: center; cursor: help; }
+.mx-headrow .h:first-child { text-align: left; padding-left: 12px; }
+.mx-class { display: flex; align-items: baseline; gap: 8px; padding: 8px 12px 5px;
+  border-bottom: 1px solid #1e2025; background: #12131a; }
+.mx-class .g { color: color-mix(in srgb, var(--class-color) 70%, #fff); font-size: 12px; }
+.mx-class h4 { margin: 0; font: 700 12.5px var(--serif); letter-spacing: .04em;
+  color: color-mix(in srgb, var(--class-color) 75%, #fff); }
+.mx-row { display: grid; grid-template-columns: minmax(96px, 1.3fr) repeat(6, minmax(38px, 1fr));
+  align-items: center; width: 100%; border: 0; border-bottom: 1px solid #16181c; background: none;
+  cursor: pointer; color: inherit; font: inherit; text-align: left; padding: 0; }
+.mx-row:hover, .mx-row:focus-visible { background: #15171c; outline: none; }
+.mx-name { display: flex; align-items: center; gap: 6px; padding: 6px 6px 6px 12px;
+  font: 600 11px var(--sans); color: #b9bdb4; white-space: nowrap; }
+.mx-name .g { color: color-mix(in srgb, var(--class-color) 70%, #fff); font-size: 10px; }
+.mx-cell { display: flex; justify-content: center; gap: 2px; padding: 6px 2px; }
+.mx-cell .d { width: 4px; height: 4px; border-radius: 50%; background: #2a2c31; }
+.mx-cell .d.f { background: #c9aa71; }
+.mx-cell .d.gap { background: none; border: 1px solid #565b62; width: 3px; height: 3px; }
+
+/* ---------- W3: pip-card wall ---------- */
+.pw-class { margin-bottom: 14px; }
+.pw-class .wl-head { margin: 0 0 6px; }
+.pw-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(168px, 1fr)); gap: 8px; }
