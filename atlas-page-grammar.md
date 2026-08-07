@@ -116,6 +116,11 @@ Same format and authority rules as `class-page-grammar.md`.
   axes can be filled; SHIP the family starmap as the interim. `starmap.html` built and deployed
   (emphasis strip, profiles, structural data only). Research ask recorded on the roadmap. Next
   piece: the identity-card granular round.
+- **2026-08-07 (rounds 7–8, the card FINISHED):** crest = official sprite (Sol hunt); sub lines =
+  jobs + range two-line form with the true-support rule; doors = HD queue icons (Damage sword,
+  Tank shield, Healer cross, Support flag) + playstyle archetype tags extracted from researched
+  fantasy text (11 drafted, ×70 compression pass queued). User verdict: "they look fantastic."
+  All rulings propagated into `atlas-v2.html`.
 - **2026-08-07 (rounds 4–6, the card, closed):** piece-by-piece rounds ruled the full card: no kick,
   authored tagline (keyword glow), no family row, E1 engine blurb, ✦ computed facts, R1 icon doors,
   V1 video corner. Pilot-five taglines/engines approved as TEMPORARY copy (revisit after research).
