@@ -1,0 +1,548 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Rhythm study — CoA Atlas scratch</title>
+<style>
+  :root{
+    --bg:#0d0c0a; --panel:#141210; --panel2:#191612; --line:#2a251d;
+    --gold:#c9aa71; --gold-hot:#e8c88a; --text:#cdc8bc; --faint:#8d8678;
+    --purple:#b35cff; --purple-soft:#8e4fb2; --tgold:#d9a441;
+    --red:#c96a5f; --green:#7fc98a;
+  }
+  *{box-sizing:border-box;margin:0}
+  body{background:var(--bg);color:var(--text);font:14px/1.55 "Segoe UI",system-ui,sans-serif;padding:26px 4vw 80px}
+  h1,h2,h3,.serif{font-family:Georgia,"Times New Roman",serif}
+  .kick{font-size:11px;letter-spacing:.18em;color:var(--faint);text-transform:uppercase}
+  header.top{max-width:1040px;margin:0 auto 30px;border:1px solid var(--line);background:var(--panel);padding:18px 22px;border-radius:4px}
+  header.top h1{color:var(--gold);font-size:24px;margin:4px 0 8px}
+  header.top p{max-width:72ch;color:var(--text)}
+  header.top .scratch{color:var(--red);font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+  section.variant{max-width:1040px;margin:0 auto 46px}
+  section.variant>h2{color:var(--gold);font-size:20px;margin-bottom:4px}
+  section.variant>h2 .tag{display:inline-block;border:1px solid var(--gold);color:var(--gold);
+    font:600 12px/1 "Segoe UI",sans-serif;padding:4px 8px;border-radius:3px;margin-right:10px;vertical-align:3px}
+  section.variant>.intro{color:var(--faint);max-width:78ch;margin-bottom:16px}
+  .card{border:1px solid var(--line);background:var(--panel);border-radius:4px;padding:16px 18px 12px;margin-bottom:14px;
+    border-left:3px solid var(--class,#555)}
+  .card.cultist{--class:var(--purple)} .card.tinker{--class:var(--tgold)}
+  .card h3{color:var(--class);font-size:16px;letter-spacing:.02em}
+  .card .sub{font-size:11px;color:var(--faint);letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px}
+  .card svg{width:100%;height:auto;display:block}
+  .honesty{display:flex;gap:8px;align-items:center;margin-top:8px;flex-wrap:wrap}
+  .tier{font-size:10px;letter-spacing:.08em;text-transform:uppercase;padding:2px 7px;border-radius:2px;border:1px solid}
+  .tier.data{color:#9ec7e8;border-color:#3a5468}
+  .tier.inf{color:#d8b06a;border-color:#63512f}
+  .honesty small{color:var(--faint)}
+  .tradeoffs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:6px}
+  .tradeoffs div{border:1px solid var(--line);background:var(--panel2);border-radius:4px;padding:12px 14px;font-size:13px}
+  .tradeoffs b{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:6px}
+  .tradeoffs .buy b{color:var(--green)} .tradeoffs .risk b{color:var(--red)}
+  .tradeoffs ul{margin-left:16px} .tradeoffs li{margin:3px 0}
+  /* --- SVG shared --- */
+  text{font-family:"Segoe UI",system-ui,sans-serif}
+  .ax{stroke:#332d24;stroke-width:1}
+  .thr{stroke:#4d4030;stroke-width:1;stroke-dasharray:5 5}
+  .thr-lab{fill:#8d8678;font-size:11px;letter-spacing:.08em}
+  .ph{fill:#a89f8e;font-size:11.5px;letter-spacing:.1em;font-weight:600}
+  .ph2{fill:#736c5e;font-size:11px}
+  .strip-title{fill:#cdc8bc;font-size:12px;letter-spacing:.14em;font-weight:600}
+  .strip-note{fill:#736c5e;font-size:11px;letter-spacing:.06em}
+  /* godblade */
+  .gb-climb{fill:rgba(179,92,255,.14);stroke:var(--purple-soft);stroke-width:1.6}
+  .gb-window{fill:rgba(179,92,255,.34);stroke:var(--purple);stroke-width:1.8}
+  .gb-window-lab{fill:#e6ccff;font-size:12.5px;font-weight:700;letter-spacing:.1em}
+  .hazard{fill:rgba(201,106,95,.35)} .hazard-lab{fill:#c96a5f;font-size:10.5px;letter-spacing:.08em}
+  /* corruption */
+  .tick{stroke:rgba(179,92,255,.5);stroke-width:2}
+  .wave{fill:rgba(179,92,255,.16);stroke:var(--purple-soft);stroke-width:1.6}
+  .refresh{fill:none;stroke:var(--gold);stroke-width:1.4}
+  .refresh-lab{fill:var(--gold);font-size:10.5px;letter-spacing:.06em}
+  .branch{stroke:#8d8678;stroke-width:1.2;fill:none;marker-end:url(#arr)}
+  /* demolition */
+  .brick{fill:rgba(217,164,65,.16);stroke:#a3803e;stroke-width:1.2}
+  .brick-lab{fill:#d9c396;font-size:10.5px;letter-spacing:.04em}
+  .dm-window{fill:rgba(217,164,65,.36);stroke:var(--tgold);stroke-width:1.8}
+  .dm-window-lab{fill:#f2dcae;font-size:12.5px;font-weight:700;letter-spacing:.1em}
+  .idle{fill:none;stroke:#4d4030;stroke-width:1;stroke-dasharray:3 4}
+  /* --- attention rows --- */
+  .att-grid{border:1px solid var(--line);background:var(--panel);border-radius:4px;overflow:hidden}
+  .att-head,.att-row{display:grid;grid-template-columns:150px repeat(4,1fr);gap:0;align-items:center}
+  .att-head{background:var(--panel2);border-bottom:1px solid var(--line);padding:10px 14px;font-size:11px;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+  .att-row{padding:12px 14px;border-bottom:1px solid var(--line)} .att-row:last-child{border-bottom:0}
+  .att-row .spec{font-family:Georgia,serif;font-size:15px}
+  .att-row .spec small{display:block;font-family:"Segoe UI",sans-serif;font-size:10.5px;color:var(--faint);letter-spacing:.08em;text-transform:uppercase}
+  .att-row.cultist .spec{color:var(--purple)} .att-row.tinker .spec{color:var(--tgold)}
+  .dots{font-size:15px;letter-spacing:3px}
+  .dots b{color:var(--gold-hot);font-weight:400} .dots span{color:#3d372d}
+  .att-why{grid-column:1/-1;color:var(--faint);font-size:12px;margin-top:5px}
+  /* --- variant C in-context --- */
+  .codex-mock{border:1px solid var(--line);background:linear-gradient(180deg,#1a1420,#141210 60%);border-radius:4px;
+    padding:22px 24px;border-top:2px solid var(--purple)}
+  .codex-mock h3{color:var(--gold-hot);font-size:26px;font-weight:400}
+  .codex-mock .meta{display:flex;gap:14px;font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--faint);margin:4px 0 10px;flex-wrap:wrap}
+  .codex-mock .meta .cur{color:#d8b06a}
+  .codex-mock .flavor{font-style:italic;color:#d8cdb9;max-width:76ch;margin-bottom:4px}
+  .codex-mock .feel{color:var(--faint);max-width:76ch;margin-bottom:14px}
+  .rhythm-block{border:1px solid #2e2637;background:rgba(0,0,0,.25);border-radius:4px;padding:12px 14px 8px;margin-bottom:6px}
+  .rhythm-block .lab{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);margin-bottom:6px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px}
+  .eyes{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 4px}
+  .eyes span{border:1px solid #322b3d;border-radius:3px;padding:3px 9px;font-size:12px;color:var(--text)}
+  .eyes b{color:var(--gold-hot);font-weight:400;letter-spacing:2px}
+  /* --- round 2 --- */
+  .round2{border:1px solid #3d3426;background:linear-gradient(180deg,#16130e,#141210)}
+  .round2 .r2kick{color:var(--gold-hot);font-size:11px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:8px;display:block}
+  .readline{max-width:82ch;margin:10px 0 0;color:var(--text)}
+  .readline b{color:var(--gold);font-weight:600}
+  .b-treats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+  .b-treat{border:1px solid var(--line);background:var(--panel2);border-radius:4px;padding:12px 14px}
+  .b-treat h4{font-family:"Segoe UI",sans-serif;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+  .b-treat .demo{border:1px solid #322b3d;background:rgba(0,0,0,.3);border-radius:3px;padding:9px 11px;min-height:64px;font-size:13px}
+  .b-treat .note{color:var(--faint);font-size:12px;margin-top:8px}
+  .chipline{display:flex;gap:7px;flex-wrap:wrap}
+  .chipline span{border:1px solid #322b3d;border-radius:3px;padding:2px 8px;font-size:12px}
+  .chipline b{color:var(--gold-hot);font-weight:400;letter-spacing:2px}
+  .rankline span{border:1px solid #322b3d;border-radius:3px;padding:2px 8px;font-size:12px}
+  .rankline i{font-style:normal;color:var(--gold-hot);margin-right:4px}
+  .rankline .dim{opacity:.55}
+  @media (max-width:820px){.b-treats{grid-template-columns:1fr}}
+  /* --- round 3: screen cards --- */
+  .screen-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media (max-width:900px){.screen-grid{grid-template-columns:1fr}}
+  .screen-card{border:1px solid var(--line);background:var(--panel);border-radius:4px;padding:14px 16px 12px;
+    border-left:3px solid var(--class,#555)}
+  .screen-card.cultist{--class:var(--purple)} .screen-card.tinker{--class:var(--tgold)}
+  .screen-card h3{color:var(--class);font-size:15px}
+  .screen-card .sub{font-size:10.5px;color:var(--faint);letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px}
+  .screen-card svg{width:100%;height:auto;display:block;border-radius:4px}
+  .screen-card .cap{color:var(--text);font-size:13px;margin-top:9px}
+  .screen-card .cap b{color:var(--gold);font-weight:600}
+  footer{max-width:1040px;margin:30px auto 0;color:var(--faint);font-size:12px;border-top:1px solid var(--line);padding-top:14px}
+  a{color:var(--gold)}
+  @media (max-width:700px){.tradeoffs{grid-template-columns:1fr}
+    .att-head,.att-row{grid-template-columns:110px repeat(4,1fr)}.att-head{font-size:9.5px}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <span class="scratch">Scratch mockup · nothing shipped · not in the repository</span>
+  <h1>Rhythm study — three candidate visual forms</h1>
+  <p>The seal (ruled: engine + one tension + verbs) answers <i>"what is this class's thing."</i>
+  The weakest-answered question is <i>"what will my hands and eyes be doing."</i>
+  This page tests three forms for that job, on real researched Cultist and Tinker data.
+  Ability names come from the snapshot (Data tier). Every <b>shape</b> is our synthesis (Inference tier), and says so.</p>
+</header>
+
+<!-- ================= ROUND 2 ================= -->
+<section class="variant">
+  <h2><span class="tag">R2</span> Round 2 — calmer strip, and three ways to say "where your eyes live"</h2>
+  <p class="intro">Feedback: the strip is the winner but runs hot, and the attention dots didn't land.
+  Below: the same Godblade strip dulled down, labels moved to familiar WoW terms, and one plain
+  reading line under it. Then three treatments of the attention idea, side by side.</p>
+
+  <article class="card cultist round2">
+    <span class="r2kick">A · round 2 — Godblade, calmed</span>
+    <h3>Godblade</h3>
+    <div class="sub">Cultist · damage · melee</div>
+    <svg viewBox="0 0 1000 158" role="img" aria-label="Godblade rhythm, calm version: build, hold at 60, one burst window at 100 that also endangers you, then rebuild">
+      <text class="strip-note" x="986" y="18" text-anchor="end">the shape of the loop · not a rotation</text>
+      <line class="thr" x1="14" y1="32" x2="986" y2="32"/><text class="thr-lab" x="14" y="26">100 · cross</text>
+      <line class="thr" x1="14" y1="68" x2="986" y2="68"/><text class="thr-lab" x="14" y="62">60 · hold</text>
+      <line class="ax" x1="14" y1="122" x2="986" y2="122"/>
+      <path class="gb-climb" d="M20 122 L110 108 L140 112 L240 96 L275 100 L370 82 L400 85 L470 70 L500 74 L530 68 L530 122 Z"/>
+      <rect class="gb-window" x="575" y="36" width="170" height="86" rx="2"/>
+      <text class="gb-window-lab" x="660" y="66" text-anchor="middle">BURST WINDOW</text>
+      <text class="ph2" x="660" y="84" text-anchor="middle" fill="#e8daf7">Voidborne · Rifted Hammer</text>
+      <rect class="hazard" x="575" y="126" width="170" height="6"/>
+      <text class="hazard-lab" x="660" y="145" text-anchor="middle">you take extra damage here</text>
+      <path class="gb-climb" d="M780 122 L870 110 L900 113 L965 102 L965 122 Z"/>
+      <text class="ph" x="270" y="142" text-anchor="middle">BUILD</text>
+      <text class="ph2" x="270" y="156" text-anchor="middle">Insanity climbs · Rift goes down</text>
+      <text class="ph" x="497" y="52" text-anchor="middle">HOLD</text>
+      <text class="ph" x="878" y="142" text-anchor="middle">…REBUILD</text>
+    </svg>
+    <p class="readline"><b>How to read it:</b> most of the fight is preparation. The payoff is one short,
+    loud window that also endangers you. Miss it, and the whole climb was wasted.</p>
+    <p class="readline"><b>Where your eyes live:</b> your Insanity bar and your zone placement, then the target.
+    The party barely exists to you.</p>
+    <div class="honesty"><span class="tier data">Data · names</span><span class="tier inf">Inference · shape</span></div>
+  </article>
+
+  <div class="b-treats">
+    <div class="b-treat">
+      <h4>B1 · dots (round 1)</h4>
+      <div class="demo chipline">
+        <span>your bar <b>●●●</b></span><span>the ground <b>●●●</b></span><span>the enemy <b>●●</b></span><span>the party <b>●</b></span>
+      </div>
+      <p class="note">Compact and comparable across specs. But dots read as scores, and they didn't land with you.</p>
+    </div>
+    <div class="b-treat">
+      <h4>B2 · one plain sentence</h4>
+      <div class="demo">
+        <b style="color:var(--gold)">Where your eyes live:</b> your Insanity bar and your zone placement,
+        then the target. The party barely exists to you.
+      </div>
+      <p class="note">Most readable and most honest. Costs quick comparison when flipping between specs.</p>
+    </div>
+    <div class="b-treat">
+      <h4>B3 · ranked chips</h4>
+      <div class="demo rankline chipline">
+        <span><i>1</i> your bar</span><span><i>2</i> the ground</span><span><i>3</i> the enemy</span><span class="dim">the party · barely</span>
+      </div>
+      <p class="note">Order without scores. Scannable, still roughly comparable, harder to mistake for a rating.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ROUND 3 ================= -->
+<section class="variant">
+  <h2><span class="tag">R3</span> Round 3 — "where your eyes live," drawn as your actual screen</h2>
+  <p class="intro">A stylized HUD instead of dots or sentences: party frames, nameplates, the ground, your bar.
+  Bright means your attention lives there. Dim means it exists, but you rarely look.
+  Each card keeps its one-line caption; the picture shows, the sentence tells.</p>
+  <div class="screen-grid" id="screenGrid"></div>
+  <div class="tradeoffs" style="margin-top:14px">
+    <div class="buy"><b>What it buys</b><ul>
+      <li>Shows the literal thing you'll be staring at, in game furniture players already know.</li>
+      <li>Healer vs caster vs engineer separates instantly.</li>
+      <li>One shared scene for all 70 specs; only the lighting changes.</li>
+    </ul></div>
+    <div class="risk"><b>What it risks</b><ul>
+      <li>It's a claim about the game's real UI; if it looks wrong, trust drops.</li>
+      <li>Small screens will squeeze the fine details.</li>
+      <li>More seductive than dots, so its Inference label matters more.</li>
+    </ul></div>
+  </div>
+</section>
+
+<script>
+(() => {
+  const HEAT = { hot: 1, med: .55, low: .38, cold: .18 };
+  const SCREENS = [
+    { id: "godblade", name: "Godblade", cls: "cultist", color: "#b35cff",
+      sub: "Cultist · damage · melee",
+      enemies: "single", ground: "rift",
+      heat: { party: "cold", enemy: "med", ground: "hot", bar: "hot", actions: "med" },
+      barFill: .74, barNotch: .6, barLabel: "INSANITY",
+      chips: [{ t: "your Insanity bar", x: 150, y: 210, a: "start" }, { t: "your Rift", x: 240, y: 132, a: "middle" }],
+      caption: "You watch your bar climb and your zone hold. The party barely exists to you." },
+    { id: "corruption", name: "Corruption", cls: "cultist", color: "#b35cff",
+      sub: "Cultist · damage · ranged",
+      enemies: "spread", ground: "tentacle", dotTimers: true,
+      heat: { party: "cold", enemy: "hot", ground: "med", bar: "med", actions: "med" },
+      barFill: .5, barLabel: "INSANITY",
+      chips: [{ t: "DoT timers on every nameplate", x: 240, y: 30, a: "middle" }, { t: "Insanity · mana", x: 150, y: 210, a: "start" }],
+      caption: "You watch debuff timers across the whole pack. Your own bar comes second." },
+    { id: "demolition", name: "Demolition", cls: "tinker", color: "#d9a441",
+      sub: "Tinker · damage · ranged",
+      enemies: "stacked", ground: "deployables",
+      heat: { party: "low", enemy: "med", ground: "hot", bar: "cold", actions: "med" },
+      barFill: .3, barLabel: "",
+      chips: [{ t: "your machines on the ground", x: 240, y: 200, a: "middle" }, { t: "the pack, once it's stacked", x: 240, y: 30, a: "middle" }],
+      caption: "You watch the ground your machines cover, and the pack the tank is stacking into them." },
+    { id: "invention", name: "Invention", cls: "tinker", color: "#d9a441",
+      sub: "Tinker · healer · support",
+      enemies: "single", ground: "beacon", partyDip: true,
+      heat: { party: "hot", enemy: "cold", ground: "hot", bar: "med", actions: "med" },
+      barFill: .6, barLabel: "",
+      chips: [{ t: "party health", x: 18, y: 84, a: "start" }, { t: "your beacon's reach", x: 240, y: 200, a: "middle" }],
+      caption: "You watch party health and your beacon's reach. The enemy is background noise." },
+  ];
+
+  function chip(c, color) {
+    const w = Math.round(c.t.length * 5.7 + 16);
+    const x = c.a === "middle" ? c.x - w / 2 : c.x;
+    return `<g><rect x="${x}" y="${c.y}" width="${w}" height="17" rx="3" fill="rgba(8,6,10,.78)" stroke="${color}" stroke-opacity=".65"/>
+      <text x="${x + w / 2}" y="${c.y + 12}" text-anchor="middle" font-size="10.5" fill="#efe7d6" letter-spacing=".04em">${c.t}</text></g>`;
+  }
+
+  function enemy(x, y, cfg) {
+    const hp = `<rect x="${x - 28}" y="${y - 26}" width="56" height="7" rx="1.5" fill="#241f28"/>
+      <rect x="${x - 28}" y="${y - 26}" width="${56 * .82}" height="7" rx="1.5" fill="#a04338"/>`;
+    const dots = cfg.dotTimers
+      ? [0, 1, 2].map(i => `<rect x="${x - 27 + i * 9}" y="${y - 16}" width="7" height="7" rx="1" fill="${cfg.color}" opacity="${.95 - i * .22}"/>`).join("")
+      : "";
+    return `${hp}${dots}<rect x="${x - 6}" y="${y - 5}" width="12" height="17" rx="2" fill="#4d4456"/>`;
+  }
+
+  function enemies(cfg) {
+    if (cfg.enemies === "spread") return [[168, 96], [244, 78], [318, 102]].map(p => enemy(p[0], p[1], cfg)).join("");
+    if (cfg.enemies === "stacked") return [[220, 92], [242, 84], [262, 96]].map(p => enemy(p[0], p[1], cfg)).join("");
+    return enemy(240, 90, cfg);
+  }
+
+  function ground(cfg) {
+    const base = `<ellipse cx="240" cy="166" rx="78" ry="19" fill="${cfg.color}" fill-opacity=".10" stroke="${cfg.color}" stroke-opacity=".8" stroke-width="1.4"/>`;
+    if (cfg.ground === "rift") return base +
+      `<ellipse cx="240" cy="166" rx="46" ry="11" fill="none" stroke="${cfg.color}" stroke-width="1" stroke-dasharray="5 4" opacity=".8"/>`;
+    if (cfg.ground === "tentacle") return base +
+      `<path d="M226 168 q4 -16 -4 -24 m18 24 q2 -12 10 -18" fill="none" stroke="${cfg.color}" stroke-width="1.6" opacity=".8"/>`;
+    if (cfg.ground === "deployables") return base +
+      `<path d="M198 170 L206 154 L214 170 Z" fill="none" stroke="${cfg.color}" stroke-width="1.6"/>
+       <circle cx="260" cy="162" r="7" fill="none" stroke="${cfg.color}" stroke-width="1.6"/>
+       <path d="M260 153 v-4 M260 171 v4 M251 162 h-4 M273 162 h-4" stroke="${cfg.color}" stroke-width="1.4"/>
+       <ellipse cx="230" cy="174" rx="15" ry="4.5" fill="${cfg.color}" fill-opacity=".28"/>`;
+    if (cfg.ground === "beacon") return base +
+      `<rect x="236" y="146" width="8" height="18" rx="1.5" fill="none" stroke="${cfg.color}" stroke-width="1.6"/>
+       <path d="M224 148 Q240 132 256 148 M218 156 Q240 134 262 156" fill="none" stroke="${cfg.color}" stroke-width="1.2" opacity=".8"/>`;
+    return base;
+  }
+
+  function party(cfg) {
+    const fills = cfg.partyDip ? [.92, .34, .66, .82] : [.9, .76, .64, .86];
+    return fills.map((f, i) => `
+      <rect x="18" y="${18 + i * 15}" width="66" height="10" rx="2" fill="#221d29"/>
+      <rect x="18" y="${18 + i * 15}" width="${66 * f}" height="10" rx="2" fill="${f < .5 ? "#b0483f" : "#5f9c6a"}"/>`).join("");
+  }
+
+  function bar(cfg) {
+    const notch = cfg.barNotch
+      ? `<line x1="${150 + 180 * cfg.barNotch}" y1="224" x2="${150 + 180 * cfg.barNotch}" y2="243" stroke="#c9aa71" stroke-width="1.3"/>`
+      : "";
+    return `<rect x="150" y="228" width="180" height="11" rx="2" fill="#221d29"/>
+      <rect x="150" y="228" width="${180 * cfg.barFill}" height="11" rx="2" fill="${cfg.color}"/>
+      ${cfg.barLabel ? `<text x="334" y="237" font-size="9" fill="#8d8678" letter-spacing=".1em">${cfg.barLabel}</text>` : ""}${notch}`;
+  }
+
+  function actions() {
+    return [0, 1, 2, 3, 4, 5].map(i =>
+      `<rect x="${188 + i * 18}" y="246" width="15" height="15" rx="2" fill="#1c1822" stroke="#332c3b"/>`).join("");
+  }
+
+  function card(cfg) {
+    const h = k => HEAT[cfg.heat[k]];
+    const glow = k => cfg.heat[k] === "hot" ? `filter="url(#sg-${cfg.id})"` : "";
+    return `<article class="screen-card ${cfg.cls}">
+      <h3>${cfg.name}</h3><div class="sub">${cfg.sub}</div>
+      <svg viewBox="0 0 480 270" role="img" aria-label="Stylized screen for ${cfg.name}: bright regions are where attention lives">
+        <defs><filter id="sg-${cfg.id}" x="-40%" y="-40%" width="180%" height="180%">
+          <feGaussianBlur stdDeviation="2.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+        <rect x="0" y="0" width="480" height="270" rx="6" fill="#0b0a0e" stroke="#26212c"/>
+        <g opacity="${h("party")}" ${glow("party")}>${party(cfg)}</g>
+        <g opacity="${h("enemy")}" ${glow("enemy")}>${enemies(cfg)}</g>
+        <g opacity="${h("ground")}" ${glow("ground")}>${ground(cfg)}</g>
+        <g opacity="${h("bar")}" ${glow("bar")}>${bar(cfg)}</g>
+        <g opacity="${h("actions")}">${actions()}</g>
+        ${cfg.chips.map(c => chip(c, cfg.color)).join("")}
+      </svg>
+      <p class="cap"><b>Where your eyes live:</b> ${cfg.caption}</p>
+      <div class="honesty" style="margin-top:6px"><span class="tier inf">Inference</span>
+        <small>From researched mechanics. A sketch, not the real UI.</small></div>
+    </article>`;
+  }
+
+  document.getElementById("screenGrid").innerHTML = SCREENS.map(card).join("");
+})();
+</script>
+
+<!-- ================= VARIANT A ================= -->
+<section class="variant">
+  <h2><span class="tag">A</span> Cadence strip — the shape of a stretch of play</h2>
+  <p class="intro">No time axis, no rotation, no ability sequence. Each spec gets one drawn "topology" of how
+  its play repeats. The test: Godblade, Corruption, and Demolition should look like three different lives.</p>
+
+  <article class="card cultist">
+    <h3>Godblade</h3>
+    <div class="sub">Cultist · damage · melee — a spike topology</div>
+    <svg viewBox="0 0 1000 168" role="img" aria-label="Godblade cadence: climb, ride the hold line, cross into a burst window that also exposes you, then climb again">
+      <text class="strip-title" x="14" y="20">ONE PASS OF THE LOOP</text>
+      <text class="strip-note" x="986" y="20" text-anchor="end">shape only · no time axis</text>
+      <line class="thr" x1="14" y1="36" x2="850" y2="36"/><text class="thr-lab" x="986" y="40" text-anchor="end">100 · cross</text>
+      <line class="thr" x1="14" y1="72" x2="850" y2="72"/><text class="thr-lab" x="986" y="76" text-anchor="end">60 · hold</text>
+      <line class="ax" x1="14" y1="126" x2="986" y2="126"/>
+      <path class="gb-climb" d="M20 126 L70 118 L85 121 L130 110 L150 113 L200 100 L215 104 L265 90 L285 93 L330 80 L350 83 L385 74
+        L410 70 L430 75 L455 68 L480 74 L505 69 L530 74 L552 70 L552 126 Z"/>
+      <rect class="gb-window" x="585" y="40" width="160" height="86" rx="2"/>
+      <text class="gb-window-lab" x="665" y="66" text-anchor="middle">VOIDBORNE</text>
+      <text class="ph2" x="665" y="82" text-anchor="middle" fill="#e8daf7">Rifted Hammer ·</text>
+      <text class="ph2" x="665" y="96" text-anchor="middle" fill="#e8daf7">Entropic Slam</text>
+      <rect class="hazard" x="585" y="130" width="160" height="7"/>
+      <text class="hazard-lab" x="665" y="150" text-anchor="middle">amplified damage taken the whole window</text>
+      <path class="gb-climb" d="M775 126 L820 116 L840 119 L880 108 L905 111 L940 102 L940 126 Z"/>
+      <text class="ph" x="286" y="146" text-anchor="middle">CLIMB &amp; PLACE</text>
+      <text class="ph2" x="286" y="160" text-anchor="middle">strikes build Insanity · Rift and tentacles go down</text>
+      <text class="ph" x="497" y="52" text-anchor="middle">RIDE THE LINE</text>
+      <text class="ph2" x="497" y="146" text-anchor="middle" opacity="0">.</text>
+      <text class="ph" x="862" y="146" text-anchor="middle">…AND CLIMB AGAIN</text>
+    </svg>
+    <div class="honesty"><span class="tier data">Data · names</span><span class="tier inf">Inference · shape</span>
+      <small>From the researched loop: cross 100 only when the target and incoming damage justify it.</small></div>
+  </article>
+
+  <article class="card cultist">
+    <h3>Corruption</h3>
+    <div class="sub">Cultist · damage · ranged — a rolling topology, no off switch</div>
+    <svg viewBox="0 0 1000 168" role="img" aria-label="Corruption cadence: DoT ticks never stop, medium beam payoffs repeat, refreshes sit between them, and Insanity drifts toward a choice">
+      <defs><marker id="arr" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8z" fill="#8d8678"/></marker></defs>
+      <text class="strip-title" x="14" y="20">THE ENGINE NEVER RESTS</text>
+      <text class="strip-note" x="986" y="20" text-anchor="end">shape only · no time axis</text>
+      <line class="ax" x1="14" y1="126" x2="986" y2="126"/>
+      <g aria-hidden="true">
+        <line class="tick" x1="30" y1="118" x2="30" y2="126"/><line class="tick" x1="52" y1="118" x2="52" y2="126"/><line class="tick" x1="74" y1="118" x2="74" y2="126"/><line class="tick" x1="96" y1="118" x2="96" y2="126"/><line class="tick" x1="118" y1="118" x2="118" y2="126"/><line class="tick" x1="140" y1="118" x2="140" y2="126"/><line class="tick" x1="162" y1="118" x2="162" y2="126"/><line class="tick" x1="184" y1="118" x2="184" y2="126"/><line class="tick" x1="206" y1="118" x2="206" y2="126"/><line class="tick" x1="228" y1="118" x2="228" y2="126"/><line class="tick" x1="250" y1="118" x2="250" y2="126"/><line class="tick" x1="272" y1="118" x2="272" y2="126"/><line class="tick" x1="294" y1="118" x2="294" y2="126"/><line class="tick" x1="316" y1="118" x2="316" y2="126"/><line class="tick" x1="338" y1="118" x2="338" y2="126"/><line class="tick" x1="360" y1="118" x2="360" y2="126"/><line class="tick" x1="382" y1="118" x2="382" y2="126"/><line class="tick" x1="404" y1="118" x2="404" y2="126"/><line class="tick" x1="426" y1="118" x2="426" y2="126"/><line class="tick" x1="448" y1="118" x2="448" y2="126"/><line class="tick" x1="470" y1="118" x2="470" y2="126"/><line class="tick" x1="492" y1="118" x2="492" y2="126"/><line class="tick" x1="514" y1="118" x2="514" y2="126"/><line class="tick" x1="536" y1="118" x2="536" y2="126"/><line class="tick" x1="558" y1="118" x2="558" y2="126"/><line class="tick" x1="580" y1="118" x2="580" y2="126"/><line class="tick" x1="602" y1="118" x2="602" y2="126"/><line class="tick" x1="624" y1="118" x2="624" y2="126"/><line class="tick" x1="646" y1="118" x2="646" y2="126"/><line class="tick" x1="668" y1="118" x2="668" y2="126"/><line class="tick" x1="690" y1="118" x2="690" y2="126"/><line class="tick" x1="712" y1="118" x2="712" y2="126"/><line class="tick" x1="734" y1="118" x2="734" y2="126"/><line class="tick" x1="756" y1="118" x2="756" y2="126"/><line class="tick" x1="778" y1="118" x2="778" y2="126"/><line class="tick" x1="800" y1="118" x2="800" y2="126"/>
+      </g>
+      <path class="wave" d="M120 126 Q190 52 260 126 Z"/>
+      <path class="wave" d="M400 126 Q470 52 540 126 Z"/>
+      <path class="wave" d="M660 126 Q730 52 800 126 Z"/>
+      <text class="ph" x="190" y="60" text-anchor="middle">BEAM &amp; GAZE</text>
+      <text class="ph" x="470" y="60" text-anchor="middle">BEAM &amp; GAZE</text>
+      <text class="ph" x="730" y="60" text-anchor="middle">BEAM &amp; GAZE</text>
+      <path class="refresh" d="M320 96 l10 -10 l10 10 l-10 10 Z"/><text class="refresh-lab" x="330" y="78" text-anchor="middle">refresh</text>
+      <path class="refresh" d="M590 96 l10 -10 l10 10 l-10 10 Z"/><text class="refresh-lab" x="600" y="78" text-anchor="middle">refresh</text>
+      <path class="branch" d="M830 110 C 870 105 890 80 905 55"/>
+      <path class="branch" d="M830 113 C 875 113 905 118 930 118"/>
+      <text class="ph2" x="912" y="42" text-anchor="middle">Insanity 100: Wrath state</text>
+      <text class="ph2" x="920" y="136" text-anchor="middle">or Sanity Tap it into mana</text>
+      <text class="ph" x="190" y="146" text-anchor="middle">CARPET</text>
+      <text class="ph2" x="190" y="160" text-anchor="middle">Darkwither everything · the ticks never stop</text>
+      <text class="ph" x="470" y="146" text-anchor="middle">HARVEST, ENDLESSLY</text>
+      <text class="ph2" x="470" y="160" text-anchor="middle">ticks accelerate the payoffs · never let the carpet lapse</text>
+    </svg>
+    <div class="honesty"><span class="tier data">Data · names</span><span class="tier inf">Inference · shape</span>
+      <small>From the researched loop: multi-DoT pressure is the point rather than a single instant nuke.</small></div>
+  </article>
+
+  <article class="card tinker">
+    <h3>Demolition</h3>
+    <div class="sub">Tinker · damage · ranged — a stacking topology: build the machine, then fire all of it</div>
+    <svg viewBox="0 0 1000 168" role="img" aria-label="Demolition cadence: layers of deployables stack, everything overlaps in one window, then the machine idles and gets rebuilt">
+      <text class="strip-title" x="14" y="20">ASSEMBLY, THEN OVERLAP</text>
+      <text class="strip-note" x="986" y="20" text-anchor="end">shape only · no time axis</text>
+      <line class="ax" x1="14" y1="126" x2="986" y2="126"/>
+      <rect class="brick" x="40" y="112" width="330" height="12" rx="1"/><text class="brick-lab" x="48" y="121">Napalm</text>
+      <rect class="brick" x="90" y="98" width="280" height="12" rx="1"/><text class="brick-lab" x="98" y="107">oil</text>
+      <rect class="brick" x="150" y="84" width="220" height="12" rx="1"/><text class="brick-lab" x="158" y="93">turret — placed after the tank stacks</text>
+      <rect class="brick" x="215" y="70" width="155" height="12" rx="1"/><text class="brick-lab" x="223" y="79">drone · factory</text>
+      <rect class="dm-window" x="400" y="38" width="180" height="88" rx="2"/>
+      <text class="dm-window-lab" x="490" y="64" text-anchor="middle">SPARKED AND READY</text>
+      <text class="ph2" x="490" y="80" text-anchor="middle" fill="#e0cb9c">instant rockets while</text>
+      <text class="ph2" x="490" y="94" text-anchor="middle" fill="#e0cb9c">every layer overlaps</text>
+      <rect class="idle" x="612" y="70" width="120" height="56" rx="2"/>
+      <text class="ph2" x="672" y="94" text-anchor="middle">pack moved —</text>
+      <text class="ph2" x="672" y="108" text-anchor="middle">the machine idles</text>
+      <rect class="brick" x="770" y="112" width="190" height="12" rx="1"/>
+      <rect class="brick" x="810" y="98" width="150" height="12" rx="1"/>
+      <rect class="brick" x="860" y="84" width="100" height="12" rx="1"/>
+      <text class="ph" x="205" y="146" text-anchor="middle">BUILD THE MACHINE</text>
+      <text class="ph2" x="205" y="160" text-anchor="middle">layers only pay off if they hit the same pack</text>
+      <text class="ph" x="490" y="146" text-anchor="middle">FIRE ALL OF IT</text>
+      <text class="ph" x="865" y="146" text-anchor="middle">REBUILD</text>
+    </svg>
+    <div class="honesty"><span class="tier data">Data · names</span><span class="tier inf">Inference · shape</span>
+      <small>From the researched loop: turret placement after gathering is essential; moving packs sharply reduce damage.</small></div>
+  </article>
+
+  <div class="tradeoffs">
+    <div class="buy"><b>What it buys</b><ul>
+      <li>Answers "what will I be doing" in one glance.</li>
+      <li>The three lives look genuinely different: spike vs wave vs stack.</li>
+      <li>Reuses the seal's language (hold/cross carries straight over).</li>
+    </ul></div>
+    <div class="risk"><b>What it risks</b><ul>
+      <li>Anything timeline-shaped can read as a rotation guide.</li>
+      <li>70 strips means 70 authored drawings, each an editorial claim.</li>
+      <li>Thin-evidence specs would get invented topologies.</li>
+    </ul></div>
+  </div>
+</section>
+
+<!-- ================= VARIANT B ================= -->
+<section class="variant">
+  <h2><span class="tag">B</span> Attention row — where your eyes live</h2>
+  <p class="intro">Four fixed channels for every spec in the game: your own bar, the enemy, the ground, the party.
+  Coarse on purpose. Cheap, uniform, comparable across all 70 specs.</p>
+
+  <div class="att-grid">
+    <div class="att-head"><span>Spec</span><span>Your bar</span><span>The enemy</span><span>The ground</span><span>The party</span></div>
+    <div class="att-row cultist">
+      <span class="spec">Godblade<small>Cultist · melee</small></span>
+      <span class="dots"><b>●●●</b><span>○</span></span><span class="dots"><b>●●</b><span>○○</span></span><span class="dots"><b>●●●</b><span>○</span></span><span class="dots"><b>●</b><span>○○○</span></span>
+      <span class="att-why">Insanity amount, Voidborne duration, and Rift location all compete for attention.</span>
+    </div>
+    <div class="att-row cultist">
+      <span class="spec">Corruption<small>Cultist · ranged</small></span>
+      <span class="dots"><b>●●</b><span>○○</span></span><span class="dots"><b>●●●</b><span>○</span></span><span class="dots"><b>●</b><span>○○○</span></span><span class="dots"><b></b><span>○○○○</span></span>
+      <span class="att-why">Darkwither coverage across several targets, plus Insanity and mana, are all live states.</span>
+    </div>
+    <div class="att-row tinker">
+      <span class="spec">Demolition<small>Tinker · ranged</small></span>
+      <span class="dots"><b>●</b><span>○○○</span></span><span class="dots"><b>●●</b><span>○○</span></span><span class="dots"><b>●●●</b><span>○</span></span><span class="dots"><b>●</b><span>○○○</span></span>
+      <span class="att-why">Factories, oil, turrets, and napalm anchor damage to locations; you wait on the tank's stack.</span>
+    </div>
+    <div class="att-row tinker">
+      <span class="spec">Invention<small>Tinker · healer</small></span>
+      <span class="dots"><b>●●</b><span>○○</span></span><span class="dots"><b></b><span>○○○○</span></span><span class="dots"><b>●●●</b><span>○</span></span><span class="dots"><b>●●●</b><span>○</span></span>
+      <span class="att-why">Beacon placement and device cooldowns on one side, ally health on the other.</span>
+    </div>
+  </div>
+  <div class="honesty"><span class="tier inf">Inference</span>
+    <small>Relative emphasis, inferred from researched mechanics. Not measured, and never comparable as "difficulty."</small></div>
+
+  <div class="tradeoffs" style="margin-top:12px">
+    <div class="buy"><b>What it buys</b><ul>
+      <li>One glance separates a placement class from a bar-watching class.</li>
+      <li>Uniform: works identically for all 70 specs, thin evidence included.</li>
+      <li>Cheap to author and cheap to keep honest.</li>
+    </ul></div>
+    <div class="risk"><b>What it risks</b><ul>
+      <li>Says nothing about rhythm, windows, or failure.</li>
+      <li>Dots are pips again: they can read as ratings.</li>
+      <li>Four channels flatten hybrid attention (mouse vs eyes vs ears).</li>
+    </ul></div>
+  </div>
+</section>
+
+<!-- ================= VARIANT C ================= -->
+<section class="variant">
+  <h2><span class="tag">C</span> In context — both forms compressed into the codex header</h2>
+  <p class="intro">The same information where the choice actually happens: the top of the selected spec's profile,
+  under the fantasy line. Mocked on Godblade with its real shipped text.</p>
+
+  <div class="codex-mock">
+    <h3>Godblade</h3>
+    <div class="meta"><span>Cultist</span><span>Damage · Melee</span><span>Planners &amp; Detonators</span><span class="cur">Curated · Medium</span></div>
+    <p class="flavor">"A Void-infused two-handed bruiser who deliberately flirts with madness, tears open damaging zones, and turns a full Insanity bar into a dangerous burst form."</p>
+    <p class="feel">Prepare Insanity and Rift before committing the big Hammer sequence, then keep melee uptime through the transformation.</p>
+    <div class="rhythm-block">
+      <div class="lab"><span>The rhythm — shape, not script</span><span>names: Data · shape: Inference</span></div>
+      <svg viewBox="0 0 1000 74" role="img" aria-label="Compact Godblade rhythm: climb and place, cross into the Voidborne window, exposed while it lasts, then climb again">
+        <line class="thr" x1="10" y1="14" x2="990" y2="14"/>
+        <line class="ax" x1="10" y1="58" x2="990" y2="58"/>
+        <path class="gb-climb" d="M14 58 L120 44 L150 48 L260 34 L300 38 L390 26 L440 30 L470 26 L470 58 Z"/>
+        <rect class="gb-window" x="500" y="16" width="150" height="42" rx="2"/>
+        <text class="gb-window-lab" x="575" y="41" text-anchor="middle" style="font-size:11.5px">VOIDBORNE</text>
+        <rect class="hazard" x="500" y="61" width="150" height="5"/>
+        <path class="gb-climb" d="M690 58 L800 46 L830 49 L930 38 L930 58 Z"/>
+        <text class="ph2" x="240" y="70">climb &amp; place</text>
+        <text class="ph2" x="575" y="12" text-anchor="middle">cross · exposed while it lasts</text>
+        <text class="ph2" x="820" y="70">…and again</text>
+      </svg>
+      <div class="eyes">
+        <span>your bar <b>●●●</b></span><span>the ground <b>●●●</b></span><span>the enemy <b>●●</b></span><span>the party <b>●</b></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="tradeoffs" style="margin-top:12px">
+    <div class="buy"><b>What it buys</b><ul>
+      <li>Sits exactly where a chooser is already looking.</li>
+      <li>Feel gets answered before any fold is opened.</li>
+      <li>One compact block, not a new page section.</li>
+    </ul></div>
+    <div class="risk"><b>What it risks</b><ul>
+      <li>The codex header gets crowded; it already holds quote, feel, video, talents.</li>
+      <li>Compression costs the annotations that keep the strip honest.</li>
+      <li>Small screens will squeeze it hard.</li>
+    </ul></div>
+  </div>
+</section>
+
+<footer>
+  Scratch page in <code>_previews/coa-class-diagram-mockups</code>. Nothing here touches the repository.
+  Seal study: <a href="diagram-preview.html?c=cultist&concept=seal">Cultist</a> · <a href="diagram-preview.html?c=tinker&concept=seal">Tinker</a>
+</footer>
+</body>
+</html>

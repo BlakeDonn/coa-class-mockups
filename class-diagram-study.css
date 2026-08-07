@@ -1,0 +1,236 @@
+/* Scratch-only study. The shipped class page remains untouched except for one
+   class-fantasy diagram selected by the query-string concept. */
+
+:root {
+  --void: #7d3fc2;
+  --void-hot: #c88cff;
+  --void-deep: #170d21;
+  --ritual-gold: #d8b367;
+}
+
+.cd-stage { color: #d8d2df; }
+.cd-stage svg { display: block; width: 100%; height: 100%; overflow: visible; }
+.cd-link { fill: none; stroke: #6f477f; stroke-width: 1.2; opacity: .52; }
+.cd-link-soft { fill: none; stroke: #a16bc3; stroke-width: .75; opacity: .24; stroke-dasharray: 3 6; }
+.cd-orbit { fill: none; stroke: #825097; stroke-width: 1; opacity: .34; }
+.cd-orbit.threshold { stroke: var(--ritual-gold); opacity: .55; stroke-dasharray: 2 5; }
+.cd-tendril { fill: none; stroke: #512f63; stroke-width: 5; opacity: .28; stroke-linecap: round; }
+.cd-eye-shell { fill: #21122d; stroke: #aa6acb; stroke-width: 2; filter: url(#cdGlow); }
+.cd-eye-lid { fill: none; stroke: #bd80dd; stroke-width: 3; stroke-linecap: round; }
+.cd-pupil { fill: #09070c; stroke: var(--ritual-gold); stroke-width: 1.25; }
+.cd-iris { fill: url(#cdIris); opacity: .95; }
+.cd-rune { fill: #b27ad0; font: 700 8px Georgia,serif; letter-spacing: .12em; opacity: .58; }
+.cd-kicker { fill: #8d8295; font: 700 8px Arial,sans-serif; letter-spacing: .22em; }
+.cd-center-label { fill: #e7d7ee; font: 700 11px Georgia,serif; letter-spacing: .18em; }
+.cd-threshold { fill: #bfa96e; font: 700 8px Arial,sans-serif; letter-spacing: .1em; }
+.cd-node { cursor: pointer; outline: none; }
+.cd-node .node-ring { fill: #151118; stroke: #644172; stroke-width: 1.1; transition: .18s ease; }
+.cd-node .node-dot { fill: #8551a0; transition: .18s ease; }
+.cd-node .node-name { fill: #d7b55e; font: 700 12px Georgia,serif; letter-spacing: .03em; }
+.cd-node .node-verb { fill: #8f8796; font: 700 7px Arial,sans-serif; letter-spacing: .16em; }
+.cd-node:hover .node-ring, .cd-node:focus-visible .node-ring,
+.cd-node.active .node-ring { fill: #291833; stroke: #d3a3ef; stroke-width: 2; filter: url(#cdGlow); }
+.cd-node.active .node-dot { fill: #e1b86d; }
+.cd-node.active .node-name { fill: #f1cb6e; }
+
+/* Concept 1: a compact heraldic seal inhabits the existing masthead. */
+.cp-mast.cd-with-seal { min-height: 224px; padding-right: 440px; }
+.cp-mast.cd-with-seal > .glyph { display: none; }
+.cd-seal { position: absolute; z-index: 1; right: 16px; top: 12px; width: 410px; height: 200px;
+  border-left: 1px solid #49355380; background: radial-gradient(circle at 50% 50%, #5a2d7230, transparent 67%); }
+.cd-seal::before { content: ""; position: absolute; inset: 8px 4px 8px 18px; pointer-events: none;
+  border: 1px solid #754c8545; clip-path: polygon(12px 0,100% 0,100% calc(100% - 12px),calc(100% - 12px) 100%,0 100%,0 12px); }
+
+/* Tinker uses the same compact slot and interaction, but its own blueprint grammar. */
+.cd-tinker-seal { border-left-color: #6f593b80;
+  background: radial-gradient(circle at 50% 46%, #d99b3630, transparent 48%), linear-gradient(115deg, #1b181480, transparent 62%); }
+.cd-tinker-seal::before { border-color: #b88b4250; }
+.cd-tinker-seal svg { overflow: hidden; }
+.tk-grid { fill: url(#tkGrid); stroke: #846a4438; }
+.tk-trace { fill: none; stroke: #493f31; stroke-width: 7; stroke-linecap: round; }
+.tk-trace-hot { stroke: #d5a24d; stroke-width: 1.25; opacity: .66; stroke-dasharray: 3 5; }
+.tk-orbit { fill: none; stroke: #9f7a3f; stroke-width: 1; opacity: .44; }
+.tk-orbit.dashed { stroke: #73b9b2; opacity: .38; stroke-dasharray: 2 5; }
+.tk-gear { fill: url(#tkMetal); stroke: #d3a65b; stroke-width: 1.2; filter: drop-shadow(0 0 9px #d98a2b33); }
+.tk-core { fill: url(#tkCore); stroke: #f1cb76; stroke-width: 1.2; filter: url(#tkGlow); }
+.tk-core-ring { fill: #181712; stroke: #6fbbb3; stroke-width: 1; opacity: .88; }
+.tk-core-mark { fill: none; stroke: #d8ad5f; stroke-width: 1.5; opacity: .24; }
+.tk-center-label { fill: #f2d487; font: 800 9px Arial,sans-serif; letter-spacing: .18em; }
+.tk-center-sub { fill: #75bbb4; font: 700 6px Arial,sans-serif; letter-spacing: .12em; }
+.tk-legend { fill: #9a8054; font: 700 6px Arial,sans-serif; letter-spacing: .13em; opacity: .72; }
+.tk-legend.right { fill: #668d88; }
+.tk-node .node-ring { fill: #181713; stroke: #806641; }
+.tk-node .tk-bolt { fill: none; stroke: #4e9b97; stroke-width: .8; stroke-dasharray: 2 3; opacity: .65; }
+.tk-node .tk-icon-line { fill: none; stroke: #d5aa59; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.tk-node .tk-signal { fill: none; stroke: #67b8b1; stroke-width: 1; opacity: .85; }
+.tk-node .node-name { fill: #e0bb70; }
+.tk-node .node-verb { fill: #75aaa6; }
+.tk-node:hover .node-ring, .tk-node:focus-visible .node-ring,
+.tk-node.active .node-ring { fill: #292319; stroke: #f0c16b; filter: url(#tkGlow); }
+.tk-node.active .tk-bolt { stroke: #8ee6dd; opacity: 1; }
+.tk-node.active .tk-icon-line { stroke: #ffe09a; }
+.tk-node.active .node-name { fill: #f4cf7d; }
+
+/* Generated ornamental layer with real HTML interaction over it. */
+.cd-generated-seal { isolation: isolate; overflow: hidden; border-left-color: #765c3770;
+  background-position: center; background-repeat: no-repeat; background-size: cover; }
+.cd-generated-seal::before { z-index: 2; border-color: #aa824c55; }
+.cd-generated-seal::after { content: ""; position: absolute; z-index: 1; inset: 0; pointer-events: none;
+  background: linear-gradient(90deg, #0c0d11b5 0, transparent 18%, transparent 82%, #0c0d11a8 100%); }
+.cd-generated-cultist { background-image: url("generated-assets/cultist-generated-seal.png"); }
+.cd-generated-tinker { background-image: url("generated-assets/tinker-generated-seal.png"); }
+.cd-generated-hotspot { position: absolute; z-index: 3; left: var(--hotspot-x); top: var(--hotspot-y);
+  width: 92px; height: 76px; padding: 0; transform: translate(-50%, -50%); border: 0; border-radius: 50%;
+  background: transparent; color: inherit; cursor: pointer; outline: none; }
+.cd-generated-hotspot::before { content: ""; position: absolute; inset: 5px 13px; border: 1px solid transparent;
+  border-radius: 50%; transition: border-color .16s ease, box-shadow .16s ease, background .16s ease; }
+.cd-generated-hotspot:hover::before, .cd-generated-hotspot:focus-visible::before,
+.cd-generated-hotspot.active::before { border-color: #f0c66f; background: #dba54b12;
+  box-shadow: 0 0 12px #f1c56d88, inset 0 0 14px #e4b75c38; }
+.cd-generated-hotspot span { position: absolute; left: 50%; top: calc(100% - 5px); min-width: 112px;
+  transform: translateX(-50%); text-align: center; text-shadow: 0 1px 3px #000, 0 0 8px #000; }
+.cd-generated-hotspot b { display: block; color: #e8c36d; font: 700 11px Georgia,serif; white-space: nowrap; }
+.cd-generated-hotspot small { display: block; margin-top: 1px; color: #9eb9b4; font: 700 6px Arial,sans-serif;
+  letter-spacing: .16em; }
+.cd-generated-hotspot.lower span { top: auto; bottom: calc(100% - 3px); }
+.cd-generated-cultist .cd-generated-hotspot span { top: 50%; transform: translate(-50%, -50%); }
+.cd-generated-cultist .cd-generated-hotspot.lower span { top: 50%; bottom: auto; }
+.cd-generated-cultist .cd-generated-hotspot small { color: #a68ab6; }
+
+/* Placement study: a medium blueprint shares the overview row with real cards. */
+.cd-overview-deck { display: grid; grid-template-columns: minmax(330px, 38%) minmax(0, 62%); gap: 10px;
+  align-items: stretch; margin: 0 0 16px; }
+.cd-overview-deck .cd-deck-artifact.cd-seal { position: relative; inset: auto; width: 100%; height: auto;
+  min-height: 246px; border: 1px solid var(--edge-out); background-color: #111216; }
+.cd-overview-deck .rail { margin: 0; grid-template-columns: repeat(2, minmax(0, 1fr)); align-content: stretch; }
+.cd-overview-deck .rail-card { min-width: 0; }
+.cd-overview-deck.cd-three-specs .rail { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.cd-layout-unified { gap: 0; padding: 9px; border: 1px solid var(--edge-out); border-radius: 3px;
+  background: linear-gradient(145deg, #171614, #111216 62%); box-shadow: inset 0 0 46px #0007; }
+.cd-layout-unified .cd-deck-artifact.cd-seal { border-color: transparent; border-right-color: #57462f80; border-radius: 0; }
+.cd-layout-unified .rail { gap: 8px; padding-left: 9px; }
+.cd-layout-band { grid-template-columns: 1fr; }
+.cd-layout-band .cd-deck-artifact.cd-seal { min-height: 174px; height: 174px; }
+.cd-layout-band .rail { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+
+/* Cards orbit the diagram and line up with its actual specialization geometry. */
+.cd-layout-orbit, .cd-layout-orbit-core { position: relative; grid-template-columns: minmax(225px, 1fr) minmax(330px, 400px) minmax(225px, 1fr);
+  grid-template-rows: repeat(2, minmax(168px, auto)); gap: 10px; }
+.cd-layout-orbit .rail, .cd-layout-orbit-core .rail { display: contents; }
+.cd-layout-orbit .cd-deck-artifact.cd-seal, .cd-layout-orbit-core .cd-deck-artifact.cd-seal {
+  grid-column: 2; grid-row: 1 / 3; min-height: 346px; align-self: stretch; }
+.cd-layout-orbit .rail-card, .cd-layout-orbit-core .rail-card { margin: 0; min-height: 0; }
+.cd-layout-orbit .rail-card.sel::after, .cd-layout-orbit-core .rail-card.sel::after { display: none; }
+.cd-cultist-deck.cd-layout-orbit .rail-card[data-sel="cultist/corruption"],
+.cd-cultist-deck.cd-layout-orbit-core .rail-card[data-sel="cultist/corruption"] { grid-column: 1; grid-row: 1; }
+.cd-cultist-deck.cd-layout-orbit .rail-card[data-sel="cultist/dreadnought"],
+.cd-cultist-deck.cd-layout-orbit-core .rail-card[data-sel="cultist/dreadnought"] { grid-column: 3; grid-row: 1; }
+.cd-cultist-deck.cd-layout-orbit .rail-card[data-sel="cultist/heretic"],
+.cd-cultist-deck.cd-layout-orbit-core .rail-card[data-sel="cultist/heretic"] { grid-column: 1; grid-row: 2; }
+.cd-cultist-deck.cd-layout-orbit .rail-card[data-sel="cultist/godblade"],
+.cd-cultist-deck.cd-layout-orbit-core .rail-card[data-sel="cultist/godblade"] { grid-column: 3; grid-row: 2; }
+.cd-tinker-deck.cd-layout-orbit, .cd-tinker-deck.cd-layout-orbit-core {
+  grid-template-rows: minmax(230px, auto) minmax(155px, auto); }
+.cd-tinker-deck.cd-layout-orbit .cd-deck-artifact.cd-seal,
+.cd-tinker-deck.cd-layout-orbit-core .cd-deck-artifact.cd-seal { grid-column: 2; grid-row: 1; min-height: 230px; }
+.cd-tinker-deck.cd-layout-orbit .rail-card[data-sel="tinker/demolition"],
+.cd-tinker-deck.cd-layout-orbit-core .rail-card[data-sel="tinker/demolition"] { grid-column: 1; grid-row: 1; }
+.cd-tinker-deck.cd-layout-orbit .rail-card[data-sel="tinker/invention"],
+.cd-tinker-deck.cd-layout-orbit-core .rail-card[data-sel="tinker/invention"] { grid-column: 3; grid-row: 1; }
+.cd-tinker-deck.cd-layout-orbit .rail-card[data-sel="tinker/mechanics"],
+.cd-tinker-deck.cd-layout-orbit-core .rail-card[data-sel="tinker/mechanics"] { grid-column: 2; grid-row: 2; }
+.cd-layout-orbit-core .cd-node .node-name,
+.cd-layout-orbit-core .cd-node .node-verb { opacity: 0; pointer-events: none; }
+.cd-layout-orbit-core .cd-node .node-ring { stroke-width: 1.5; }
+
+/* Concept 2: a full-width ritual plate, visually dominant but still one insertion. */
+.cd-ritual-plate { position: relative; height: 286px; margin: 0 0 14px; overflow: hidden;
+  border: 1px solid var(--edge-out); border-radius: 3px;
+  background:
+    radial-gradient(circle at 50% 52%, #6b368050, transparent 29%),
+    radial-gradient(ellipse at 50% 100%, #35193c70, transparent 62%),
+    linear-gradient(145deg,#121014,#17131a 48%,#0e0e11); box-shadow: inset 0 0 70px #0009; }
+.cd-ritual-plate::before, .cd-ritual-plate::after { content: ""; position: absolute; pointer-events: none; }
+.cd-ritual-plate::before { inset: 8px; border: 1px solid #7e55873b;
+  clip-path: polygon(15px 0,100% 0,100% calc(100% - 15px),calc(100% - 15px) 100%,0 100%,0 15px); }
+.cd-ritual-plate::after { inset: 0; opacity: .16;
+  background-image: repeating-linear-gradient(0deg,transparent 0 23px,#ba8dd00b 24px),
+    repeating-linear-gradient(90deg,transparent 0 23px,#ba8dd008 24px); }
+.cd-ritual-plate .plate-title { position: absolute; z-index: 2; left: 18px; top: 13px;
+  color: #a58aad; font: 700 9px Arial,sans-serif; letter-spacing: .22em; text-transform: uppercase; }
+.cd-ritual-plate .plate-note { position: absolute; z-index: 2; right: 18px; bottom: 12px;
+  color: #766e7c; font-size: 9px; }
+
+/* Concept 3: a compact spec compass linked to the unchanged rail. */
+.cd-compass { position: relative; min-height: 206px; margin-bottom: 14px; overflow: hidden;
+  border: 1px solid var(--edge-out); border-radius: 3px;
+  background: radial-gradient(circle at center,#45215545,transparent 27%),linear-gradient(145deg,#151317,#0f1013); }
+.cd-compass .compass-title { position: absolute; left: 16px; top: 12px; z-index: 3;
+  color: #9a819f; font: 700 9px Arial,sans-serif; letter-spacing: .2em; text-transform: uppercase; }
+.cd-compass .compass-lines { position: absolute; inset: 0; z-index: 1; pointer-events: none; }
+.cd-compass .compass-core { position: absolute; z-index: 2; left: 50%; top: 52%; width: 116px; height: 116px;
+  transform: translate(-50%,-50%); border: 1px solid #8b5b9d; border-radius: 50%;
+  background: radial-gradient(circle,#7f44a04f,#221329 54%,#0d0d10 56%); box-shadow: 0 0 45px #7438934a,inset 0 0 22px #000; }
+.cd-compass .compass-core::before { content: ""; position: absolute; inset: 22px 12px; border: 2px solid #bd7edd;
+  border-radius: 55% 45%; transform: rotate(-8deg); box-shadow: 0 0 15px #9d5ecb55; }
+.cd-compass .compass-core::after { content: ""; position: absolute; left: 50%; top: 50%; width: 22px; height: 52px;
+  transform: translate(-50%,-50%); border-radius: 50%; background: #09070c; border: 1px solid #d3ae64; }
+.cd-compass .core-label { position: absolute; z-index: 4; left: 50%; top: calc(52% + 69px); transform: translateX(-50%);
+  color: #a995b1; font: 700 8px Arial,sans-serif; letter-spacing: .16em; text-transform: uppercase; }
+.cd-compass .compass-node { position: absolute; z-index: 3; width: 190px; min-height: 58px; padding: 9px 12px;
+  border: 1px solid #4e3d54; border-radius: 3px; background: #151218e8; text-align: left; cursor: pointer; }
+.cd-compass .compass-node b { display: block; color: #d9b960; font: 700 13px Georgia,serif; }
+.cd-compass .compass-node span { color: #8d8491; font: 700 8px Arial,sans-serif; letter-spacing: .14em; text-transform: uppercase; }
+.cd-compass .compass-node:hover, .cd-compass .compass-node.active { border-color: #bd83d5;
+  background: #25172b; box-shadow: 0 0 20px #7b3c9340; }
+.cd-compass .n-corruption { left: 16px; top: 42px; }
+.cd-compass .n-heretic { left: 16px; bottom: 18px; }
+.cd-compass .n-dreadnought { right: 16px; top: 42px; }
+.cd-compass .n-godblade { right: 16px; bottom: 18px; }
+
+/* Scratch comparison control. */
+.cd-switcher { position: fixed; z-index: 90; right: 12px; bottom: 12px; width: 230px; padding: 10px;
+  border: 1px solid #4b4651; border-radius: 5px; background: #111218f2; box-shadow: 0 12px 40px #000b;
+  font: 10px/1.45 Arial,sans-serif; color: #9da0a8; }
+.cd-switcher strong { display: block; margin-bottom: 6px; color: #d2b369; letter-spacing: .14em; text-transform: uppercase; }
+.cd-switcher a { display: block; margin-top: 4px; padding: 5px 7px; border: 1px solid #34343a; border-radius: 3px;
+  color: #b8bac0; text-decoration: none; }
+.cd-switcher a.current { border-color: #9c6bb1; background: #2b1b31; color: #f0d7ff; }
+.cd-switcher small { display: block; margin-top: 7px; color: #6f727b; }
+
+@media (max-width: 900px) {
+  .cp-mast.cd-with-seal { padding-right: 24px; padding-bottom: 218px; }
+  .cd-seal { left: 12px; right: 12px; top: auto; bottom: 8px; width: auto; border-left: 0; border-top: 1px solid #49355380; }
+  .cd-generated-seal { background-size: cover; }
+  .cd-compass .compass-node { width: 160px; }
+  .cd-overview-deck { grid-template-columns: 1fr; }
+  .cd-overview-deck .cd-deck-artifact.cd-seal { inset: auto; width: 100%; min-height: 220px; }
+  .cd-layout-unified .cd-deck-artifact.cd-seal { border-right-color: transparent; border-bottom-color: #57462f80; }
+  .cd-layout-orbit, .cd-layout-orbit-core,
+  .cd-tinker-deck.cd-layout-orbit, .cd-tinker-deck.cd-layout-orbit-core { grid-template-columns: 1fr; grid-template-rows: auto auto; }
+  .cd-layout-orbit .cd-deck-artifact.cd-seal, .cd-layout-orbit-core .cd-deck-artifact.cd-seal,
+  .cd-tinker-deck.cd-layout-orbit .cd-deck-artifact.cd-seal,
+  .cd-tinker-deck.cd-layout-orbit-core .cd-deck-artifact.cd-seal { grid-column: 1; grid-row: 1; min-height: 220px; }
+  .cd-layout-orbit .rail, .cd-layout-orbit-core .rail { display: grid; grid-column: 1; grid-row: 2;
+    grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cd-layout-orbit .rail-card, .cd-layout-orbit-core .rail-card { grid-column: auto !important; grid-row: auto !important; }
+}
+
+@media (max-width: 620px) {
+  .cd-switcher { position: static; width: auto; margin: 12px; }
+  .cd-ritual-plate { height: 276px; overflow-x: auto; overflow-y: hidden; scrollbar-width: thin; scrollbar-color: #654873 #141116; }
+  .cd-ritual-plate svg { width: 760px; max-width: none; height: 228px; margin-top: 32px; }
+  .cd-ritual-plate .plate-note { display: none; }
+  .cd-compass { min-height: 440px; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 142px 10px 10px; }
+  .cd-compass .compass-core { top: 72px; width: 96px; height: 96px; }
+  .cd-compass .core-label { top: 128px; }
+  .cd-compass .compass-lines { display: none; }
+  .cd-compass .compass-node { position: static; width: auto; min-height: 72px; }
+  .cd-overview-deck .rail, .cd-overview-deck.cd-three-specs .rail { display: flex; overflow-x: auto; gap: 8px;
+    padding: 0 0 4px; scrollbar-width: none; }
+  .cd-overview-deck .rail-card { flex: 0 0 78vw; }
+  .cd-layout-unified { padding: 8px; }
+  .cd-layout-orbit .rail, .cd-layout-orbit-core .rail { display: flex; }
+  .cd-generated-hotspot { width: 82px; }
+  .cd-generated-hotspot span { min-width: 96px; }
+}

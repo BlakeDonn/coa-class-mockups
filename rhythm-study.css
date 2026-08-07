@@ -1,0 +1,175 @@
+/* Rhythm placement study — scratch only. Injected block + strip + screen-card styles. */
+
+/* hide the seal study's switcher on this page; ours links back to it */
+.cd-switcher { display: none; }
+
+.ry-block { border: 1px solid #2e2637; background: rgba(0,0,0,.28); border-radius: 4px;
+  padding: 12px 14px 10px; margin: 14px 0 4px; }
+.fold-body .ry-block { margin: 4px 0; }
+.ry-lab { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 6px;
+  font-size: 10.5px; letter-spacing: .16em; text-transform: uppercase; color: #8d8678; margin-bottom: 6px; }
+.ry-block svg { width: 100%; height: auto; display: block; }
+.ry-read { margin: 9px 0 0; color: #cdc8bc; font-size: 13px; line-height: 1.55; max-width: 84ch; }
+.ry-read b { color: #c9aa71; font-weight: 600; }
+.ry-tiers { display: flex; gap: 8px; align-items: center; margin-top: 8px; }
+.ry-tier { font-size: 9.5px; letter-spacing: .08em; text-transform: uppercase; padding: 2px 7px;
+  border-radius: 2px; border: 1px solid; }
+.ry-tier.data { color: #9ec7e8; border-color: #3a5468; }
+.ry-tier.inf { color: #d8b06a; border-color: #63512f; }
+.ry-gap { border-style: dashed; }
+.ry-gap .ry-read { color: #8d8678; }
+
+.ry-eye-btn { margin-left: 10px; background: none; border: 1px dashed #63512f; border-radius: 3px;
+  color: #d8b06a; font: 11px/1 "Segoe UI", sans-serif; letter-spacing: .06em; padding: 3px 8px; cursor: pointer; }
+.ry-eye-btn.on, .ry-eye-btn:hover { background: #2a2115; border-style: solid; }
+.ry-screen { margin-top: 10px; }
+.ry-screen svg { max-width: 560px; border-radius: 4px; }
+.ry-warn { color: #c96a5f; font-size: 12px; font-style: italic; margin: 0 0 8px; }
+
+/* strip internals, scoped to the block */
+.ry-block svg text { font-family: "Segoe UI", system-ui, sans-serif; }
+.ry-block .ax { stroke: #332d24; stroke-width: 1; }
+.ry-block .thr { stroke: #4d4030; stroke-width: 1; stroke-dasharray: 5 5; }
+.ry-block .thr-lab { fill: #8d8678; font-size: 11px; letter-spacing: .08em; }
+.ry-block .ph { fill: #a89f8e; font-size: 11.5px; letter-spacing: .1em; font-weight: 600; }
+.ry-block .ph2 { fill: #736c5e; font-size: 11px; }
+.ry-block .strip-note { fill: #736c5e; font-size: 11px; letter-spacing: .06em; }
+.ry-block .gb-climb { fill: rgba(179,92,255,.14); stroke: #8e4fb2; stroke-width: 1.6; }
+.ry-block .gb-window { fill: rgba(179,92,255,.34); stroke: #b35cff; stroke-width: 1.8; }
+.ry-block .gb-window-lab { fill: #e6ccff; font-size: 12.5px; font-weight: 700; letter-spacing: .1em; }
+.ry-block .hazard { fill: rgba(201,106,95,.35); }
+.ry-block .hazard-lab { fill: #c96a5f; font-size: 10.5px; letter-spacing: .08em; }
+.ry-block .tick { stroke: rgba(179,92,255,.5); stroke-width: 2; }
+.ry-block .wave { fill: rgba(179,92,255,.16); stroke: #8e4fb2; stroke-width: 1.6; }
+.ry-block .refresh { fill: none; stroke: #c9aa71; stroke-width: 1.4; }
+.ry-block .refresh-lab { fill: #c9aa71; font-size: 10.5px; letter-spacing: .06em; }
+.ry-block .branch { stroke: #8d8678; stroke-width: 1.2; fill: none; }
+.ry-block .brick { fill: rgba(217,164,65,.16); stroke: #a3803e; stroke-width: 1.2; }
+.ry-block .brick-lab { fill: #d9c396; font-size: 10.5px; letter-spacing: .04em; }
+.ry-block .dm-window { fill: rgba(217,164,65,.36); stroke: #d9a441; stroke-width: 1.8; }
+.ry-block .dm-window-lab { fill: #f2dcae; font-size: 12.5px; font-weight: 700; letter-spacing: .1em; }
+.ry-block .idle { fill: none; stroke: #4d4030; stroke-width: 1; stroke-dasharray: 3 4; }
+
+/* col engine: let the seal claim the masthead's full height, at its own aspect ratio */
+@media (min-width: 901px) {
+  .ry-e-col .cp-mast.cd-with-seal { padding-right: clamp(440px, 45%, 640px); }
+  .ry-e-col .cd-seal { top: 12px; height: calc(100% - 24px); width: auto;
+    aspect-ratio: 420 / 205; max-width: calc(clamp(440px, 45%, 640px) - 40px); }
+}
+
+/* engine paragraph variants */
+.ry-engine { border-left: 2px solid var(--class-color, #c9aa71); padding: 5px 12px 6px; margin: 10px 0 2px; max-width: 62ch; }
+.ry-engine .lab { display: block; font-size: 10px; letter-spacing: .16em; text-transform: uppercase; color: #8d8678; margin-bottom: 3px; }
+.ry-engine p { margin: 0; color: #cdc8bc; font-size: 13.5px; line-height: 1.55; }
+.ry-e-seal .cd-seal { height: auto; }
+.ry-e-seal .cp-mast.cd-with-seal { min-height: 300px; }
+.ry-engine-cap { padding: 8px 14px 10px 18px; border-top: 1px solid #49355380; font-size: 12px; line-height: 1.5; color: #b9b2a4; }
+.ry-engine-cap .lab { font-size: 9.5px; letter-spacing: .16em; text-transform: uppercase; color: #8d8678; display: block; margin-bottom: 2px; }
+.ry-engine-strip { display: flex; gap: 18px; align-items: baseline; padding: 12px 20px; }
+.ry-engine-strip .lab { flex: 0 0 auto; font-size: 10.5px; letter-spacing: .16em; text-transform: uppercase; color: #8d8678; }
+.ry-engine-strip p { margin: 0; color: #cdc8bc; font-size: 13.5px; line-height: 1.55; max-width: 96ch; }
+@media (max-width: 700px) { .ry-engine-strip { flex-direction: column; gap: 4px; } }
+
+/* re-spaced cultist seal for the tall col slot */
+@media (min-width: 901px) {
+  .ry-e-col .cd-seal.ry-reseal { aspect-ratio: 420 / 260; }
+}
+
+/* rebuilt spec cards */
+.ry-card2 { display: flex; flex-direction: column; gap: 4px; }
+.ry-card2 .rc-top { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
+.ry-card2 .rc-top b { font-family: Georgia, serif; font-size: 16.5px; color: #e8c88a; }
+.ry-card2 .ry-verb-chip { position: static; flex: 0 0 auto; }
+.ry-card2 .rc-role { font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: #8d8678; }
+.ry-card2 .rc-family { display: flex; align-items: center; gap: 7px; font-size: 10.5px; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--class-color, #c9aa71); margin-top: 2px; }
+.ry-topo { width: 52px; height: 15px; flex: 0 0 auto; }
+.tg-fill { fill: color-mix(in srgb, var(--class-color, #c9aa71) 45%, transparent); }
+.tg-hot { fill: color-mix(in srgb, var(--class-color, #c9aa71) 85%, white 6%); }
+.tg-line { fill: none; stroke: var(--class-color, #c9aa71); stroke-width: 1.6; }
+.ry-card2 .rc-fantasy { font-style: italic; color: #b7b0a2; font-size: 12.5px; line-height: 1.5; margin: 3px 0;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.ry-card2 .rc-fantasy.one-line { -webkit-line-clamp: 1; }
+.ry-card2 .rc-yes { color: #7fc98a; font-size: 12px; line-height: 1.45; margin: 0; }
+.ry-card2 .rc-no { color: #c96a5f; font-size: 12px; line-height: 1.45; margin: 0; }
+
+/* selected card glows like the seal's active node — same lightened stroke tone (#d3a3ef-class) */
+body.ry-glow .rail-card.sel {
+  border-color: color-mix(in srgb, var(--class-color, #c9aa71) 58%, white 42%);
+  box-shadow: 0 0 0 1px color-mix(in srgb, color-mix(in srgb, var(--class-color, #c9aa71) 58%, white 42%) 50%, transparent),
+    0 0 22px color-mix(in srgb, var(--class-color, #c9aa71) 30%, transparent);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--class-color, #c9aa71) 9%, transparent), transparent 58%); }
+
+/* round-2 cards: authored copy, no truncation, airier type */
+.ry-card3 { gap: 6px; }
+.ry-card3 .rc-line { font-style: italic; color: #c6beac; font-size: 12.5px; line-height: 1.55; margin: 2px 0 0; }
+.ry-card3 .rc-div { border-top: 1px solid #27221b; margin: 5px 0 3px; }
+.ry-card3 .rc-mark { display: grid; grid-template-columns: 15px 1fr; gap: 5px; font-size: 12px; line-height: 1.45; }
+.ry-card3 .rc-mark.yes { color: #7fc98a; }
+.ry-card3 .rc-mark.no { color: #c96a5f; }
+
+/* style-led cards: inner clipped frame echoing the seal ornament */
+body.ry-k-style .rail-card::before { content: ""; position: absolute; inset: 5px; pointer-events: none;
+  border: 1px solid color-mix(in srgb, var(--class-color, #c9aa71) 26%, transparent);
+  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px); }
+
+/* verb echo on rail cards */
+.rail-card { position: relative; }
+.ry-verb-chip { position: absolute; top: 10px; right: 10px; font-size: 9.5px; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--class-color, #c9aa71);
+  border: 1px solid; border-color: color-mix(in srgb, var(--class-color, #c9aa71) 45%, transparent);
+  padding: 2px 7px; border-radius: 3px; opacity: .85; }
+.rail-card.sel .ry-verb-chip { opacity: 1; background: color-mix(in srgb, var(--class-color, #c9aa71) 14%, transparent); }
+.ry-verb-kick { display: block; font-size: 9.5px; letter-spacing: .18em; text-transform: uppercase;
+  color: var(--class-color, #c9aa71); margin-bottom: 2px; }
+.ry-verb-meta { color: var(--class-color, #c9aa71); text-transform: uppercase; letter-spacing: .08em; }
+
+/* reading lines side by side */
+.ry-reads { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 26px; }
+@media (max-width: 900px) { .ry-reads { grid-template-columns: 1fr; } }
+
+/* talents in the spec header: vertically centered, sized to invite the click */
+[data-spec-root] .d-head { position: relative; }
+.ry-head-talents { position: absolute; top: 50%; transform: translateY(-50%); right: 22px; display: flex; gap: 9px; }
+.ry-head-talents img { width: 46px; height: 46px; border-radius: 4px; border: 1px solid #3d3447;
+  display: block; cursor: pointer; transition: border-color .15s, transform .15s; }
+.ry-head-talents img:hover { border-color: #c9aa71; transform: translateY(-2px); }
+@media (max-width: 900px) { .ry-head-talents { position: static; transform: none; margin-top: 8px; } }
+
+/* class highlight as a masthead chip */
+.ry-mast-video { display: inline-block; border: 1px solid #4a3d2a; border-radius: 3px; padding: 4px 10px;
+  margin-left: 6px; color: #c9aa71; font-size: 11px; letter-spacing: .1em; text-transform: uppercase;
+  text-decoration: none; }
+.ry-mast-video:hover { color: #e8c88a; border-color: #6b573a; }
+
+/* compressed media row (codex top slim/tight) */
+.ry-media-row { display: flex; align-items: center; gap: 7px; padding: 9px 0 3px; flex-wrap: wrap; }
+.ry-media-row img { width: 30px; height: 30px; border-radius: 3px; display: block; }
+.ry-mr-meta { display: flex; gap: 8px; align-items: center; margin-left: 8px; font-size: 12px; color: #8d8678; flex-wrap: wrap; }
+.ry-mr-link { color: #c9aa71; text-decoration: none; }
+.ry-mr-link:hover { color: #e8c88a; }
+.ry-mr-sep { color: #4d4030; }
+
+/* pips treatments */
+.d-stats .stat[data-tipname] { cursor: help; border-bottom: 1px dotted #4d4030; }
+.ry-pips-more { color: #736c5e; font-size: 10.5px; letter-spacing: .06em; align-self: center; }
+
+/* video treatments */
+.ry-vid-mini { display: flex; align-items: center; gap: 10px; padding: 8px 14px;
+  border-bottom: 1px solid #211d18; color: #8d8678; font-size: 12px; text-decoration: none; }
+.ry-vid-mini img { width: 72px; border-radius: 3px; display: block; }
+.ry-vid-mini b { color: #c9aa71; font-weight: 600; }
+.ry-vid-mini:hover b { color: #e8c88a; }
+.ry-sw-row { display: flex; gap: 4px; margin-top: 4px; }
+.ry-sw-row a { flex: 1; text-align: center; }
+
+/* our switcher, bottom-left mirror of the study's */
+.ry-switcher { position: fixed; z-index: 90; right: 12px; bottom: 12px; width: 240px; padding: 10px;
+  border: 1px solid #4b4651; border-radius: 5px; background: #111218f2; box-shadow: 0 12px 40px #000b;
+  font: 10px/1.45 Arial, sans-serif; color: #9da0a8; }
+.ry-switcher strong { display: block; margin-bottom: 6px; color: #d2b369; letter-spacing: .14em; text-transform: uppercase; }
+.ry-switcher a { display: block; margin-top: 4px; padding: 5px 7px; border: 1px solid #34343a; border-radius: 3px;
+  color: #b8bac0; text-decoration: none; }
+.ry-switcher a.current { border-color: #9c6bb1; background: #2b1b31; color: #f0d7ff; }
+.ry-switcher small { display: block; margin-top: 7px; color: #6f727b; }
+@media (max-width: 900px) { .ry-switcher { position: static; width: auto; margin: 12px; } }

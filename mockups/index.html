@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CoA Field Guide – Visual Directions</title>
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: #0b0c10; color: #eee; font: 15px/1.5 Inter, Segoe UI, sans-serif; }
+    .chooser { max-width: 1500px; margin: auto; padding: 28px; }
+    .chooser > h1 { margin: 0; font-size: clamp(24px, 4vw, 44px); }
+    .chooser > p { color: #aaa; max-width: 800px; }
+    .jump { display: flex; flex-wrap: wrap; gap: 10px; margin: 22px 0 38px; }
+    .jump a { color: #fff; border: 1px solid #444; padding: 8px 14px; border-radius: 999px; text-decoration: none; }
+    .direction { margin: 0 0 56px; }
+    .direction-title { display: flex; align-items: baseline; flex-wrap: wrap; gap: 12px; margin: 0 0 12px; }
+    .direction-title h2 { margin: 0; font-size: 25px; }
+    .direction-title span { color: #aaa; }
+    .viewport { min-height: 690px; overflow: hidden; border: 1px solid #333; border-radius: 18px; box-shadow: 0 24px 60px #0009; }
+
+    /* A: Arcane Codex */
+    .a { --cyan:#5de4d1; --violet:#9a7cff; background: radial-gradient(circle at 80% 0%, #28244b 0, transparent 34%), #10131c; color:#ecf2f7; display:grid; grid-template-columns:240px 1fr; }
+    .a aside { padding:26px 18px; border-right:1px solid #293040; background:#0c0f16dd; }
+    .a .brand { color:var(--cyan); text-transform:uppercase; letter-spacing:.18em; font-size:12px; font-weight:800; }
+    .a .big { font:700 25px/1.05 Georgia,serif; margin:8px 0 28px; }
+    .a nav div { margin:5px 0; padding:9px 10px; color:#87909e; border-radius:8px; }
+    .a nav .active { background:#5de4d119; color:var(--cyan); border-left:2px solid var(--cyan); }
+    .a main { padding:34px clamp(24px,4vw,58px); }
+    .a .eyebrow { color:var(--cyan); text-transform:uppercase; letter-spacing:.15em; font-size:11px; }
+    .a h3 { font:700 clamp(34px,5vw,64px)/1 Georgia,serif; margin:8px 0 12px; }
+    .a .intro { color:#aab3c1; max-width:760px; font-size:17px; }
+    .a .tools { display:flex; gap:9px; margin:24px 0; flex-wrap:wrap; }
+    .a .tool { border:1px solid #30394a; background:#141925; border-radius:9px; color:#aeb8c7; padding:8px 12px; }
+    .a .grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
+    .a article { min-height:300px; border:1px solid #2a3344; border-radius:14px; padding:20px; background:linear-gradient(145deg,#181e2a,#11151e); position:relative; }
+    .a article::before { content:""; height:3px; position:absolute; inset:0 18px auto; background:linear-gradient(90deg,var(--cyan),var(--violet)); border-radius:0 0 5px 5px; }
+    .a .role { color:var(--cyan); font-size:11px; letter-spacing:.12em; text-transform:uppercase; }
+    .a h4 { font:700 24px Georgia,serif; margin:8px 0; }
+    .a article p { color:#9ca7b6; }
+    .a .tags { display:flex; flex-wrap:wrap; gap:6px; position:absolute; bottom:18px; }
+    .a .tags span { background:#252c3b; color:#c4cddd; border-radius:999px; padding:4px 8px; font-size:11px; }
+
+    /* B: Adventurer's Journal */
+    .b { background:#e9ddbd; color:#352b20; font-family:Georgia,serif; padding:38px clamp(22px,5vw,80px); position:relative; }
+    .b::after { content:""; position:absolute; inset:0; pointer-events:none; opacity:.18; background-image:repeating-linear-gradient(0deg,transparent 0 4px,#684d2b 5px); }
+    .b header { max-width:950px; margin:auto; text-align:center; border-bottom:1px solid #8a704a; padding-bottom:25px; }
+    .b .kicker { font:700 11px Segoe UI,sans-serif; letter-spacing:.24em; text-transform:uppercase; color:#86582e; }
+    .b h3 { font-size:clamp(36px,6vw,68px); margin:4px 0; }
+    .b header p { color:#67533c; font-style:italic; }
+    .b .journal-tools { max-width:950px; margin:24px auto; display:grid; grid-template-columns:1fr auto; gap:10px; font-family:Segoe UI,sans-serif; }
+    .b .search { border:1px solid #9d835d; padding:10px 13px; background:#f3e9cc; color:#796448; }
+    .b .stamp { border:1px solid #9d835d; padding:10px 13px; color:#754021; text-transform:uppercase; letter-spacing:.1em; }
+    .b .entries { max-width:950px; margin:auto; display:grid; gap:12px; }
+    .b details { border-top:1px solid #967950; background:#f2e6c8aa; }
+    .b summary { list-style:none; cursor:pointer; display:grid; grid-template-columns:55px 1fr auto; align-items:center; gap:15px; padding:16px; }
+    .b summary::-webkit-details-marker { display:none; }
+    .b .initial { font-size:34px; color:#9a3d2c; font-weight:bold; text-align:center; }
+    .b summary h4 { margin:0; font-size:25px; }
+    .b summary small { font:12px Segoe UI,sans-serif; color:#735e43; }
+    .b .count { font:700 12px Segoe UI,sans-serif; border:1px solid #9d835d; padding:5px 8px; }
+    .b .entry-body { padding:0 20px 22px 86px; display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+    .b .spec { border-left:3px double #9a3d2c; padding-left:14px; }
+    .b .spec b { display:block; font-size:19px; }
+    .b .spec em { color:#8b4d2e; font-size:13px; }
+    .b .spec p { color:#5e4b35; margin-bottom:0; }
+
+    /* C: Explorer Dashboard */
+    .c { --gold:#ffcb69; background:#080a0f; color:#f6f7fb; font-family:Segoe UI,sans-serif; }
+    .c header { padding:24px clamp(20px,5vw,68px); border-bottom:1px solid #242832; display:flex; justify-content:space-between; align-items:center; gap:20px; }
+    .c .logo { font-weight:900; letter-spacing:-.03em; font-size:22px; }
+    .c .logo i { color:var(--gold); font-style:normal; }
+    .c .search { width:min(430px,50vw); background:#12151c; border:1px solid #2b303c; border-radius:999px; padding:10px 16px; color:#7d8491; }
+    .c main { padding:30px clamp(20px,5vw,68px); }
+    .c h3 { font-size:35px; margin:0 0 6px; }
+    .c .subtitle { color:#838a98; margin:0 0 22px; }
+    .c .filters { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:24px; }
+    .c .filters span { border:1px solid #2c313b; border-radius:999px; padding:6px 11px; font-size:12px; color:#a6adba; }
+    .c .filters .on { color:#17120a; background:var(--gold); border-color:var(--gold); font-weight:800; }
+    .c .dash { display:grid; grid-template-columns:minmax(260px,.8fr) minmax(420px,1.6fr); gap:18px; }
+    .c .class-list { display:grid; gap:8px; }
+    .c .class-row { background:#11141b; border:1px solid #242a35; border-radius:12px; padding:14px; display:flex; align-items:center; gap:12px; }
+    .c .class-row.active { border-color:#ffcb6977; background:#ffcb690c; }
+    .c .orb { width:38px; height:38px; border-radius:10px; display:grid; place-items:center; font-weight:900; background:linear-gradient(135deg,#402b58,#ad7ce0); }
+    .c .class-row:nth-child(2) .orb { background:linear-gradient(135deg,#174c41,#55c293); }
+    .c .class-row:nth-child(3) .orb { background:linear-gradient(135deg,#5b281b,#e47b48); }
+    .c .class-row b { display:block; }
+    .c .class-row small { color:#747c8b; }
+    .c .panel { background:#11141b; border:1px solid #242a35; border-radius:16px; padding:24px; }
+    .c .panel-top { display:flex; justify-content:space-between; gap:15px; border-bottom:1px solid #272c36; padding-bottom:18px; }
+    .c .panel h4 { font-size:28px; margin:0; }
+    .c .panel-top p { color:#858d9c; margin:4px 0 0; }
+    .c .rating { text-align:right; color:#858d9c; white-space:nowrap; }
+    .c .rating b { color:var(--gold); font-size:18px; letter-spacing:2px; }
+    .c .spec-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin-top:18px; }
+    .c article { background:#0c0f14; border:1px solid #272d38; padding:16px; border-radius:12px; }
+    .c article .top { display:flex; justify-content:space-between; gap:10px; }
+    .c article b { font-size:17px; }
+    .c article .pill { font-size:10px; color:var(--gold); text-transform:uppercase; }
+    .c article p { color:#8d95a3; margin:9px 0; font-size:13px; }
+    .c .meter { height:4px; border-radius:5px; background:#242a35; overflow:hidden; }
+    .c .meter i { display:block; height:100%; width:76%; background:linear-gradient(90deg,var(--gold),#f17b55); }
+
+    @media (max-width:850px) {
+      .a { grid-template-columns:1fr; }
+      .a aside { display:none; }
+      .a .grid, .b .entry-body, .c .spec-grid { grid-template-columns:1fr; }
+      .b .entry-body { padding-left:30px; }
+      .c .dash { grid-template-columns:1fr; }
+      .c .class-list { grid-template-columns:repeat(3,1fr); }
+      .c .class-row { display:block; }
+      .c .class-row div:last-child { margin-top:7px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="chooser">
+    <h1>Pick our CoA field guide direction</h1>
+    <p>These are visual slices, not the finished site. Each uses real mechanics from the current 70-spec research. The chosen direction will get all classes, filters, search, collapsible detail, and responsive behavior.</p>
+    <div class="jump">
+      <a href="#a">A · Arcane Codex</a><a href="#b">B · Adventurer’s Journal</a><a href="#c">C · Explorer Dashboard</a>
+    </div>
+
+    <section class="direction" id="a">
+      <div class="direction-title"><h2>A · Arcane Codex</h2><span>Atmospheric, class-first browsing, generous spec cards. Best for reading.</span></div>
+      <div class="viewport a">
+        <aside>
+          <div class="brand">CoA Field Guide</div><div class="big">The Seventy Paths</div>
+          <nav><div>All classes</div><div>Barbarian</div><div>Witch Doctor</div><div class="active">Chronomancer</div><div>Necromancer</div><div>Pyromancer</div><div>Starcaller</div><div>Tinker</div><div>Venomancer</div></nav>
+        </aside>
+        <main>
+          <div class="eyebrow">Class 11 of 21 · Arcane controller</div><h3>Chronomancer</h3>
+          <p class="intro">Cooldown manipulation, Chromatic damage, time effects, and wands. Choose between attrition, fragment-driven combos, and proactive healing.</p>
+          <div class="tools"><div class="tool">⌕ Search abilities</div><div class="tool">All roles</div><div class="tool">Learning load</div></div>
+          <div class="grid">
+            <article><div class="role">Ranged DoT DPS</div><h4>Infinite</h4><p>Timerend and periodic effects continuously compress cooldowns. Stack Mind Melt, trigger Anomaly Spikes, and enter a volatile Incarnation of Chaos window.</p><div class="tags"><span>Very high load</span><span>DoTs</span><span>Cooldown loops</span></div></article>
+            <article><div class="role">Ranged wand DPS</div><h4>Artificer</h4><p>Generate Echo Fragments with Artificer’s Wand, then spend them through Distortion spells while a chosen Continuum changes the payoff.</p><div class="tags"><span>Very high load</span><span>Combos</span><span>Mobile windows</span></div></article>
+            <article><div class="role">Healer · Support</div><h4>Time</h4><p>Manipulate Epoch and Ripple through Aeons for throughput, shielding, damage delay, or support. Flexible and strongly proactive.</p><div class="tags"><span>Very high load</span><span>Modes</span><span>Utility</span></div></article>
+          </div>
+        </main>
+      </div>
+    </section>
+
+    <section class="direction" id="b">
+      <div class="direction-title"><h2>B · Adventurer’s Journal</h2><span>Warm Warcraft manual, compact accordions, lots of information per screen.</span></div>
+      <div class="viewport b">
+        <header><div class="kicker">A field record of Azeroth’s new disciplines</div><h3>The Seventy Paths</h3><p>Twenty-one classes. Seventy ways to conquer Azeroth. Open a chapter and find the one that feels like home.</p></header>
+        <div class="journal-tools"><div class="search">Search for pets, DoTs, shields, melee, support…</div><div class="stamp">August 2026 edition</div></div>
+        <div class="entries">
+          <details open><summary><span class="initial">V</span><span><h4>Venomancer</h4><small>Poison · Fungi · Spiders · Shapeshifting</small></span><span class="count">4 paths</span></summary>
+            <div class="entry-body">
+              <div class="spec"><b>Venom</b><em>Ranged DoT damage</em><p>An Affliction-like rot caster using Wilt, Spore, fungal summons, and Sepsis Bloom detonations.</p></div>
+              <div class="spec"><b>Stalking</b><em>Melee poison damage</em><p>A spider-form ambusher built around corrosive bites, pursuit, burrowing, and venom pressure.</p></div>
+              <div class="spec"><b>Fortitude</b><em>Tank</em><p>Regenerative chitin, poison retaliation, Carapace repair, Impale, and Molt.</p></div>
+              <div class="spec"><b>Vizier</b><em>Healer</em><p>Turns poison into medicine through healing-over-time webs, rituals, extraction, and rebirth.</p></div>
+            </div>
+          </details>
+          <details><summary><span class="initial">R</span><span><h4>Runemaster</h4><small>Glyphs · Engravings · Elemental weapons</small></span><span class="count">3 paths</span></summary></details>
+          <details><summary><span class="initial">S</span><span><h4>Starcaller</h4><small>Scattered Stars · Moonlight · Maximum mana</small></span><span class="count">4 paths</span></summary></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="direction" id="c">
+      <div class="direction-title"><h2>C · Explorer Dashboard</h2><span>Fast filtering and comparison, game-tool feel, less atmospheric.</span></div>
+      <div class="viewport c">
+        <header><div class="logo"><i>COA</i> Spec Explorer</div><div class="search">⌕ Search all 70 specializations</div></header>
+        <main><h3>Find your next main</h3><p class="subtitle">Filter by combat role, range, mechanics, or learning load.</p>
+          <div class="filters"><span class="on">All 70</span><span>Damage</span><span>Tank</span><span>Healer</span><span>Support</span><span>Pets</span><span>DoTs</span><span>Low load</span></div>
+          <div class="dash">
+            <div class="class-list">
+              <div class="class-row active"><span class="orb">T</span><div><b>Tinker</b><small>3 specializations</small></div></div>
+              <div class="class-row"><span class="orb">V</span><div><b>Venomancer</b><small>4 specializations</small></div></div>
+              <div class="class-row"><span class="orb">P</span><div><b>Pyromancer</b><small>3 specializations</small></div></div>
+            </div>
+            <section class="panel"><div class="panel-top"><div><h4>Tinker</h4><p>Explosives, healing technology, and combat machines.</p></div><div class="rating">Documented builds<br><b>9</b></div></div>
+              <div class="spec-grid">
+                <article><div class="top"><b>Demolition</b><span class="pill">DPS</span></div><p>Layer bombs, Napalm, drones, rockets, factories, and turrets into explosive windows.</p><div class="meter"><i style="width:92%"></i></div></article>
+                <article><div class="top"><b>Invention</b><span class="pill">Healer</span></div><p>Place restorative devices, fire Bandage Gun, deploy nanobots, and prepare emergency repairs.</p><div class="meter"><i style="width:72%"></i></div></article>
+                <article><div class="top"><b>Mechanics</b><span class="pill">DPS</span></div><p>Build and upgrade a Mechsuit, Scrapmaw, lasers, jets, and overclocked machines.</p><div class="meter"><i style="width:25%"></i></div></article>
+              </div>
+            </section>
+          </div>
+        </main>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
