@@ -21,7 +21,7 @@
     "chronomancer": "Time itself is the resource. Every Chronomancer bends cooldowns, echoes, and epochs — they differ in whether the bent time burns, shoots, or heals.",
     "necromancer": "Death obeys. Rot it, freeze it, or raise it and march it forward.",
     "pyromancer": "Fire in every register — the weave that mends, the blaze that consumes, the dragon that endures.",
-    "cultist": "Whispers from below, answered. Blades, corruption, heresy, and a dreadnought's bulk.",
+    "cultist": "The whispers offer power. Will you listen?",
     "starcaller": "The sky is an arsenal. Moonlight guards and heals; stars sentinel and hunt.",
     "sun-cleric": "The sun militant. Piety, blessing, seraphim wings, and a valkyrie's spear.",
     "tinker": "Machines do the hitting. Demolition, invention, and mechanics — genius as a weapon.",

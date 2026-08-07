@@ -12,6 +12,12 @@
 .ry-rare li { color: #e8c88a; font-size: 12.5px; }
 .ry-rare .mark { color: #c9aa71; margin-right: 6px; }
 
+/* styled tagline keyword: class color with a shadowy glow — decoration, not information */
+.ry-tagword { font-style: normal; font-weight: 600;
+  color: color-mix(in srgb, var(--class-color, #c9aa71) 72%, white);
+  text-shadow: 0 0 14px color-mix(in srgb, var(--class-color, #c9aa71) 70%, transparent),
+    0 0 4px color-mix(in srgb, var(--class-color, #c9aa71) 45%, transparent); }
+
 /* ---------- chrome: one sticky row, icon nav with fading labels (grammar 6b) ---------- */
 .ph-search, .ph-icons { display: none; }
 

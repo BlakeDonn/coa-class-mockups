@@ -108,7 +108,7 @@
     cultist: {
       label: "The engine — Insanity",
       lede: "Every Cultist runs on Insanity, and it climbs as you act.",
-      text: "Near 60 it is steady power: strong enough to fuel your kit, controlled enough to stay safe. At 100 it pays out more, and punishes you while it lasts.",
+      text: "Near 60 it is steady power: strong enough to fuel your kit, safe enough to hold. Cross 100 and it pays out more, punishing you while it lasts.",
     },
     tinker: {
       label: "The engine — temporary machines",
@@ -496,6 +496,16 @@
     const selId = rail?.querySelector(".rail-card.sel")?.dataset.sel;
     svg.querySelectorAll("[data-cd-spec]").forEach(el =>
       el.classList.toggle("active", el.dataset.cdSpec === selId));
+  })();
+
+  // ---------- tagline keyword ----------
+  // One tagline word may carry the class color with a soft glow (grammar contract 1).
+  // Decoration only, never an information channel. Cultist: "whispers".
+  (() => {
+    if (classSlug !== "cultist") return;
+    const prem = document.querySelector("#mast > p");
+    if (prem) prem.innerHTML = prem.innerHTML.replace(/whispers/i,
+      m => `<em class="ry-tagword">${m}</em>`);
   })();
 
   // ---------- engine paragraph ----------
