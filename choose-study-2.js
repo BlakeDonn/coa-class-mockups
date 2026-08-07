@@ -20,7 +20,8 @@
   ];
 
   const OPTS = { engine: "blurb", doors: "wow-words", corner: "video" };
-  const state = { mapping: "M1", altitude: "class", persona: "planner" };
+  // Mapping RULED 2026-08-07 ("looks good m2"): class→C, spec→A. Study defaults mirror it.
+  const state = { mapping: "M2", altitude: "class", persona: "planner" };
   let answers = { ...PERSONAS[0][2] };
 
   // ---------- shared pieces (round-1 vocabulary) ----------

@@ -27,7 +27,7 @@ Same format and authority rules as `atlas-page-grammar.md` and `class-page-gramm
 |---|---|---|
 | Two registers | The result card follows what is being recommended. User (2026-08-07, near-verbatim): "once we have more data I think we will do a class and spec questionnaire, so depending on if the class or spec is recommended we should do A or C; if it's class we should also be like 'you will probably like X spec' so we highlight that." Direction B set aside by the same call | RULED (2026-08-07 round 1) |
 | Probable-spec line | A class result always names its probable spec ("You will probably like X") and lights that spec's door | RULED (2026-08-07, user's words) |
-| A↔C mapping | Which form carries the class result (the spec result takes the other). Both mappings rendered live in `choose-study-2.html` (M1 class→A/spec→C, M2 class→C/spec→A) | OPEN (round 1b ask) |
+| A↔C mapping | **M2**: class result = the full Atlas card (C) with the probable-spec band and glowing door; spec result = the compact identity card (A). User 2026-08-07: "looks good m2". Study defaults mirror it | RULED (2026-08-07 round 1b) |
 | Register sequencing | Today's engine recommends classes (best spec per class), so the class register ships first; the spec questionnaire waits on the pilot's data | RULED (plan) |
 | Tier badges | Strong / Plausible / Wildcard badges kept in all forms | PROPOSED (shared) |
 | Strong-match glow | The ruled lightened-class-color formula (`color-mix(class-color 58%, white 42%)`) marks the Strong match card | PROPOSED (shared) |
@@ -51,7 +51,7 @@ Same format and authority rules as `atlas-page-grammar.md` and `class-page-gramm
 
 | Piece | Decision | Status |
 |---|---|---|
-| Register | Slim quick-look vs port the class page into it vs remove — undecided by design; mock the registers and let the picks decide | OPEN (own round) |
+| Register | Round 2 study built (`profile-study.html`): Today's mini class page · **P1 slim quick-look** (one screen: identity, archetype tag, pips, ✓/✕, defining talents, one link out) · **P2 class page in the modal** (ruled study in the dialog, pilot demo) · **P0 remove** (doors navigate). Live demo: two ruled Atlas cards, the stone decides what doors open; Godblade side by side in every register | OPEN (round 2 ask) |
 
 ## 5 · Session log
 
@@ -69,3 +69,8 @@ Same format and authority rules as `atlas-page-grammar.md` and `class-page-gramm
   live scores (spec register demoed via the same engine un-deduped; the Calm commander persona
   visibly shows two Barbarian specs where the class register dedupes). Smoke test: 60 paths.
   Awaiting the round-1b pick: M1 (class→A, spec→C) or M2 (class→C, spec→A).
+- **2026-08-07 (round 1b verdict → round 2):** user: "looks good m2" — mapping RULED (§1), study
+  defaults flipped to M2. Round 2 built and deployed: the spec-profile modal registers
+  (`profile-study.html`) — Today / P1 slim / P2 class-page-in-modal / P0 remove, with a live
+  door demo on two ruled cards and Godblade side by side in every register. Slim renderer
+  smoke-tested across all 70 specs. Awaiting the round-2 pick.
