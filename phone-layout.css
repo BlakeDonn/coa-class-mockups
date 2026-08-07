@@ -1,0 +1,70 @@
+/* Ruled phone layout for the rhythm study (grammar contract, session 2).
+   Scope: rhythm-class.html only. Everything here activates at 560px and below;
+   the desktop and tablet rulings are untouched above that. */
+
+/* ---------- chrome: sigil-only top row + bottom deck (grammar 6b) ---------- */
+.ph-deck { display: none; }
+
+@media (max-width: 560px) {
+  .a-tabs { display: none; }
+  .a-topbar { justify-content: flex-start; }
+
+  .ph-deck { position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; display: flex;
+    border-top: 1px solid #6b5a35; background: linear-gradient(#141312, #0b0a09);
+    padding-bottom: max(4px, env(safe-area-inset-bottom));
+    box-shadow: 0 -6px 20px #0009; transition: transform .22s; }
+  .ph-deck.hide { transform: translateY(108%); }
+  .ph-deck a { flex: 1; display: grid; place-items: center; gap: 1px; padding: 6px 0 3px;
+    color: #9a9483; font-size: 10px; font-weight: 800; letter-spacing: .09em;
+    text-transform: uppercase; text-decoration: none; }
+  .ph-deck a .g { font-size: 15px; line-height: 1; }
+  .ph-deck a.active { color: #ecd7a8; }
+  .ph-deck a.active .g { text-shadow: 0 0 12px #c9aa7180; }
+  body.class-page { padding-bottom: 64px; }
+}
+@media (prefers-reduced-motion: reduce) { .ph-deck { transition: none; } }
+
+/* ---------- seal: static, full width, below the masthead text (grammar 2) ---------- */
+@media (max-width: 560px) {
+  .cp-mast.cd-with-seal { padding-right: 24px; padding-bottom: 18px; min-height: 0; }
+  .cd-seal { position: static; width: 100%; height: auto; margin-top: 12px;
+    border-left: 0; border-top: 1px solid #49355380; padding-top: 8px; }
+  /* the tightened drawing is 420x224; the tinker schematic keeps its native 420x205 */
+  .cd-seal svg { height: auto; aspect-ratio: 420 / 224; }
+  .cd-seal.cd-tinker-seal svg { aspect-ratio: 420 / 205; }
+}
+
+/* ---------- spec cards: selected card only + All-4 sheet (grammar 3) ---------- */
+@media (max-width: 560px) {
+  /* overrides explorer.css's 78vw swipe rail */
+  .rail { display: block; overflow: visible; padding-bottom: 0; }
+  .rail .rail-card { display: none; }
+  .rail .rail-card.sel { display: flex; flex: none; width: 100%; }
+  .rail-card.sel::after { display: none; }
+
+  .ph-all-btn { display: block; width: 100%; margin: 8px 0 0; padding: 11px;
+    border: 1px solid #3a3325; border-radius: 3px;
+    background: linear-gradient(#1c1a15, #131210); color: #9a9483;
+    font: 800 10px Arial, sans-serif; letter-spacing: .12em; text-transform: uppercase;
+    cursor: pointer; }
+  .ph-all-btn:focus-visible { outline: 1px solid #c9aa71; }
+}
+@media (min-width: 561px) { .ph-all-btn, .ph-sheet, .ph-backdrop { display: none !important; } }
+
+.ph-backdrop { position: fixed; inset: 0; z-index: 70; background: #050505c9;
+  opacity: 0; pointer-events: none; transition: opacity .2s; }
+.ph-sheet { position: fixed; left: 0; right: 0; bottom: 0; z-index: 71;
+  transform: translateY(102%); transition: transform .24s;
+  border-top: 1px solid #6b5a35; border-radius: 10px 10px 0 0; background: #131210;
+  padding: 10px 12px calc(18px + env(safe-area-inset-bottom)); max-height: 80vh; overflow-y: auto; }
+body.ph-sheet-open .ph-sheet { transform: none; }
+body.ph-sheet-open .ph-backdrop { opacity: 1; pointer-events: auto; }
+.ph-sheet .grip { width: 38px; height: 4px; border-radius: 2px; background: #3a3325; margin: 0 auto 10px; }
+.ph-sheet h4 { margin: 0 0 8px; font: 800 10px Arial, sans-serif; letter-spacing: .18em;
+  text-transform: uppercase; color: #83888f; text-align: center; }
+.ph-sheet .rail-card { display: flex !important; width: 100%; margin-bottom: 8px; }
+/* sync() marks the current spec with .active on any [data-cd-spec] element */
+.ph-sheet .rail-card.active {
+  border-color: color-mix(in srgb, var(--class-color, #c9aa71) 58%, white 42%);
+  box-shadow: 0 0 18px color-mix(in srgb, var(--class-color, #c9aa71) 30%, transparent); }
+@media (prefers-reduced-motion: reduce) { .ph-sheet, .ph-backdrop { transition: none; } }
