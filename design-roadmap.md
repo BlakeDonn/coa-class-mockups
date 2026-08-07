@@ -66,6 +66,10 @@ Authority note: entries here are plans, not rulings. Rulings live in the grammar
 
 ## FURTHER OUT (not yet planned in detail)
 
+- **Two-altitude Choose: a class questionnaire AND a spec questionnaire** (user direction
+  2026-08-07, session 5). The result register follows the recommendation altitude; class results
+  name their probable spec. Blocked on the pilot's data; register forms being ruled now in
+  `choose-page-grammar.md` §1.
 - The 16-class research run — explicitly unapproved until the pilot's numbers are in.
 - "Not yet researched" picker treatment surfacing in the site once picker data integrates.
 - Choose-to-Guided integration — deferred by standing ruling until validated v3 relationships

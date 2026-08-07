@@ -55,3 +55,17 @@
 .cs-composed { max-width: 760px; margin: 0 auto; }
 .cs-list-C { justify-items: center; }
 .cs-personas { margin: 0 0 12px; }
+
+/* Round 1b — the two registers */
+.cs-problabel { font: 800 8.5px var(--sans); letter-spacing: .14em; text-transform: uppercase;
+  color: var(--dim); margin: 9px 0 3px; }
+.cs-problabel + .cs-door { margin-top: 0; }
+.cs-band .cs-prob { margin: 0 0 5px; font-size: 12px; color: #b9bdb4; }
+.cs-band .cs-prob b { color: color-mix(in srgb, var(--class-color) 72%, #fff); font-weight: 600; }
+.cs-band .cs-bandtop { margin: 0 0 5px; }
+.cs-band .cs-bandname { font: 700 14px var(--serif); text-decoration: none;
+  color: color-mix(in srgb, var(--class-color) 72%, #fff); }
+.cs-band .cs-bandname:hover { text-decoration: underline; text-underline-offset: 3px; }
+.cs-band .cs-bandsub { color: #83888f; font-size: 9.5px; text-transform: uppercase;
+  letter-spacing: .08em; margin-left: 6px; }
+.cs-a2 .cs-top .m-sub { margin-top: 2px; }

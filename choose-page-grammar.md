@@ -25,10 +25,13 @@ Same format and authority rules as `atlas-page-grammar.md` and `class-page-gramm
 
 | Piece | Decision | Status |
 |---|---|---|
-| Card language | Round 1 study built (`choose-study.html`): today's card beside **A identity result** (crest + class name + tagline + matched spec as a ruled glowing door), **B spec door card** (slim, spec-first), **C full Atlas card with match band**. Same live-scored trio in all three; persona stones + shipped adjust chips re-score everything | OPEN (round 1 ask) |
-| Tier badges | Strong / Plausible / Wildcard badges kept in all directions | PROPOSED (shared) |
+| Two registers | The result card follows what is being recommended. User (2026-08-07, near-verbatim): "once we have more data I think we will do a class and spec questionnaire, so depending on if the class or spec is recommended we should do A or C; if it's class we should also be like 'you will probably like X spec' so we highlight that." Direction B set aside by the same call | RULED (2026-08-07 round 1) |
+| Probable-spec line | A class result always names its probable spec ("You will probably like X") and lights that spec's door | RULED (2026-08-07, user's words) |
+| A↔C mapping | Which form carries the class result (the spec result takes the other). Both mappings rendered live in `choose-study-2.html` (M1 class→A/spec→C, M2 class→C/spec→A) | OPEN (round 1b ask) |
+| Register sequencing | Today's engine recommends classes (best spec per class), so the class register ships first; the spec questionnaire waits on the pilot's data | RULED (plan) |
+| Tier badges | Strong / Plausible / Wildcard badges kept in all forms | PROPOSED (shared) |
 | Strong-match glow | The ruled lightened-class-color formula (`color-mix(class-color 58%, white 42%)`) marks the Strong match card | PROPOSED (shared) |
-| Score voice | Matched / Trade-off / Confidence lines kept verbatim in all directions — the honest voice is not the piece under study | PROPOSED (keep) |
+| Score voice | Matched / Trade-off / Confidence lines kept verbatim in all forms — the honest voice is not the piece under study | PROPOSED (keep) |
 | Absent copy | No tagline or archetype tag renders where none is authored — absent, never invented (default persona surfaces Pyromancer to show the gap) | law-derived |
 
 ## 2 · The question surface
@@ -58,4 +61,11 @@ Same format and authority rules as `atlas-page-grammar.md` and `class-page-gramm
   the real scoring engine — five persona presets, live adjust chips, node smoke test covers
   81 render paths (every direction × every persona pick × all 21 classes through direction C).
   `card-study-2.js` now exports MICRO + roleImgs for reuse (cache refs bumped to v=12).
-  Awaiting the round-1 pick: A / B / C.
+- **2026-08-07 (round 1 verdict → round 1b):** user reframed instead of picking: two future
+  questionnaires (class + spec), the register follows the recommendation altitude, class results
+  name their probable spec. B set aside. Recorded in §1. Process note: the mapping question was
+  first asked with ASCII previews and the user rejected that — "you gotta actually show me."
+  Round 1b built and deployed: `choose-study-2.html` renders both registers in both forms on
+  live scores (spec register demoed via the same engine un-deduped; the Calm commander persona
+  visibly shows two Barbarian specs where the class register dedupes). Smoke test: 60 paths.
+  Awaiting the round-1b pick: M1 (class→A, spec→C) or M2 (class→C, spec→A).

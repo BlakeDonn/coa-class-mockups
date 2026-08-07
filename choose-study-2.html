@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="robots" content="noindex">
+  <title>CoA Choose — round 1b (the two registers)</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="explorer.css">
+  <link rel="stylesheet" href="atlas-study.css">
+  <link rel="stylesheet" href="card-study.css?v=6">
+  <link rel="stylesheet" href="card-study-2.css?v=11">
+  <link rel="stylesheet" href="choose-study.css?v=2">
+</head>
+<body class="atlas atlas-study">
+
+  <div class="st-banner">
+    <span class="st-tag">Choose page · session 5 · round 1b · the two registers</span>
+    <nav>
+      <a href="#cls">Class result</a>
+      <a href="#spc">Spec result</a>
+      <a href="#live">Composed</a>
+      <a href="choose-study.html">round 1 ↩</a>
+    </nav>
+  </div>
+
+  <section class="st-sec">
+    <header class="st-head">
+      <h2>Round 1b — your reframe, rendered for real</h2>
+      <p>Your call: with more data, Choose asks at two altitudes — a class questionnaire and a
+        spec questionnaire. The result card follows what is being recommended, using form A or
+        form C, and a class result names its probable spec ("you will probably like X").
+        Direction B is set aside. Below, <b>both registers are rendered in both forms</b> with
+        live scores, so the pick is which form carries the class result — the spec result takes
+        the other. Today's engine recommends classes, so the class register ships first; the spec
+        register is demoed with the same engine, not deduped by class.</p>
+    </header>
+    <div class="st-pick"><span class="stone" id="personaRow">
+      <button data-persona="planner" class="active">Overloaded planner</button>
+      <button data-persona="striker">Windowed striker</button>
+      <button data-persona="lifeline">Melee lifeline</button>
+      <button data-persona="commander">Calm commander</button>
+      <button data-persona="wall">Wall with a plan</button>
+    </span></div>
+  </section>
+
+  <section class="st-sec" id="cls">
+    <header class="st-head"><h2>The class result — "you will probably like X"</h2>
+      <p>The class is the recommendation. Every card names its probable spec and lights its door.</p></header>
+
+    <div class="st-sub"><h3>Form A · compact identity card</h3>
+      <div class="st-note">Crest, class name, authored tagline, then the probable-spec door under
+        its label. <span class="gain">Gains:</span> the whole shortlist fits one screen; the class
+        stays the headline. <span class="cost">Costs:</span> the class's other specs are invisible
+        until the click.</div>
+      <div class="cs-pair" data-form="classA"></div>
+    </div>
+
+    <div class="st-sub"><h3>Form C · the full Atlas card</h3>
+      <div class="st-note">The ruled 21-card with a band: tier, "You will probably like X," reasons,
+        confidence. The probable door glows among its siblings. <span class="gain">Gains:</span> the
+        probable spec is seen in context — you can disagree with it on the spot; engine and ✦ facts
+        arrive free. <span class="cost">Costs:</span> three full cards is a tall scroll.</div>
+      <div class="cs-pair" data-form="classC"></div>
+    </div>
+  </section>
+
+  <section class="st-sec" id="spc">
+    <header class="st-head"><h2>The spec result — the future questionnaire, demoed live</h2>
+      <p>The spec itself is the recommendation. Same two forms, spec first.</p></header>
+
+    <div class="st-sub"><h3>Form A · compact spec card</h3>
+      <div class="st-note">Spec name headlines; class and family sit in the sub line; its door
+        carries the queue identity. <span class="gain">Gains:</span> tight, direct answer.
+        <span class="cost">Costs:</span> the class context is one line of text.</div>
+      <div class="cs-pair" data-form="specA"></div>
+    </div>
+
+    <div class="st-sub"><h3>Form C · spec in full class context</h3>
+      <div class="st-note">The band names the spec ("Corruption — the Cultist path"); the full class
+        card follows with that door glowing. <span class="gain">Gains:</span> you see what class you
+        are signing up for before committing to a spec. <span class="cost">Costs:</span> the tallest
+        possible answer to a narrow question.</div>
+      <div class="cs-pair" data-form="specC"></div>
+    </div>
+  </section>
+
+  <section class="st-sec" id="live">
+    <header class="st-head"><h2>The composed results screen</h2>
+      <p>Pick a mapping, then flip the altitude to see each questionnaire's full screen. Chips
+        re-score everything live.</p></header>
+    <div class="st-pick">
+      <span class="stone" data-pick="mapping">
+        <button data-v="M1" class="active">M1 · class→A, spec→C</button>
+        <button data-v="M2">M2 · class→C, spec→A</button>
+      </span>
+      <span class="stone" data-pick="altitude">
+        <button data-v="class" class="active">Class questionnaire (ships first)</button>
+        <button data-v="spec">Spec questionnaire (demo)</button>
+      </span>
+    </div>
+    <div class="plate oracle cs-composed" id="composed"></div>
+  </section>
+
+  <footer class="st-foot">
+    Open ask: <b>M1 or M2</b> — which form carries the class result; the spec result takes the
+    other. Rulings land in <code>choose-page-grammar.md</code> §1.
+  </footer>
+
+  <dialog id="profileDialog" class="a-dialog">
+    <button class="d-close" id="profileClose" aria-label="Close specialization profile">×</button>
+    <div id="profileContent"></div>
+  </dialog>
+
+  <script src="explorer-data.js"></script>
+  <script src="profile-render.js"></script>
+  <script src="guided-data.js"></script>
+  <script src="atlas-study.js?v=2"></script>
+  <script src="card-study-2.js?v=12"></script>
+  <script src="choose.js"></script>
+  <script src="choose-study-2.js"></script>
+</body>
+</html>
