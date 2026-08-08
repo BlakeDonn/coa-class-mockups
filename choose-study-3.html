@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="robots" content="noindex">
+  <title>CoA Choose — round 3 (the question surface)</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="explorer.css">
+  <link rel="stylesheet" href="atlas-study.css">
+  <link rel="stylesheet" href="card-study.css?v=6">
+  <link rel="stylesheet" href="card-study-2.css?v=11">
+  <link rel="stylesheet" href="choose-study.css?v=4">
+  <link rel="stylesheet" href="profile-study.css?v=9">
+</head>
+<body class="atlas atlas-study">
+
+  <div class="st-banner">
+    <span class="st-tag">Choose page · session 5 · round 3 · the question surface</span>
+    <nav>
+      <a href="#side">Side by side</a>
+      <a href="#play">Play it</a>
+      <a href="profile-study.html">round 2 ↩</a>
+    </nav>
+  </div>
+
+  <section class="st-sec">
+    <header class="st-head">
+      <h2>Round 3 — the questions themselves</h2>
+      <p>The scoring, the questions, and their copy stay exactly as ruled — this round is only the
+        <b>choice buttons' register</b>. Three directions on the same three questions below, then
+        the whole questionnaire playable under your pick. The finished flow ends in the ruled M2
+        results, and every door opens the locked slim modal — the first full assembly of every
+        session-5 ruling.</p>
+    </header>
+  </section>
+
+  <section class="st-sec" id="side">
+    <header class="st-head"><h2>Same three questions, three registers</h2>
+      <p>The opening vignette, the role question, and the load question in each direction.</p></header>
+    <div class="q-grid">
+      <div class="q-col"><h3>A · As it ships — text only</h3>
+        <div id="colA"></div>
+        <div class="st-note"><span class="gain">Gains:</span> nothing to learn, nothing to
+          maintain; the words carry everything. <span class="cost">Costs:</span> the questions
+          speak none of the Atlas language the results now wear.</div></div>
+      <div class="q-col"><h3>B · Honest icons</h3>
+        <div id="colB"></div>
+        <div class="st-note">Art only where a true mapping exists: the ruled queue icons on the
+          role question, demand pips on load and mistake cost. Range, payoff, and the vignette
+          stay text — families have no ruled art, so none is invented.
+          <span class="gain">Gains:</span> teaches the site's icon and pip language before the
+          results use it. <span class="cost">Costs:</span> two questions look richer than the
+          other four.</div></div>
+      <div class="q-col"><h3>C · Scene-forward</h3>
+        <div id="colC"></div>
+        <div class="st-note">Every choice speaks in the serif-italic story voice — the vignette's
+          register extended to all six questions. <span class="gain">Gains:</span> the oracle
+          feels like an oracle. <span class="cost">Costs:</span> plain preference questions
+          ("melee or ranged?") wear a costume; slower to scan.</div></div>
+    </div>
+  </section>
+
+  <section class="st-sec" id="play">
+    <header class="st-head"><h2>Play it — the full flow under your pick</h2>
+      <p>Six questions, then the ruled M2 results. Tap a door on a result card to feel the locked
+        slim modal. Everything is live scoring.</p></header>
+    <div class="st-pick">
+      <span class="stone" data-pick="q">
+        <button data-v="A">A · text</button>
+        <button data-v="B" class="active">B · honest icons</button>
+        <button data-v="C">C · scene-forward</button>
+      </span>
+    </div>
+    <div class="plate oracle cs-composed" id="flow"></div>
+  </section>
+
+  <footer class="st-foot">
+    Open ask: <b>A / B / C</b> for the choice buttons. Rulings land in
+    <code>choose-page-grammar.md</code> §2.
+  </footer>
+
+  <dialog id="profileDialog" class="a-dialog">
+    <button class="d-close" id="profileClose" aria-label="Close specialization profile">×</button>
+    <div id="profileContent"></div>
+  </dialog>
+
+  <script src="explorer-data.js"></script>
+  <script src="profile-render.js"></script>
+  <script src="guided-data.js"></script>
+  <script src="atlas-study.js?v=2"></script>
+  <script src="card-study-2.js?v=12"></script>
+  <script src="choose.js"></script>
+  <script src="profile-study.js?v=8"></script>
+  <script src="choose-study-3.js"></script>
+</body>
+</html>

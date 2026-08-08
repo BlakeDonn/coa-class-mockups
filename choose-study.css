@@ -65,6 +65,24 @@
 .cs-list-C { justify-items: center; }
 .cs-personas { margin: 0 0 12px; }
 
+/* Round 3 — the question surface */
+.q-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 12px; max-width: 1240px; }
+.q-col h3 { margin: 0 0 6px; font: 700 13px var(--serif); color: var(--gold); letter-spacing: .04em; }
+.q-col .q-mini { margin-bottom: 12px; }
+.q-mini { padding: 18px 14px 16px; }
+.q-mini h2 { font-size: 17px; }
+.qc-art { display: inline-flex; gap: 4px; flex: 0 0 auto; }
+.qc-art img { width: 22px; height: 22px; display: block; }
+.qc-art.sm img { width: 15px; height: 15px; }
+.q-B .choices button, #flow.q-live-B .choices button { display: flex; align-items: center; gap: 11px; text-align: left; }
+.q-B .choices .qc-body, #flow.q-live-B .choices .qc-body { flex: 1 1 auto; min-width: 0; }
+.q-pips { flex: 0 0 auto; margin-left: auto; }
+.q-C .choices button b, #flow.q-live-C .choices button b { font: 700 15px var(--serif); letter-spacing: .03em; }
+.q-C .choices .qc-line, #flow.q-live-C .choices .qc-line { display: block; margin-top: 3px;
+  font-style: italic; font-family: var(--serif); font-size: 12.5px; color: #d8c99b; }
+.q-C .choices button, #flow.q-live-C .choices button { padding: 14px 16px; }
+
 /* Round 1b — the two registers */
 .cs-problabel { font: 800 8.5px var(--sans); letter-spacing: .14em; text-transform: uppercase;
   color: var(--dim); margin: 9px 0 3px; }

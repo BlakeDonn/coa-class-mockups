@@ -38,7 +38,8 @@ Same format and authority rules as `atlas-page-grammar.md` and `class-page-gramm
 
 | Piece | Decision | Status |
 |---|---|---|
-| Question card, vignette, choices | Not yet discussed | OPEN (own round) |
+| Choice-button register | Round 3 study built (`choose-study-3.html`): **A text-only** (as ships) · **B honest icons** (queue icons on the role question, demand pips on load/cost — art only where a true mapping exists, none invented) · **C scene-forward** (serif story voice on every choice). Same three questions side by side; the full flow playable under the picked direction, ending in the ruled M2 results with the locked slim modal on every door | OPEN (round 3 ask) |
+| Questions & copy | The six questions, their copy, and the scoring stay exactly as ruled (2026-08-06, Sol-approved) — not in scope | RULED (standing) |
 
 ## 3 · Adjust chips & entry
 
@@ -53,7 +54,7 @@ Same format and authority rules as `atlas-page-grammar.md` and `class-page-gramm
 |---|---|---|
 | Register | **P1 slim quick-look**: one screen — identity, archetype tag, demand pips, ✓/✕, defining talents. The mini-class-page modal retires; the nine folds live on the class page only. User 2026-08-07: "p1" | RULED (2026-08-07 round 2) |
 | Class-page emphasis | The modal must sell the full class page, not just link it. User (2026-08-07, near-verbatim): "make sure we emphasize the full class page, cause that's where the magic is at." The small footer link is replaced by an emphasized exit | RULED (2026-08-07, user's words) |
-| Exit placement | **Beside the spec name on the name row**, clear of the ×, with a small gap (7px) before the text below ("put it back, with maybe a tiny bit of padding so it spaces out the text below"). Two other placements were tried on user suggestion and reverted on phone verify: the archetype-tag row and the ×-line top strip. The name row stands | RULED (2026-08-07, settled after three tries) |
+| Exit placement | **Beside the spec name on the name row**, clear of the ×, with a small gap (7px) before the text below. Two other placements were tried on user suggestion and reverted on phone verify: the archetype-tag row and the ×-line top strip. **LOCKED by the user** ("wonderful lock it and lets move on") | LOCKED (2026-08-07) |
 | Exit form | **Crest + "View class page" in text**, a glowing chip beside the spec name. User 2026-08-07: "do crest and 'view class page' in text." X4–X6 wordings set aside; class name returns to the meta line since the chip no longer carries it | RULED (2026-08-07 round 2c) |
 | Exit × clearance | The chip must clear the dialog's × close — the user caught the overlap live ("it's behind the X to close right now so move that"). Fixed: the dialog's header row reserves the × corner (`.a-dialog .slim-h2row { padding-right: 34px }`). Standing rule for anything else placed in the modal's top-right | RULED (fix, 2026-08-07) |
 | Exit destination | Pilot classes demo the ruled study (`rhythm-class.html?c=<class>`); the rest link to today's `class.html` until the site slice + ×21 authoring land | note |
@@ -112,3 +113,11 @@ Same format and authority rules as `atlas-page-grammar.md` and `class-page-gramm
   the X") and also reverted ("put it back, tiny bit of padding"). Final: the name-row chip with
   a 7px gap under the row. Three placements tried, two reverted, each round-trip cheap and
   verified in the 390px harness before deploy. §4 carries the settled form.
+- **2026-08-07 (ROUND 2 LOCKED):** user: "wonderful lock it and lets move on." The whole modal
+  ruling is LOCKED: P1 slim register · name-row chip with the 7px gap · × corner reserved.
+  Round 3 opens on the question surface (§2).
+- **2026-08-07 (round 3 built):** the choice-button register in three directions (A text /
+  B honest icons / C scene-forward), same three questions side by side; the full questionnaire
+  playable under the picked direction — the first assembly of every session-5 ruling in one
+  flow (M2 results, locked slim modal on doors). Smoke test 21 renders; 390px harness clean.
+  Awaiting the round-3 pick.
