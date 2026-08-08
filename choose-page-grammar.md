@@ -53,7 +53,7 @@ Same format and authority rules as `atlas-page-grammar.md` and `class-page-gramm
 |---|---|---|
 | Register | **P1 slim quick-look**: one screen — identity, archetype tag, demand pips, ✓/✕, defining talents. The mini-class-page modal retires; the nine folds live on the class page only. User 2026-08-07: "p1" | RULED (2026-08-07 round 2) |
 | Class-page emphasis | The modal must sell the full class page, not just link it. User (2026-08-07, near-verbatim): "make sure we emphasize the full class page, cause that's where the magic is at." The small footer link is replaced by an emphasized exit | RULED (2026-08-07, user's words) |
-| Exit placement | **A top strip level with the × close** — the chip sits on the ×'s line with clear space between them; the spec name gets its own full line below. User 2026-08-07: "make it in line with the X, a bit higher, give some space." Earlier tries set aside: archetype-row (reverted, "ugh i don't like that"), name-row (superseded by this) | RULED (2026-08-07, final form) |
+| Exit placement | **Beside the spec name on the name row**, clear of the ×, with a small gap (7px) before the text below ("put it back, with maybe a tiny bit of padding so it spaces out the text below"). Two other placements were tried on user suggestion and reverted on phone verify: the archetype-tag row and the ×-line top strip. The name row stands | RULED (2026-08-07, settled after three tries) |
 | Exit form | **Crest + "View class page" in text**, a glowing chip beside the spec name. User 2026-08-07: "do crest and 'view class page' in text." X4–X6 wordings set aside; class name returns to the meta line since the chip no longer carries it | RULED (2026-08-07 round 2c) |
 | Exit × clearance | The chip must clear the dialog's × close — the user caught the overlap live ("it's behind the X to close right now so move that"). Fixed: the dialog's header row reserves the × corner (`.a-dialog .slim-h2row { padding-right: 34px }`). Standing rule for anything else placed in the modal's top-right | RULED (fix, 2026-08-07) |
 | Exit destination | Pilot classes demo the ruled study (`rhythm-class.html?c=<class>`); the rest link to today's `class.html` until the site slice + ×21 authoring land | note |
@@ -108,7 +108,7 @@ Same format and authority rules as `atlas-page-grammar.md` and `class-page-gramm
   ("kinda same place it is now"); built, deployed, then reverted on their verify ("ugh i don't
   like that put it back"). The name-row chip stands as ruled (§4). Cheap round trip — the
   re-mock/verify loop working as intended.
-- **2026-08-07 (chip placement, final):** user: "make it in line with the X, a bit higher, give
-  some space" — the chip moves to its own top strip, vertically centered on the ×'s line
-  (`margin-top: -10px` against the header padding; 50px right reserve). Verified in the 390px
-  harness: chip and × level, clean gap, name alone below. §4 updated.
+- **2026-08-07 (chip placement, settled):** the ×-line top strip was tried next ("in line with
+  the X") and also reverted ("put it back, tiny bit of padding"). Final: the name-row chip with
+  a 7px gap under the row. Three placements tried, two reverted, each round-trip cheap and
+  verified in the 390px harness before deploy. §4 carries the settled form.
