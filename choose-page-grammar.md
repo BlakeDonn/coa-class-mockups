@@ -53,7 +53,7 @@ Same format and authority rules as `atlas-page-grammar.md` and `class-page-gramm
 |---|---|---|
 | Register | **P1 slim quick-look**: one screen — identity, archetype tag, demand pips, ✓/✕, defining talents. The mini-class-page modal retires; the nine folds live on the class page only. User 2026-08-07: "p1" | RULED (2026-08-07 round 2) |
 | Class-page emphasis | The modal must sell the full class page, not just link it. User (2026-08-07, near-verbatim): "make sure we emphasize the full class page, cause that's where the magic is at." The small footer link is replaced by an emphasized exit | RULED (2026-08-07, user's words) |
-| Exit placement | **The chip rides the archetype-tag row, right-aligned** ("2H burst bruiser" left, chip right). User 2026-08-07: "put it on the 'curated medium or 2h bruiser row', kinda same place it is now" — amending the earlier next-to-the-name placement. Specs without a tag show the chip alone on that row | RULED (2026-08-07, amended) |
+| Exit placement | **Beside the spec name, on the name row**, clear of the × close. The archetype-row placement was tried on the user's suggestion and reverted the same day on their phone verify ("ugh i don't like that put it back"). The name-row form stands | RULED (2026-08-07, reverted amendment) |
 | Exit form | **Crest + "View class page" in text**, a glowing chip beside the spec name. User 2026-08-07: "do crest and 'view class page' in text." X4–X6 wordings set aside; class name returns to the meta line since the chip no longer carries it | RULED (2026-08-07 round 2c) |
 | Exit × clearance | The chip must clear the dialog's × close — the user caught the overlap live ("it's behind the X to close right now so move that"). Fixed: the dialog's header row reserves the × corner (`.a-dialog .slim-h2row { padding-right: 34px }`). Standing rule for anything else placed in the modal's top-right | RULED (fix, 2026-08-07) |
 | Exit destination | Pilot classes demo the ruled study (`rhythm-class.html?c=<class>`); the rest link to today's `class.html` until the site slice + ×21 authoring land | note |
@@ -104,7 +104,7 @@ Same format and authority rules as `atlas-page-grammar.md` and `class-page-gramm
   PRACTICE: before any deploy, screenshot the changed page in the 390px harness (desktop
   headless lays out at ~500px minimum, so bare `--window-size=390` lies; WSL sees `/mnt/c`
   writes late — wait, don't rerun).
-- **2026-08-07 (chip placement amended):** user: "put it on the 'curated medium or 2h bruiser
-  row', kinda same place it is now" — the chip moves off the name row onto the archetype-tag
-  row, right-aligned (§4 updated). Verified in the 390px harness before deploy: tag left, chip
-  right, one line, × clear.
+- **2026-08-07 (chip placement: tried and reverted):** user suggested the archetype-tag row
+  ("kinda same place it is now"); built, deployed, then reverted on their verify ("ugh i don't
+  like that put it back"). The name-row chip stands as ruled (§4). Cheap round trip — the
+  re-mock/verify loop working as intended.
