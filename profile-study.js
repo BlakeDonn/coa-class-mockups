@@ -57,11 +57,11 @@
       <span class="cap">Defining talents — hover or tap to read</span></div>` : "";
     return `<div class="slim" style="--class-color:${s.color}">
       <header class="d-head ${s.enriched ? "q-c" : "q-w"}">
-        <div class="slim-h2row"><h2>${esc(s.name)}</h2>${exitHTML(s)}</div>
+        <div class="slim-h2row"><h2>${esc(s.name)}</h2></div>
         <div class="d-meta"><span>${esc(s.klass)}</span><span>${[...s.roles, ...s.range].map(esc).join(" · ")}</span>
           <span>${esc(famById[s.atlas].name)}</span>
           <span class="wb-q ${s.enriched ? "c" : "w"}">${s.enriched ? "Curated · " + esc(s.confidence) : "Research in progress"}</span></div>
-        ${micro ? `<span class="slim-tag">${esc(micro)}</span>` : ""}
+        <div class="slim-tagrow">${micro ? `<span class="slim-tag">${esc(micro)}</span>` : ""}${exitHTML(s)}</div>
         <p class="d-flavor">"${esc(s.fantasy || s.oneLine)}"</p>
         ${feel ? `<p class="d-feel">${esc(feel)}</p>` : ""}
       </header>
