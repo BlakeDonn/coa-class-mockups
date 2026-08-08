@@ -42,5 +42,7 @@
   box-shadow: 0 0 9px color-mix(in srgb, var(--class-color) 20%, transparent); }
 .slim-exit-chip .arr { color: var(--gold); }
 .slim-exit-chip:hover { filter: brightness(1.12); }
-/* In the dialog the header row must clear the absolute × close button. */
-.a-dialog .slim-h2row { padding-right: 34px; }
+/* The chip rides its own top strip, level with the dialog's × close (user 2026-08-07:
+   "in line with the X, a bit higher, give some space"). 50px reserves the × corner. */
+.slim-topbar { display: flex; justify-content: flex-end; margin: 0 0 8px; }
+.a-dialog .slim-topbar { margin-top: -10px; padding-right: 50px; }
