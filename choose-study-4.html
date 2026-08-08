@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="robots" content="noindex">
+  <title>CoA Choose — round 4 (the entry)</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="explorer.css">
+  <link rel="stylesheet" href="atlas-study.css">
+  <link rel="stylesheet" href="card-study.css?v=6">
+  <link rel="stylesheet" href="card-study-2.css?v=11">
+  <link rel="stylesheet" href="choose-study.css?v=5">
+  <link rel="stylesheet" href="profile-study.css?v=9">
+</head>
+<body class="atlas atlas-study">
+
+  <div class="st-banner">
+    <span class="st-tag">Choose page · session 5 · round 4 · the entry</span>
+    <nav>
+      <a href="#side">Side by side</a>
+      <a href="#play">Play it</a>
+      <a href="choose-study-3.html">round 3 ↩</a>
+    </nav>
+  </div>
+
+  <section class="st-sec">
+    <header class="st-head">
+      <h2>Round 4 — how the page greets you</h2>
+      <p>The last big Choose piece. The flow below is fully ruled (B icons, M2 results, locked
+        modal); only the chrome around its first screen varies. No copy is rewritten — E2 simply
+        promotes the existing foot line into a masthead.</p>
+    </header>
+  </section>
+
+  <section class="st-sec" id="side">
+    <header class="st-head"><h2>The first screen, three ways</h2></header>
+    <div class="q-grid">
+      <div class="q-col"><h3>E1 · Bare — as it ships</h3>
+        <div id="colE1"></div>
+        <div class="st-note"><span class="gain">Gains:</span> fastest to the first question; the
+          oracle speaks first. <span class="cost">Costs:</span> no title anywhere — the tab name
+          alone says where you are; the honesty line hides at the bottom.</div></div>
+      <div class="q-col"><h3>E2 · Mini-masthead</h3>
+        <div id="colE2"></div>
+        <div class="st-note">The Atlas masthead language, condensed: kick, "Find your class," and
+          the existing foot line promoted to the promise position.
+          <span class="gain">Gains:</span> the page introduces itself like its siblings; the
+          honesty line is read before question one. <span class="cost">Costs:</span> one screen
+          of scroll before the vignette on small phones.</div></div>
+      <div class="q-col"><h3>E3 · Framed band</h3>
+        <div id="colE3"></div>
+        <div class="st-note">A slim titled band fused to the oracle plate; the foot line stays
+          below. <span class="gain">Gains:</span> a title at nearly zero height cost.
+          <span class="cost">Costs:</span> the honesty line stays buried at the bottom.</div></div>
+    </div>
+  </section>
+
+  <section class="st-sec" id="play">
+    <header class="st-head"><h2>Play it — the whole page under your pick</h2>
+      <p>Entry chrome + the ruled flow. Everything else is as ruled and live.</p></header>
+    <div class="st-pick">
+      <span class="stone" data-pick="entry">
+        <button data-v="E1">E1 · bare</button>
+        <button data-v="E2" class="active">E2 · mini-masthead</button>
+        <button data-v="E3">E3 · framed band</button>
+      </span>
+    </div>
+    <div id="entryZone"></div>
+    <div class="plate oracle cs-composed" id="flow"></div>
+    <p class="choose-foot" id="flowFoot">Six questions, thirty seconds. Results come from the
+      Atlas's researched demand axes — qualitative labels, relative among researched CoA specs,
+      never a tier list.</p>
+  </section>
+
+  <footer class="st-foot">
+    Open ask: <b>E1 / E2 / E3</b> for the entry. Rulings land in
+    <code>choose-page-grammar.md</code> §3.
+  </footer>
+
+  <dialog id="profileDialog" class="a-dialog">
+    <button class="d-close" id="profileClose" aria-label="Close specialization profile">×</button>
+    <div id="profileContent"></div>
+  </dialog>
+
+  <script src="explorer-data.js"></script>
+  <script src="profile-render.js"></script>
+  <script src="guided-data.js"></script>
+  <script src="atlas-study.js?v=2"></script>
+  <script src="card-study-2.js?v=12"></script>
+  <script src="choose.js"></script>
+  <script src="profile-study.js?v=8"></script>
+  <script src="choose-study-3.js?v=2"></script>
+  <script src="choose-study-4.js"></script>
+</body>
+</html>

@@ -38,15 +38,15 @@ Same format and authority rules as `atlas-page-grammar.md` and `class-page-gramm
 
 | Piece | Decision | Status |
 |---|---|---|
-| Choice-button register | Round 3 study built (`choose-study-3.html`): **A text-only** (as ships) · **B honest icons** (queue icons on the role question, demand pips on load/cost — art only where a true mapping exists, none invented) · **C scene-forward** (serif story voice on every choice). Same three questions side by side; the full flow playable under the picked direction, ending in the ruled M2 results with the locked slim modal on every door | OPEN (round 3 ask) |
+| Choice-button register | **B · honest icons**: the ruled queue icons lead the role question's choices; demand pips render the load and mistake-cost targets; range, payoff, and the vignette stay text — art only where a true mapping exists, none invented. User 2026-08-07: "b". A (text) and C (scene-forward) set aside | RULED (2026-08-07 round 3) |
 | Questions & copy | The six questions, their copy, and the scoring stay exactly as ruled (2026-08-06, Sol-approved) — not in scope | RULED (standing) |
 
 ## 3 · Adjust chips & entry
 
 | Piece | Decision | Status |
 |---|---|---|
-| Adjust chips | Not yet discussed | OPEN |
-| Entry masthead / foot copy | Not yet discussed | OPEN |
+| Entry chrome | Round 4 study built (`choose-study-4.html`): **E1 bare** (as ships, foot line below) · **E2 mini-masthead** (Atlas masthead language condensed; the existing foot line promoted verbatim to the promise slot) · **E3 framed band** (slim titled band fused to the oracle plate). Same first screen side by side; the whole ruled flow playable under the pick | OPEN (round 4 ask) |
+| Adjust chips | Not yet discussed; the shipped chips already match the stone language | OPEN (likely keep) |
 
 ## 4 · The spec-profile modal (job 2)
 
@@ -121,3 +121,10 @@ Same format and authority rules as `atlas-page-grammar.md` and `class-page-gramm
   playable under the picked direction — the first assembly of every session-5 ruling in one
   flow (M2 results, locked slim modal on doors). Smoke test 21 renders; 390px harness clean.
   Awaiting the round-3 pick.
+- **2026-08-07 (round 3 verdict → round 4):** user: "b" — honest icons RULED (§2); the flow now
+  speaks one icon language end to end. Round 4 opens on the entry: how the page greets you
+  (bare oracle vs mini-masthead vs framed band).
+- **2026-08-08 (round 4 built):** the entry in three chromes around the same ruled flow
+  (`choose-study-4.html`); no copy rewritten — E2 promotes the shipped foot line verbatim.
+  choose-study-3.js patched for reuse (guards + class preservation, ?v=2). 390px harness clean
+  on both pages. Awaiting the round-4 pick.

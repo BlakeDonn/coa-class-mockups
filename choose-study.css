@@ -83,6 +83,17 @@
   font-style: italic; font-family: var(--serif); font-size: 12.5px; color: #d8c99b; }
 .q-C .choices button, #flow.q-live-C .choices button { padding: 14px 16px; }
 
+/* Round 4 — the entry */
+.cs-entrymast { margin: 0 auto 12px; max-width: 760px; }
+.q-band { text-align: center; padding: 10px 14px 8px; margin: 0 auto; max-width: 760px;
+  border-radius: 3px 3px 0 0; border-bottom: 0; }
+.q-band .kick { font-size: 9.5px; font-weight: 800; letter-spacing: .26em;
+  text-transform: uppercase; color: var(--dim); }
+.q-band .sub { color: #a9ada7; font-size: 11px; margin-top: 2px; }
+.q-attached { border-top-left-radius: 0; border-top-right-radius: 0; }
+.q-col .q-band, .q-col .cs-entrymast { margin-bottom: 0; }
+.q-col .cs-entrymast { margin-bottom: 10px; }
+
 /* Round 1b — the two registers */
 .cs-problabel { font: 800 8.5px var(--sans); letter-spacing: .14em; text-transform: uppercase;
   color: var(--dim); margin: 9px 0 3px; }

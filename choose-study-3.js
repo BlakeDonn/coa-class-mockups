@@ -94,14 +94,18 @@
   }
 
   // ---------- the live flow ----------
+  const setLive = mode => {
+    el("flow").classList.remove("q-live-A", "q-live-B", "q-live-C");
+    if (mode) el("flow").classList.add("q-live-" + mode);
+  };
   function drawFlow() {
     if (step >= CH.QUESTIONS.length) return drawResults();
-    el("flow").className = "plate oracle cs-composed q-live-" + state.q;
+    setLive(state.q);
     el("flow").innerHTML = questionHTML(CH.QUESTIONS[step], state.q, step, true);
   }
   function drawResults() {
     const picks = CH.recommend(answers);
-    el("flow").className = "plate oracle cs-composed";
+    setLive(null);
     el("flow").innerHTML = `
       <div class="prog">${CH.QUESTIONS.map(() => `<span class="done"></span>`).join("")}</div>
       <p class="stepline">The Atlas has read you</p>
@@ -119,6 +123,7 @@
   const DEMO_QS = ["vignette", "role", "load"];
   function renderStatics() {
     ["A", "B", "C"].forEach(mode => {
+      if (!el("col" + mode)) return;
       el("col" + mode).innerHTML = DEMO_QS.map(id => {
         const qq = CH.QUESTIONS.find(x => x.id === id);
         return `<div class="plate oracle q-mini q-${mode}">${questionHTML(qq, mode, undefined, false)}</div>`;
@@ -128,14 +133,16 @@
 
   function init() {
     const group = document.querySelector("[data-pick='q']");
-    group.querySelectorAll("button[data-v]").forEach(b => b.classList.toggle("active", b.dataset.v === state.q));
-    group.addEventListener("click", e => {
-      const b = e.target.closest("button[data-v]");
-      if (!b) return;
-      state.q = b.dataset.v;
-      group.querySelectorAll("button[data-v]").forEach(x => x.classList.toggle("active", x === b));
-      drawFlow();
-    });
+    if (group) {
+      group.querySelectorAll("button[data-v]").forEach(b => b.classList.toggle("active", b.dataset.v === state.q));
+      group.addEventListener("click", e => {
+        const b = e.target.closest("button[data-v]");
+        if (!b) return;
+        state.q = b.dataset.v;
+        group.querySelectorAll("button[data-v]").forEach(x => x.classList.toggle("active", x === b));
+        drawFlow();
+      });
+    }
 
     el("flow").addEventListener("click", e => {
       const chip = e.target.closest("[data-chipq]");
