@@ -45,7 +45,7 @@ Same format and authority rules as `atlas-page-grammar.md` and `class-page-gramm
 
 | Piece | Decision | Status |
 |---|---|---|
-| Entry chrome | Round 4 study built (`choose-study-4.html`): **E1 bare** (as ships, foot line below) · **E2 mini-masthead** (Atlas masthead language condensed; the existing foot line promoted verbatim to the promise slot) · **E3 framed band** (slim titled band fused to the oracle plate). Same first screen side by side; the whole ruled flow playable under the pick | OPEN (round 4 ask) |
+| Entry chrome | **E1 · bare, as it ships**: straight into the vignette, the honesty foot line below the plate. User 2026-08-08: "e1". E2 (mini-masthead) and E3 (framed band) set aside — the advisor's E2 lean was overruled | RULED (2026-08-08 round 4) |
 | Adjust chips | Not yet discussed; the shipped chips already match the stone language | OPEN (likely keep) |
 
 ## 4 · The spec-profile modal (job 2)
@@ -128,3 +128,7 @@ Same format and authority rules as `atlas-page-grammar.md` and `class-page-gramm
   (`choose-study-4.html`); no copy rewritten — E2 promotes the shipped foot line verbatim.
   choose-study-3.js patched for reuse (guards + class preservation, ?v=2). 390px harness clean
   on both pages. Awaiting the round-4 pick.
+- **2026-08-08 (round 4 verdict):** user: "e1" — the bare entry RULED (§3); study defaults
+  flipped to E1. All four Choose rounds are now ruled: M2 result cards · locked P1 modal with
+  the name-row chip · B honest-icon questions · E1 bare entry. Remaining small piece: the
+  adjust chips (§3, advisor recommends keep-as-ships).

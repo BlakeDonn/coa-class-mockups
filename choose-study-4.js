@@ -11,7 +11,8 @@
   const el = id => document.getElementById(id);
   // The shipped foot line, verbatim — E2 promotes it, nothing is rewritten.
   const PROMISE = "Six questions, thirty seconds. Results come from the Atlas's researched demand axes — qualitative labels, relative among researched CoA specs, never a tier list.";
-  const state4 = { entry: "E2" };
+  // Entry RULED 2026-08-08 ("e1"): the bare oracle stands. Defaults mirror the ruling.
+  const state4 = { entry: "E1" };
 
   function entryChrome(mode) {
     if (mode === "E2") return `<header class="plate atlas-mast cs-entrymast"><div>
