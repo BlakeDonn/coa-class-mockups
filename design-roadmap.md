@@ -13,7 +13,7 @@ Authority note: entries here are plans, not rulings. Rulings live in the grammar
 |---|---|---|
 | Atlas design session (session 4, 2026-08-07) | This repo | **CLOSED, all landed.** Eight rounds; the class card finished ("they look fantastic"). Rulings in `atlas-page-grammar.md`; assembly `atlas-v2.html`; interim map `starmap.html`. The bit-by-bit round cadence is now the standing process (contract in the session-5 handoff) |
 | Design session 5: Choose page + spec-profile modal | This repo, rulings in `choose-page-grammar.md` | **All four rounds ruled** (2026-08-07/08): M2 result cards (full Atlas card + "you will probably like X") · modal LOCKED (P1 slim, name-row chip) · B honest-icon questions · E1 bare entry. Two-altitude questionnaire recorded as a forward plan (blocked on pilot data). Open: adjust chips confirm (likely keep); the site slice carries it all later |
-| Five-class research pilot (cultist, tinker, witch-hunter, guardian, knight-of-xoroth) | Main repo, worktree `coa-picker-pilot`, branch `work/2026-08-07-coa-picker-pilot` | In flight, separate session. Its outputs unblock half this file |
+| Five-class research pilot (cultist, tinker, witch-hunter, guardian, knight-of-xoroth) | Main repo, worktree `coa-picker-pilot`, branch `work/2026-08-07-coa-picker-pilot` | **Gates green, not yet landed** (reported 2026-08-08): corpus imported (112 claims, 105 validated, 63 sources), picker readiness PASS, fixtures 32/0. Adopted guides 15→12 under amendment 13 (content rejection beats citation). Remaining there: bounded Sol-high review → commit → gated landing to `work/quest-hint-prototype`. The design track's pilot-blocked items stay blocked until that landing; the 16-class run stays unapproved |
 
 ## NEXT (design track, in order)
 
