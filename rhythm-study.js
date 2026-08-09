@@ -13,8 +13,9 @@
   // t1/t2/t3: session-6 desktop-echo thumb placements (text column's right edge).
   // RULED 2026-08-09 round 1: t1 (top corner) is the desktop treatment; the chip retired.
   const video = ["full", "mini", "t1", "t2", "t3", "off"].includes(params.get("v")) ? params.get("v") : "t1";
-  // su=strict: round-2 preview of true-support counting on the masthead role line.
-  const support = ["ship", "strict"].includes(params.get("su")) ? params.get("su") : "ship";
+  // RULED 2026-08-09 round 2: strict true-support counting is the page (class.js).
+  // su=ship rebuilds the old inflated line, kept for reference only.
+  const support = ["ship", "strict"].includes(params.get("su")) ? params.get("su") : "strict";
   const engine = ["col", "seal", "strip", "off"].includes(params.get("e")) ? params.get("e") : "col";
   const verbEcho = ["chip", "kick", "meta", "off"].includes(params.get("w")) ? params.get("w") : "chip";
 
@@ -337,18 +338,15 @@
          title="Official Ascension class video — an older fantasy reference, not evidence">▶ Class highlight</a>`);
   }
 
-  // ---------- round 2: true-support role counting (su=strict) ----------
-  // Atlas grammar §4 principle: class-level "Support" appears only when a spec supports
-  // WITHOUT healing. strict recomputes the role line under that rule (Cultist: Heretic
-  // heals, so Support drops). ship keeps the line as the data counts it today.
-  if (support === "strict") {
+  // ---------- role counting reference (su=ship) ----------
+  // The page renders the ruled strict counting (class.js). This rebuilds the retired
+  // inflated line — every spec role counted, healers included in Support — for reference.
+  if (support === "ship") {
     const roles = document.querySelector("#mast .cp-roles");
     const specs = R.data.specs.filter(s => s.id.split("/")[0] === classSlug);
     if (roles && specs.length) {
       const counts = {};
-      specs.forEach(s => s.roles
-        .filter(r => r !== "Support" || !s.roles.includes("Healer"))
-        .forEach(r => { counts[r] = (counts[r] || 0) + 1; }));
+      specs.forEach(s => s.roles.forEach(r => { counts[r] = (counts[r] || 0) + 1; }));
       const ranges = [...new Set(specs.flatMap(s => s.range))];
       const chip = roles.querySelector(".ry-mast-video");
       roles.innerHTML = [...Object.entries(counts).map(([r, n]) => n > 1 ? `${r} ×${n}` : r), ...ranges]

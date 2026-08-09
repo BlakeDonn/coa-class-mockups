@@ -57,7 +57,7 @@ Same format and authority rules as `class-page-grammar.md`.
 | Door middle element | **M2 archetype tag** ("2H burst bruiser" · "mobile DoT caster"). AUTHORING RULE (user): tags describe **playstyle, not fantasy** — lore nouns and flavor adjectives out, mechanics words in; each tag still traces to the researched fantasy sentence. 11 specs drafted (Cultist, Tinker, Witch Hunter), temporary copy; the ×70 compression pass fills the rest and revisits verbiage | RULED (2026-08-07 round 8 close) |
 | THE CARD IS CLOSED | User verdict: "that kinda finishes the class cards, they look fantastic." Final composition: official crest · name · jobs line · range line · tagline (keyword glow) · engine blurb · ✦ computed facts · doors (queue icon + name + archetype tag + range) · video corner | RULED (2026-08-07) |
 | True-support rule | Class-level "Support" appears only when a spec supports WITHOUT healing (user 2026-08-07: "wouldn't every healer be quantified as support?"). Five classes qualify: Barbarian, Stormbringer, Guardian, Ranger, Sun Cleric. Spec-level role data is untouched — doors still show a Healer+Support spec's ⚑, and the taxonomy stays research-derived | RULED (principle) |
-| True-support ripples | Two surfaces disagree with the new rule and need explicit dispositions: (1) the class page's RULED masthead role line ("Damage ×2 · Healer · Support · Tank" for Cultist) counts Heretic as Support; (2) the "four specs, four different jobs" ✦ facts and the session-3 verified roster fact "four-role classes = 4 of 21" both use the inflated counting | OPEN (flag) |
+| True-support ripples | RESOLVED: user ruled strict everywhere (2026-08-09, session 6 round 2). The class-page role line and the computed ✦ jobs facts now count under the rule; four-jobs classes drop 4 → 1 (Sun Cleric), the others fall back to the playstyles fact. Record in `class-page-grammar.md` §1 + session log | RULED (2026-08-09) |
 
 ## 5 · The identity map
 
@@ -85,8 +85,8 @@ Same format and authority rules as `class-page-grammar.md`.
 
 1. **Star-map placement** — the masthead ghost button in `atlas-v2.html` is a live proposal.
 2. **Starmap phone redraw** — interim is a horizontal pan; an authored S2-style redraw is open.
-3. **True-support propagation** — the class page's ruled role line and the four-jobs ✦ facts
-   still use the old counting (§4 ripples row).
+3. ~~True-support propagation~~ — RESOLVED 2026-08-09 (session 6 round 2): strict everywhere
+   (§4 ripples row).
 4. **Crest rights confirmation** — before the site slice only.
 5. **Spec-profile modal** — slim vs port-class-page vs remove; session 5's job
    (`choose-profile-design-handoff.md`).

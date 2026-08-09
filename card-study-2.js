@@ -48,7 +48,10 @@
   // playstyles line only appears when the jobs line hasn't already said it.
   function factsFor(c) {
     const out = [];
-    const distinctRoles = [...new Set(c.specs.flatMap(s => s.roles))];
+    // True-support rule (ruled 2026-08-09): the jobs counting ignores Support on specs
+    // that also heal — same rule the subLines jobs line already applies. Doors untouched.
+    const distinctRoles = [...new Set(c.specs.flatMap(s =>
+      s.roles.filter(r => r !== "Support" || !s.roles.includes("Healer"))))];
     const distinctFams = [...new Set(c.specs.map(s => s.atlas))];
     const n = c.specs.length;
     const mh = c.specs.find(s => s.roles.includes("Healer") && s.range.includes("Melee"));

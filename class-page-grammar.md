@@ -25,7 +25,7 @@ This is the checklist for repeating the design 21 times without drift.
 | Engine content | Names the resource, the loop, and the class tension. Generalizations across specs need research backing (flag: Heretic's Insanity relation unconfirmed) | RULED shape / OPEN copy per class |
 | Engine copy shape (amended) | Condensed: a serif-italic lede ("Every Cultist runs on Insanity, and it climbs as you act."), then "Near 60 it is steady power: strong enough to fuel your kit, safe enough to hold. Cross 100 and it pays out more, punishing you while it lasts." The paragraph deliberately teaches the seal's HOLD/CROSS words right above the seal. The four-specs sentence is dropped — the seal shows it. FLAG: "strong enough to fuel your kit" is a cross-spec generalization needing research confirm; fallback is "steady power you ride, not spend" | RULED (2026-08-07 session 3, copy tightened same day) / flag on the 60-band claim |
 | Rare-part list | The engine block ends with 1–3 terse ✦ fragments naming what is strange about the class. Cultist: "Melee healer option" · "Four specs, four different playstyles". Every fragment must trace to a computable roster fact (melee healers = 2 of 70 specs; verified in snapshot). No fact, no bullet — never invented | RULED (2026-08-07 session 3) |
-| Role chips | One plain-text line, sentence case, no boxes, separators only ("Damage ×2 · Healer · Support · Tank · Melee · Ranged"). Authored to fit ONE line at 390px. Desktop follows the same treatment in its own pass | RULED (2026-08-07 session 3, supersedes "keep") |
+| Role chips | One plain-text line, sentence case, no boxes, separators only. Authored to fit ONE line at 390px. Applies at every width (desktop echo landed 2026-08-09). COUNTING: the true-support rule — class-level Support only when a spec supports WITHOUT healing (Cultist: "Damage ×2 · Healer · Tank · Melee · Ranged"; Heretic's Support stays on its spec card) | RULED (2026-08-07 session 3; strict counting ruled 2026-08-09 session 6 round 2) |
 
 ## 2 · Seal (class diagram)
 
@@ -204,6 +204,14 @@ placement `feel`, video `mini`, engine `col`, verbs `chip`, cards `airfam`.
   phone echo). §5 updated; the chip is retired; study default flipped so the bare URL renders
   T1. T2/T3 stay in the switcher for reference. Round 2 opens on true-support propagation
   (the role line's Support counting), the first Atlas warm-up flag.
+- **2026-08-09 (round 2 verdict, true-support propagated):** user ruled **strict everywhere**.
+  Computed ripples disclosed before the pick: 12 → 5 classes show class-level Support
+  (Barbarian, Stormbringer, Guardian, Ranger, Sun Cleric); four-jobs classes 4 → 1
+  (Sun Cleric alone keeps the "four different jobs" ✦ fact; Cultist, Bloodmage, Primalist
+  fall back to the playstyles fact). Applied: `class.js` roleChips (this page + `class.html`),
+  `card-study-2.js` factsFor (Atlas cards, Choose results, profile studies — the card's jobs
+  line already obeyed the rule). `?su=ship` keeps the retired counting for reference.
+  Atlas grammar §4 ripples flag closed.
 - **Deployed:** https://blakedonn.github.io/coa-class-mockups/ (GitHub Pages, repo
   `BlakeDonn/coa-class-mockups`, public). Main study:
   https://blakedonn.github.io/coa-class-mockups/rhythm-class.html?c=cultist

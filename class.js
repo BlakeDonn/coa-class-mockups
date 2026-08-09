@@ -48,8 +48,12 @@
   document.title = `${klass} — CoA Atlas`;
 
   function roleChips() {
+    // True-support rule (ruled 2026-08-09, session 6 round 2): class-level Support
+    // counts only specs that support WITHOUT healing. Spec-level roles untouched.
     const counts = {};
-    specs.forEach(s => s.roles.forEach(r => { counts[r] = (counts[r] || 0) + 1; }));
+    specs.forEach(s => s.roles
+      .filter(r => r !== "Support" || !s.roles.includes("Healer"))
+      .forEach(r => { counts[r] = (counts[r] || 0) + 1; }));
     const ranges = [...new Set(specs.flatMap(s => s.range))];
     return [...Object.entries(counts).map(([r, n]) => n > 1 ? `${r} ×${n}` : r), ...ranges]
       .map(t => `<span>${esc(t)}</span>`).join("");
