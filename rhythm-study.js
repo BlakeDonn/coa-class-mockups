@@ -11,7 +11,10 @@
   const classSlug = params.get("c") || "cultist";
   const placement = ["feel", "stats", "fold"].includes(params.get("p")) ? params.get("p") : "fold";
   // t1/t2/t3: session-6 desktop-echo thumb placements (text column's right edge).
-  const video = ["full", "mini", "t1", "t2", "t3", "off"].includes(params.get("v")) ? params.get("v") : "mini";
+  // RULED 2026-08-09 round 1: t1 (top corner) is the desktop treatment; the chip retired.
+  const video = ["full", "mini", "t1", "t2", "t3", "off"].includes(params.get("v")) ? params.get("v") : "t1";
+  // su=strict: round-2 preview of true-support counting on the masthead role line.
+  const support = ["ship", "strict"].includes(params.get("su")) ? params.get("su") : "ship";
   const engine = ["col", "seal", "strip", "off"].includes(params.get("e")) ? params.get("e") : "col";
   const verbEcho = ["chip", "kick", "meta", "off"].includes(params.get("w")) ? params.get("w") : "chip";
 
@@ -334,6 +337,26 @@
          title="Official Ascension class video — an older fantasy reference, not evidence">▶ Class highlight</a>`);
   }
 
+  // ---------- round 2: true-support role counting (su=strict) ----------
+  // Atlas grammar §4 principle: class-level "Support" appears only when a spec supports
+  // WITHOUT healing. strict recomputes the role line under that rule (Cultist: Heretic
+  // heals, so Support drops). ship keeps the line as the data counts it today.
+  if (support === "strict") {
+    const roles = document.querySelector("#mast .cp-roles");
+    const specs = R.data.specs.filter(s => s.id.split("/")[0] === classSlug);
+    if (roles && specs.length) {
+      const counts = {};
+      specs.forEach(s => s.roles
+        .filter(r => r !== "Support" || !s.roles.includes("Healer"))
+        .forEach(r => { counts[r] = (counts[r] || 0) + 1; }));
+      const ranges = [...new Set(specs.flatMap(s => s.range))];
+      const chip = roles.querySelector(".ry-mast-video");
+      roles.innerHTML = [...Object.entries(counts).map(([r, n]) => n > 1 ? `${r} ×${n}` : r), ...ranges]
+        .map(t => `<span>${R.esc(t)}</span>`).join("");
+      if (chip) roles.appendChild(chip);
+    }
+  }
+
   // Defining talents move up into the spec header's empty top-right corner.
   function applyTalents(root) {
     const strip = root.querySelector(".icon-strip");
@@ -561,7 +584,7 @@
   // ---------- switcher ----------
   const P_LABELS = { feel: "1 · Under the header, before the video", stats: "2 · After the verdicts, with the pips", fold: "3 · First fold — “The rhythm”" };
   const other = classSlug === "tinker" ? "cultist" : "tinker";
-  const url = (c, p, v, e = engine, w = verbEcho, k = cardStyle, s = pipsMode, t = topMode) => `rhythm-class.html?c=${c}&p=${p}&v=${v}&e=${e}&w=${w}&k=${k}&s=${s}&t=${t}`;
+  const url = (c, p, v, e = engine, w = verbEcho, k = cardStyle, s = pipsMode, t = topMode, su2 = support) => `rhythm-class.html?c=${c}&p=${p}&v=${v}&e=${e}&w=${w}&k=${k}&s=${s}&t=${t}&su=${su2}`;
   const links = ["feel", "stats", "fold"].map(p =>
     [url(classSlug, p, video), P_LABELS[p], p === placement]);
   links.push([url(other, placement, video), `${other === "tinker" ? "Tinker" : "Cultist"} · same placement`, false]);
@@ -578,6 +601,8 @@
     `<a class="${s === pipsMode ? "current" : ""}" href="${url(classSlug, placement, video, engine, verbEcho, cardStyle, s)}">${s}</a>`).join("");
   const topRow = ["ship", "slim", "tight"].map(t =>
     `<a class="${t === topMode ? "current" : ""}" href="${url(classSlug, placement, video, engine, verbEcho, cardStyle, pipsMode, t)}">${t}</a>`).join("");
+  const suRow = ["ship", "strict"].map(su2 =>
+    `<a class="${su2 === support ? "current" : ""}" href="${url(classSlug, placement, video, engine, verbEcho, cardStyle, pipsMode, topMode, su2)}">${su2}</a>`).join("");
   links.push([`rhythm-preview.html`, "Form studies (strips · screens)", false]);
   links.push([`diagram-preview.html?c=${classSlug}&concept=seal`, "Seal study", false]);
   if (params.get("sw") !== "off")
@@ -589,6 +614,7 @@
     <strong style="margin-top:8px">Spec cards</strong><div class="ry-sw-row">${cardRow}</div>
     <strong style="margin-top:8px">Pips row</strong><div class="ry-sw-row">${pipsRow}</div>
     <strong style="margin-top:8px">Codex top</strong><div class="ry-sw-row">${topRow}</div>
+    <strong style="margin-top:8px">Role counting</strong><div class="ry-sw-row">${suRow}</div>
     ${links.slice(4).map(([href, label, cur]) => `<a href="${href}">${label}</a>`).join("")}
     <small>Only the rhythm block and the video treatment change. Godblade, Corruption, and Demolition have strips; other specs show the honest gap.</small></aside>`);
 })();

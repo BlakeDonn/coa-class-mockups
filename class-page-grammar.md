@@ -90,8 +90,8 @@ Screen cards so far: same three, plus Invention config in the form study.
 
 | Piece | Decision | Status |
 |---|---|---|
-| Class video | Masthead chip: "▶ Class highlight" link beside the role chips, caveat as hover title. Nothing about it renders in the codex | RULED (2026-08-07, supersedes the mini row) |
-| Class video (phone) | Real thumbnail again: 96×54 in the masthead's top-right corner, provenance micro-caption on the image, links to the video. Replaces the chip below 560px. Desktop echo ruled in principle (thumb at the text column's right edge — the seal owns the far right); chip stays on desktop until that pass | RULED (2026-08-07 session 3) |
+| Class video | Desktop: real thumbnail, 112×63, at the TEXT COLUMN's top-right corner, level with the class name (T1, the literal phone echo) — the seal owns the far right. Provenance micro-caption on the image; caveat as hover title. The "▶ Class highlight" chip is RETIRED. Nothing about it renders in the codex | RULED (2026-08-09 session 6 round 1, supersedes the chip) |
+| Class video (phone) | Real thumbnail: 96×54 in the masthead's top-right corner, provenance micro-caption on the image, links to the video. Below 560px. Desktop echo landed 2026-08-09 (T1 above) | RULED (2026-08-07 session 3) |
 | Rationale | Class-level content belongs at class level; it was repeated per spec and labeled weak by the page itself | — |
 | Spec guide rows | Unchanged (verified guides with thumbnails) | RULED (keep) |
 | No-spec-video row | Hidden; the search record lives in Evidence & gaps | RULED |
@@ -200,6 +200,10 @@ placement `feel`, video `mini`, engine `col`, verbs `chip`, cards `airfam`.
   baseline until the pick; compare page `desktop-echo-study.html` (real renders, trade-offs,
   Tinker cross-check links). 1280/1440 desktop + 390 phone screenshots verified pre-deploy.
   Awaiting the round-1 pick.
+- **2026-08-09 (round 1 verdict):** user picked **T1 · top corner** (the recommended literal
+  phone echo). §5 updated; the chip is retired; study default flipped so the bare URL renders
+  T1. T2/T3 stay in the switcher for reference. Round 2 opens on true-support propagation
+  (the role line's Support counting), the first Atlas warm-up flag.
 - **Deployed:** https://blakedonn.github.io/coa-class-mockups/ (GitHub Pages, repo
   `BlakeDonn/coa-class-mockups`, public). Main study:
   https://blakedonn.github.io/coa-class-mockups/rhythm-class.html?c=cultist
