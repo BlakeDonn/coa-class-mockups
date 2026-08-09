@@ -50,9 +50,11 @@
 .ry-block .dm-window-lab { fill: #f2dcae; font-size: 12.5px; font-weight: 700; letter-spacing: .1em; }
 .ry-block .idle { fill: none; stroke: #4d4030; stroke-width: 1; stroke-dasharray: 3 4; }
 
-/* col engine: let the seal claim the masthead's full height, at its own aspect ratio */
+/* col engine: let the seal claim the masthead's full height, at its own aspect ratio.
+   --seal-slot marks where the text column ends; the session-6 thumb anchors to it. */
 @media (min-width: 901px) {
-  .ry-e-col .cp-mast.cd-with-seal { padding-right: clamp(440px, 45%, 640px); }
+  .cp-mast.cd-with-seal { --seal-slot: 440px; }
+  .ry-e-col .cp-mast.cd-with-seal { --seal-slot: clamp(440px, 45%, 640px); padding-right: var(--seal-slot); }
   .ry-e-col .cd-seal { top: 12px; height: calc(100% - 24px); width: auto;
     aspect-ratio: 420 / 205; max-width: calc(clamp(440px, 45%, 640px) - 40px); }
 }
@@ -164,6 +166,41 @@ body.ry-k-style .rail-card::before { content: ""; position: absolute; inset: 5px
 .ry-sw-row a { flex: 1; text-align: center; }
 
 /* our switcher, bottom-left mirror of the study's */
+/* ---------- session 6 · desktop echo ---------- */
+/* Role line: the phone's ruled plain-text treatment now applies at every width (grammar 1).
+   Same declarations as phone-layout.css's 560px block; this study page only. */
+.cp-roles { display: block; margin-top: 10px; white-space: nowrap; overflow: hidden; }
+.cp-roles span { display: inline; border: 0; background: none; padding: 0; color: #9a9483;
+  font-size: 12px; letter-spacing: 0; text-transform: none; }
+.cp-roles span + span::before { content: " · "; color: #565b62; }
+
+/* The corner thumb at desktop: same anatomy as the phone's .ph-thumb, 112x63 for the
+   wider canvas. Anchored to --seal-slot: the text column's right edge, never the seal's. */
+.ry-thumb { display: none; }
+@media (min-width: 561px) {
+  .ry-thumb { position: absolute; z-index: 2; display: block; width: 112px; height: 63px;
+    border: 1px solid #6b5a35; border-radius: 3px; overflow: hidden; }
+  .ry-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .ry-thumb .play { position: absolute; inset: 0; display: grid; place-items: center;
+    color: #ecd7a8; font-size: 14px; text-shadow: 0 0 8px #000; }
+  .ry-thumb .cap { position: absolute; left: 0; right: 0; bottom: 0; padding: 2px 4px 3px;
+    background: linear-gradient(transparent, #000d); color: #c9aa71; font-size: 7.5px;
+    letter-spacing: .12em; text-transform: uppercase; text-align: center; }
+  .ry-thumb:hover { border-color: #c9aa71; }
+
+  /* t1 · top corner: the literal phone echo, level with the crumb and title */
+  .ry-t1 { top: 16px; right: calc(var(--seal-slot, 24px) + 16px); }
+  body.ry-v-t1 .cp-mast .crumb, body.ry-v-t1 .cp-mast .kick { padding-right: 140px; }
+
+  /* t2 · roles row: bottom of the text column, beside the role line (the chip's old home) */
+  .ry-t2 { bottom: 16px; right: calc(var(--seal-slot, 24px) + 16px); }
+  body.ry-v-t2 .cp-roles { padding-right: 140px; min-height: 14px; }
+
+  /* t3 · engine corner: docked inside the engine block, copy wraps around it.
+     Stays position:relative so its play/caption overlays anchor to the thumb itself. */
+  .ry-t3 { float: right; position: relative; margin: 2px 0 6px 12px; }
+}
+
 .ry-switcher { position: fixed; z-index: 90; right: 12px; bottom: 12px; width: 240px; padding: 10px;
   border: 1px solid #4b4651; border-radius: 5px; background: #111218f2; box-shadow: 0 12px 40px #000b;
   font: 10px/1.45 Arial, sans-serif; color: #9da0a8; }

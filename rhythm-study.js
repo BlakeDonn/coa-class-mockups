@@ -10,7 +10,8 @@
   const params = new URLSearchParams(location.search);
   const classSlug = params.get("c") || "cultist";
   const placement = ["feel", "stats", "fold"].includes(params.get("p")) ? params.get("p") : "fold";
-  const video = ["full", "mini", "off"].includes(params.get("v")) ? params.get("v") : "mini";
+  // t1/t2/t3: session-6 desktop-echo thumb placements (text column's right edge).
+  const video = ["full", "mini", "t1", "t2", "t3", "off"].includes(params.get("v")) ? params.get("v") : "mini";
   const engine = ["col", "seal", "strip", "off"].includes(params.get("e")) ? params.get("e") : "col";
   const verbEcho = ["chip", "kick", "meta", "off"].includes(params.get("w")) ? params.get("w") : "chip";
 
@@ -124,6 +125,7 @@
   };
   const codex = document.getElementById("codex");
   if (!codex) return;
+  document.body.classList.add(`ry-v-${video}`);
 
   // ---------- cadence strips (authored per spec) ----------
   const corrTicks = Array.from({ length: 36 }, (_, i) =>
@@ -530,6 +532,23 @@
     }
   })();
 
+  // ---------- desktop video thumb (session 6: the phone corner thumb echoed) ----------
+  // Grammar 5: the thumb sits at the TEXT COLUMN's right edge — the seal owns the far
+  // right. Three placements under study; the masthead chip retires when one is ruled.
+  (() => {
+    if (!/^t[123]$/.test(video)) return;
+    const vid = R.data.specs.find(s => s.id.split("/")[0] === classSlug && s.media.classVideo)?.media.classVideo;
+    const mast = document.getElementById("mast");
+    if (!vid || !mast) return;
+    const html = `<a class="ry-thumb ry-${video}" href="https://www.youtube.com/watch?v=${vid}" target="_blank" rel="noreferrer"
+        title="Official Ascension class video — an older fantasy reference, not evidence">
+      <img src="https://i.ytimg.com/vi/${vid}/mqdefault.jpg" alt="" loading="lazy">
+      <span class="play">▶</span><span class="cap">Class highlight</span></a>`;
+    const engineBlock = mast.querySelector(".ry-engine");
+    if (video === "t3" && engineBlock) engineBlock.insertAdjacentHTML("afterbegin", html);
+    else mast.insertAdjacentHTML("beforeend", html);
+  })();
+
   document.addEventListener("click", e => {
     const b = e.target.closest(".ry-eye-btn");
     if (!b) return;
@@ -546,8 +565,9 @@
   const links = ["feel", "stats", "fold"].map(p =>
     [url(classSlug, p, video), P_LABELS[p], p === placement]);
   links.push([url(other, placement, video), `${other === "tinker" ? "Tinker" : "Cultist"} · same placement`, false]);
-  const vidRow = ["full", "mini", "off"].map(v =>
-    `<a class="${v === video ? "current" : ""}" href="${url(classSlug, placement, v)}">${v}</a>`).join("");
+  const VID_LABELS = { full: "full", mini: "chip", t1: "t1", t2: "t2", t3: "t3", off: "off" };
+  const vidRow = ["full", "mini", "t1", "t2", "t3", "off"].map(v =>
+    `<a class="${v === video ? "current" : ""}" href="${url(classSlug, placement, v)}">${VID_LABELS[v]}</a>`).join("");
   const engRow = ["col", "seal", "strip", "off"].map(e =>
     `<a class="${e === engine ? "current" : ""}" href="${url(classSlug, placement, video, e)}">${e}</a>`).join("");
   const verbRow = ["chip", "kick", "meta", "off"].map(w =>
@@ -560,6 +580,7 @@
     `<a class="${t === topMode ? "current" : ""}" href="${url(classSlug, placement, video, engine, verbEcho, cardStyle, pipsMode, t)}">${t}</a>`).join("");
   links.push([`rhythm-preview.html`, "Form studies (strips · screens)", false]);
   links.push([`diagram-preview.html?c=${classSlug}&concept=seal`, "Seal study", false]);
+  if (params.get("sw") !== "off")
   document.body.insertAdjacentHTML("beforeend", `<aside class="ry-switcher"><strong>Rhythm placement study</strong>
     ${links.slice(0, 4).map(([href, label, cur]) => `<a class="${cur ? "current" : ""}" href="${href}">${label}</a>`).join("")}
     <strong style="margin-top:8px">Class video</strong><div class="ry-sw-row">${vidRow}</div>

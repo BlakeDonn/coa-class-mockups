@@ -192,6 +192,14 @@ placement `feel`, video `mini`, engine `col`, verbs `chip`, cards `airfam`.
 - **Next:** research-confirm the two engine flags ("fuel your kit", Heretic's Insanity relation);
   approve the 7 advisor card blurbs (§3 flag); author tinker's rare-part bullets from computable
   facts; then plan the shipped-site slice (after the Anatomy merge).
+- **2026-08-09 (session 6 open, desktop echo, round 1 built):** read-first list completed.
+  The ruled plain-text role line now applies at every width on `rhythm-class.html` (promoted
+  out of the 560px gate; §1 "own pass" executed). Engine block verified at desktop parity.
+  Round 1 built and deployed: the corner video thumb at the text column's right edge, three
+  placements (`?v=t1` top corner / `t2` roles row / `t3` engine corner), chip kept as the
+  baseline until the pick; compare page `desktop-echo-study.html` (real renders, trade-offs,
+  Tinker cross-check links). 1280/1440 desktop + 390 phone screenshots verified pre-deploy.
+  Awaiting the round-1 pick.
 - **Deployed:** https://blakedonn.github.io/coa-class-mockups/ (GitHub Pages, repo
   `BlakeDonn/coa-class-mockups`, public). Main study:
   https://blakedonn.github.io/coa-class-mockups/rhythm-class.html?c=cultist
