@@ -46,7 +46,7 @@ Same format and authority rules as `atlas-page-grammar.md` and `class-page-gramm
 | Piece | Decision | Status |
 |---|---|---|
 | Entry chrome | **E1 · bare, as it ships**: straight into the vignette, the honesty foot line below the plate. User 2026-08-08: "e1". E2 (mini-masthead) and E3 (framed band) set aside — the advisor's E2 lean was overruled | RULED (2026-08-08 round 4) |
-| Adjust chips | Not yet discussed; the shipped chips already match the stone language | OPEN (likely keep) |
+| Adjust chips | **Keep as shipped.** The answer pills under the results re-score live and already speak the stone-button language. User 2026-08-08: "I think keep them yeah" | RULED (2026-08-08) |
 
 ## 4 · The spec-profile modal (job 2)
 
@@ -132,3 +132,9 @@ Same format and authority rules as `atlas-page-grammar.md` and `class-page-gramm
   flipped to E1. All four Choose rounds are now ruled: M2 result cards · locked P1 modal with
   the name-row chip · B honest-icon questions · E1 bare entry. Remaining small piece: the
   adjust chips (§3, advisor recommends keep-as-ships).
+- **2026-08-08 (SESSION 5 CLOSED):** adjust chips ruled keep ("I think keep them yeah") — every
+  Choose and modal piece now carries a ruling. Deliverables: four study pages (rounds 1–4), the
+  full ruled flow playable end to end, this grammar. Implementation waits on the site-slice
+  gates (Anatomy merge, crest rights) and the pilot's landing for the authoring passes. The
+  Atlas warm-up flags (star-map placement, true-support propagation) pass to the next session's
+  queue untouched.

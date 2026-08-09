@@ -12,19 +12,17 @@ Authority note: entries here are plans, not rulings. Rulings live in the grammar
 | Item | Where | State |
 |---|---|---|
 | Atlas design session (session 4, 2026-08-07) | This repo | **CLOSED, all landed.** Eight rounds; the class card finished ("they look fantastic"). Rulings in `atlas-page-grammar.md`; assembly `atlas-v2.html`; interim map `starmap.html`. The bit-by-bit round cadence is now the standing process (contract in the session-5 handoff) |
-| Design session 5: Choose page + spec-profile modal | This repo, rulings in `choose-page-grammar.md` | **All four rounds ruled** (2026-08-07/08): M2 result cards (full Atlas card + "you will probably like X") · modal LOCKED (P1 slim, name-row chip) · B honest-icon questions · E1 bare entry. Two-altitude questionnaire recorded as a forward plan (blocked on pilot data). Open: adjust chips confirm (likely keep); the site slice carries it all later |
+| Design session 5: Choose page + spec-profile modal | This repo, rulings in `choose-page-grammar.md` | **CLOSED, all ruled** (2026-08-07/08): M2 result cards · modal LOCKED (P1 slim, name-row chip) · B honest-icon questions · E1 bare entry · adjust chips kept. Two-altitude questionnaire recorded as a forward plan (blocked on pilot data). The site slice carries it all later |
 | Five-class research pilot (cultist, tinker, witch-hunter, guardian, knight-of-xoroth) | Main repo, worktree `coa-picker-pilot`, branch `work/2026-08-07-coa-picker-pilot` | **Gates green, not yet landed** (reported 2026-08-08): corpus imported (112 claims, 105 validated, 63 sources), picker readiness PASS, fixtures 32/0. Adopted guides 15→12 under amendment 13 (content rejection beats citation). Remaining there: bounded Sol-high review → commit → gated landing to `work/quest-hint-prototype`. The design track's pilot-blocked items stay blocked until that landing; the 16-class run stays unapproved |
 
 ## NEXT (design track, in order)
 
-1. **Session 5 (handoff ready): Choose page pass + the spec-profile modal question.** Choose is
-   unblocked — scoring is ruled and Sol-approved; this is visual language. The modal question:
-   today's spec profile duplicates the future class page; slim it, port the class page into it,
-   or drop it.
-2. **Desktop echo pass.** Carry the session-3 rulings to desktop: plain-text role line, corner
-   video thumb (at the text column's right edge — the seal owns the far right), engine styling.
-   Plus the shipped-Atlas tagline swap (the old premise line still shows there; recorded divergence).
-3. **Guided Verdict pass. Deliberately LAST.** Guided renders v3 evidence, so a redesign before the
+1. **Session 6 (handoff ready: `desktop-echo-design-handoff.md`): the desktop echo pass.** Carry
+   the session-3 rulings to desktop: plain-text role line, corner video thumb (at the text
+   column's right edge — the seal owns the far right), engine styling. Plus the shipped-Atlas
+   tagline swap (the old premise line still shows there; recorded divergence), and the two
+   Atlas warm-up flags (star-map placement, true-support propagation).
+2. **Guided Verdict pass. Deliberately LAST.** Guided renders v3 evidence, so a redesign before the
    pilot imports means doing it twice. Also waits on the Anatomy merge (below).
 
 ## BLOCKED — waiting on the pilot's research
