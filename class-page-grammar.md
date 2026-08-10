@@ -319,3 +319,6 @@ placement `feel`, video `mini`, engine `col`, verbs `chip`, cards `airfam`.
   builds shipped in ~30 min and Pages caches 10 min, so the phone mixed old files. Fix
   in tooling: `deploy_coa_site.py` now stamps every css/js reference with a content hash
   at package time — a fresh page load can never mix stale runtime files again.
+  Final label ruling ("ok cool that works but do we really need the black backfill?"):
+  plate REMOVED, halo alone carries readability. The §2 standing rule amends to: center
+  label paints last with a dark halo; no plate.
