@@ -356,6 +356,12 @@ placement `feel`, video `mini`, engine `col`, verbs `chip`, cards `airfam`.
   Verified at 1280 + 390 iframe (war, godblade); Cultist/Tinker strips converted to the
   same bullet grammar from their verified prose. Compare artifact:
   https://claude.ai/code/artifact/361b3534-834e-41b6-a08d-ca63271f03a0
+- **2026-08-10 (SESSION CLOSE):** the seal & strip session ends with the pass complete.
+  Live: 21/21 classes with audited engines, seals, verbs, and strips at both widths.
+  Open on return: the user's final phone sweep across the 16 new classes (corrections
+  re-mock cheaply, per the standing cadence); the deferred spec-card blurbs (§3) for
+  the 19 later classes remain the copy lane's. Evidence packets, the Sol advisory, and
+  every ruling are file-backed in this log and the main repo.
 - **2026-08-10 (THE SEAL & STRIP PASS COMPLETES — 21/21 AUTHORED AND LIVE):** the final
   eight shipped in four pairs, all from packets under every standing ruling. BARBARIAN:
   segmented Energy gauge with the Enrage wedge gap (−30% inside it); Hoard/Reset/Pour;
