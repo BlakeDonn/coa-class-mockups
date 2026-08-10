@@ -328,3 +328,24 @@ placement `feel`, video `mini`, engine `col`, verbs `chip`, cards `airfam`.
   pips/wheel/bank card glyphs are RULED as shipped. The war-strip quarantine reading
   (strips rest on landed structural claims; dead dimensions carry nothing) stands
   unobjected. Round 2 opens on Guardian — the honest-split engine case.
+- **2026-08-10 (design-pass session opened, round 1 built — the one-line class name):**
+  from `2026-08-10-coa-class-page-design-pass-handoff.md`. Baseline measured on the live
+  source: only Knight of Xoroth wraps, and only at phone width — 202px of name against
+  197px of slot at 390 (the 30px h1 fits everything at 1280; availW there is 537px).
+  Three directions built behind a TEMPORARY `?n=` switcher on the live `class.html`
+  (baseline stays the bare-URL default until the pick; switcher and its harness are
+  removed when the verdict lands): **fit** = a self-correcting JS guard in the role-line
+  style — nowrap, measure, scale ONLY the overflowing name (KoX 24→23.1px; every other
+  class untouched; holds at ANY width and under font substitution; ResizeObserver added
+  after the harness caught a late-scrollbar miss) · **small** = one smaller fixed phone
+  size for every class (20px; KoX 168/197 with margin; short names pay for the long one)
+  · **tight** = tracking 0 everywhere + a 7% scaleX squeeze at phone only (KoX 170/197;
+  desktop names measurably narrower, e.g. KoX 252→233 at 1280). Verified: six long names
+  (KoX · Chronomancer · Stormbringer · Witch Doctor · Witch Hunter · Sun Cleric) × 390/
+  1280 × all four forms, mechanical one-line checks green except the baseline's known
+  KoX wrap; 21-class breadth harness re-run clean (only the recorded false positives:
+  seal SVG text metrics at 1280, the ⌕ Search pill at 390). Method note: the round
+  harness (`name-harness.html`, committed) POSTs measurements back AND
+  `--virtual-time-budget` + `--screenshot` makes Windows headless Chrome reliable from
+  WSL — screenshots landed for all four forms this run. Deployed `e1ccd32` → coa_classes
+  `5b9ec92`. AWAITING the round-1 pick (advisor recommends fit).
