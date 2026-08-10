@@ -19,11 +19,11 @@ This is the checklist for repeating the design 21 times without drift.
 |---|---|---|
 | Order | Name → tagline → engine paragraph → role chips; seal on the right | RULED |
 | Tagline | Must fit ONE line at desktop width. Author or trim to fit | RULED (2026-08-07) |
-| Tagline copy (cultist) | "The whispers offer power. Will you listen?" — replaces "Whispers from below, answered…". The shipped Atlas keeps the old premise line until the site slice lands (recorded divergence) | RULED (2026-08-07 session 3) |
+| Tagline copy (cultist) | "The whispers offer power. Will you listen?" — replaces "Whispers from below, answered…". The shipped Atlas keeps the old premise line (at `coa_classes\class.js:24`) until the site slice lands — divergence RECONFIRMED as the resolution path, no hot-patch (session 6) | RULED (2026-08-07 session 3; resolution 2026-08-09) |
 | Styled keyword | One tagline word may carry the class color with a soft glow (cultist: "whispers"). The color is the ruled outline tone — `color-mix(class-color 58%, white 42%)`, same as the seal's active ring and the selected card. Decoration only — never an information channel, text stays readable | RULED (2026-08-07 session 3) |
 | Engine paragraph | 2–4 plain sentences in the masthead column (`e=col`), class-colored left border, label "THE ENGINE — <resource/idea>" | RULED |
-| Engine content | Names the resource, the loop, and the class tension. Generalizations across specs need research backing (flag: Heretic's Insanity relation unconfirmed) | RULED shape / OPEN copy per class |
-| Engine copy shape (amended) | Condensed: a serif-italic lede ("Every Cultist runs on Insanity, and it climbs as you act."), then "Near 60 it is steady power: strong enough to fuel your kit, safe enough to hold. Cross 100 and it pays out more, punishing you while it lasts." The paragraph deliberately teaches the seal's HOLD/CROSS words right above the seal. The four-specs sentence is dropped — the seal shows it. FLAG: "strong enough to fuel your kit" is a cross-spec generalization needing research confirm; fallback is "steady power you ride, not spend" | RULED (2026-08-07 session 3, copy tightened same day) / flag on the 60-band claim |
+| Engine content | Names the resource, the loop, and the class tension. Generalizations across specs need research backing. Heretic's Insanity relation CONFIRMED against v3 (copy-verification, 2026-08-10) | RULED shape / OPEN copy per class |
+| Engine copy shape (amended) | Condensed: a serif-italic lede ("Every Cultist runs on Insanity, and it climbs as you act."), then "Near 60 it is steady power: strong enough to fuel your kit, safe enough to hold. Cross 100 and it pays out more, punishing you while it lasts." The paragraph deliberately teaches the seal's HOLD/CROSS words right above the seal. The four-specs sentence is dropped — the seal shows it. The "strong enough to fuel your kit" 60-band claim CONFIRMED against v3 (2026-08-10): 3 of 4 specs evidence the mid-band; Heretic silent there. The fallback line retires | RULED (2026-08-07 session 3, copy tightened same day; 60-band claim confirmed 2026-08-10) |
 | Rare-part list | The engine block ends with 1–3 terse ✦ fragments naming what is strange about the class. Cultist: "Melee healer option" · "Four specs, four different playstyles". Every fragment must trace to a computable roster fact (melee healers = 2 of 70 specs; verified in snapshot). No fact, no bullet — never invented | RULED (2026-08-07 session 3) |
 | Role chips | One plain-text line, sentence case, no boxes, separators only. Authored to fit ONE line at 390px. Applies at every width (desktop echo landed 2026-08-09). COUNTING: the true-support rule — class-level Support only when a spec supports WITHOUT healing (Cultist: "Damage ×2 · Healer · Tank · Melee · Ranged"; Heretic's Support stays on its spec card) | RULED (2026-08-07 session 3; strict counting ruled 2026-08-09 session 6 round 2) |
 
@@ -45,7 +45,7 @@ This is the checklist for repeating the design 21 times without drift.
 Current verb + gloss set (Cultist/Tinker):
 - Spread — keep damage-over-time on every target; the engine is coverage.
 - Endure — hold Insanity in a managed band and turn it into survival.
-- Convert — turn melee aggression into healing for the group. *(gloss needs research confirm)*
+- Convert — turn melee aggression into healing for the group. *(confirmed against v3, 2026-08-10 — near-verbatim claim: "Blade of Yogg-Saron turns Blade of the Empire damage into healing for the lowest-health ally")*
 - Cross — push Insanity to 100 on purpose and fight inside the dangerous payoff state.
 - Detonate — stack explosives and machines, then fire them in one overlapping window.
 - Restore — deploy healing machines where the group will need them.
@@ -61,7 +61,7 @@ Current verb + gloss set (Cultist/Tinker):
 | Fantasy blurb | Slightly verbose on purpose: one full sentence, ~90–105 chars, 2–3 lines. Authored to fit, never clamped | RULED |
 | No truncation | Card copy is AUTHORED TO FIT, never clamped data text. ✓/✕ as short fragments (~40 chars); full sentences stay in the codex | RULED |
 | Family tooltip | Family row carries the family's authored tagline as hover tooltip | RULED (via airfam) |
-| Draft copy | The 7 authored blurbs + fragments in `rhythm-study.js` are ADVISOR DRAFTS, rephrased from researched text only. Need user approval before shipping | flag |
+| Draft copy | VERIFIED + RULED (copy-verification, 2026-08-10): six of the 7 blurbs and all ✓/✕ fragments confirmed with v3 citations (incl. "oil" and "batteries" via v2 kit data); Godblade's "cashing the full bar" KEPT by user ruling — no v3 evidence either way, the v2 kit grounding stands | RULED (2026-08-10) |
 | Playstyle line | The roster families ARE the playstyle taxonomy ("Planners & Detonators" etc.); `style` variant surfaces them on cards | PROPOSED |
 | Topology glyph | Tiny spike/wave/stack silhouette derived from the spec's authored strip. Only exists where a strip exists — no invented shapes | PROPOSED |
 | Family tooltip | Family names are jargon; attach the family's authored tagline as tooltip (same treatment as verbs) | PROPOSED (flag raised) |
@@ -156,14 +156,16 @@ placement `feel`, video `mini`, engine `col`, verbs `chip`, cards `airfam`.
    on their phone, so the session naturally starts here. Strips are unreadable at 400px today;
    masthead chip, header talents (static-row fallback), and two-column readings all need a
    phone verification pass.
-2. Approve or edit the 7 drafted card blurbs and ✓/✕ fragments (advisor drafts).
+2. ~~Approve or edit the 7 drafted card blurbs and ✓/✕ fragments~~ — RESOLVED 2026-08-10
+   (copy-verification): six confirmed with citations, Godblade kept by ruling (§3 draft-copy row).
 3. Card ↔ codex blurb registers (advisor answered "keep both, diverge in authoring"; confirm).
 4. The remaining folds: Endgame contexts, Leveling story, PvP, etc. Expected LIGHT touch —
    user: "a lot of what we have here is solid stuff."
 5. Choose page and Guided pilot: user wants to revisit; NOT touched in this dialogue at all,
    and prior state unknown to it. Start by surveying what ships today.
 6. Seal ratio rule (420×260) — confirm as standing.
-7. Verb research confirms: Heretic's Convert gloss; Heretic's Insanity relation in the engine ¶.
+7. ~~Verb research confirms: Heretic's Convert gloss; Heretic's Insanity relation in the engine ¶~~
+   — RESOLVED 2026-08-10 (copy-verification): both confirmed against v3 (§1 + §2 rows).
 
 ## 11 · Session log
 
@@ -212,6 +214,19 @@ placement `feel`, video `mini`, engine `col`, verbs `chip`, cards `airfam`.
   `card-study-2.js` factsFor (Atlas cards, Choose results, profile studies — the card's jobs
   line already obeyed the rule). `?su=ship` keeps the retired counting for reference.
   Atlas grammar §4 ripples flag closed.
+- **2026-08-09 (job 2 resolved):** the shipped-Atlas tagline divergence resolves in the SITE
+  SLICE, not a hot-patch (user accepted the recommendation). The old premise stays at
+  `coa_classes\class.js:24` until then. §1 row updated. Round 3 opens on star-map placement,
+  the last warm-up flag.
+- **2026-08-10 (copy-verification session, five-class round ruled):** the session-5 verification
+  of every authored sentence against the LANDED five-class v3 corpus went to the user for
+  rulings. CONFIRMED, flags closed: the Cultist engine lede and 60/100 lines ("fuel your kit"
+  held — 3 of 4 specs evidence the mid-band); Heretic's Insanity relation (§1); the Convert
+  gloss, near-verbatim (§2); six of seven card blurbs, all ✓/✕ fragments, "oil" and "batteries"
+  (§3). RULED: Godblade's "cashing the full bar" kept on its v2 kit grounding (no v3 evidence
+  either way). Queue items 2 and 7 closed. The three Atlas engine-blurb fixes from the same
+  round are recorded in `atlas-page-grammar.md` §8. Next: verify Tinker's engine texts (the one
+  pilot engine not yet quoted), then the ×16 authoring — corpus for the 16 still UNLANDED.
 - **Deployed:** https://blakedonn.github.io/coa-class-mockups/ (GitHub Pages, repo
   `BlakeDonn/coa-class-mockups`, public). Main study:
   https://blakedonn.github.io/coa-class-mockups/rhythm-class.html?c=cultist

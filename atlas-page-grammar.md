@@ -47,7 +47,7 @@ Same format and authority rules as `class-page-grammar.md`.
 | Engine blurb | **E1**: one authored sentence with the class-colored engine label. Pilot five have copy (Cultist authored, four advisor drafts); the rest omit until the ×21 authoring | RULED (2026-08-07 round 5) |
 | Role coupling | **R1 role icons**: ⚔ Damage · 🛡 Tank · ✚ Healer · ⚑ Support lead each spec door, tooltip names the role, range word at right | RULED (2026-08-07 round 5) |
 | Composed card | Crest (name only) → tagline → engine blurb → ✦ facts → doors with role icons. User: "the first one is perfect… just great" | RULED (2026-08-07 round 5) |
-| Draft taglines/engines | The four pilot drafts (Tinker, Witch Hunter, Guardian, Knight of Xoroth) are **approved as temporary copy** — user 2026-08-07: "good for now but just temporary; once we have full research we will revisit the actual verbiage." Revisit trigger: the research lands and the ×21 authoring pass runs | RULED (provisional) |
+| Draft taglines/engines | The four pilot drafts (Tinker, Witch Hunter, Guardian, Knight of Xoroth) are **approved as temporary copy** — user 2026-08-07: "good for now but just temporary; once we have full research we will revisit the actual verbiage." Revisit trigger: the research lands and the ×21 authoring pass runs. **2026-08-10 copy-verification:** three engine blurbs contradicted the landed v3 corpus and were replaced with user-ruled fixes (session log). Labels moved too: Witch Hunter "three fuels" → "Rage"; KoX "Rage" → "Demonfire". Taglines stay provisional; KoX "Damnation rides with you" KEPT with a name-collision flag (Damnation is a Witch Hunter Boltslinger ability) until the ×21 pass | RULED (provisional; engines re-ruled 2026-08-10) |
 | Top-right corner | **V1 class-video thumb**: real thumbnail, play ring, "Class highlight" caption, opens the video. The ruled phone-masthead treatment, scaled to the card. All 21 classes have a video in the data | RULED (2026-08-07 round 6, "video thumb is dope") |
 | Rare ✦ lines | The class-page rare-part pattern comes to the card: 1–2 terse ✦ fragments, every one tracing to a computable roster fact. No fact, no bullet | RULED pattern (2026-08-07, user ask) |
 | Ordering | Alphabetical; no ordering that could read as rank | PROPOSED |
@@ -94,7 +94,28 @@ Same format and authority rules as `class-page-grammar.md`.
 
 ## 8 · Session log
 
-- **2026-08-09 (session 6, round 3 built):** star-map placement variants deployed on the
+- **2026-08-10 (copy-verification session, engine blurbs ruled):** the five-class verification
+  round (run in session 5 against the LANDED five-class v3 corpus, 106 claims) went to the user
+  for line-by-line rulings. Three contradicted engine blurbs replaced, all accepted as proposed:
+  1. **Witch Hunter** — old "Each spec burns its own fuel: Rage, Shadow Brands, or Stamina" ✕.
+     Corpus: "Regenerative Elixirs makes Tonics restore Rage" (class-wide); parries "restore
+     missing health and Rage" (Black Knight); Boltslinger "generates Rage"; a player report has
+     Inquisition Rage generation; Stamina appears in zero claims. New: "Every Hunter runs on
+     Rage; each spec layers its own marks and stacks on top." Label → "The engine — Rage".
+  2. **Guardian** — old "No resource bar. Formations and timing are the engine" ✕. Corpus:
+     Raise Shield "blocks restore Energy", "Reprisal restores Energy after a block";
+     "Motivating Strike grants Motivation, which some Guardian abilities consume"; Glory
+     (Gladiator), Tempo (Inspiration), Paragon (Vanguard) stack per spec. New: "Formations set
+     the stance; Energy, Motivation, and per-spec stacks do the work." Label unchanged.
+  3. **Knight of Xoroth** — old "Every Knight runs on Rage, fed by demons and wounds" ✕.
+     Corpus: Demonfire is generated in all three specs (Shieldgore, Seeking Flame, Gore);
+     "The class tree connects Demon's Blood to Rage" — Rage and Demon's Blood are side layers;
+     "a class node makes melee Physical damage generate Demon's Blood". New: "Every Knight runs
+     on Demonfire, fed by demons and blood." Label → "The engine — Demonfire".
+  Two judgment calls ruled KEEP: (4) KoX tagline "Damnation rides with you" stands until the
+  ×21 pass, flagged — Damnation is a Witch Hunter ability ("Damnation converts Rage into
+  damage", Boltslinger); (5) Godblade "cashing the full bar" stands on its v2 kit grounding —
+  no v3 evidence either way. Copy landed in `card-study-2.js` (ENGINES + GROUNDING). star-map placement variants deployed on the
   reference assembly (`atlas-v2.html?sm=ghost|lens|band`): masthead ghost button (the live
   proposal) · lens third state on the Classes/Specs toggle · section-door band after the
   card grids. Build note: the variant body class collided with the band's own `.sm-band`

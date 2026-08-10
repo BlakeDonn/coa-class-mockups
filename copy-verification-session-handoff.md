@@ -16,6 +16,11 @@ grammar files and update the draft copy in the study JS files.
 
 ## OPENING STATE — the five-class round is already run (session 5, 2026-08-10)
 
+> **RESOLVED 2026-08-10:** all five awaiting items below were ruled. Fixes 1–3 accepted as
+> proposed; items 4–5 kept. Records with quotes: `atlas-page-grammar.md` §8 (engine blurbs)
+> and `class-page-grammar.md` session log (confirmations + Godblade). Copy landed in
+> `card-study-2.js`. The session continues at "SCOPE FOR THE REMAINING 16 CLASSES".
+
 CONFIRMED with citations (no action): the Cultist engine lede and 60/100 lines ("fuel your
 kit" held — 3 of 4 specs evidence the mid-band; Heretic silent there), Heretic's Insanity
 relation, the Convert gloss (near-verbatim: "Blade of Yogg-Saron turns Blade of the Empire

@@ -1,6 +1,8 @@
 /* Identity card study, round 5: engine blurb, computed ✦ facts, role-coupled doors.
-   Taglines/engine blurbs: Cultist authored; four pilot-class ADVISOR DRAFTS (approval
-   required). Every ✦ fact is computed from the roster — no fact, no bullet. */
+   Taglines/engine blurbs: Cultist authored. Witch Hunter, Guardian, and KoX engine blurbs
+   corrected + user-ruled against the v3 corpus (2026-08-10, copy-verification session).
+   Tinker's engine and the four pilot taglines stay temporary drafts until the ×21 pass.
+   Every ✦ fact is computed from the roster — no fact, no bullet. */
 (() => {
   "use strict";
 
@@ -20,15 +22,15 @@
   const ENGINES = {
     "Cultist": { lab: "The engine — Insanity", p: "Every Cultist runs on Insanity, and it climbs as you act.", draft: false },
     "Tinker": { lab: "The engine — Scrap", p: "Every Tinker runs on Scrap: gunfire in, machines out.", draft: true },
-    "Witch Hunter": { lab: "The engine — three fuels", p: "Each spec burns its own fuel: Rage, Shadow Brands, or Stamina.", draft: true },
-    "Guardian": { lab: "The engine — formations", p: "No resource bar. Formations and timing are the engine.", draft: true },
-    "Knight of Xoroth": { lab: "The engine — Rage", p: "Every Knight runs on Rage, fed by demons and wounds.", draft: true },
+    "Witch Hunter": { lab: "The engine — Rage", p: "Every Hunter runs on Rage; each spec layers its own marks and stacks on top.", draft: false },
+    "Guardian": { lab: "The engine — formations", p: "Formations set the stance; Energy, Motivation, and per-spec stacks do the work.", draft: false },
+    "Knight of Xoroth": { lab: "The engine — Demonfire", p: "Every Knight runs on Demonfire, fed by demons and blood.", draft: false },
   };
   const GROUNDING = {
     "Tinker": "Mechanics: “converts gunfire into Scrap”; grammar §8's own workshop exemplar",
-    "Witch Hunter": "Inquisition/Black Knight fantasies; resources Rage · Shadow Brand · Stamina (data)",
-    "Guardian": "All three fantasies center formations/shield-wall; roster shows no class resource",
-    "Knight of Xoroth": "Mounted infernal spellblade; Defiance “feeds Rage”, War stacks wounds (data)",
+    "Witch Hunter": "v3 ruled 2026-08-10: Rage in all four specs (“Regenerative Elixirs makes Tonics restore Rage” is class-wide); Stamina absent from the corpus",
+    "Guardian": "v3 ruled 2026-08-10: blocks “restore Energy” (Raise Shield, Reprisal); “Motivating Strike grants Motivation”; Glory/Tempo/Paragon stack per spec",
+    "Knight of Xoroth": "v3 ruled 2026-08-10: Demonfire generated in all three specs (Shieldgore, Seeking Flame, Gore); melee damage “generate[s] Demon's Blood”",
   };
 
   // ---------- computed pieces ----------
@@ -216,9 +218,11 @@
       ${Object.keys(TAGLINES).map(k => `<tr><td>${esc(k)}${TAGLINES[k].draft ? "" : " (authored)"}</td>
         <td>${esc(TAGLINES[k].t)}</td><td>${esc(ENGINES[k].p)}</td>
         <td>${esc(GROUNDING[k] || "Ruled in the class-page grammar")}</td></tr>`).join("")}</table>
-      <p style="color:#83888f;font-size:11px;margin:10px 0 0">Four drafts need your yes/no (or edits).
-      Every ✦ fact line is computed live from the roster and needs no approval — hover one to see its
-      fact. The other sixteen classes get taglines and engines in the ×21 authoring pass.</p></div>`;
+      <p style="color:#83888f;font-size:11px;margin:10px 0 0">Engine blurbs for Witch Hunter,
+      Guardian, and Knight of Xoroth were corrected and ruled against the v3 corpus (2026-08-10).
+      Taglines stay temporary until the ×21 pass. Every ✦ fact line is computed live from the
+      roster and needs no approval — hover one to see its fact. The other sixteen classes get
+      taglines and engines in the ×21 authoring pass.</p></div>`;
   }
 
   function openProfile(id) {
