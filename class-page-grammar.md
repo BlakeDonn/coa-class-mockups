@@ -356,6 +356,8 @@ placement `feel`, video `mini`, engine `col`, verbs `chip`, cards `airfam`.
   Verified at 1280 + 390 iframe (war, godblade); Cultist/Tinker strips converted to the
   same bullet grammar from their verified prose. Compare artifact:
   https://claude.ai/code/artifact/361b3534-834e-41b6-a08d-ca63271f03a0
+- **2026-08-10 (BATCH 1 VERDICT — RULED):** user: "looks good keep going." The four
+  batch-1 units stand as shipped. Batch 2 opens: Sun Cleric · Templar · Ranger · Felsworn.
 - **2026-08-10 (BATCH 1 AUTHORED + DEPLOYED — awaiting batch verdict):** four classes
   from packets, all standing rulings applied (two-sentence bar, bullets, honesty line,
   ladders, label geometry, halo-last center labels). STORMBRINGER: the Static column
