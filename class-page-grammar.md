@@ -21,7 +21,7 @@ This is the checklist for repeating the design 21 times without drift.
 | Tagline | Must fit ONE line at desktop width. Author or trim to fit | RULED (2026-08-07) |
 | Tagline copy (cultist) | "The whispers offer power. Will you listen?" — replaces "Whispers from below, answered…". The shipped Atlas keeps the old premise line (at `coa_classes\class.js:24`) until the site slice lands — divergence RECONFIRMED as the resolution path, no hot-patch (session 6) | RULED (2026-08-07 session 3; resolution 2026-08-09) |
 | Styled keyword | One tagline word may carry the class color with a soft glow (cultist: "whispers"). The color is the ruled outline tone — `color-mix(class-color 58%, white 42%)`, same as the seal's active ring and the selected card. Decoration only — never an information channel, text stays readable | RULED (2026-08-07 session 3) |
-| Engine paragraph | 2–4 plain sentences in the masthead column (`e=col`), class-colored left border, label "THE ENGINE — <resource/idea>" | RULED |
+| Engine paragraph | In the masthead column (`e=col`), class-colored left border, label "THE ENGINE — <resource/idea>". SHAPE BAR (amended 2026-08-10, design-pass round 2): serif lede + at most TWO plain sentences; one idea per sentence, parallel halves fine, chained clauses not; game words first (build · generate · spend · consume · stacks — the Sol vocabulary rule), flavor verbs only after the mechanic is clear; no spec-count sentences (the seal shows them). BINDS the ×19 paragraphs the seal session authors. Exemplar: the KoX body ("Build Demonfire stacks, then spend them to increase an ability's damage or duration. At six stacks, certain abilities trigger an additional effect.") | RULED (2026-08-10 design-pass round 2; supersedes "2–4 sentences") |
 | Engine content | Names the resource, the loop, and the class tension. Generalizations across specs need research backing. Heretic's Insanity relation CONFIRMED against v3 (copy-verification, 2026-08-10) | RULED shape / OPEN copy per class |
 | Interim masthead text (19 classes) | Adoption round 2 built (`adoption-study.html` + a "Masthead text" switcher on unadopted class pages): **ship** (the v2 premise line alone) · **eng** (the ×21 authored tagline with keyword glow + Atlas engine blurb under the ruled label, premise replaced) · **both** (authored text above, premise kept). The blurb is one cited sentence, honestly thinner than the ruled 2–4 sentence ¶; the full ¶ arrives with each class's authoring pass | OPEN (adoption round 2 ask) |
 | Engine copy shape (amended) | Condensed: a serif-italic lede ("Every Cultist runs on Insanity, and it climbs as you act."), then "Near 60 it is steady power: strong enough to fuel your kit, safe enough to hold. Cross 100 and it pays out more, punishing you while it lasts." The paragraph deliberately teaches the seal's HOLD/CROSS words right above the seal. The four-specs sentence is dropped — the seal shows it. The "strong enough to fuel your kit" 60-band claim CONFIRMED against v3 (2026-08-10): 3 of 4 specs evidence the mid-band; Heretic silent there. The fallback line retires | RULED (2026-08-07 session 3, copy tightened same day; 60-band claim confirmed 2026-08-10) |
@@ -140,7 +140,9 @@ Screen cards so far: same three, plus Invention config in the form study.
 
 - Tone bar: stylized phrase may introduce; plain language must explain. "Build machines, deploy them, keep the workshop running" — yes. "Unrivaled architect of annihilation" — no.
 - Tagline: one line, desktop width.
-- Engine paragraph: 2–4 sentences, resource + loop + tension, no unresearched generalizations.
+- Engine paragraph: lede + ≤2 sentences, one idea each (amended 2026-08-10, round 2).
+  Game words first — build, generate, spend, consume, stacks; flavor after the mechanic.
+  Resource + loop + tension; no unresearched generalizations; no spec-count sentences.
 - Verb: one word + a gloss that stands alone.
 - Reading lines: second person, concrete, one idea per sentence.
 - Card copy: authored to fit its slot. Spec one-liner ≤ ~60 chars; ✓/✕ fragments ≤ ~40 chars. Clamped or ellipsized text on a card is a defect.
@@ -420,3 +422,31 @@ placement `feel`, video `mini`, engine `col`, verbs `chip`, cards `airfam`.
   SPEND, crown pip "6 · BONUS", since six adds riders, not one universal unleash;
   "unleash" also risks confusion with Unleash Pestilence. Deployed `0d93a96` →
   coa_classes `4955068`. AWAITING the round-2 pick (advisor + Sol recommend r4).
+- **2026-08-10 (round 2 VERDICT — the shape bar + r4 RULED):** user: "it feels a little
+  long still but if we think that necessary thats cool, idk i think this length is
+  needed cause it does describe the class well" — read with both advisor
+  recommendations as: r4 accepted, length trade accepted. BAKED: r4 lands in
+  `authored-copy.js` CLASS_ENGINE as the exemplar (surgical hunk; the file stays the
+  seal session's region); the `?e2=` switcher and engine harness retire. §1 row and §8
+  amended: lede + ≤2 sentences, one idea each, game-words-first, no spec-count
+  sentences — supersedes "2–4 sentences". THE BAR NOW BINDS the ×19 engine paragraphs:
+  USER still to RELAY it to the seal session. OPEN decision point (Sol's, logged last
+  entry): the seal-label rename BUILD / SPEND / "6 · BONUS" — no seal change shipped,
+  user has not addressed it. Verified: baked KoX bare URL renders r4, name law 1 line,
+  breadth clean. Deployed `6ec1971` → coa_classes `8b9e913`.
+- **2026-08-10 (design-pass round 3 built — jobs vs ranges on the role line):** the
+  handoff's piece 3 (user: "more visual distinction that some of these are roles, the
+  others the playstyle… like we have on two separate lines on the card"); supersedes
+  fold-verdicts handoff Job 2. This round would EDIT the ruled one-line law
+  (2026-08-07/09), so both directions ship behind a TEMPORARY `?r3=` switcher and the
+  law stands until the pick: **dim** = one line kept, range words in the card's fainter
+  `#565b62` inline (law intact; Sun Cleric still needs the 11px tight guard at 390) ·
+  **two** = the Atlas card S1 echo — jobs line as ruled, ranges on their own fainter
+  second line, card order (Melee · Hybrid · Ranged) and card join ("&" at ≤2), which
+  RETIRES the Sun Cleric tight guard (jobs alone fit full-size at 390, verified).
+  Harness: `role-harness.html` (Sun Cleric · KoX · Cultist · Stormbringer × 390/1280 ×
+  3 forms) — zero overflow, name law holds ×24; tight fires only on base/dim Sun
+  Cleric at 390. A card-fidelity fix en route: the two-line ranges follow the card's
+  fixed order, not spec order. Deployed with the r4 bake (`6ec1971`). AWAITING the
+  round-3 pick (advisor recommends two — it is the user's own reference form, and it
+  ends the guard).
