@@ -311,3 +311,7 @@ placement `feel`, video `mini`, engine `col`, verbs `chip`, cards `airfam`.
   (`acadfc8`, live): the center label pair carries a dark paint-order halo (new standing
   trick for text over seal geometry), and the FEED arc is re-anchored — it now starts at
   the first ember and lands at the crown, on both the desktop and phone drawings.
+  Second pass ("demonfire needs like z axis, it's still behind the fire icon"): halo alone
+  lost to the flame glow on device. The label pair now paints LAST on a soft dark plate
+  (`kx-lab-plate`), both arrangements. STANDING RULE for future seals: the center label
+  draws above all seal art, with a halo, and a plate if it crosses bright geometry.
