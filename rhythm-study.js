@@ -21,6 +21,8 @@
   // Adoption round 1, RULED 2026-08-10 ("yeah g2 is fine"): the crest seat is the
   // seal-less masthead. ship = the old void · g1/g3 kept for reference.
   const gapMode = ["ship", "g1", "g2", "g3"].includes(params.get("gap")) ? params.get("gap") : "g2";
+  // Adoption round 2: interim masthead text on classes without an authored engine ¶.
+  const mtext = ["ship", "eng", "both"].includes(params.get("m")) ? params.get("m") : "ship";
 
   // Seal verbs, mirrored from the seal study. One word per spec: its relation to the engine.
   // Each verb carries a plain gloss, surfaced as a tooltip: a verb must not need the seal to parse.
@@ -556,6 +558,26 @@
     }
   })();
 
+  // ---------- adoption round 2: interim masthead text (no authored engine ¶) ----------
+  // The ×21 Atlas copy (card-study-2.js, cited by the copy session) stands in until each
+  // class's full engine paragraph is authored. ship = the v2 premise line alone ·
+  // eng = authored tagline + engine blurb replace it · both = authored text above, premise kept.
+  (function applyMtext() {
+    if (ENGINE[classSlug] || mtext === "ship") return;
+    const C2 = window.COA_CARD2;
+    const mast = document.getElementById("mast");
+    const prem = mast?.querySelector(":scope > p");
+    if (!C2 || !mast || !prem) return;
+    const kname = mast.querySelector("h1")?.textContent?.trim() || "";
+    const tag = C2.TAGLINES[kname], engb = C2.ENGINES[kname];
+    if (!tag && !engb) return;
+    const tagHTML = tag ? `<p>${tag.t.replace(tag.kw,
+      `<em class="ry-tagword">${tag.kw}</em>`)}</p>` : "";
+    const engHTML = engb ? `<div class="ry-engine"><span class="lab">${engb.lab}</span><p>${engb.p}</p></div>` : "";
+    if (mtext === "eng") { prem.insertAdjacentHTML("afterend", tagHTML + engHTML); prem.remove(); }
+    else prem.insertAdjacentHTML("beforebegin", tagHTML + engHTML);
+  })();
+
   // ---------- desktop video thumb (session 6: the phone corner thumb echoed) ----------
   // Grammar 5: the thumb sits at the TEXT COLUMN's right edge — the seal owns the far
   // right. Three placements under study; the masthead chip retires when one is ruled.
@@ -619,7 +641,7 @@
     });
   })();
 
-  const url = (c, p, v, e = engine, w = verbEcho, k = cardStyle, s = pipsMode, t = topMode, su2 = support, g = gapMode) => `rhythm-class.html?c=${c}&p=${p}&v=${v}&e=${e}&w=${w}&k=${k}&s=${s}&t=${t}&su=${su2}&gap=${g}`;
+  const url = (c, p, v, e = engine, w = verbEcho, k = cardStyle, s = pipsMode, t = topMode, su2 = support, g = gapMode, m2 = mtext) => `rhythm-class.html?c=${c}&p=${p}&v=${v}&e=${e}&w=${w}&k=${k}&s=${s}&t=${t}&su=${su2}&gap=${g}&m=${m2}`;
   const links = ["feel", "stats", "fold"].map(p =>
     [url(classSlug, p, video), P_LABELS[p], p === placement]);
   links.push([url(other, placement, video), `${other === "tinker" ? "Tinker" : "Cultist"} · same placement`, false]);
@@ -640,6 +662,8 @@
     `<a class="${su2 === support ? "current" : ""}" href="${url(classSlug, placement, video, engine, verbEcho, cardStyle, pipsMode, topMode, su2)}">${su2}</a>`).join("");
   const gapRow = ["ship", "g1", "g2", "g3"].map(g =>
     `<a class="${g === gapMode ? "current" : ""}" href="${url(classSlug, placement, video, engine, verbEcho, cardStyle, pipsMode, topMode, support, g)}">${g}</a>`).join("");
+  const mRow = ["ship", "eng", "both"].map(m2 =>
+    `<a class="${m2 === mtext ? "current" : ""}" href="${url(classSlug, placement, video, engine, verbEcho, cardStyle, pipsMode, topMode, support, gapMode, m2)}">${m2}</a>`).join("");
   links.push([`rhythm-preview.html`, "Form studies (strips · screens)", false]);
   links.push([`diagram-preview.html?c=${classSlug}&concept=seal`, "Seal study", false]);
   if (params.get("sw") !== "off")
@@ -653,7 +677,8 @@
     <strong style="margin-top:8px">Codex top</strong><div class="ry-sw-row">${topRow}</div>
     <strong style="margin-top:8px">Role counting</strong><div class="ry-sw-row">${suRow}</div>
     ${document.querySelector("#mast .cd-stage.cd-seal") ? "" :
-      `<strong style="margin-top:8px">Seal slot</strong><div class="ry-sw-row">${gapRow}</div>`}
+      `<strong style="margin-top:8px">Seal slot</strong><div class="ry-sw-row">${gapRow}</div>
+       <strong style="margin-top:8px">Masthead text</strong><div class="ry-sw-row">${mRow}</div>`}
     ${links.slice(4).map(([href, label, cur]) => `<a href="${href}">${label}</a>`).join("")}
     <small>Only the rhythm block and the video treatment change. Godblade, Corruption, and Demolition have strips; other specs show the honest gap.</small></aside>`);
 })();
