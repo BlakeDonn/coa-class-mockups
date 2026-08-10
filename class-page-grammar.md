@@ -376,7 +376,11 @@ placement `feel`, video `mini`, engine `col`, verbs `chip`, cards `airfam`.
   Clarified target ("i meant like build · fire dawn steel dusk"): the Inquisition phone
   ladder's BUILD sub split into two short lines ("fire builds Dawn" / "steel builds
   Dusk") and every phone-ladder return arc pushed 8px further right. Standing: ladder
-  station subs stay ≤ ~20 chars; split before they reach the arc's lane.
+  station subs stay ≤ ~20 chars; split before they reach the arc's lane. Follow-up
+  ("all the labels that are on that column… can be a bit more left"): the station
+  label column moved 185→165, beside the glyphs it describes — the arc owns the
+  right rail alone. Standing ladder geometry: glyphs ≤ x150 · labels at x165 ·
+  window 200 wide · arc sweeps x≥356.
 - **2026-08-10 (round 2 VERDICT — Guardian RULED):** user on the live page after the
   ladder-window fix: "ok cool this is good to keep going i think." The banner seal
   (TOWER · GUARD / LINE · MARCH), the meter-marked node rank (10 · 3 · 3),
