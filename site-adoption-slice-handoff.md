@@ -1,8 +1,12 @@
-# Handoff: the site-adoption slice — the ruled design onto the LIVE site
+# Handoff: the site-adoption build — the ruled design onto the LIVE site
 
-- **What this is:** a sponsor-tier candidate brief from the design track (Fable, 2026-08-10).
-  It is main-repo work: paste the kickoff into a WORK session (Opus holder) and route it
-  through /slice. The detached design session does not execute it.
+- **STATUS 2026-08-10: DIRECT BUILD, user-authorized.** No slice pipeline — the user ruled
+  the process down ("i really dont think we need a slice… you can just build it go ahead")
+  and pre-answered every decision point (below). The design session dispatches the build.
+- **DECISIONS PRE-RULED (user, 2026-08-10):** (1) Anatomy branch: MERGED (done, `c8dbdf7`,
+  guided fixtures pass). (2) Crests: SKIPPED for now — glyph/ability-icon fallback until
+  rights confirm; do NOT ship the hub sprite. (3) Masthead text: `eng` — the authored
+  tagline + engine blurb replace the premise. (4) Mockups repo: kept as reference lab.
 - **The user's direction, near-verbatim:** "I just want our live site to be what's getting
   updated, so we're not fighting with mockup pages… I just want the bones built out so when
   we bring in our data from the 21 classes it just works on our live page."
