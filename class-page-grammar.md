@@ -265,3 +265,8 @@ placement `feel`, video `mini`, engine `col`, verbs `chip`, cards `airfam`.
   SITE-ADOPTION SLICE (`site-adoption-slice-handoff.md`, work-session lane). Round 2's pick is
   deferred into that slice as a decision point (advisor recommends eng). The mockups repo
   becomes a reference lab.
+- **2026-08-10 (session close, handovers written):** the ship session ends. Standing docs:
+  `seal-strip-authoring-playbook.md` (the ×19 process), `seal-strip-session-handoff.md`
+  (fresh-session kickoff; ready set WH/Guardian/KoX), the adoption session's STATE SYNC,
+  and the research brief's addendum (families + engine audit + fold verdicts). The live
+  site is the single render target for all of it.

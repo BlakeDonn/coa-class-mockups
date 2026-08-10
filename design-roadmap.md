@@ -18,6 +18,12 @@ Authority note: entries here are plans, not rulings. Rulings live in the grammar
 
 ## NEXT (design track, in order)
 
+0. **The seal & strip authoring pass (handoff ready: `seal-strip-session-handoff.md`,
+   process: `seal-strip-authoring-playbook.md`).** Fresh session, live-site render target,
+   one class per round. Ready today: Witch Hunter, Guardian, Knight of Xoroth (engines
+   audited 2026-08-10). Chronomancer blocked on engine re-derivation; the rest enter as
+   the adoption session's engine audit clears them.
+
 0. **THE SITE ADOPTION: SHIPPED 2026-08-10.** The ruled system is LIVE at
    https://blakedonn.github.io/coa_classes/ — class page (seal or glyph seat, authored or
    interim masthead, airfam cards, rhythm fold), Atlas classes-first cards, Choose B/M2 flow,
