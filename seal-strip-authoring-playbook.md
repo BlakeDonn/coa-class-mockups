@@ -81,6 +81,24 @@ seal + verbs + strips, rendered LIVE on the class page (the site is the render t
 now), user verdict, corrections re-mocked cheaply. Full 2–3-direction rounds return only
 if a class resists its first reading. Record each class's rulings as new grammar rows.
 
+## WHAT WORKED (recorded 2026-08-10, strip round — bind these into future rounds)
+
+- **Phone-first compare surfaces.** The user verdicts from their phone. A desktop-format
+  compare page failed outright ("id rather not have to scroll them"). Options render as a
+  phone-width artifact, nothing scrolls sideways, today's version sits beside each option.
+- **Generalize from what the user liked.** The ladder round started from "war is great
+  for our mobile view" — the winning move was applying the liked form to the others, not
+  inventing a new direction. Ask what made the liked thing work; spread that.
+- **A Sol-xhigh advisory leg mid-round is cheap and sharp.** ~3 minutes detached; it
+  caught the War strip reading as a forbidden button-sequence and wrote caption budgets.
+  Dispatch on legibility/vocabulary questions; the user picks from its directions.
+- **Plain words beat mechanic shorthand.** "Gore builds Demonfire" read as gibberish to
+  the user. Captions lead with plain player verbs; at most one ability name per bullet.
+- **Honesty labels survive by being understandable.** Two cryptic labels nearly got cut;
+  one plain merged line ("drawn from research · not a rotation guide") kept the job.
+- **DPI trap, re-proven:** headless Chrome window sizes are inflated by Windows display
+  scaling (430px window = ~518 CSS px). Only the 390px iframe harness tells the truth.
+
 ## VERIFICATION, EVERY CLASS
 
 1. Label-collision check at the authored ratio.
