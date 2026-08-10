@@ -467,3 +467,19 @@ placement `feel`, video `mini`, engine `col`, verbs `chip`, cards `airfam`.
   classes, zero overflow, no guard firing anywhere; 21-class breadth clean (same two
   false-positive families). Deployed `a2a40a4` → coa_classes `d2f0e04`. Round 4 opens
   on the handoff's last piece: blocked assets on managed networks.
+- **2026-08-10 (design-pass round 4 built — blocked assets, two decisions):** evidence
+  measured on the live source: SIX render sites hotlink `coabuildhub.com/skill-icons/`
+  (277 distinct icons in use, ~1–2MB; the hub's own tracker shows 1,120 of 2,415 icons
+  already dead) and three files hotlink `i.ytimg.com` thumbs. DECISION 1 (ruling, no
+  mock): localize the 277 icons into `generated-assets/skill-icons/` — the crest
+  precedent (v1 retirement broke every crest silently; local copy RULED as the fix),
+  same rights posture, and it fixes managed-network icons entirely. DECISION 2 (pick):
+  the thumb fallback. The real mechanism shipped this round: every thumb img wires an
+  error handler that marks its anchor `.noimg`. Two states behind a TEMPORARY `?r4=`
+  switcher, with `?r4sim=1` faking the blocked CDN from any network: **hide** (failed
+  thumb disappears; guide rows keep text) · **card** (masthead thumb becomes a bordered
+  "▶ CLASS HIGHLIGHT" link chip; guide rows a ▶ tile; `.cine-strip` already degrades
+  gracefully via background-image). Harness `thumb-harness.html`: Cultist + Heretic's
+  guide row × 390/1280 × sim-only/hide/card — all three `.noimg` anchors fire, zero
+  overflow. Deployed `a952b49` → coa_classes `467b587`. AWAITING both calls (advisor
+  recommends localize + card).
