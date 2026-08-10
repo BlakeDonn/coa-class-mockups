@@ -356,6 +356,23 @@ placement `feel`, video `mini`, engine `col`, verbs `chip`, cards `airfam`.
   Verified at 1280 + 390 iframe (war, godblade); Cultist/Tinker strips converted to the
   same bullet grammar from their verified prose. Compare artifact:
   https://claude.ai/code/artifact/361b3534-834e-41b6-a08d-ca63271f03a0
+- **2026-08-10 (seal & strip round 2 — GUARDIAN authored, deployed, awaiting verdict):**
+  the honest-split case, built under every ruling landed today (two-sentence engine bar,
+  bullet captions, honesty line, ladder phone grammar, center-label halo painted last).
+  Engine ¶: audited lede kept; body names the split plainly — each spec its own stacks
+  at its own mark (ten Paragon · three Tempo · three Glory, all claim-numbered) plus the
+  shared floor (blocks restore Energy; Motivating Strike grants Motivation). SEAL: a war
+  banner between the two stances — TOWER · GUARD (tight 3×3 grid) and LINE · MARCH
+  (spread rank) from the c-formations trade-off claim; the three spec nodes stand in a
+  RANK below, each carrying its own meter mark (10 · 3 · 3) — the split made visible
+  without breaking the one-tension rule. Verbs: Block (blocks pay Energy/Paragon/High
+  Guard) · Rally (Ballads → three Tempo → Sound of War) · Duel (Glory ×3 → boosted Ram;
+  net → Centurion crits). Strips: Vanguard Paragon bank (10 · the mark) · Inspiration
+  tempo cycle with the Hero's March 15 s window · Gladiator glory wheel — desktop
+  horizontal loops/banks + phone ladders, bullet captions, all numbers claim-traced.
+  Quarantine: inspiration/enjoy_avoid_fit carries nothing. One build fix en route: the
+  seal legend moved top-left (bottom-left collided with the Vanguard node's labels).
+  Verified 1280 ×3 specs + 390 iframe; live.
 - **2026-08-10 (PHONE LADDER GRAMMAR — adopted, deployed):** user, after the caption
   round landed: "war is great for our mobile view" — asked what would bring the other
   two up to par. Advisor read: War won because it reads top-to-bottom. Mocked Hellfire
