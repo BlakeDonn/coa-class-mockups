@@ -94,6 +94,25 @@ Same format and authority rules as `class-page-grammar.md`.
 
 ## 8 · Session log
 
+- **2026-08-10 (joint Sol-xhigh + Fable review — the nine delegated calls closed):** user:
+  "for the borderline calls, Sol xhigh and you both decide… maybe the same for the
+  taglines." Method: file-backed packet, both judges BLIND (Fable's verdicts written to
+  file before reading Sol's), agreements become rulings, splits reconciled on the merits.
+  AGREED (5): maelstrom → `combo` · boltslinger → `duelists` · Barbarian tagline → "The
+  ancestors are watching. Give them a show." (glow: ancestors) · Felsworn → "The demon is
+  not a metaphor." (glow: demon) · Witch Doctor → "The best curses are homemade."
+  (glow: curses). RECONCILED SPLITS (4): lightning → `setup` (Sol 5 vs Fable keep 3; Fable
+  conceded on the sanguine analog — a held-threshold ramp cashed into a scaling dump
+  already lives in setup) · harvest KEEPS `duelists` (Sol keep 3 vs Fable move 2; both
+  low-confidence, the incumbent stands) · Ranger tagline KEPT (Sol: the alt oversells
+  preplanning on a real-time Advantage class) · Runemaster tagline KEPT (Sol: "spelled" is
+  a fantasy-native double meaning, and the alt restates the engine blurb rendered directly
+  beneath it). The five reviewed taglines now carry draft:false as jointly ruled under
+  delegation. Applied in `SPEC_ATLAS` + `authored-copy.js`, regenerated, verified exactly
+  3 of 70 family assignments changed, deployed (`f68cfd8`). Family totals after all five
+  moves today (verified from the regenerated data): setup 11 · combo 10 · steady 7 ·
+  duelists 11 · commanders 5 · anchors 12 · menders 10 · marshals 4. Verdict files: the
+  session scratchpad (sol-verdicts.txt, fable-verdicts.md), provenance only.
 - **2026-08-10 (delegated rulings closed):** user: "whatever you think is best." Recorded as
   delegated rulings adopting the advisor recommendations: (1) **Venomancer engine blurb
   KEPT** with the weighting note — Venoms trigger from every cast, so the shared layer is a
