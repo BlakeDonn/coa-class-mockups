@@ -356,6 +356,15 @@ placement `feel`, video `mini`, engine `col`, verbs `chip`, cards `airfam`.
   Verified at 1280 + 390 iframe (war, godblade); Cultist/Tinker strips converted to the
   same bullet grammar from their verified prose. Compare artifact:
   https://claude.ai/code/artifact/361b3534-834e-41b6-a08d-ca63271f03a0
+- **2026-08-10 (ENGINE AUDIT ×16 RULED — packets landed):** the workflow returned 16/16
+  packets (0 errors, ~740k agent tokens, ~14 min). Audit: 5 engines confirmed
+  (Chronomancer, Reaper, Starcaller, Stormbringer, Sun Cleric), 11 corrected — the blurb
+  named the right resource with the wrong weight (Barbarian's Enrage is a hard gate;
+  Templar's Oaths are a held chain; Venomancer has no shared bar; etc.). User ruled
+  "Approve all 16" on the audit artifact; the 11 corrected lines replaced the ENGINES
+  blurbs and deployed. Packets committed (`seal-strip-packets.json`); audit artifact:
+  https://claude.ai/code/artifact/5d3e5a50-8bab-4a7e-a2cb-3a1259b22d05
+  Batch 1 opens: Reaper · Stormbringer · Chronomancer · Starcaller (confirmed engines).
 - **2026-08-10 (round 3 VERDICT + SCALE-OUT ruled):** Witch Hunter "looks great" after
   three overlap fixes (desktop return labels left of the arc dip; the Inquisition build
   line split; the whole ladder label column moved to x165 beside its glyphs). User ruled
