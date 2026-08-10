@@ -305,3 +305,9 @@ placement `feel`, video `mini`, engine `col`, verbs `chip`, cards `airfam`.
   rests on the dead dimensions. Verified: 1280 + 390 iframe screenshots ×3 specs, zero
   horizontal overflow at both widths, Cultist seal-swap regression clean. AWAITING the
   user's live-page verdict; engine ¶ / seal / verbs / strips become RULED rows on it.
+- **2026-08-10 (round 1 corrections, applied + redeployed):** user's live read, two fixes:
+  "the text on the glyph for 'demonfire' is hidden behind the actual diagram" and "a
+  weird … arrow on the left side that isn't connected to the diagram itself." Fixes
+  (`acadfc8`, live): the center label pair carries a dark paint-order halo (new standing
+  trick for text over seal geometry), and the FEED arc is re-anchored — it now starts at
+  the first ember and lands at the crown, on both the desktop and phone drawings.
