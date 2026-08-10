@@ -356,6 +356,21 @@ placement `feel`, video `mini`, engine `col`, verbs `chip`, cards `airfam`.
   Verified at 1280 + 390 iframe (war, godblade); Cultist/Tinker strips converted to the
   same bullet grammar from their verified prose. Compare artifact:
   https://claude.ai/code/artifact/361b3534-834e-41b6-a08d-ca63271f03a0
+- **2026-08-10 (BATCH 1 AUTHORED + DEPLOYED — awaiting batch verdict):** four classes
+  from packets, all standing rulings applied (two-sentence bar, bullets, honesty line,
+  ladders, label geometry, halo-last center labels). STORMBRINGER: the Static column
+  as a graduated spark gap (70 supercharge band, barbed 100 cap, bolt inside), taps at
+  spec heights, Discharge/Compound/Feed. REAPER: the scythe-ring soul ladder (nine
+  notches in three arcs, soul-mark band, Infusion halo crowning the gap, haft spine),
+  Muster/Execute/Flood; Harvest's 35% gate strip. CHRONOMANCER: three concentric
+  clock faces with unaligned hands (10 ticks · 4 notches · scattered shards), the
+  Rewind core, Ramp/Invest/Tune; spiral and dial strip families debut. STARCALLER:
+  the EMPTY socket — stars live on the enemy — four lances with starred enemy rings,
+  payback tags per node (8 · 5 · 8TH · 4→6), Sweep/Reap/Count/Chain; churn family
+  debuts (Warden). Quarantine honored per packet flags (moon-priest range facts kept
+  out of copy). Each class verified at 1280 + 390 iframe and deployed individually.
+  Build fixes en route: SB threshold labels into the clear band; CM redundant top
+  label removed; a duplicated-anchor insert caught by syntax check and cleaned.
 - **2026-08-10 (ENGINE AUDIT ×16 RULED — packets landed):** the workflow returned 16/16
   packets (0 errors, ~740k agent tokens, ~14 min). Audit: 5 engines confirmed
   (Chronomancer, Reaper, Starcaller, Stormbringer, Sun Cleric), 11 corrected — the blurb
