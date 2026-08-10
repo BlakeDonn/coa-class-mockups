@@ -32,6 +32,8 @@ This is the checklist for repeating the design 21 times without drift.
 | Piece | Decision | Status |
 |---|---|---|
 | Mandatory slots | Engine name · ONE central mechanical tension · one verb per spec | RULED |
+| Empty seal slot (19 classes) | Adoption round 1 built (`adoption-study.html` + a "Seal slot" switcher on every seal-less class page): **G1 calm text masthead** (slot hidden) · **G2 crest seat** (official crest + "Seal not yet drawn") · **G3 node plate** (dashed frame, specs as working switch buttons — structural data only). Phone unaffected: below 900px the slot hides and the sheet keeps switching | OPEN (adoption round 1 ask) |
+| Crest sprite source | The hub retired `class-icons.v1.webp` (404, found 2026-08-10); `v2` has identical frame order. The studies now serve a LOCAL copy (`generated-assets/class-icons.v2.webp`) — hotlinking a fan hub's versioned asset broke every crest silently. Rights flag unchanged | RULED (fix, 2026-08-10) |
 | Geometry | Unique per class; placement and interaction shared | RULED (pre-existing product ruling) |
 | Expression level | "One-tension instrument" (option B): encodes the tension (e.g. 60 HOLD / 100 CROSS), not the full loop | RULED |
 | Size | Fills masthead height, aspect preserved | RULED |
@@ -236,3 +238,10 @@ placement `feel`, video `mini`, engine `col`, verbs `chip`, cards `airfam`.
 - **Deployed:** https://blakedonn.github.io/coa-class-mockups/ (GitHub Pages, repo
   `BlakeDonn/coa-class-mockups`, public). Main study:
   https://blakedonn.github.io/coa-class-mockups/rhythm-class.html?c=cultist
+- **2026-08-10 (design-adoption session opened, round 1 built):** the adoption handoff landed in
+  the standing design session. Round 1 = the empty seal slot on the 19 seal-less classes:
+  G1 calm text / G2 crest seat / G3 node plate, all real full-page renders via a `?gap=` mode
+  on `rhythm-class.html` plus the `adoption-study.html` compare page (Barbarian + the
+  Knight of Xoroth long-name stress). Found en route: the hub's crest sprite went 404 (v1
+  retired); v2 verified frame-identical and adopted as a LOCAL asset across all studies.
+  Verified at 1280 on real pixels; phone hides the slot below 900px. Awaiting the round-1 pick.

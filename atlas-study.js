@@ -420,7 +420,7 @@
 
   // Official class-crest sprite (Sol hunt, sol-class-icon-findings.md). RULED as the
   // class crest 2026-08-07; rights confirmation still required before the site slice.
-  const CREST_SPRITE = "https://coabuildhub.com/icons/class-icons.v1.webp";
+  const CREST_SPRITE = "generated-assets/class-icons.v2.webp";
   const CREST_POS = { "Barbarian": 0, "Witch Doctor": 5, "Felsworn": 10, "Witch Hunter": 15,
     "Stormbringer": 20, "Knight of Xoroth": 25, "Guardian": 30, "Templar": 35, "Bloodmage": 40,
     "Ranger": 45, "Chronomancer": 50, "Necromancer": 55, "Pyromancer": 60, "Cultist": 65,

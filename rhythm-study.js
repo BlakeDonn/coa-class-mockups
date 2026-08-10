@@ -18,6 +18,9 @@
   const support = ["ship", "strict"].includes(params.get("su")) ? params.get("su") : "strict";
   const engine = ["col", "seal", "strip", "off"].includes(params.get("e")) ? params.get("e") : "col";
   const verbEcho = ["chip", "kick", "meta", "off"].includes(params.get("w")) ? params.get("w") : "chip";
+  // Adoption round 1 (2026-08-10): the empty seal slot on the 19 seal-less classes.
+  // ship = today's void · g1 = calm full-width text · g2 = crest seat · g3 = node plate.
+  const gapMode = ["ship", "g1", "g2", "g3"].includes(params.get("gap")) ? params.get("gap") : "ship";
 
   // Seal verbs, mirrored from the seal study. One word per spec: its relation to the engine.
   // Each verb carries a plain gloss, surfaced as a tooltip: a verb must not need the seal to parse.
@@ -582,7 +585,41 @@
   // ---------- switcher ----------
   const P_LABELS = { feel: "1 · Under the header, before the video", stats: "2 · After the verdicts, with the pips", fold: "3 · First fold — “The rhythm”" };
   const other = classSlug === "tinker" ? "cultist" : "tinker";
-  const url = (c, p, v, e = engine, w = verbEcho, k = cardStyle, s = pipsMode, t = topMode, su2 = support) => `rhythm-class.html?c=${c}&p=${p}&v=${v}&e=${e}&w=${w}&k=${k}&s=${s}&t=${t}&su=${su2}`;
+  // ---------- adoption round 1: the empty seal slot (seal-less classes only) ----------
+  // Absent, never invented: g2 shows the real crest with an honest caption; g3 is
+  // structural data only (spec names + role icons as working switch buttons).
+  const CREST_SPRITE = "generated-assets/class-icons.v2.webp";
+  const CREST_POS = { "Barbarian": 0, "Witch Doctor": 5, "Felsworn": 10, "Witch Hunter": 15,
+    "Stormbringer": 20, "Knight of Xoroth": 25, "Guardian": 30, "Templar": 35, "Bloodmage": 40,
+    "Ranger": 45, "Chronomancer": 50, "Necromancer": 55, "Pyromancer": 60, "Cultist": 65,
+    "Starcaller": 70, "Sun Cleric": 75, "Tinker": 80, "Venomancer": 85, "Reaper": 90,
+    "Primalist": 95, "Runemaster": 100 };
+  const GAP_LFG = { Damage: "generated-assets/lfg-damage.png", Tank: "generated-assets/lfg-tank.png",
+    Healer: "generated-assets/lfg-healer.png", Support: "generated-assets/lfg-flag.png" };
+  (function applyGap() {
+    const mast = document.getElementById("mast");
+    if (!mast || document.querySelector("#mast .cd-stage.cd-seal") || gapMode === "ship") return;
+    const kname = mast.querySelector("h1")?.textContent?.trim() || "";
+    if (gapMode === "g1") { mast.classList.add("ry-gap-full"); return; }
+    mast.classList.add("ry-gap-slot");
+    if (gapMode === "g2") {
+      mast.insertAdjacentHTML("beforeend", `<div class="ry-sealgap ry-sealgap-crest" aria-hidden="true">
+        <span class="ry-crest" style="background:url('${CREST_SPRITE}') ${CREST_POS[kname] ?? 0}% 0 / 2100% 100% no-repeat"></span>
+        <span class="cap">Seal not yet drawn</span></div>`);
+      return;
+    }
+    const gapSpecs = window.COA_RENDER.data.specs.filter(s => s.klass === kname);
+    mast.insertAdjacentHTML("beforeend", `<div class="ry-sealgap ry-sealgap-nodes">
+      <div class="nrow">${gapSpecs.map(s => `<button data-gapsel="${s.id.split("/")[1]}">
+        <img src="${GAP_LFG[s.roles[0]] || GAP_LFG.Damage}" alt="">${s.name}</button>`).join("")}</div>
+      <span class="cap">The ${kname} seal isn't drawn yet — tap a spec</span></div>`);
+    mast.querySelector(".ry-sealgap-nodes").addEventListener("click", e => {
+      const b = e.target.closest("[data-gapsel]");
+      if (b) document.getElementById("tab-" + b.dataset.gapsel)?.click();
+    });
+  })();
+
+  const url = (c, p, v, e = engine, w = verbEcho, k = cardStyle, s = pipsMode, t = topMode, su2 = support, g = gapMode) => `rhythm-class.html?c=${c}&p=${p}&v=${v}&e=${e}&w=${w}&k=${k}&s=${s}&t=${t}&su=${su2}&gap=${g}`;
   const links = ["feel", "stats", "fold"].map(p =>
     [url(classSlug, p, video), P_LABELS[p], p === placement]);
   links.push([url(other, placement, video), `${other === "tinker" ? "Tinker" : "Cultist"} · same placement`, false]);
@@ -601,6 +638,8 @@
     `<a class="${t === topMode ? "current" : ""}" href="${url(classSlug, placement, video, engine, verbEcho, cardStyle, pipsMode, t)}">${t}</a>`).join("");
   const suRow = ["ship", "strict"].map(su2 =>
     `<a class="${su2 === support ? "current" : ""}" href="${url(classSlug, placement, video, engine, verbEcho, cardStyle, pipsMode, topMode, su2)}">${su2}</a>`).join("");
+  const gapRow = ["ship", "g1", "g2", "g3"].map(g =>
+    `<a class="${g === gapMode ? "current" : ""}" href="${url(classSlug, placement, video, engine, verbEcho, cardStyle, pipsMode, topMode, support, g)}">${g}</a>`).join("");
   links.push([`rhythm-preview.html`, "Form studies (strips · screens)", false]);
   links.push([`diagram-preview.html?c=${classSlug}&concept=seal`, "Seal study", false]);
   if (params.get("sw") !== "off")
@@ -613,6 +652,8 @@
     <strong style="margin-top:8px">Pips row</strong><div class="ry-sw-row">${pipsRow}</div>
     <strong style="margin-top:8px">Codex top</strong><div class="ry-sw-row">${topRow}</div>
     <strong style="margin-top:8px">Role counting</strong><div class="ry-sw-row">${suRow}</div>
+    ${document.querySelector("#mast .cd-stage.cd-seal") ? "" :
+      `<strong style="margin-top:8px">Seal slot</strong><div class="ry-sw-row">${gapRow}</div>`}
     ${links.slice(4).map(([href, label, cur]) => `<a href="${href}">${label}</a>`).join("")}
     <small>Only the rhythm block and the video treatment change. Godblade, Corruption, and Demolition have strips; other specs show the honest gap.</small></aside>`);
 })();

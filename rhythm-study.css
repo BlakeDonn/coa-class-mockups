@@ -210,3 +210,27 @@ body.ry-k-style .rail-card::before { content: ""; position: absolute; inset: 5px
 .ry-switcher a.current { border-color: #9c6bb1; background: #2b1b31; color: #f0d7ff; }
 .ry-switcher small { display: block; margin-top: 7px; color: #6f727b; }
 @media (max-width: 900px) { .ry-switcher { position: static; width: auto; margin: 12px; } }
+
+/* Adoption round 1 — the empty seal slot (seal-less classes only) */
+.ry-gap-full > .glyph, .ry-gap-slot > .glyph { display: none; }
+.ry-gap-slot { min-height: 208px; padding-right: 460px; }
+.ry-sealgap { position: absolute; right: 26px; top: 50%; transform: translateY(-50%);
+  width: 410px; display: grid; place-items: center; gap: 9px; text-align: center; }
+.ry-sealgap .cap { font-size: 9px; font-weight: 800; letter-spacing: .16em;
+  text-transform: uppercase; color: var(--dim); }
+.ry-crest { display: block; width: 118px; height: 118px;
+  filter: drop-shadow(0 0 20px color-mix(in srgb, var(--class-color) 32%, transparent)); }
+.ry-sealgap-nodes { border: 1px dashed #4a463c; border-radius: 8px; padding: 16px 14px;
+  width: 410px; box-sizing: border-box; }
+.ry-sealgap-nodes .nrow { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;
+  margin-bottom: 9px; }
+.ry-sealgap-nodes button { display: inline-flex; align-items: center; gap: 7px; cursor: pointer;
+  border: 1px solid color-mix(in srgb, var(--class-color) 40%, #2b2d31); border-radius: 3px;
+  background: #0f1013; padding: 7px 11px;
+  color: color-mix(in srgb, var(--class-color) 72%, #fff); font: 600 12px var(--sans); }
+.ry-sealgap-nodes button:hover { border-color: color-mix(in srgb, var(--class-color) 58%, white 42%); }
+.ry-sealgap-nodes img { width: 15px; height: 15px; display: block; }
+@media (max-width: 900px) {
+  .ry-gap-slot { min-height: 0; padding-right: 24px; }
+  .ry-sealgap { display: none; }
+}
