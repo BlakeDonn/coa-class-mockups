@@ -356,6 +356,16 @@ placement `feel`, video `mini`, engine `col`, verbs `chip`, cards `airfam`.
   Verified at 1280 + 390 iframe (war, godblade); Cultist/Tinker strips converted to the
   same bullet grammar from their verified prose. Compare artifact:
   https://claude.ai/code/artifact/361b3534-834e-41b6-a08d-ca63271f03a0
+- **2026-08-10 (PHONE LADDER GRAMMAR — adopted, deployed):** user, after the caption
+  round landed: "war is great for our mobile view" — asked what would bring the other
+  two up to par. Advisor read: War won because it reads top-to-bottom. Mocked Hellfire
+  and Defiance as ladders on the same artifact (today vs ladder, phone-first). User:
+  "on desktop we may prefer the horizontal slice but yeah on mobile these are both
+  good." RULED and live: the LADDER is the standing S2 phone grammar — stacked
+  stations, each spec's own furniture inside them, a full-width payoff window, one
+  return arrow; DESKTOP keeps the wide horizontal drawings. Applies to future classes'
+  phone redraws. The 2026-08-07 "vertical rotation set aside" ruling is untouched —
+  ladders re-compose stations, they do not rotate the level axis.
 - **2026-08-10 (design-pass session opened, round 1 built — the one-line class name):**
   from `2026-08-10-coa-class-page-design-pass-handoff.md`. Baseline measured on the live
   source: only Knight of Xoroth wraps, and only at phone width — 202px of name against
