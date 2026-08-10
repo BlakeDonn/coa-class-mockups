@@ -27,7 +27,7 @@ This is the checklist for repeating the design 21 times without drift.
 | Engine copy shape (amended) | Condensed: a serif-italic lede ("Every Cultist runs on Insanity, and it climbs as you act."), then "Near 60 it is steady power: strong enough to fuel your kit, safe enough to hold. Cross 100 and it pays out more, punishing you while it lasts." The paragraph deliberately teaches the seal's HOLD/CROSS words right above the seal. The four-specs sentence is dropped — the seal shows it. The "strong enough to fuel your kit" 60-band claim CONFIRMED against v3 (2026-08-10): 3 of 4 specs evidence the mid-band; Heretic silent there. The fallback line retires | RULED (2026-08-07 session 3, copy tightened same day; 60-band claim confirmed 2026-08-10) |
 | Rare-part list | The engine block ends with 1–3 terse ✦ fragments naming what is strange about the class. Cultist: "Melee healer option" · "Four specs, four different playstyles". Every fragment must trace to a computable roster fact (melee healers = 2 of 70 specs; verified in snapshot). No fact, no bullet — never invented | RULED (2026-08-07 session 3) |
 | Class name | ONE line at every width — the name never wraps. The `fit` form RULED: a self-correcting JS guard measures the rendered name and scales only one that overflows (KoX 24→23.1px at phone; every other class untouched). Picked over a fixed smaller phone size and tracking/condensed styling. `white-space: nowrap` + guard in `class.js`; refits on resize, ResizeObserver, frame and load ticks | RULED (2026-08-10 design-pass round 1) |
-| Role chips | One plain-text line, sentence case, no boxes, separators only. Authored to fit ONE line at 390px. Applies at every width (desktop echo landed 2026-08-09). COUNTING: the true-support rule — class-level Support only when a spec supports WITHOUT healing (Cultist: "Damage ×2 · Healer · Tank · Melee · Ranged"; Heretic's Support stays on its spec card) | RULED (2026-08-07 session 3; strict counting ruled 2026-08-09 session 6 round 2) |
+| Role chips | TWO REGISTERS (amended 2026-08-10, design-pass round 3): the jobs line (plain text, sentence case, no boxes, separators only), then ranges on their own fainter line (`#565b62`) — the Atlas card S1 form at the class page, card order (Melee · Hybrid · Ranged) and card join ("&" at ≤2, "·" at 3). One plain-text line PER REGISTER at every width; the Sun Cleric 11px tight guard RETIRED (jobs alone fit full-size at 390, harness-verified). COUNTING unchanged: the true-support rule — class-level Support only when a spec supports WITHOUT healing (Heretic's Support stays on its spec card) | RULED (2026-08-07 session 3; strict counting 2026-08-09; two registers 2026-08-10 round 3 "b is good") |
 
 ## 2 · Seal (class diagram)
 
@@ -460,3 +460,10 @@ placement `feel`, video `mini`, engine `col`, verbs `chip`, cards `airfam`.
   fixed order, not spec order. Deployed with the r4 bake (`6ec1971`). AWAITING the
   round-3 pick (advisor recommends two — it is the user's own reference form, and it
   ends the guard).
+- **2026-08-10 (round 3 VERDICT — two registers RULED):** user: "b is good." BAKED:
+  `roleLines()` renders the jobs line + the fainter ranges line on every class page;
+  the `?r3=` switcher, the tight guard, and `role-harness.html` all retire; §1 row
+  amended. Verified post-bake: bare URLs render two registers on all four harness
+  classes, zero overflow, no guard firing anywhere; 21-class breadth clean (same two
+  false-positive families). Deployed `a2a40a4` → coa_classes `d2f0e04`. Round 4 opens
+  on the handoff's last piece: blocked assets on managed networks.
