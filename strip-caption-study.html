@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Strip captions & legibility — pick a direction</title>
+<style>
+  body { margin: 0; background: #0b0a0e; color: #cdc8bc; font: 14px/1.55 "Segoe UI", system-ui, sans-serif; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 18px 80px; }
+  h1 { font: 700 22px Georgia, serif; color: #e8c88a; margin: 0 0 6px; }
+  .prov { color: #8d8678; font-size: 12px; margin: 0 0 26px; }
+  h2 { font: 700 16px Georgia, serif; color: #e8c88a; border-top: 1px solid #2e2637; padding-top: 22px; margin: 34px 0 4px; }
+  h2 .rec { color: #7fc98a; font: 700 10px Arial; letter-spacing: .12em; text-transform: uppercase; margin-left: 10px; }
+  .trade { color: #9a9483; font-size: 12.5px; max-width: 84ch; margin: 2px 0 14px; }
+  .speclab { font-size: 10px; letter-spacing: .16em; text-transform: uppercase; color: #8d8678; margin: 14px 0 4px; }
+  .ry-block { border: 1px solid #2e2637; background: rgba(0,0,0,.28); border-radius: 4px; padding: 12px 14px 10px; margin: 6px 0 4px; }
+  .ry-lab { display: flex; justify-content: space-between; font-size: 10.5px; letter-spacing: .16em; text-transform: uppercase; color: #8d8678; margin-bottom: 6px; }
+  .ry-block svg { width: 100%; height: auto; display: block; }
+  .ry-read { margin: 9px 0 0; color: #cdc8bc; font-size: 13px; }
+  .ry-read b { color: #c9aa71; font-weight: 600; }
+  .legend { display: flex; gap: 8px; margin: 0 0 8px; }
+  .legend span { border: 1px solid #3a3325; border-radius: 3px; padding: 2px 9px; font-size: 10.5px; letter-spacing: .1em; color: #c9aa71; }
+  svg text { font-family: "Segoe UI", system-ui, sans-serif; }
+  .ax { stroke: #332d24; stroke-width: 1; }
+  .thr { stroke: #4d4030; stroke-width: 1; stroke-dasharray: 5 5; }
+  .thr-lab { fill: #8d8678; font-size: 11px; letter-spacing: .08em; }
+  .ph { fill: #a89f8e; font-size: 11.5px; letter-spacing: .1em; font-weight: 600; }
+  .ph2 { fill: #736c5e; font-size: 11px; }
+  .strip-note { fill: #736c5e; font-size: 11px; letter-spacing: .06em; }
+  .refresh { fill: none; stroke: #c9aa71; stroke-width: 1.4; }
+  .branch { stroke: #8d8678; stroke-width: 1.2; fill: none; }
+  .kx-climb { fill: none; stroke: #a03a4c; stroke-width: 1.4; opacity: .8; }
+  .kx-sember .pip-flame { fill: rgba(225,79,100,.5); stroke: #e14f64; stroke-width: 1.1; }
+  .kx-sember.lit .pip-flame { fill: rgba(240,176,96,.7); stroke: #f0b060; }
+  .kx-window { fill: rgba(225,79,100,.3); stroke: #e14f64; stroke-width: 1.8; }
+  .kx-window-lab { fill: #f6ccd3; font-size: 12.5px; font-weight: 700; letter-spacing: .1em; }
+  .kx-charge { fill: rgba(216,160,95,.4); stroke: #d8a05f; stroke-width: 1.6; }
+  .beacon circle { fill: #1c1116; stroke: #c9aa71; stroke-width: 1.3; }
+  .beacon text { fill: #e8c88a; font-size: 11px; font-weight: 700; }
+</style></head><body><div class="wrap">
+<h1>Rhythm strips: captions &amp; legibility — pick a direction</h1>
+<p class="prov">Round input: "a bit too long winded … the graph isn't super self explanatory on some of these."
+Advisory: Sol-xhigh, 2026-08-10. War and Hellfire shown — the weakest and the count case. The pick applies to all strips, phone redraws follow it.</p>
+
+<p class="trade">All three directions share the same redrawn drawings (War becomes one closed loop
+instead of a repeated row; Hellfire gets endpoint numbers and a shorter six-rule). What you are
+picking is the orientation system: how much caption survives, and what sits on the drawing.</p>
+
+<div id="sections"></div>
+
+<script>
+const NOTE = '<text class="strip-note" x="986" y="18" text-anchor="end">the shape of the loop · not a rotation</text>';
+const ember = (x, y, s, lit) => `<g class="kx-sember${lit ? " lit" : ""}" transform="translate(${x} ${y}) scale(${s})">
+  <path class="pip-flame" d="M0 6 C-5.5 1 -3.5 -5 0 -10 C3.5 -5 5.5 1 0 6 Z"/></g>`;
+const beacon = (x, y, n) => `<g class="beacon"><circle cx="${x}" cy="${y}" r="9"/><text x="${x}" y="${y + 4}" text-anchor="middle">${n}</text></g>`;
+
+// ---- current (shipped) drawings ----
+const WAR_SHIP = `<svg viewBox="0 0 1000 168">
+  <defs><marker id="aS" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8z" fill="#8d8678"/></marker></defs>
+  ${NOTE}<line class="ax" x1="14" y1="126" x2="986" y2="126"/>
+  <circle class="kx-charge" cx="70" cy="112" r="7"/><circle class="kx-charge" cx="102" cy="112" r="7"/>
+  <text class="ph2" x="86" y="92" text-anchor="middle">Gore ×2 · 8 s</text>
+  <path class="refresh" d="M140 104 l10 -10 l10 10 l-10 10 Z"/><text class="ph2" x="150" y="80" text-anchor="middle">spend</text>
+  <rect class="kx-window" x="180" y="58" width="140" height="68" rx="2"/>
+  <text class="kx-window-lab" x="250" y="82" text-anchor="middle">GORES +25%</text>
+  <text class="ph2" x="250" y="100" text-anchor="middle" fill="#f3cdd4">12 s → free Meatsaw</text>
+  ${ember(350, 100, 1)}
+  <path class="branch" d="M355 112 C 375 128, 395 128, 412 118" marker-end="url(#aS)"/>
+  <circle class="kx-charge" cx="420" cy="112" r="7"/><circle class="kx-charge" cx="452" cy="112" r="7"/>
+  <path class="refresh" d="M490 104 l10 -10 l10 10 l-10 10 Z"/>
+  <rect class="kx-window" x="530" y="58" width="140" height="68" rx="2"/>
+  <text class="kx-window-lab" x="600" y="82" text-anchor="middle">GORES +25%</text>
+  <text class="ph2" x="600" y="100" text-anchor="middle" fill="#f3cdd4">wounds stack · 10 s</text>
+  ${ember(700, 100, 1)}
+  <path class="branch" d="M705 112 C 725 128, 745 128, 762 118" marker-end="url(#aS)"/>
+  <circle class="kx-charge" cx="770" cy="112" r="7"/><circle class="kx-charge" cx="802" cy="112" r="7"/>
+  <path class="refresh" d="M840 104 l10 -10 l10 10 l-10 10 Z"/>
+  <rect class="kx-window" x="880" y="58" width="106" height="68" rx="2"/>
+  <text class="ph" x="205" y="146" text-anchor="middle">SPEND &amp; RELOAD</text>
+  <text class="ph2" x="205" y="160" text-anchor="middle">spending Demonfire hands Gore a charge back</text>
+  <text class="ph" x="555" y="146" text-anchor="middle">…AND TURN AGAIN</text>
+  <text class="ph2" x="555" y="160" text-anchor="middle">the free Meatsaw restocks the bar for the next turn</text>
+</svg>`;
+const HF_SHIP = `<svg viewBox="0 0 1000 168">
+  ${NOTE}
+  <line class="thr" x1="14" y1="44" x2="986" y2="44"/><text class="thr-lab" x="14" y="38">6 · the full bar</text>
+  <line class="ax" x1="14" y1="126" x2="986" y2="126"/>
+  <path class="kx-climb" d="M70 122 L420 56"/>
+  ${ember(90, 118, .8)}${ember(155, 106, .9)}${ember(220, 94, 1)}${ember(285, 82, 1.1)}${ember(350, 69, 1.2)}${ember(415, 56, 1.4, true)}
+  <rect class="kx-window" x="460" y="48" width="240" height="78" rx="2"/>
+  <text class="kx-window-lab" x="580" y="74" text-anchor="middle">UNLEASH</text>
+  <text class="ph2" x="580" y="92" text-anchor="middle" fill="#f3cdd4">Flames of Xoroth → Rain of Chaos · 9 s</text>
+  <text class="ph2" x="580" y="106" text-anchor="middle" fill="#f3cdd4">Hellfire Form 15 s · Seeking Flame free</text>
+  <path class="kx-climb" d="M760 122 L950 92"/>
+  ${ember(790, 117, .8)}${ember(855, 106, .9)}${ember(920, 95, 1)}
+  <text class="ph" x="250" y="146" text-anchor="middle">BUILD</text>
+  <text class="ph2" x="250" y="160" text-anchor="middle">Seeking Flame stacks Demonfire · +1 each, faster in Form</text>
+  <text class="ph" x="855" y="146" text-anchor="middle">…REBUILD</text>
+</svg>`;
+
+// ---- redrawn drawings (Sol per-strip fixes, shared by A/B/C) ----
+const WAR_NEW = (beacons) => `<svg viewBox="0 0 1000 168">
+  <defs><marker id="aN${beacons ? "b" : ""}" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8z" fill="#8d8678"/></marker></defs>
+  ${NOTE}
+  <circle class="kx-charge" cx="150" cy="84" r="8"/><circle class="kx-charge" cx="182" cy="84" r="8"/>
+  <text class="ph" x="166" y="116" text-anchor="middle">BUILD</text>
+  <text class="ph2" x="166" y="130" text-anchor="middle">GORE ×2 · 8 s</text>
+  <path class="branch" d="M200 74 C 280 40, 380 36, 452 48" marker-end="url(#aN${beacons ? "b" : ""})"/>
+  <text class="ph2" x="325" y="30" text-anchor="middle">GORE FEEDS DEMONFIRE</text>
+  <path class="refresh" d="M467 58 l13 -13 l13 13 l-13 13 Z"/>
+  <text class="ph" x="480" y="98" text-anchor="middle">SPEND</text>
+  <text class="ph2" x="480" y="112" text-anchor="middle">A GORE CHARGE RETURNS</text>
+  <path class="branch" d="M508 52 C 570 40, 630 42, 692 56" marker-end="url(#aN${beacons ? "b" : ""})"/>
+  <rect class="kx-window" x="700" y="42" width="190" height="64" rx="2"/>
+  <text class="kx-window-lab" x="795" y="68" text-anchor="middle">BOOST WINDOW</text>
+  <text class="ph2" x="795" y="86" text-anchor="middle" fill="#f3cdd4">GORES +25% · 12 s</text>
+  <path class="branch" d="M795 110 C 700 158, 300 160, 166 100" marker-end="url(#aN${beacons ? "b" : ""})"/>
+  <text class="ph2" x="480" y="152" text-anchor="middle">FREE MEATSAW · RESTOCKS BAR</text>
+  ${beacons ? beacon(120, 84, "1") + beacon(480, 24, "2") + beacon(672, 74, "3") : ""}
+</svg>`;
+const HF_NEW = (beacons) => `<svg viewBox="0 0 1000 168">
+  <defs><marker id="hN${beacons ? "b" : ""}" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8z" fill="#8d8678"/></marker></defs>
+  ${NOTE}
+  <line class="thr" x1="14" y1="44" x2="450" y2="44"/><text class="thr-lab" x="14" y="38">6 · FULL BAR</text>
+  <line class="ax" x1="14" y1="126" x2="986" y2="126"/>
+  <path class="kx-climb" d="M70 122 L420 56"/>
+  ${ember(90, 118, .8)}${ember(155, 106, .9)}${ember(220, 94, 1)}${ember(285, 82, 1.1)}${ember(350, 69, 1.2)}${ember(415, 56, 1.4, true)}
+  <text class="ph2" x="90" y="140" text-anchor="middle">1</text>
+  <text class="ph2" x="415" y="76" text-anchor="middle">6</text>
+  <text class="ph2" x="240" y="70" text-anchor="middle">DEMONFIRE · +1 EACH</text>
+  <rect class="kx-window" x="460" y="48" width="240" height="78" rx="2"/>
+  <text class="kx-window-lab" x="580" y="68" text-anchor="middle">BURST WINDOW</text>
+  <text class="ph2" x="580" y="86" text-anchor="middle" fill="#f3cdd4">UNLEASH FULL SIX</text>
+  <text class="ph2" x="580" y="100" text-anchor="middle" fill="#f3cdd4">RAIN OF CHAOS · 9 s</text>
+  <text class="ph2" x="580" y="114" text-anchor="middle" fill="#f3cdd4">HELLFIRE FORM · 15 s</text>
+  <path class="branch" d="M710 120 C 730 140, 744 142, 757 133" marker-end="url(#hN${beacons ? "b" : ""})"/>
+  <path class="kx-climb" d="M760 122 L950 92"/>
+  ${ember(790, 117, .8)}${ember(855, 106, .9)}${ember(920, 95, 1)}
+  <text class="ph" x="250" y="146" text-anchor="middle">BUILD</text>
+  <text class="ph" x="855" y="146" text-anchor="middle">REBUILD</text>
+  ${beacons ? beacon(70, 100, "1") + beacon(580, 30, "2") + beacon(790, 146, "3") : ""}
+</svg>`;
+
+const block = (lab, svg, readHTML) => `<div class="speclab">${lab}</div>
+  <div class="ry-block"><div class="ry-lab"><span></span><span>names: Data · shape: Inference</span></div>${svg}${readHTML}</div>`;
+const two = (r, e) => `<p class="ry-read"><b>How to read it:</b> ${r}</p><p class="ry-read"><b>Where your eyes live:</b> ${e}</p>`;
+const one = (r, e) => `<p class="ry-read"><b>How to read it:</b> ${r} · <b>Eyes:</b> ${e}</p>`;
+
+const sections = [
+  { t: "SHIP · what is live today", rec: "", trade: "Current drawings and captions, for reference.",
+    war: block("War", WAR_SHIP, two(
+      "There is no long climb — just a short wheel that keeps turning. Spending Demonfire hands Gore a charge back and ends in a free Meatsaw, so every payoff reloads the loop that feeds the next one.",
+      "Gore's two charges and the 12-second boost timer; the wound stacks on your target come second.")),
+    hf: block("Hellfire", HF_SHIP, two(
+      "Stacks climb one strike at a time toward six, then the whole bar goes out in one unleash. Rain of Chaos needs the full six — a thin spend never calls it.",
+      "the Demonfire count, then the Form timer; the number six matters more than the target.")) },
+  { t: "A · fixed drawings + two micro-captions", rec: "SOL RECOMMENDS", trade: "The drawing carries topology (War becomes one closed loop; labels name what each mark is). Captions shrink to one line each: read ≤ 14 words, eyes ≤ 10.",
+    war: block("War", WAR_NEW(false), two(
+      "Gore feeds Demonfire; each spend boosts Gore and reloads the loop.",
+      "Watch Gore charges and boost timer, then wound stacks.")),
+    hf: block("Hellfire", HF_NEW(false), two(
+      "Build six Demonfire, unleash the full bar, then rebuild.",
+      "Watch Demonfire count, then your Hellfire Form timer.")) },
+  { t: "B · numbered phase beacons + eyes-only caption", rec: "", trade: "Same drawings plus ①②③ beacons on the phases. One universal read line replaces per-strip reads; only the eyes line stays authored. Fastest first read; numbers can faintly suggest a rotation.",
+    war: block("War", WAR_NEW(true), two(
+      "Follow 1–3; the return arrow restarts the rhythm.",
+      "Watch Gore charges and boost timer, then wound stacks.")),
+    hf: block("Hellfire", HF_NEW(true), two(
+      "Follow 1–3; the return arrow restarts the rhythm.",
+      "Watch Demonfire count, then your Hellfire Form timer.")) },
+  { t: "C · shared micro-legend + one combined row", rec: "", trade: "A three-chip legend teaches the shared marks once; both captions merge into one compact row. Least repeated ink across 70 specs; the chips are one more thing to learn on the first strip.",
+    war: `<div class="speclab">War</div><div class="ry-block"><div class="ry-lab"><span></span><span>names: Data · shape: Inference</span></div>
+      <div class="legend"><span>↗ BUILD</span><span>▣ WINDOW</span><span>↩ REBUILD</span></div>${WAR_NEW(false)}
+      ${one("Gore feeds Demonfire; each spend boosts Gore and reloads the loop.", "Gore charges, boost timer, then wounds.")}</div>`,
+    hf: `<div class="speclab">Hellfire</div><div class="ry-block"><div class="ry-lab"><span></span><span>names: Data · shape: Inference</span></div>
+      <div class="legend"><span>↗ BUILD</span><span>▣ WINDOW</span><span>↩ REBUILD</span></div>${HF_NEW(false)}
+      ${one("Build six Demonfire, unleash the full bar, then rebuild.", "Demonfire count, then the Form timer.")}</div>` },
+];
+
+document.getElementById("sections").innerHTML = sections.map(s => `
+  <h2>${s.t}${s.rec ? `<span class="rec">${s.rec}</span>` : ""}</h2>
+  <p class="trade">${s.trade}</p>${s.war}${s.hf}`).join("");
+</script>
+</div></body></html>
