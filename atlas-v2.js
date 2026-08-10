@@ -133,6 +133,30 @@
     render();
   }
 
+  // ---------- round 3 (session 6): star-map placement variants ----------
+  // Grammar §5/§7: where the interim star map lives in Atlas nav. ghost = the masthead
+  // ghost button (the live proposal). lens = third state on the Classes/Specs toggle.
+  // band = a section door after the card grids. One renders at a time.
+  function starMapVariant() {
+    if (!el("smBand") || !el("lens")) return;
+    const p = new URLSearchParams(location.search);
+    const sm = ["ghost", "lens", "band"].includes(p.get("sm")) ? p.get("sm") : "ghost";
+    document.body.classList.add(`smv-${sm}`);
+    if (sm === "lens") el("lens").insertAdjacentHTML("beforeend",
+      `<a class="lens-star" href="starmap.html">✦ Star Map</a>`);
+    if (sm === "band") el("smBand").hidden = false;
+    if (p.get("sw") === "off") return;
+    const LAB = { ghost: "ghost · masthead button", lens: "lens · toggle third state", band: "band · section door" };
+    document.body.insertAdjacentHTML("beforeend",
+      `<aside style="position:fixed;z-index:90;right:12px;bottom:12px;width:220px;padding:10px;border:1px solid #4b4651;border-radius:5px;background:#111218f2;box-shadow:0 12px 40px #000b;font:10px/1.45 Arial,sans-serif;color:#9da0a8">
+        <strong style="display:block;margin-bottom:6px;color:#d2b369;letter-spacing:.14em;text-transform:uppercase">Star-map placement</strong>
+        ${["ghost", "lens", "band"].map(v =>
+          `<a style="display:block;margin-top:4px;padding:5px 7px;border:1px solid ${v === sm ? "#9c6bb1" : "#34343a"};border-radius:3px;color:${v === sm ? "#f0d7ff" : "#b8bac0"};text-decoration:none;${v === sm ? "background:#2b1b31" : ""}" href="atlas-v2.html?sm=${v}">${LAB[v]}</a>`).join("")}
+        <small style="display:block;margin-top:7px;color:#6f727b">Round 3: only the star map's home changes. The map itself is the ruled interim starmap.</small>
+      </aside>`);
+  }
+  starMapVariant();
+
   window.COA_ATLAS_V2 = { specCard, render: null };
   if (typeof document !== "undefined" && document.getElementById && document.getElementById("lens")) init();
 })();

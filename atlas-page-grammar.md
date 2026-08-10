@@ -94,6 +94,14 @@ Same format and authority rules as `class-page-grammar.md`.
 
 ## 8 · Session log
 
+- **2026-08-09 (session 6, round 3 built):** star-map placement variants deployed on the
+  reference assembly (`atlas-v2.html?sm=ghost|lens|band`): masthead ghost button (the live
+  proposal) · lens third state on the Classes/Specs toggle · section-door band after the
+  card grids. Build note: the variant body class collided with the band's own `.sm-band`
+  class and flexed the whole body; namespaced to `smv-*`. Awaiting the pick (§5 placement
+  row, §7 queue 1). Earlier same session: §4 true-support ripples RESOLVED (strict
+  everywhere, round 2).
+
 - **2026-08-07 (session 4, Atlas, open):** read-first list completed (grammar contract, deployed
   study, Atlas source, data probe, sessions 2–3 artifact). Palette validator run on the 21 class
   colors against the dark surface (evidence in §5). Study page built with real roster data:
