@@ -18,6 +18,10 @@ Authority note: entries here are plans, not rulings. Rulings live in the grammar
 
 ## NEXT (design track, in order)
 
+0. **Copy-verification session (handoff ready: `copy-verification-session-handoff.md`).** All 21
+   classes' copy verified against the v3 corpus, line by line with quotes; the ×16 taglines and
+   engines can be authored citation-first inside it. Opens with three contradicted engine
+   rewrites and two judgment calls awaiting rulings. User-ruled its own session 2026-08-10.
 1. **Session 6 (handoff ready: `desktop-echo-design-handoff.md`): the desktop echo pass.** Carry
    the session-3 rulings to desktop: plain-text role line, corner video thumb (at the text
    column's right edge — the seal owns the far right), engine styling. Plus the shipped-Atlas
