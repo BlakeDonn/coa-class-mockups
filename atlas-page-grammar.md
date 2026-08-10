@@ -94,6 +94,11 @@ Same format and authority rules as `class-page-grammar.md`.
 
 ## 8 · Session log
 
+- **2026-08-10 (Chronomancer tagline re-ruled):** the user (a level-60 Chrono main) rejected
+  "Undo is a class ability" as the weakest of the 21. Replacement RULED from three options:
+  **"Reality is a rough draft."** (keyword "draft") — grounded in Melt Reality and the
+  Timewalking/Rewind revision loop. A register note recorded: modern-UI wordplay reads flat;
+  the tagline quality pass reviews the other 20 for the same defect.
 - **2026-08-10 (copy-verification session, the ×21 + ×70 authoring executed):** after the five
   opening rulings landed, the user issued a BLANKET RULING (verbatim): "you don't need my
   approval go ahead and just implement all 21 classes based on our research data." Under it:

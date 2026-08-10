@@ -25,7 +25,7 @@
     "Knight of Xoroth": { t: "Damnation rides with you.", kw: "Damnation", draft: true },
     "Barbarian": { t: "Fury of the north, fed by ale and ancestors.", kw: "north", draft: true },
     "Bloodmage": { t: "Blood remembers what mana forgets.", kw: "Blood", draft: true },
-    "Chronomancer": { t: "Undo is a class ability.", kw: "Undo", draft: true },
+    "Chronomancer": { t: "Reality is a rough draft.", kw: "draft", draft: false },
     "Felsworn": { t: "The demon inside is load-bearing.", kw: "demon", draft: true },
     "Necromancer": { t: "The dead work for you now.", kw: "dead", draft: true },
     "Primalist": { t: "The wild does not negotiate.", kw: "wild", draft: true },
