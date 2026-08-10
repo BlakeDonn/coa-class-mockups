@@ -356,6 +356,15 @@ placement `feel`, video `mini`, engine `col`, verbs `chip`, cards `airfam`.
   Verified at 1280 + 390 iframe (war, godblade); Cultist/Tinker strips converted to the
   same bullet grammar from their verified prose. Compare artifact:
   https://claude.ai/code/artifact/361b3534-834e-41b6-a08d-ca63271f03a0
+- **2026-08-10 (round 3 VERDICT + SCALE-OUT ruled):** Witch Hunter "looks great" after
+  three overlap fixes (desktop return labels left of the arc dip; the Inquisition build
+  line split; the whole ladder label column moved to x165 beside its glyphs). User ruled
+  the remaining 16 classes run as a HYBRID: a 16-agent Opus workflow mines per-class
+  evidence packets (engine audit with the Chronomancer catch, numbers, verb/strip
+  proposals, seal concepts) → the user rules the audit table in ONE pass → seals and
+  strips authored in-session in batches of ~4 with a live verdict per batch. Full
+  parallel end-to-end authoring and fully-serial rounds both set aside. Workflow
+  wf_bcb3f4ce-7ed launched this session.
 - **2026-08-10 (seal & strip round 3 — WITCH HUNTER authored, deployed, awaiting
   verdict):** the shared-bar case, the mirror of Guardian's split: one Rage under four
   spec layers (audited; Tonics restore it class-wide, c1). Engine ¶ under the
