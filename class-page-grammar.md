@@ -356,6 +356,21 @@ placement `feel`, video `mini`, engine `col`, verbs `chip`, cards `airfam`.
   Verified at 1280 + 390 iframe (war, godblade); Cultist/Tinker strips converted to the
   same bullet grammar from their verified prose. Compare artifact:
   https://claude.ai/code/artifact/361b3534-834e-41b6-a08d-ca63271f03a0
+- **2026-08-10 (seal & strip round 3 — WITCH HUNTER authored, deployed, awaiting
+  verdict):** the shared-bar case, the mirror of Guardian's split: one Rage under four
+  spec layers (audited; Tonics restore it class-wide, c1). Engine ¶ under the
+  two-sentence bar — build/spend/restore plus the four layer names. SEAL: a Rage vial
+  at the center of a hunter's diamond; corner nodes carry their LAYER tags
+  (BOLTS · HOUNDS · BRANDS · DAWN·DUSK); threshold "ONE RAGE · SHARED"; legend the
+  shared tools "VAULT · TRAP · TONIC" (c1/c2). Verbs: Unload · Loose · Riposte ·
+  Balance, glosses claim-backed (bl1, hm1/hm2, bk1/bk2, iq2). Strips: boltslinger
+  Damnation loop with the Twilight Frenzy window · houndmaster pack loop with the 20 s
+  Decimate window · black-knight parry gate (avoid unlocks Desecrate) · inquisition
+  DUAL CLIMB — Dawn and Dusk tracks to a 20 gate into Cycle of Despair (6 s), a new
+  topology. Desktop horizontals + phone ladders (200-wide windows). Build fix en
+  route: the phone legend moved top-left (bottom-left hit Black Knight's labels —
+  same bug as Guardian round; corner legends now default TOP-left on phone).
+  Verified 1280 ×4 specs + 390 iframe; live.
 - **2026-08-10 (round 2 VERDICT — Guardian RULED):** user on the live page after the
   ladder-window fix: "ok cool this is good to keep going i think." The banner seal
   (TOWER · GUARD / LINE · MARCH), the meter-marked node rank (10 · 3 · 3),
