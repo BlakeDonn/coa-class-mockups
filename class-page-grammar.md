@@ -26,6 +26,7 @@ This is the checklist for repeating the design 21 times without drift.
 | Interim masthead text (19 classes) | Adoption round 2 built (`adoption-study.html` + a "Masthead text" switcher on unadopted class pages): **ship** (the v2 premise line alone) · **eng** (the ×21 authored tagline with keyword glow + Atlas engine blurb under the ruled label, premise replaced) · **both** (authored text above, premise kept). The blurb is one cited sentence, honestly thinner than the ruled 2–4 sentence ¶; the full ¶ arrives with each class's authoring pass | OPEN (adoption round 2 ask) |
 | Engine copy shape (amended) | Condensed: a serif-italic lede ("Every Cultist runs on Insanity, and it climbs as you act."), then "Near 60 it is steady power: strong enough to fuel your kit, safe enough to hold. Cross 100 and it pays out more, punishing you while it lasts." The paragraph deliberately teaches the seal's HOLD/CROSS words right above the seal. The four-specs sentence is dropped — the seal shows it. The "strong enough to fuel your kit" 60-band claim CONFIRMED against v3 (2026-08-10): 3 of 4 specs evidence the mid-band; Heretic silent there. The fallback line retires | RULED (2026-08-07 session 3, copy tightened same day; 60-band claim confirmed 2026-08-10) |
 | Rare-part list | The engine block ends with 1–3 terse ✦ fragments naming what is strange about the class. Cultist: "Melee healer option" · "Four specs, four different playstyles". Every fragment must trace to a computable roster fact (melee healers = 2 of 70 specs; verified in snapshot). No fact, no bullet — never invented | RULED (2026-08-07 session 3) |
+| Class name | ONE line at every width — the name never wraps. The `fit` form RULED: a self-correcting JS guard measures the rendered name and scales only one that overflows (KoX 24→23.1px at phone; every other class untouched). Picked over a fixed smaller phone size and tracking/condensed styling. `white-space: nowrap` + guard in `class.js`; refits on resize, ResizeObserver, frame and load ticks | RULED (2026-08-10 design-pass round 1) |
 | Role chips | One plain-text line, sentence case, no boxes, separators only. Authored to fit ONE line at 390px. Applies at every width (desktop echo landed 2026-08-09). COUNTING: the true-support rule — class-level Support only when a spec supports WITHOUT healing (Cultist: "Damage ×2 · Healer · Tank · Melee · Ranged"; Heretic's Support stays on its spec card) | RULED (2026-08-07 session 3; strict counting ruled 2026-08-09 session 6 round 2) |
 
 ## 2 · Seal (class diagram)
@@ -349,3 +350,27 @@ placement `feel`, video `mini`, engine `col`, verbs `chip`, cards `airfam`.
   `--virtual-time-budget` + `--screenshot` makes Windows headless Chrome reliable from
   WSL — screenshots landed for all four forms this run. Deployed `e1ccd32` → coa_classes
   `5b9ec92`. AWAITING the round-1 pick (advisor recommends fit).
+- **2026-08-10 (design-pass round 1 VERDICT — fit RULED):** user: "yeah a is good." The
+  one-line name law is baked: `white-space: nowrap` on the masthead h1 plus the class.js
+  guard for every class, `?n=` switcher and its harness removed (§1 row added). En route
+  the engine harness caught a late-scrollbar race — the guard's first run happens before
+  the codex fills, so a scrollbar can narrow the h1 afterward; frame and load re-checks
+  added alongside the ResizeObserver. Bare-URL KoX verified 1 line at 23.1px ×8 renders;
+  21-class breadth re-run clean (same two false-positive families only). Deployed
+  `017997c` → coa_classes `bf1905f`.
+- **2026-08-10 (design-pass round 2 built — the engine-paragraph shape bar):** the
+  handoff's piece 2 (user: the KoX ¶ is "long winded and isn't the most clear"). PROPOSED
+  bar: serif lede + ≤2 plain sentences · one idea per sentence, parallel halves allowed,
+  chained clauses not · teach the seal's words where true (Cultist precedent) · no
+  spec-count sentences (the seal shows them). Tightens §8's "2–4 sentences" to lede+2;
+  Cultist already obeys unchanged. Three KoX rewrites live behind a TEMPORARY `?e2=`
+  switcher rendering from `class.js` — CLASS_ENGINE in authored-copy.js is the seal
+  session's active region and stays untouched until the pick. All three keep the audited
+  lede verbatim, rephrase only the shipped seal-session-verified sentences, and drop two
+  on purpose ("Spend thin…" restates the scaling rule; "each spec keeps a six-stack
+  reward…" follows the Cultist four-specs precedent out — the crown ember and verbs show
+  it). r1 "the rule" (16w) · r2 "rule + command" (17w, teaches feed/unleash) · r3 "the
+  ember" (18w, one extra phone line). Measured: ¶ block 167px → 104/104/125px at 390;
+  38 → 16–18 words. On the verdict: winner lands in authored-copy.js as the exemplar,
+  §8 amends, and the USER RELAYS the ruled bar to the seal session (its ×19 authoring
+  binds to it). AWAITING the round-2 pick (advisor recommends r2).
