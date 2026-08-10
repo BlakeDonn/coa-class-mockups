@@ -356,6 +356,10 @@ placement `feel`, video `mini`, engine `col`, verbs `chip`, cards `airfam`.
   Verified at 1280 + 390 iframe (war, godblade); Cultist/Tinker strips converted to the
   same bullet grammar from their verified prose. Compare artifact:
   https://claude.ai/code/artifact/361b3534-834e-41b6-a08d-ca63271f03a0
+- **2026-08-10 (BATCH 2 VERDICT — RULED; final batches green-lit):** user: "ok go
+  aheD and finish rhem all off." Batch 2 stands. The final 8 classes run to
+  completion in one stretch: Barbarian · Bloodmage · Necromancer · Primalist ·
+  Pyromancer · Runemaster · Venomancer · Witch Doctor.
 - **2026-08-10 (BATCH 2 AUTHORED + DEPLOYED — awaiting batch verdict):** SUN CLERIC:
   a sun cut by the horizon rule — Solar Power below the line, ten Fulfillment rays
   above; Alternate/Relay/Harden/Double; relay strip family debuts (Blessings).
