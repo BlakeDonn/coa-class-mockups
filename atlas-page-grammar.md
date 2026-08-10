@@ -264,3 +264,15 @@ Same format and authority rules as `class-page-grammar.md`.
   unchanged, modal and workbench scale too). Real renders at 1440 + 1920 ×4 forms.
   Deployed `5bccb80` → coa_classes `e5c79e5`. AWAITING the pick (advisor recommends
   zoom — the report names both smallness and expansion; only zoom fixes both).
+
+- **2026-08-10 (expansion VERDICT — zoom RULED; healer icon ruling):** user: "ok yep
+  zoom is good." BAKED: `body.ry-zoom` stamped by explorer.js (Atlas page only), steps
+  1.08 at ≥1440 · 1.16 at ≥1600 · 1.3 at ≥1860; the `?d=` switcher, wide, and big
+  retire. SAME MESSAGE, second ruling: Healer+Support spec rows drew two role icons
+  and overflowed the class-card spec rows — user: "can we not show the support flag
+  for healers please." `roleImgs` now drops the Support flag when Healer is present
+  (same spirit as the strict true-support counting); the hover tooltip still names
+  every role. Verified: all 70 spec rows measure zero overflow at 1440 (zoom 1.08)
+  and 1920 (zoom 1.3); the three remaining two-icon rows are non-healer pairs
+  (Inspiration · Farstrider · Seraphim) and fit. Deployed `700ec32` → coa_classes
+  `7b184ba`.
