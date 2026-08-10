@@ -399,3 +399,24 @@ placement `feel`, video `mini`, engine `col`, verbs `chip`, cards `airfam`.
   38 → 16–18 words. On the verdict: winner lands in authored-copy.js as the exemplar,
   §8 amends, and the USER RELAYS the ruled bar to the seal session (its ×19 authoring
   binds to it). AWAITING the round-2 pick (advisor recommends r2).
+- **2026-08-10 (round 2 RE-MOCKED — user verdict + a Sol-xhigh leg):** user on r1–r3:
+  "the vocabulary just feels weird like it doesnt explain things very well," and asked
+  for sol-xhigh. Bounded file-backed leg (codex exec, gpt-5.6-sol, xhigh; brief + the
+  landed KoX digest; answer archived as `sol-engine-vocabulary-answer.md` here).
+  DIAGNOSIS: the candidates led with metaphor before mechanics — "bar" hides the
+  resource and its stack units, "payoff/burns" hide which abilities spend, "ember"
+  invents a second unit name, "strikes" is too narrow (imps, Demon Heart, on-attacked
+  also generate), and "harder it hits" wrongly reduces scaling to damage (spenders
+  also scale DURATION: "Lasts 3 sec for each Demonfire consumed", Suffuse +2s/stack —
+  newly surfaced, digest-cited). VOCABULARY RULE (Sol, adopted for the re-mock): game
+  words first — build · generate · spend · consume · stacks; flavor verbs only after
+  the mechanic is clear. New candidates behind `?e2=` (r1–r3 retired): **r4** cleanest
+  ("Build Demonfire stacks, then spend them to increase an ability's damage or
+  duration. At six stacks, certain abilities trigger an additional effect.") · **r5**
+  conversational (consume-every-stack named) · **r6** keeps FEED/UNLEASH, each
+  translated inline. All 22–25 words, ¶ 146px at 390, name law + overflow clean ×8
+  renders. FLAG raised by Sol, held as a DECISION POINT (edits the RULED KoX seal —
+  the seal session's surface, no change shipped): rename seal labels to BUILD /
+  SPEND, crown pip "6 · BONUS", since six adds riders, not one universal unleash;
+  "unleash" also risks confusion with Unleash Pestilence. Deployed `0d93a96` →
+  coa_classes `4955068`. AWAITING the round-2 pick (advisor + Sol recommend r4).
