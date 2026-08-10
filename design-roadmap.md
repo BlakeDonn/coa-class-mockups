@@ -42,8 +42,11 @@ Authority note: entries here are plans, not rulings. Rulings live in the grammar
 
 - **Granular class-page details:** endgame folds, leveling story, PvP, and friends. FROZEN by user
   ruling 2026-08-07 — the research will change them.
-- **Per-class authoring at scale** (`class-page-grammar.md` §9, ×21): taglines, engine paragraphs,
-  seals, verbs + glosses, cadence strips (desktop + S2 phone variants), rare-part bullets.
+- **Per-class authoring at scale** (`class-page-grammar.md` §9, ×19 remaining): engine
+  paragraphs, seals, verbs + glosses, cadence strips. Process now WRITTEN:
+  `seal-strip-authoring-playbook.md` (2026-08-10). Entry gates per class: the engine audit
+  verdict + tension numbers (kit-derivation output, or hand-mined digests until it lands).
+  Not blocked on the breadth pass; classes land one at a time on the live site.
 - **Anatomy extension past the three Guided pilot classes** (main repo) — grammar is ready,
   data is the constraint.
 - **Six style axes per spec** (Damage · Burst · Sustain · Control · Mobility · Utility) — research
