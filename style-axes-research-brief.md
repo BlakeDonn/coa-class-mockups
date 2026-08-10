@@ -40,9 +40,36 @@ Per spec, six values (or honest gaps) with provenance tiers — the shape `map-s
 and `atlas-page-grammar.md` §5 already specify. The map stays DEFERRED until then; the family
 starmap remains the interim by standing ruling.
 
+## SECOND QUESTION: THE CLASS-PAGE FOLDS (added 2026-08-10, same measurement pass)
+
+The folds (Endgame contexts, Leveling story, PvP, Mechanics in detail, How it fails, What
+players say, Performance, Evidence & gaps) render from the v2 enrichment. Measured:
+
+1. **v2 coverage is COMPLETE, not thin.** All 70 specs carry every fold: endgame contexts
+   70/70, pvp 70/70, leveling bands 70/70, mechanics loop 70/70, failure modes 70/70,
+   sentiment 70/70. The thin rows: conflicts/known issues 5/70, DPS entries 62/70, verified
+   spec guides 4/70.
+2. **But the provenance doesn't discriminate.** Context sections carry blanket three-tier tags
+   (every endgame/leveling/pvp feel is tagged Data AND Players AND Inference — 140/140/140,
+   210/210/210, 70/70/70). Failure modes lean Inference (208 inference vs 142 data tags).
+   Sentiment alone is genuinely sourced (players 141, inference 41, data 0). So the folds are
+   full of synthesis whose per-item evidence quality is unmeasurable from the tags.
+3. **What v3 + digests can refresh, per fold:** Mechanics in detail → hardened to Data tier
+   from the digests (full formulas on disk). What players say / How it fails → replace or
+   corroborate with provenance-hard claims. Leveling story → the corpus's strongest signal
+   (33/70 specs). Endgame contexts → partial corroboration. Guides → the audited adopted set
+   (12 for the pilot five) supersedes v2's 4 verified. **PvP → v3 can verify almost nothing
+   (9/70); the fold survives on honest labeling or gets its own capture, same decision as the
+   PvP axis above.**
+
+ASK: when the corpus integrates into the site data, decide per fold: replace, corroborate, or
+keep-with-tier-downgrade. The design track freezes granular fold work until that integration
+(standing ruling 2026-08-07); it needs the per-fold verdicts to unfreeze.
+
 ## POINTERS
 
 - Digests: `reports/coa-specs/research-v3/digests/` (main repo, landed).
 - Corpus + readiness: `candidates/` (landed five; full 21 in the `coa-picker-16class`
   worktree, unlanded, read-only).
 - Map spec and evidence bar: `map-study-3.html` + `atlas-page-grammar.md` §5 (mockups repo).
+- Fold renderers: `profile-render.js` (mockups repo) — the field shapes the site consumes.
