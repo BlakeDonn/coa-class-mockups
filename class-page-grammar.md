@@ -315,3 +315,7 @@ placement `feel`, video `mini`, engine `col`, verbs `chip`, cards `airfam`.
   lost to the flame glow on device. The label pair now paints LAST on a soft dark plate
   (`kx-lab-plate`), both arrangements. STANDING RULE for future seals: the center label
   draws above all seal art, with a halo, and a plate if it crosses bright geometry.
+  Third report ("still rendering behind") diagnosed as STALE CACHE, not z-order: three
+  builds shipped in ~30 min and Pages caches 10 min, so the phone mixed old files. Fix
+  in tooling: `deploy_coa_site.py` now stamps every css/js reference with a content hash
+  at package time — a fresh page load can never mix stale runtime files again.
