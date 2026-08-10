@@ -329,6 +329,31 @@ placement `feel`, video `mini`, engine `col`, verbs `chip`, cards `airfam`.
   pips/wheel/bank card glyphs are RULED as shipped. The war-strip quarantine reading
   (strips rest on landed structural claims; dead dimensions carry nothing) stands
   unobjected. Round 2 opens on Guardian — the honest-split engine case.
+- **2026-08-10 (STRIP CAPTION ROUND — §4 amended, deployed):** user paused Guardian:
+  reading lines "a bit too long winded … the graph isn't super self explanatory", and
+  asked for a Sol-xhigh assist plus options. Process: Sol-xhigh advisory leg (findings in
+  the main repo, `reports/coa-specs/strip-legibility-sol-findings.md`; ~3 min, detached
+  codex exec) → a desktop compare page (A/B/C caption systems) REJECTED ("i dont really
+  like these", must be phone-first, no sideways scroll) → two phone-first artifact
+  rounds. RULINGS, all applied and live (`site` commit + deploy 2026-08-10):
+  · Captions are BULLETS now: 2–4 dash bullets under "HOW TO READ IT", plain player
+    words first, at most ONE ability name per bullet, numbers kept; the eyes line
+    becomes one gold "👁 watch:" line with two attention objects. User: "bullets are
+    definitely the play but we gotta get better vocabulary ccuase a lot of this feels
+    like givverish." Sol's ≤14/≤10-word budgets fold into this shape.
+  · The two per-strip labels ("names: Data · shape: Inference" + "shape, not rotation")
+    MERGE into one line, wording user-picked: "drawn from research · not a rotation
+    guide". The in-svg notes are removed from every strip.
+  · WAR redrawN: desktop = one closed three-station loop (BUILD → SPEND → BOOST WINDOW,
+    return edge "free Meatsaw · the bar refills") — Sol's diagnosis that the repeated
+    row read as a forbidden button-sequence; phone = the W2 LADDER (user pick; W1 wheel
+    and W3 ship set aside). Hellfire and Defiance drawings ruled good as shipped and
+    kept ("i do think defiance and hellfire originals are good").
+  · Set aside: caption directions B (numbered beacons) and C (legend chips), and the
+    first desktop-format compare (mockups repo `strip-caption-study.html`, reference).
+  Verified at 1280 + 390 iframe (war, godblade); Cultist/Tinker strips converted to the
+  same bullet grammar from their verified prose. Compare artifact:
+  https://claude.ai/code/artifact/361b3534-834e-41b6-a08d-ca63271f03a0
 - **2026-08-10 (design-pass session opened, round 1 built — the one-line class name):**
   from `2026-08-10-coa-class-page-design-pass-handoff.md`. Baseline measured on the live
   source: only Knight of Xoroth wraps, and only at phone width — 202px of name against
