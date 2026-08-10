@@ -18,11 +18,14 @@ Authority note: entries here are plans, not rulings. Rulings live in the grammar
 
 ## NEXT (design track, in order)
 
-0. **THE SITE-ADOPTION SLICE (user-directed 2026-08-10, handoff ready:
-   `site-adoption-slice-handoff.md`).** "I just want our live site to be what's getting
-   updated." The ruled system ports to the live site source (`reports/coa-specs/site/`,
-   main repo, work-session lane) with honest gap states; the mockup-round cadence ends and
-   this repo becomes a reference lab. Four decision points ride the slice's planner gate.
+0. **THE SITE ADOPTION: SHIPPED 2026-08-10.** The ruled system is LIVE at
+   https://blakedonn.github.io/coa_classes/ — class page (seal or glyph seat, authored or
+   interim masthead, airfam cards, rhythm fold), Atlas classes-first cards, Choose B/M2 flow,
+   the locked slim modal, §6b chrome on all five shells. Anatomy merged first (`c8dbdf7`);
+   crests skipped (glyph fallback) pending rights; six site commits + deploy-script update on
+   `work/quest-hint-prototype`. This repo is now a reference lab. Open flags from the build:
+   the Cultist "four playstyles" ✦ fragment does not compute (3 families — copy-lane
+   disposition needed) and the spec-card clamp divergence still stands until authoring.
 1. **Copy-verification session (handoff ready: `copy-verification-session-handoff.md`).** All 21
    classes' copy verified against the v3 corpus, line by line with quotes; the ×16 taglines and
    engines can be authored citation-first inside it. Opens with three contradicted engine
