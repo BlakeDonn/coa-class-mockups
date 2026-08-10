@@ -500,3 +500,20 @@ placement `feel`, video `mini`, engine `col`, verbs `chip`, cards `airfam`.
   guide row × 390/1280 × sim-only/hide/card — all three `.noimg` anchors fire, zero
   overflow. Deployed `a952b49` → coa_classes `467b587`. AWAITING both calls (advisor
   recommends localize + card).
+- **2026-08-10 (round 4 VERDICT — localize + card RULED; DESIGN PASS COMPLETE):** user:
+  "ok go ahead." EXECUTED: all 277 in-use skill icons downloaded (browser-UA curl, every
+  file verified JPEG, 0.69MB) into `generated-assets/skill-icons/`; the six render
+  sites now build LOCAL urls (the hub keeps only outbound `/build/<uuid>` links);
+  `deploy_coa_site.py` enumerates the icon directory at package time. The card thumb
+  fallback BAKED ungated: a failed thumb img marks its anchor `.noimg` (error listener
+  + a complete-but-broken naturalWidth check) and renders as the masthead link chip /
+  guide-row ▶ tile; the `?r4` switcher and `thumb-harness.html` retire. PROOF RENDER:
+  Cultist with BOTH CDNs blocked via `--host-resolver-rules` — local icons load, the
+  chip renders, zero broken art (a managed-network page is now whole). Breadth clean
+  (32/42; the seal-svg false-positive count grew with the parallel session's new
+  Guardian seal). Deployed `918ab5a` → coa_classes `b81b69e`. Rights posture: same as
+  the crest — fan-hub-mirrored game art, flag recorded, unresolved. ALL FOUR handoff
+  pieces are now RULED and live: name (fit) · engine bar (r4 exemplar) · role line
+  (two registers) · assets (localize + card). Still parked for the user: relay the
+  ruled shape bar to the seal session, and Sol's optional seal-label rename
+  (BUILD / SPEND / 6 · BONUS).
