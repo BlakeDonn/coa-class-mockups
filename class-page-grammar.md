@@ -356,6 +356,27 @@ placement `feel`, video `mini`, engine `col`, verbs `chip`, cards `airfam`.
   Verified at 1280 + 390 iframe (war, godblade); Cultist/Tinker strips converted to the
   same bullet grammar from their verified prose. Compare artifact:
   https://claude.ai/code/artifact/361b3534-834e-41b6-a08d-ca63271f03a0
+- **2026-08-10 (THE SEAL & STRIP PASS COMPLETES — 21/21 AUTHORED AND LIVE):** the final
+  eight shipped in four pairs, all from packets under every standing ruling. BARBARIAN:
+  segmented Energy gauge with the Enrage wedge gap (−30% inside it); Hoard/Reset/Pour;
+  the vessel family debuts (the Tankard). BLOODMAGE: the two-chambered heart, Mortal
+  hollow and Cursed filled, beaded vessels ×4; Overdraw/Prolong/Trade/Link; bank-overrun
+  and window-stretch debut. NECROMANCER: the crypt floor — grave niches 1/2/3 slots wide
+  (Ghoul 1 · Mage 2 · Gargoyle 3 as the center sub); Marshal/Cultivate/Freeze.
+  PRIMALIST: the split geode on its one Seismic fault, a fissure per spec, Rage fill;
+  Rend/Amass/Split/Deflect (two more agent verb collisions renamed); the split family
+  debuts. PYROMANCER: the brazier — countable coals below, Heat ticks rising;
+  Reserve/Ripen/Invoke (two collisions renamed). RUNEMASTER: the chisel on the blade
+  with scattered sparks; Brand/Escalate/Beat (two collisions renamed); riftblade
+  quarantine honored (structural claims only). VENOMANCER: two fangs, four segmented
+  ducts, the only shared thing at the center; Fester/Stalk/Shed/Prime (one collision
+  renamed). WITCH DOCTOR: the loa mask and fetish cord, five wisps with the fifth lit;
+  Snap/Gather/Mix. Build fixes en route: the Primalist fault trimmed clear of node
+  verbs; the Witch Doctor mask assembly raised clear of the Brewing node. Every class
+  verified at 1280 (seals + strips) before its deploy; each pair deployed on landing.
+  ALL 21 CLASSES now carry: audited engine ¶ under the two-sentence bar, a unique seal
+  with the ruled interaction, one verb + gloss per spec, and strips with bullets and
+  ladders at both widths. AWAITING the user's final sweep verdict.
 - **2026-08-10 (BATCH 2 VERDICT — RULED; final batches green-lit):** user: "ok go
   aheD and finish rhem all off." Batch 2 stands. The final 8 classes run to
   completion in one stretch: Barbarian · Bloodmage · Necromancer · Primalist ·
