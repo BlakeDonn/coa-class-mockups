@@ -94,6 +94,14 @@ Same format and authority rules as `class-page-grammar.md`.
 
 ## 8 · Session log
 
+- **2026-08-10 (delegated rulings closed):** user: "whatever you think is best." Recorded as
+  delegated rulings adopting the advisor recommendations: (1) **Venomancer engine blurb
+  KEPT** with the weighting note — Venoms trigger from every cast, so the shared layer is a
+  real combat engine, unlike the Rewind case. (2) **Both family moves APPLIED** in
+  `SPEC_ATLAS` (`build_explorer_data.py`), the editorial source: hellfire → `combo`,
+  shadowhunting → `setup`. Regenerated and verified exactly 2 of 70 assignments changed;
+  deployed (`390886e` → coa_classes `f6c6bbf`). The four borderline family notes and the
+  S1 two-line phone role form stay open as recorded recommendations, not rulings.
 - **2026-08-10 (data-adoption jobs: engine audit ×21 + family validation ×70):** run by the
   copy session per the adoption handoff's STATE SYNC and the style-axes addendum.
   **Engine audit** (lens: citation is not weighting — the Chronomancer defect class):
