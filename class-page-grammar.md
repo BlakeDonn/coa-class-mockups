@@ -32,7 +32,8 @@ This is the checklist for repeating the design 21 times without drift.
 | Piece | Decision | Status |
 |---|---|---|
 | Mandatory slots | Engine name · ONE central mechanical tension · one verb per spec | RULED |
-| Empty seal slot (19 classes) | Adoption round 1 built (`adoption-study.html` + a "Seal slot" switcher on every seal-less class page): **G1 calm text masthead** (slot hidden) · **G2 crest seat** (official crest + "Seal not yet drawn") · **G3 node plate** (dashed frame, specs as working switch buttons — structural data only). Phone unaffected: below 900px the slot hides and the sheet keeps switching | OPEN (adoption round 1 ask) |
+| Empty seal slot (19 classes) | **G2 · the crest seat**: the official crest holds the seal slot with "Seal not yet drawn" under it; masthead geometry matches authored classes. User 2026-08-10: "yeah g2 is fine." G1 (calm text) and G3 (node plate) set aside, kept in the switcher for reference. Phone unaffected: below 900px the slot hides and the sheet keeps switching. Each authored seal replaces its crest seat class by class | RULED (2026-08-10 adoption round 1) |
+| Seal authoring sequencing | Seals are a DEDICATED per-class pass, not adoption work (advisor recommendation, user asked 2026-08-10): the §9 unit is engine ¶ + seal + verbs + strip per class, and it should consume the kit-derivation output (thresholds, windows, stack counts from the digests) so the tension numbers arrive pre-extracted instead of hand-mined ×19 | PROPOSED (sequencing) |
 | Crest sprite source | The hub retired `class-icons.v1.webp` (404, found 2026-08-10); `v2` has identical frame order. The studies now serve a LOCAL copy (`generated-assets/class-icons.v2.webp`) — hotlinking a fan hub's versioned asset broke every crest silently. Rights flag unchanged | RULED (fix, 2026-08-10) |
 | Geometry | Unique per class; placement and interaction shared | RULED (pre-existing product ruling) |
 | Expression level | "One-tension instrument" (option B): encodes the tension (e.g. 60 HOLD / 100 CROSS), not the full loop | RULED |
@@ -245,3 +246,9 @@ placement `feel`, video `mini`, engine `col`, verbs `chip`, cards `airfam`.
   Knight of Xoroth long-name stress). Found en route: the hub's crest sprite went 404 (v1
   retired); v2 verified frame-identical and adopted as a LOCAL asset across all studies.
   Verified at 1280 on real pixels; phone hides the slot below 900px. Awaiting the round-1 pick.
+- **2026-08-10 (adoption round 1 verdict):** user: "yeah g2 is fine" — the crest seat RULED as
+  the seal-less masthead; study default flipped so every bare class URL renders it. On "create
+  the seals now?": recorded as PROPOSED sequencing — seals stay a dedicated per-class pass
+  (§9 unit: engine ¶ + seal + verbs + strip), fed by the kit-derivation research output.
+  Next adoption rounds: the interim engine block (the ×21 Atlas blurbs as masthead copy),
+  the 21-class breadth pass, consolidation after the copy session closes its file.

@@ -18,9 +18,9 @@
   const support = ["ship", "strict"].includes(params.get("su")) ? params.get("su") : "strict";
   const engine = ["col", "seal", "strip", "off"].includes(params.get("e")) ? params.get("e") : "col";
   const verbEcho = ["chip", "kick", "meta", "off"].includes(params.get("w")) ? params.get("w") : "chip";
-  // Adoption round 1 (2026-08-10): the empty seal slot on the 19 seal-less classes.
-  // ship = today's void · g1 = calm full-width text · g2 = crest seat · g3 = node plate.
-  const gapMode = ["ship", "g1", "g2", "g3"].includes(params.get("gap")) ? params.get("gap") : "ship";
+  // Adoption round 1, RULED 2026-08-10 ("yeah g2 is fine"): the crest seat is the
+  // seal-less masthead. ship = the old void · g1/g3 kept for reference.
+  const gapMode = ["ship", "g1", "g2", "g3"].includes(params.get("gap")) ? params.get("gap") : "g2";
 
   // Seal verbs, mirrored from the seal study. One word per spec: its relation to the engine.
   // Each verb carries a plain gloss, surfaced as a tooltip: a verb must not need the seal to parse.
