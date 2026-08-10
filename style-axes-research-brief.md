@@ -66,6 +66,30 @@ ASK: when the corpus integrates into the site data, decide per fold: replace, co
 keep-with-tier-downgrade. The design track freezes granular fold work until that integration
 (standing ruling 2026-08-07); it needs the per-fold verdicts to unfreeze.
 
+## ADDENDUM 2026-08-10 — asks for the DATA-ADOPTION session (from the user + design track)
+
+1. **Validate the playstyle-family assignments against v3** (user ask). The `atlas` family per
+   spec is v2-era editorial; the corpus now carries rhythm_payoff dimensions per target. Check
+   every spec's family against its landed claims; propose moves where they disagree. Design
+   note: the Cultist card's "four playstyles" ✦ fact already fell to a family fact
+   (Godblade and Corruption both sit in `setup`) — family correctness is now user-visible.
+2. **Engine-blurb audit, class level** (user-flagged via Chronomancer). The ×21 Atlas engine
+   blurbs are cited, but citation is not weighting: Chrono's blurb leans on the shared
+   Timewalking/Rewind claim while the spec loops run on other economies (Infinite: DoT ramps
+   via Melt Reality/Anomaly Spikes; Artificer: Echo Fragments; Time: Aeons/Epoch). User:
+   "the engine of chrono is a kinda weak point… the rewind isn't that significant." Re-derive
+   each class's engine identity from kit digests + claims; where no shared engine exists,
+   say so Guardian-style ("each spec runs its own clock"). Fix candidates route to the copy
+   lane for rulings.
+3. **Fold verdicts** (standing ask above): per fold, replace / corroborate / downgrade.
+4. **Quarantine awareness:** six dimensions landed quarantined (artificer, inspiration,
+   defiance fit; war rhythm; riftblade fit+role; moon-priest role) — nothing may rest on
+   them. Chronomancer is data-soft generally (also the standing Time `Hybrid` range check in
+   `design-roadmap.md`).
+5. **The live site is now the render target.** The ruled design shipped 2026-08-10; data
+   integration lands into `reports/coa-specs/site/` (main repo) and deploys via
+   `tools/deploy_coa_site.py`. Gap states absorb missing fields; no layout work needed.
+
 ## POINTERS
 
 - Digests: `reports/coa-specs/research-v3/digests/` (main repo, landed).
