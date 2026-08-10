@@ -1,5 +1,42 @@
 # Handoff: the design-adoption session (all 21 classes onto the ruled system)
 
+## ⚠ STATE SYNC 2026-08-10 (read this first — the plan below is superseded)
+
+The adoption happened, faster and elsewhere. The user ended the mockup-round cadence
+("I just want our live site to be what's getting updated") and authorized a direct build.
+What is now TRUE:
+
+- **The ruled system is LIVE** at https://blakedonn.github.io/coa_classes/ for all 21
+  classes. Source of truth: main repo `reports/coa-specs/site/` on
+  `work/quest-hint-prototype`; deploy via `tools/deploy_coa_site.py`.
+- **Round 1 (G2 crest seat): ruled and shipped** — with the GLYPH/ability-icon fallback,
+  crests skipped pending rights. **Round 2 (masthead text): ruled `eng` and shipped** —
+  authored tagline + engine blurb replace the premise on all 19. **Consolidation: done** —
+  `authored-copy.js` exists in the site source; the site imports it. The Anatomy branch is
+  merged (`c8dbdf7`). Class cards and spec cards now carry real icon art; the slim modal
+  chip reads "Class page" with class art; the phone modal header gives the × its own row.
+- The mockups repo is a reference lab. Nothing further lands there.
+
+**THIS SESSION'S REMAINING JOBS, on the live site source:**
+1. **The 21-class breadth pass.** Every `class.html?c=<class>` clean at 1280 AND 390 (the
+   390px iframe-harness rule binds; bare small windows lie). The ship build verified
+   cultist, tinker, reaper, and the shared surfaces — the other 18 classes need eyes.
+   Hunt: 3-vs-4-spec rails, long names, tagline overflow, interim engine blocks, seat
+   layout, phone sheet. Fix in the site source, deploy through the script, record fixes
+   in `class-page-grammar.md`.
+2. **Adopt the new data findings into the designs** (user ask): the addendum in
+   `style-axes-research-brief.md` lists them — validate every spec's playstyle family
+   against the landed corpus; audit all 21 engine blurbs for wrong-weighted engines
+   (Chronomancer is the proven case: Timewalking is shared utility, the spec loops run on
+   DoT ramps / Echo Fragments / Aeons); respect the six quarantined dimensions. Copy fixes
+   route through the copy lane's citation-first process.
+3. **Out of scope, unchanged:** seals and rhythm strips (the dedicated per-class authoring
+   pass), crests (rights), the identity map.
+
+The original brief below stays for context only.
+
+---
+
 - **Session type:** user-launched detached Fable design dialogue (high/xhigh). The user is
   pasting this into their standing Fable-high design session — the full ruled shelf should
   already be in its context; the read-first list below re-anchors it either way.
