@@ -541,3 +541,16 @@ placement `feel`, video `mini`, engine `col`, verbs `chip`, cards `airfam`.
   (two registers) · assets (localize + card). Still parked for the user: relay the
   ruled shape bar to the seal session, and Sol's optional seal-label rename
   (BUILD / SPEND / 6 · BONUS).
+- **2026-08-10 (post-pass correction — modal hover tooltips):** user: "it seems like
+  hover doesn't work in the class preview modal." Diagnosis: the slim quick-look is a
+  native `<dialog>` shown with `showModal()`, which paints in the browser TOP LAYER —
+  above ANY z-index on body children, so the body-parented `.talent-tip` (z-index 90)
+  was created on hover but painted invisibly underneath. Fix in the shared tooltip
+  runtime (`profile-render.js`): the tip parents to the topmost open dialog when one
+  exists, else body; `position: fixed` keeps viewport coordinates (the dialog carries
+  no transform). Verified: harness opened the Godblade quick-look, synthesized the
+  hover, asserted the tip inside the open dialog, and screenshotted the Rift gloss
+  rendering over the modal. Non-modal surfaces unaffected (no open dialog → body, as
+  before). STANDING TRAP for future overlays: anything inside a modal dialog that
+  spawns a floating element on body must re-parent it into the top layer. Deployed
+  `aa9c4f6` → coa_classes `6f2f74c`.
