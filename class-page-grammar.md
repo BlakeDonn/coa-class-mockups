@@ -373,6 +373,10 @@ placement `feel`, video `mini`, engine `col`, verbs `chip`, cards `airfam`.
   Verified 1280 ×4 specs + 390 iframe; live. Post-verdict fix (user: "move the middle
   text a bit more left so the arrow doesn't overlap it"): all six desktop loop strips'
   return labels moved to x≈310 — left of the return arc's dip — as the standing rule.
+  Clarified target ("i meant like build · fire dawn steel dusk"): the Inquisition phone
+  ladder's BUILD sub split into two short lines ("fire builds Dawn" / "steel builds
+  Dusk") and every phone-ladder return arc pushed 8px further right. Standing: ladder
+  station subs stay ≤ ~20 chars; split before they reach the arc's lane.
 - **2026-08-10 (round 2 VERDICT — Guardian RULED):** user on the live page after the
   ladder-window fix: "ok cool this is good to keep going i think." The banner seal
   (TOWER · GUARD / LINE · MARCH), the meter-marked node rank (10 · 3 · 3),
