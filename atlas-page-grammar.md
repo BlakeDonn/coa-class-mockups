@@ -94,6 +94,31 @@ Same format and authority rules as `class-page-grammar.md`.
 
 ## 8 · Session log
 
+- **2026-08-10 (data-adoption jobs: engine audit ×21 + family validation ×70):** run by the
+  copy session per the adoption handoff's STATE SYNC and the style-axes addendum.
+  **Engine audit** (lens: citation is not weighting — the Chronomancer defect class):
+  APPLIED — Chronomancer re-ruled from the user's own flag ("the rewind isn't that
+  significant"): label → "The engine — three clocks", blurb → "Each spec runs its own
+  clock — DoT ramps, Echo Fragments, or Aeons — and Rewind is just the safety net."
+  (Infinite: Anomaly Spikes on periodic damage; Artificer: Echo Fragments; Time:
+  Aeons/Epoch; Timewalking is shared utility.) RULING REQUESTED — Venomancer: the blurb
+  leans on the shared two-Venom layer while spec loops run on marks/rot/Rage/mists; unlike
+  Rewind, Venoms trigger from every cast, so the advisor recommends KEEP with this note;
+  alternative on request. HOLD with recorded weighting notes: Necromancer (Death runs
+  diseases through the shared minion frame), Runemaster (Riftblade fits the write-release
+  metaphor weakest), Barbarian (Ancestry layers its own Tankard economy), Bloodmage
+  (Accursed leans on Blood Shards), Witch Doctor (Brewing has no Spirit claims; the blurb
+  already self-hedges). All 15 others hold cleanly.
+  **Family validation** (v2 `atlas` family vs landed rhythm_payoff notes): PROPOSED MOVES —
+  (1) knight-of-xoroth/hellfire `commanders` → `combo`: the landed loop is six-Demonfire
+  banking into timed form windows; no pet-centric hellfire claims landed (the Greater Imp
+  is v2 fantasy). High confidence. (2) witch-doctor/shadowhunting `steady` → `setup`: two
+  tracked banks (Spirits, Voodoo Hunger) released in chosen windows — not low-ceremony.
+  Medium confidence. BORDERLINE, recorded, no move: stormbringer/lightning (planned
+  stationary windows lean setup), stormbringer/maelstrom (weave windows lean combo),
+  reaper/harvest (execute-proc lean), witch-hunter/boltslinger (mobile lean duelists).
+  SKIPPED: knight-of-xoroth/war — rhythm dimension quarantined. Family moves are data-lane
+  changes to the generated roster; proposals await the user + data lane, no hand-edits.
 - **2026-08-10 (correction: the 16-class corpus IS landed):** the user caught a stale claim.
   The full corpus landed on the main repo's `main` branch at 10:15 (`9fcbcd7` "land 16-class
   scale-up"); the copy session had checked its own behind branch and the session handoff's

@@ -237,6 +237,20 @@ placement `feel`, video `mini`, engine `col`, verbs `chip`, cards `airfam`.
   then ran in full — record in `atlas-page-grammar.md` §8. Class-page engine PARAGRAPHS for
   the 16 new classes remain unwritten: they belong with the per-class seal/verb/strip
   authoring (§9 checklist), not the card pass.
+- **2026-08-10 (21-class breadth pass, live site):** run by the copy session per the
+  adoption handoff's STATE SYNC. Method: `harness.html` (now committed in the site source) —
+  42 renders (21 classes × 390/1280) in fixed-width iframes, mechanical checks (document
+  overflow, clipped elements, tagline/role wrap), results POSTed back; headless Chrome
+  stdout/screenshot both hang through WSL interop on this box, so the POST-back harness is
+  the working pattern. Results: 34/42 clean at first pass. Real defect: **Sun Cleric's role
+  line clipped at 390** (327px in a 301px slot; the only class over — the one-line law's
+  computed content can exceed the slot on the 4-jobs class). Fix shipped: a self-correcting
+  guard in `class.js` adds `.tight` (11px spans) only when the line overflows; verified
+  re-render fits, all other classes untouched at 12px. RECOMMENDED for a future ruling: the
+  Atlas S1 two-line form (ranges on a fainter second line) at phone width as the durable
+  fix. False positives recorded: seal SVG `<text>` metrics; the `⌕ Search` pill clips ~15px
+  into its trailing ellipsis on phone (shipped chrome, cosmetic, left alone). Deployed
+  `374d20e` → coa_classes `7c5b6db`.
 - **Deployed:** https://blakedonn.github.io/coa-class-mockups/ (GitHub Pages, repo
   `BlakeDonn/coa-class-mockups`, public). Main study:
   https://blakedonn.github.io/coa-class-mockups/rhythm-class.html?c=cultist
