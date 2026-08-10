@@ -61,6 +61,11 @@ plain language explains (class-page grammar §8), tags describe playstyle not fa
 
 ## THE CORPUS — WHERE AND ITS CAVEAT
 
+> **UPDATE 2026-08-10 (later same day):** the full 21-class corpus LANDED on the main
+> repo's `main` branch — commit `9fcbcd7`, 10:15. The landed files are byte-identical to
+> the worktree candidates cited by the ×21 pass, so all groundings are final. The six
+> quarantined dimensions landed recorded and still bind. The caveat below is historical.
+
 - Landed (5 classes, 106 claims): main repo
   `reports/coa-specs/research-v3/candidates/<class>.json` on `work/quest-hint-prototype`.
 - Full 21 classes, 386 claims, 91 picker targets: worktree

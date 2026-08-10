@@ -29,19 +29,20 @@
    the future site slice ports that one file. Keep exports back-compatible
    (`window.COA_CARD2` consumers: choose/profile/door studies).
 
-## DATA RULES — the thing the user is worried about
+## DATA RULES
 
 - **Structural data is safe:** `explorer-data.js` (v2 roster: specs, roles, ranges,
   families) drives all layout work. Stable, shipped-site lineage.
-- **The v3 claim corpus is only PARTLY landed.** Landed on the main repo
-  (`work/quest-hint-prototype`, commit `69b6e98`): Cultist, Tinker, Witch Hunter, Guardian,
-  Knight of Xoroth — final. The 16-class corpus (386 claims) is UNLANDED in
-  `C:\Users\17274\Worktrees\coa-picker-16class` — candidate only, audit in progress, three
-  spec dimensions quarantined (artificer fit; riftblade fit+role; moon-priest role).
-- **Therefore this session authors NOTHING from claims.** No seals, no verbs, no strips,
-  no engine paragraphs. Layout and gap states only. Per-class seal/strip rounds start
-  AFTER this session, with the landed pilot five; the 16 wait for their corpus to land.
-- Existing card copy for the 16 already carries a re-verify-on-landing flag — leave it.
+- **The FULL v3 corpus is landed.** All 21 classes, 386 claims, on the main repo's `main`
+  branch — commit `9fcbcd7` "land 16-class scale-up", 2026-08-10 10:15. Verified
+  byte-identical to the candidate files the ×21 card copy cited, so that copy's grounding
+  is final. (An earlier draft of this handoff called the 16 unlanded — corrected same day.)
+- **Six dimensions landed QUARANTINED and still bind:** artificer fit · inspiration fit ·
+  defiance fit · war rhythm · riftblade fit+role · moon-priest role. Nothing may rest on a
+  quarantined dimension; everything else in a landed claims array is fair evidence.
+- **This session still authors NOTHING from claims.** Layout, gap states, and
+  consolidation only. The per-class seal/strip rounds that follow can now cover all 21
+  classes on final data — no pilot-five-first restriction remains.
 
 ## READ FIRST, IN ORDER
 

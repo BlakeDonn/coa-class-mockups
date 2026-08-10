@@ -44,7 +44,7 @@ Same format and authority rules as `class-page-grammar.md`.
 | Tagline slot | Authored-only tagline on the card, ruled styled-keyword glow; unauthored classes omit the line — absent, never invented. ×21 COMPLETE (2026-08-10): all 21 authored; the 16 new ones await the user's verbiage read (draft flag) | RULED (2026-08-07 round 4; ×21 filled 2026-08-10) |
 | Family row | DROPPED from the card ("no jargon thing"). Families still live in profiles and the starmap | RULED (2026-08-07 round 4) |
 | Role line | The standalone counts line is REPLACED: role info couples onto the spec doors (icon or color-coded). Treatment variant is round 5's pick | RULED direction (2026-08-07) / variant OPEN |
-| Engine blurb | **E1**: one authored sentence with the class-colored engine label. ×21 COMPLETE (2026-08-10, blanket ruling): every class carries a corpus-grounded blurb with its citation in the drafts table. Pilot five cite the landed corpus; the 16 cite the candidate corpus (re-verify on landing) | RULED (2026-08-07 round 5; ×21 filled 2026-08-10) |
+| Engine blurb | **E1**: one authored sentence with the class-colored engine label. ×21 COMPLETE (2026-08-10, blanket ruling): every class carries a corpus-grounded blurb with its citation in the drafts table. All citations final: the 16-class corpus landed on main the same day (`9fcbcd7`), byte-identical to the cited candidates — the re-verify flag is CLOSED | RULED (2026-08-07 round 5; ×21 filled 2026-08-10) |
 | Role coupling | **R1 role icons**: ⚔ Damage · 🛡 Tank · ✚ Healer · ⚑ Support lead each spec door, tooltip names the role, range word at right | RULED (2026-08-07 round 5) |
 | Composed card | Crest (name only) → tagline → engine blurb → ✦ facts → doors with role icons. User: "the first one is perfect… just great" | RULED (2026-08-07 round 5) |
 | Draft taglines/engines | The four pilot drafts (Tinker, Witch Hunter, Guardian, Knight of Xoroth) are **approved as temporary copy** — user 2026-08-07: "good for now but just temporary; once we have full research we will revisit the actual verbiage." Revisit trigger: the research lands and the ×21 authoring pass runs. **2026-08-10 copy-verification:** three engine blurbs contradicted the landed v3 corpus and were replaced with user-ruled fixes (session log). Labels moved too: Witch Hunter "three fuels" → "Rage"; KoX "Rage" → "Demonfire". Taglines stay provisional; KoX "Damnation rides with you" KEPT with a name-collision flag (Damnation is a Witch Hunter Boltslinger ability) until the ×21 pass. **Later the same day** the ×21 pass ran under the user's blanket ruling — see the session-log entry above | RULED (provisional; engines re-ruled 2026-08-10; ×21 executed 2026-08-10) |
@@ -94,6 +94,14 @@ Same format and authority rules as `class-page-grammar.md`.
 
 ## 8 · Session log
 
+- **2026-08-10 (correction: the 16-class corpus IS landed):** the user caught a stale claim.
+  The full corpus landed on the main repo's `main` branch at 10:15 (`9fcbcd7` "land 16-class
+  scale-up"); the copy session had checked its own behind branch and the session handoff's
+  caveat, and wrongly reported it unlanded. Verified now: the landed files are byte-identical
+  to the candidates the ×21 pass cited — every grounding is final and the standing re-verify
+  flag is CLOSED. The six quarantined dimensions landed recorded and still bind. Ripple: the
+  per-class seal/strip rounds may cover all 21 classes on final data; the design-adoption
+  handoff's data rules were rewritten accordingly.
 - **2026-08-10 (tagline quality pass, deferred):** all 20 non-Chrono lines reviewed for the
   register defect (modern wordplay breaking fantasy voice). Five flagged with recorded
   alternatives, PROPOSED and NOT adopted — user: "those taglines are alright, we may do

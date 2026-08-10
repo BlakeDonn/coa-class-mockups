@@ -1,7 +1,7 @@
 /* Identity card study, round 5: engine blurb, computed ✦ facts, role-coupled doors.
    ×21 taglines + engines and ×70 archetype tags completed 2026-08-10 under the user's
-   blanket ruling. Pilot-five engines corpus-verified against the LANDED v3 corpus; the
-   16 new classes are grounded in the CANDIDATE corpus (unlanded — re-verify on landing).
+   blanket ruling. All groundings cite the v3 corpus, fully landed on main the same day
+   (9fcbcd7 "land 16-class scale-up" — verified byte-identical to the cited candidates).
    Every ✦ fact is computed from the roster — no fact, no bullet. */
 (() => {
   "use strict";
@@ -14,8 +14,8 @@
   // ---------- authored copy, all 21 classes ----------
   // ×21 pass executed 2026-08-10 under the user's blanket ruling ("you don't need my
   // approval, go ahead and implement all 21 classes based on our research data").
-  // Pilot-five evidence: the LANDED v3 corpus. The 16 new classes: the CANDIDATE corpus
-  // (unlanded 16-class worktree, audit in progress) — re-verify on landing.
+  // Evidence: the v3 corpus, all 21 classes landed on main 2026-08-10 (9fcbcd7); the
+  // landed files are byte-identical to the candidates cited here.
   // draft:true = verbiage not yet eyeballed by the user; evidence grounding is in GROUNDING.
   const TAGLINES = {
     "Cultist": { t: "The whispers offer power. Will you listen?", kw: "whispers", draft: false },
@@ -160,8 +160,8 @@
   // Archetype tags, RULED round 8. Authoring rule (user 2026-08-07): describe PLAYSTYLE,
   // not fantasy — lore nouns and flavor adjectives out, mechanics words in. Each tag still
   // traces to the spec's researched fantasy sentence.
-  // ×70 pass completed 2026-08-10 (blanket ruling). 16-class tags trace to the CANDIDATE
-  // corpus + roster fantasy; max length 28 chars (the phone-verified precedent).
+  // ×70 pass completed 2026-08-10 (blanket ruling). Tags trace to the landed v3 corpus
+  // + roster fantasy; max length 28 chars (the phone-verified precedent).
   // Quarantine flags: chronomancer/artificer (fit), runemaster/riftblade (fit+role),
   // starcaller/moon-priest (role) — those tags rest on surviving rhythm/structural claims.
   const MICRO = {
@@ -336,10 +336,10 @@
         <td>${esc(TAGLINES[k].t)}</td><td>${esc(ENGINES[k].p)}</td>
         <td>${esc(GROUNDING[k] || "Ruled in the class-page grammar")}</td></tr>`).join("")}</table>
       <p style="color:#83888f;font-size:11px;margin:10px 0 0">All 21 classes carry authored
-      taglines and corpus-grounded engine blurbs (×21 pass, 2026-08-10, blanket ruling). The
-      16 new classes cite the CANDIDATE corpus — re-verify when it lands. Taglines marked
-      draft await the user's verbiage read. Every ✦ fact line is computed live from the
-      roster and needs no approval — hover one to see its fact.</p></div>`;
+      taglines and corpus-grounded engine blurbs (×21 pass, 2026-08-10, blanket ruling).
+      Every citation is against the fully landed v3 corpus (16-class landing 9fcbcd7, same
+      day). Taglines marked draft await the user's verbiage read. Every ✦ fact line is
+      computed live from the roster and needs no approval — hover one to see its fact.</p></div>`;
   }
 
   function openProfile(id) {
