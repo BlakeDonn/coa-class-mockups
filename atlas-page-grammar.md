@@ -250,3 +250,17 @@ Same format and authority rules as `class-page-grammar.md`.
   tooltips extended to spec cards. **Reference assembly built: `atlas-v2.html`** — the Atlas as
   ruled, both altitudes, live data. Remaining OPEN: star-map placement (masthead ghost shown as a
   proposal), starmap phone redraw, the ×21 authoring (blocked on pilot).
+
+- **2026-08-10 (desktop-expansion round built, LIVE SITE):** user: "everything is a bit
+  too small on the atlas page, like its not properly expanding to take up space as it
+  should on the desktop." Cause measured on the live source: every wrap (`.a-wrap`,
+  `.bar-row`, `.family-nav`, `.atlas-mast`) caps at 1400px and `.class-grid` fills with
+  320px-minimum columns — at 1920 that is four small cards and ~250px dead margin per
+  side, with 9.5–13px card type. Three directions behind a TEMPORARY `?d=` switcher
+  (baseline unchanged until the pick): **wide** = caps raised to 1840 at ≥1500 (five
+  columns, same card) · **big** = card grid min 320→400 plus one type notch across the
+  card at every desktop width (cap stays; margins remain at 1920) · **zoom** = stepped
+  whole-page scale (1.08 at ≥1440 · 1.16 at ≥1600 · 1.3 at ≥1860; composition
+  unchanged, modal and workbench scale too). Real renders at 1440 + 1920 ×4 forms.
+  Deployed `5bccb80` → coa_classes `e5c79e5`. AWAITING the pick (advisor recommends
+  zoom — the report names both smallness and expansion; only zoom fixes both).
