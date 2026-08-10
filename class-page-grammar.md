@@ -356,6 +356,11 @@ placement `feel`, video `mini`, engine `col`, verbs `chip`, cards `airfam`.
   Verified at 1280 + 390 iframe (war, godblade); Cultist/Tinker strips converted to the
   same bullet grammar from their verified prose. Compare artifact:
   https://claude.ai/code/artifact/361b3534-834e-41b6-a08d-ca63271f03a0
+- **2026-08-10 (round 2 VERDICT — Guardian RULED):** user on the live page after the
+  ladder-window fix: "ok cool this is good to keep going i think." The banner seal
+  (TOWER · GUARD / LINE · MARCH), the meter-marked node rank (10 · 3 · 3),
+  Block/Rally/Duel, the engine body under the two-sentence bar, and all three strips are
+  RULED as shipped. Round 3 opens on Witch Hunter — the last of the ready set.
 - **2026-08-10 (seal & strip round 2 — GUARDIAN authored, deployed, awaiting verdict):**
   the honest-split case, built under every ruling landed today (two-sentence engine bar,
   bullet captions, honesty line, ladder phone grammar, center-label halo painted last).
