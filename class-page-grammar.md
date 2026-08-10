@@ -356,6 +356,19 @@ placement `feel`, video `mini`, engine `col`, verbs `chip`, cards `airfam`.
   Verified at 1280 + 390 iframe (war, godblade); Cultist/Tinker strips converted to the
   same bullet grammar from their verified prose. Compare artifact:
   https://claude.ai/code/artifact/361b3534-834e-41b6-a08d-ca63271f03a0
+- **2026-08-10 (BATCH 2 AUTHORED + DEPLOYED — awaiting batch verdict):** SUN CLERIC:
+  a sun cut by the horizon rule — Solar Power below the line, ten Fulfillment rays
+  above; Alternate/Relay/Harden/Double; relay strip family debuts (Blessings).
+  TEMPLAR: the Oath Chain as a clock of twelve links, one snapped open and spilling,
+  one welded shut (Oathkeeper), a sweep hand on the timer; Renew/Keep/Tally; debt
+  family debuts (the Libram). RANGER: the drawn bowstring — five notches to full
+  draw, the arrow forking into a heavy head (harder) and a second-ruled shaft
+  (longer); Call/Extend/Mark; overlap family debuts (Brigand). FELSWORN: crossed
+  glaives with paired notches climbing to six, the Inner Demon aperture burning at
+  the crossing; Cleave/Cascade/Brace; cascade family debuts (Infernal). Verb
+  collisions from parallel packet agents fixed: infernal Chain→Cascade (Chain is
+  Warden's), tyrant Harden→Brace (Harden is Seraphim's). All bullets injected
+  verbatim from packets; numbers claim-traced. Verified 1280 per class; deployed.
 - **2026-08-10 (BATCH 1 VERDICT — RULED):** user: "looks good keep going." The four
   batch-1 units stand as shipped. Batch 2 opens: Sun Cleric · Templar · Ranger · Felsworn.
 - **2026-08-10 (BATCH 1 AUTHORED + DEPLOYED — awaiting batch verdict):** four classes
