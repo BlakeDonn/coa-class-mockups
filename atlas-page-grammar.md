@@ -94,6 +94,13 @@ Same format and authority rules as `class-page-grammar.md`.
 
 ## 8 · Session log
 
+- **2026-08-10 (tagline quality pass, deferred):** all 20 non-Chrono lines reviewed for the
+  register defect (modern wordplay breaking fantasy voice). Five flagged with recorded
+  alternatives, PROPOSED and NOT adopted — user: "those taglines are alright, we may do
+  another pass but that's good for now." The shelf for that later pass:
+  Barbarian "The ancestors are watching. Give them a show." · Felsworn "The demon is not a
+  metaphor." · Ranger "The kill was decided three steps ago." · Runemaster "First you write
+  it. Then it hits." · Witch Doctor "The best curses are homemade."
 - **2026-08-10 (Chronomancer tagline re-ruled):** the user (a level-60 Chrono main) rejected
   "Undo is a class ability" as the weakest of the 21. Replacement RULED from three options:
   **"Reality is a rough draft."** (keyword "draft") — grounded in Melt Reality and the
