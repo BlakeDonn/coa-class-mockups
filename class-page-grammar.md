@@ -258,3 +258,10 @@ placement `feel`, video `mini`, engine `col`, verbs `chip`, cards `airfam`.
   read live from `card-study-2.js`, loaded read-only) / both. Compare renders on Reaper in
   `adoption-study.html`; verified at 1280 and in the 390px harness (tagline glow, engine
   label, roles, crest seat, guide rows all clean). Awaiting the round-2 pick.
+- **2026-08-10 (ADOPTION DIALOGUE CLOSED EARLY — user reframe):** "I just want our live site
+  to be what's getting updated… I just want the bones built out so when we bring in our data
+  from the 21 classes it just works on our live page." The mockup-round cadence ends; the
+  remaining adoption legs (interim masthead text, breadth pass, consolidation) fold into the
+  SITE-ADOPTION SLICE (`site-adoption-slice-handoff.md`, work-session lane). Round 2's pick is
+  deferred into that slice as a decision point (advisor recommends eng). The mockups repo
+  becomes a reference lab.
