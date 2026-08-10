@@ -365,7 +365,9 @@ placement `feel`, video `mini`, engine `col`, verbs `chip`, cards `airfam`.
   banner between the two stances — TOWER · GUARD (tight 3×3 grid) and LINE · MARCH
   (spread rank) from the c-formations trade-off claim; the three spec nodes stand in a
   RANK below, each carrying its own meter mark (10 · 3 · 3) — the split made visible
-  without breaking the one-tension rule. Verbs: Block (blocks pay Energy/Paragon/High
+  without breaking the one-tension rule. LADDER AMENDMENT (user fix, same day): the
+  payoff window is 200 wide, not full-width — the return arc owns the freed right rail,
+  and the return label sits on its own line under the window. Binds all phone ladders. Verbs: Block (blocks pay Energy/Paragon/High
   Guard) · Rally (Ballads → three Tempo → Sound of War) · Duel (Glory ×3 → boosted Ram;
   net → Centurion crits). Strips: Vanguard Paragon bank (10 · the mark) · Inspiration
   tempo cycle with the Hero's March 15 s window · Gladiator glory wheel — desktop
