@@ -225,8 +225,14 @@ placement `feel`, video `mini`, engine `col`, verbs `chip`, cards `airfam`.
   gloss, near-verbatim (§2); six of seven card blurbs, all ✓/✕ fragments, "oil" and "batteries"
   (§3). RULED: Godblade's "cashing the full bar" kept on its v2 kit grounding (no v3 evidence
   either way). Queue items 2 and 7 closed. The three Atlas engine-blurb fixes from the same
-  round are recorded in `atlas-page-grammar.md` §8. Next: verify Tinker's engine texts (the one
-  pilot engine not yet quoted), then the ×16 authoring — corpus for the 16 still UNLANDED.
+  round are recorded in `atlas-page-grammar.md` §8. Later the same day: Tinker verified —
+  the class-page engine paragraph CONFIRMED (bombs, turrets, beacons, Mechsuit, and the
+  "destruction, repair, or the pilot's seat" split all carry claims); the Atlas blurb's
+  "Every Tinker runs on Scrap" was contradicted-by-absence (Scrap is Mechanics-only) and
+  replaced with this page's lede under the user's blanket ruling. The ×21 Atlas authoring
+  then ran in full — record in `atlas-page-grammar.md` §8. Class-page engine PARAGRAPHS for
+  the 16 new classes remain unwritten: they belong with the per-class seal/verb/strip
+  authoring (§9 checklist), not the card pass.
 - **Deployed:** https://blakedonn.github.io/coa-class-mockups/ (GitHub Pages, repo
   `BlakeDonn/coa-class-mockups`, public). Main study:
   https://blakedonn.github.io/coa-class-mockups/rhythm-class.html?c=cultist

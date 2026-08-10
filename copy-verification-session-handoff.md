@@ -44,6 +44,13 @@ AWAITING USER RULING — two judgment calls:
 5. Godblade blurb "cashing the full bar": no v3 evidence either way for Godblade at 100;
    the v2 grounding stands if kept.
 
+> **EXECUTED 2026-08-10:** the user issued a blanket ruling ("you don't need my approval go
+> ahead and just implement all 21 classes based on our research data"). Ruling 6 (Tinker
+> blurb) applied; ×21 taglines + engine blurbs and ×70 archetype tags landed in
+> `card-study-2.js` with citations. Remaining from the scope below: class-page engine
+> PARAGRAPHS, spec-card blurbs + ✓/✕, and verbs/glosses for the 16 — they pair with the
+> per-class seal/strip visual authoring. Records: `atlas-page-grammar.md` §8.
+
 ## SCOPE FOR THE REMAINING 16 CLASSES
 
 Surfaces with copy to verify or author: engine paragraphs and taglines (only the pilot five

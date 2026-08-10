@@ -41,20 +41,20 @@ Same format and authority rules as `class-page-grammar.md`.
 |---|---|---|
 | Card form | **B identity card** as the base. Constellation shapes on cards set aside unless the map question revives them | RULED (2026-08-07 round 1) |
 | Kick line | "Class · N specializations" DROPPED — the doors carry the count | RULED (2026-08-07 round 4) |
-| Tagline slot | Authored-only tagline on the card, ruled styled-keyword glow; unauthored classes omit the line — absent, never invented | RULED (2026-08-07 round 4) |
+| Tagline slot | Authored-only tagline on the card, ruled styled-keyword glow; unauthored classes omit the line — absent, never invented. ×21 COMPLETE (2026-08-10): all 21 authored; the 16 new ones await the user's verbiage read (draft flag) | RULED (2026-08-07 round 4; ×21 filled 2026-08-10) |
 | Family row | DROPPED from the card ("no jargon thing"). Families still live in profiles and the starmap | RULED (2026-08-07 round 4) |
 | Role line | The standalone counts line is REPLACED: role info couples onto the spec doors (icon or color-coded). Treatment variant is round 5's pick | RULED direction (2026-08-07) / variant OPEN |
-| Engine blurb | **E1**: one authored sentence with the class-colored engine label. Pilot five have copy (Cultist authored, four advisor drafts); the rest omit until the ×21 authoring | RULED (2026-08-07 round 5) |
+| Engine blurb | **E1**: one authored sentence with the class-colored engine label. ×21 COMPLETE (2026-08-10, blanket ruling): every class carries a corpus-grounded blurb with its citation in the drafts table. Pilot five cite the landed corpus; the 16 cite the candidate corpus (re-verify on landing) | RULED (2026-08-07 round 5; ×21 filled 2026-08-10) |
 | Role coupling | **R1 role icons**: ⚔ Damage · 🛡 Tank · ✚ Healer · ⚑ Support lead each spec door, tooltip names the role, range word at right | RULED (2026-08-07 round 5) |
 | Composed card | Crest (name only) → tagline → engine blurb → ✦ facts → doors with role icons. User: "the first one is perfect… just great" | RULED (2026-08-07 round 5) |
-| Draft taglines/engines | The four pilot drafts (Tinker, Witch Hunter, Guardian, Knight of Xoroth) are **approved as temporary copy** — user 2026-08-07: "good for now but just temporary; once we have full research we will revisit the actual verbiage." Revisit trigger: the research lands and the ×21 authoring pass runs. **2026-08-10 copy-verification:** three engine blurbs contradicted the landed v3 corpus and were replaced with user-ruled fixes (session log). Labels moved too: Witch Hunter "three fuels" → "Rage"; KoX "Rage" → "Demonfire". Taglines stay provisional; KoX "Damnation rides with you" KEPT with a name-collision flag (Damnation is a Witch Hunter Boltslinger ability) until the ×21 pass | RULED (provisional; engines re-ruled 2026-08-10) |
+| Draft taglines/engines | The four pilot drafts (Tinker, Witch Hunter, Guardian, Knight of Xoroth) are **approved as temporary copy** — user 2026-08-07: "good for now but just temporary; once we have full research we will revisit the actual verbiage." Revisit trigger: the research lands and the ×21 authoring pass runs. **2026-08-10 copy-verification:** three engine blurbs contradicted the landed v3 corpus and were replaced with user-ruled fixes (session log). Labels moved too: Witch Hunter "three fuels" → "Rage"; KoX "Rage" → "Demonfire". Taglines stay provisional; KoX "Damnation rides with you" KEPT with a name-collision flag (Damnation is a Witch Hunter Boltslinger ability) until the ×21 pass. **Later the same day** the ×21 pass ran under the user's blanket ruling — see the session-log entry above | RULED (provisional; engines re-ruled 2026-08-10; ×21 executed 2026-08-10) |
 | Top-right corner | **V1 class-video thumb**: real thumbnail, play ring, "Class highlight" caption, opens the video. The ruled phone-masthead treatment, scaled to the card. All 21 classes have a video in the data | RULED (2026-08-07 round 6, "video thumb is dope") |
 | Rare ✦ lines | The class-page rare-part pattern comes to the card: 1–2 terse ✦ fragments, every one tracing to a computable roster fact. No fact, no bullet | RULED pattern (2026-08-07, user ask) |
 | Ordering | Alphabetical; no ordering that could read as rank | PROPOSED |
 | Crest icon | **The official class crest, all 21 classes** (build-hub sprite `class-icons.v1.webp`; findings in `sol-class-icon-findings.md`). Ability icons stay as the recorded fallback. STANDING FLAG: the hub is fan-made, no license published — shipping the crests needs rights confirmation before the site slice | RULED (2026-08-07 round 7) / rights flag OPEN |
 | Crest sub line | **S1, two-line form**: jobs on the first line (true-support rule), range always on its own fainter second line ("Damage · Tank · Healer" / "Melee & Ranged"). Applied to the ruled card renderer and the atlas-v2 assembly | RULED (2026-08-07 round 7 close) |
 | Door role art | **The HD queue icons** — 64px frames of WoW's UI-LFG-ICON-ROLES via the canonical interface-art mirror, stored in `generated-assets/lfg-*.png`. Damage sword · Tank shield · Healer cross · Support **green flag** (same gold-rim style). The 16px client crown stays the recorded alternative | RULED (2026-08-07 round 8 close) |
-| Door middle element | **M2 archetype tag** ("2H burst bruiser" · "mobile DoT caster"). AUTHORING RULE (user): tags describe **playstyle, not fantasy** — lore nouns and flavor adjectives out, mechanics words in; each tag still traces to the researched fantasy sentence. 11 specs drafted (Cultist, Tinker, Witch Hunter), temporary copy; the ×70 compression pass fills the rest and revisits verbiage | RULED (2026-08-07 round 8 close) |
+| Door middle element | **M2 archetype tag** ("2H burst bruiser" · "mobile DoT caster"). AUTHORING RULE (user): tags describe **playstyle, not fantasy** — lore nouns and flavor adjectives out, mechanics words in; each tag still traces to the researched fantasy sentence. ×70 COMPLETE (2026-08-10, blanket ruling): all 70 specs tagged, max 28 chars (the phone-verified fit precedent; `.mid` clips overflow). Quarantine-flagged specs (artificer, riftblade, moon-priest) rest on surviving structural claims | RULED (2026-08-07 round 8 close; ×70 filled 2026-08-10) |
 | THE CARD IS CLOSED | User verdict: "that kinda finishes the class cards, they look fantastic." Final composition: official crest · name · jobs line · range line · tagline (keyword glow) · engine blurb · ✦ computed facts · doors (queue icon + name + archetype tag + range) · video corner | RULED (2026-08-07) |
 | True-support rule | Class-level "Support" appears only when a spec supports WITHOUT healing (user 2026-08-07: "wouldn't every healer be quantified as support?"). Five classes qualify: Barbarian, Stormbringer, Guardian, Ranger, Sun Cleric. Spec-level role data is untouched — doors still show a Healer+Support spec's ⚑, and the taxonomy stays research-derived | RULED (principle) |
 | True-support ripples | RESOLVED: user ruled strict everywhere (2026-08-09, session 6 round 2). The class-page role line and the computed ✦ jobs facts now count under the rule; four-jobs classes drop 4 → 1 (Sun Cleric), the others fall back to the playstyles fact. Record in `class-page-grammar.md` §1 + session log | RULED (2026-08-09) |
@@ -94,6 +94,27 @@ Same format and authority rules as `class-page-grammar.md`.
 
 ## 8 · Session log
 
+- **2026-08-10 (copy-verification session, the ×21 + ×70 authoring executed):** after the five
+  opening rulings landed, the user issued a BLANKET RULING (verbatim): "you don't need my
+  approval go ahead and just implement all 21 classes based on our research data." Under it:
+  (1) **Ruling 6 applied** — the Tinker Atlas blurb "Every Tinker runs on Scrap: gunfire in,
+  machines out" was contradicted-by-absence (Scrap claims are Mechanics-only; Invention has
+  zero) and replaced with the class-page lede "A Tinker's power stands on the field, not on
+  the action bar" (Cultist precedent: Atlas blurb = class-page lede). Label → "temporary
+  machines". (2) **×21 taglines + engine blurbs authored** — every blurb grounded in a quoted
+  class-level corpus claim (GROUNDING map, rendered in the drafts table). Notable engines:
+  Reaper's three-rung soul ladder, Stormbringer's Static overcharge (supercharge above 70,
+  self-stun at 100), Sun Cleric's Dawn window, Bloodmage's health→Thirst→Rage chain.
+  (3) **×70 archetype tags completed** — 59 new tags, playstyle-not-fantasy rule, capped at
+  28 chars (the phone-verified fit precedent). (4) **Provenance:** the pilot five cite the
+  LANDED corpus; the 16 new classes cite the CANDIDATE corpus (unlanded 16-class worktree,
+  audit in progress) — STANDING FLAG: re-verify the 16 when the corpus lands. Quarantined
+  dimensions avoided: chronomancer/artificer (fit), runemaster/riftblade (fit + role/range),
+  starcaller/moon-priest (role/range) — their copy rests on surviving structural claims and
+  the site roster. Tagline keyword-collision checks run (the Damnation precedent); Sun
+  Cleric's "Dawn" keyword is its own engine term and noted against Witch Hunter's Dawn Blade.
+  Mechanical checks: 21/21/21 tagline-engine-grounding coverage, 70/70 tags, all ids
+  roster-valid, all tags ≤28 chars, all keywords present in their taglines.
 - **2026-08-10 (copy-verification session, engine blurbs ruled):** the five-class verification
   round (run in session 5 against the LANDED five-class v3 corpus, 106 claims) went to the user
   for line-by-line rulings. Three contradicted engine blurbs replaced, all accepted as proposed:
