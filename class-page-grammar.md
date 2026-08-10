@@ -322,3 +322,9 @@ placement `feel`, video `mini`, engine `col`, verbs `chip`, cards `airfam`.
   Final label ruling ("ok cool that works but do we really need the black backfill?"):
   plate REMOVED, halo alone carries readability. The §2 standing rule amends to: center
   label paints last with a dark halo; no plate.
+- **2026-08-10 (round 1 VERDICT — Knight of Xoroth RULED):** user on the live page after
+  the plate removal: "perfect!" The KoX engine ¶, six-ember seal (both arrangements),
+  Unleash/Cycle/Stoke verbs + glosses, all three strips with S2 phone redraws, and the
+  pips/wheel/bank card glyphs are RULED as shipped. The war-strip quarantine reading
+  (strips rest on landed structural claims; dead dimensions carry nothing) stands
+  unobjected. Round 2 opens on Guardian — the honest-split engine case.
