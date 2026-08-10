@@ -46,7 +46,7 @@ This is the checklist for repeating the design 21 times without drift.
 | Verbs | One word per spec, its relation to the engine. Must not need the seal to parse: every verb ships with a plain gloss (tooltip) | RULED |
 | Phone treatment | Full seal at full width, vertically tightened ~15% (420×224 arrangement: orbits 60/77, eye .66, node rows raised; nothing removed). Post-verify amendment: the seal sits DETACHED in its own plate directly below the masthead, not inside it. The seal is the phone spec switcher — tap a node to select. NEVER fused with the spec card; band/rail/collapsed compactions considered and set aside (session-2 artifact). Fallback if still too tall in real use: a remembered collapsed row | RULED (2026-08-07 sessions 2–3) |
 
-Current verb + gloss set (Cultist/Tinker):
+Current verb + gloss set (Cultist/Tinker/Knight of Xoroth):
 - Spread — keep damage-over-time on every target; the engine is coverage.
 - Endure — hold Insanity in a managed band and turn it into survival.
 - Convert — turn melee aggression into healing for the group. *(confirmed against v3, 2026-08-10 — near-verbatim claim: "Blade of Yogg-Saron turns Blade of the Empire damage into healing for the lowest-health ally")*
@@ -54,6 +54,9 @@ Current verb + gloss set (Cultist/Tinker):
 - Detonate — stack explosives and machines, then fire them in one overlapping window.
 - Restore — deploy healing machines where the group will need them.
 - Overclock — push your machines and combat suit past their limits.
+- Unleash — bank Demonfire to six and cash it as fire; a full Flames of Xoroth calls down Rain of Chaos. *(near-verbatim h3)*
+- Cycle — spend Demonfire to refresh Gore's charges; stacks turn back into strikes, and the loop keeps turning. *(w1)*
+- Stoke — Shieldgore and beckoned imps feed the fire two stacks at a time; defense fills the bar. *(d1)*
 
 ## 3 · Spec rail cards
 
@@ -284,3 +287,21 @@ placement `feel`, video `mini`, engine `col`, verbs `chip`, cards `airfam`.
   (fresh-session kickoff; ready set WH/Guardian/KoX), the adoption session's STATE SYNC,
   and the research brief's addendum (families + engine audit + fold verdicts). The live
   site is the single render target for all of it.
+- **2026-08-10 (seal & strip session, round 1 — Knight of Xoroth authored):** cadence
+  CONFIRMED by the user at round open: one proposed seal + verbs + strips per round,
+  rendered live; 2–3-direction rounds return only if a class resists (playbook row now
+  RULED). KoX authored end to end and DEPLOYED (main repo `dd077a9`; live via the 13:03
+  pages build): engine ¶ (audited lede kept verbatim; body teaches FEED / 6 · UNLEASH —
+  six-stack bar from Demon Heart, per-stack-consumed payoffs, and a six-stack rider in
+  each spec tree: Rain of Chaos · Pestilence Unbound · Stoke the Flames), six-ember
+  hexagonal seal (crown ember = the sixth stack; 420×224 phone arrangement; the seal-swap
+  code generalized from the Cultist-only special case), verbs Unleash/Cycle/Stoke with
+  claim-backed glosses, three strip topologies (Hellfire stack-climb h2/h3/h6 · War wheel
+  w1/w2/w3/w6 · Defiance imp bank d1/d2/d4/d6) with S2 phone redraws, and pips/wheel/bank
+  card topo glyphs. QUARANTINE INTERPRETATION (flag for the user): war/rhythm_payoff and
+  defiance/enjoy_avoid_fit are quarantined DIMENSIONS (their picker sentences died in
+  audit, claims:none); the strips rest only on the landed structural claims, per the
+  adoption ruling "everything else in a landed claims array is fair evidence" — nothing
+  rests on the dead dimensions. Verified: 1280 + 390 iframe screenshots ×3 specs, zero
+  horizontal overflow at both widths, Cultist seal-swap regression clean. AWAITING the
+  user's live-page verdict; engine ¶ / seal / verbs / strips become RULED rows on it.

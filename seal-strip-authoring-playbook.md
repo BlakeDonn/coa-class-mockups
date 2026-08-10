@@ -74,7 +74,7 @@ Authority: the grammar files stay the binding record. This playbook is procedure
 - Never invent: engine claims, glosses, topologies all trace to digests or claims, or the
   surface shows its gap.
 
-## CADENCE (PROPOSED — confirm at the pass's first round)
+## CADENCE (RULED 2026-08-10 — confirmed at round 1, Knight of Xoroth)
 
 One class per round. The geometry language is established, so a round is: one proposed
 seal + verbs + strips, rendered LIVE on the class page (the site is the render target
